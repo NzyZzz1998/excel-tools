@@ -64,7 +64,7 @@ class WindowTests(unittest.TestCase):
         self.assertEqual(self.app.failed, 1)
         self.assertEqual(self.app.output_directory, self.folder.resolve())
         self.assertNotIn("disabled", self.app.open_button.state())
-        output = successful.with_name("合并 数据_拆分填充.xlsx")
+        output = successful.with_name("合并 数据_拆分填充.xlsx").resolve()
         self.assertTrue(output.is_file())
         log = self.app.results.get("1.0", "end")
         self.assertIn(str(output), log)
