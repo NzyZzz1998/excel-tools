@@ -1,0 +1,18 @@
+# Local input data and generated workbooks are never repository inputs.
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.tsv
+*.zip
+*.exe
+*.spec
+build/
+dist/
+ExcelUnmergeFill/
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+*.log
+
