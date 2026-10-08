@@ -23,17 +23,49 @@ jobs:
       - name: Test source
         run: python -m unittest discover -s tests -v
       - name: Build portable application
-        run: python -m PyInstaller --noconfirm --clean --onefile --windowed --name ExcelUnmergeFill excel_unmerge_gui.py
-      - name: Test packaged application
+        run: python -m PyInstaller --noconfirm --clean --onefile --windowed --name ExcelTools excel_unmerge_gui.py
+      - name: Test portable app without Python paths or source files
         shell: pwsh
         run: |
-          $app = Start-Process -FilePath "$PWD/dist/ExcelUnmergeFill.exe" -ArgumentList '--self-test' -Wait -PassThru
-          if ($app.ExitCode -ne 0) {
-            throw "Packaged application self-test failed with exit code $($app.ExitCode)"
+          $portableDir = Join-Path $env:RUNNER_TEMP '免安装 验收'
+          $workingDir = Join-Path $env:RUNNER_TEMP '独立 工作目录'
+          $scratchDir = Join-Path $env:RUNNER_TEMP '临时 解压目录'
+          New-Item -ItemType Directory -Force -Path $portableDir, $workingDir, $scratchDir | Out-Null
+          $portableExe = Join-Path $portableDir 'ExcelTools.exe'
+          Copy-Item 'dist/ExcelTools.exe' $portableExe
+          $saved = @{}
+          Get-ChildItem Env: | Where-Object {
+            $_.Name -match '^(PYTHON.*|TCL.*|TK.*|VIRTUAL_ENV|CONDA.*|PATH|TEMP|TMP)$'
+          } | ForEach-Object { $saved[$_.Name] = $_.Value }
+          try {
+            foreach ($key in $saved.Keys) { Remove-Item "Env:$key" -ErrorAction SilentlyContinue }
+            $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot"
+            $env:TEMP = $scratchDir
+            $env:TMP = $scratchDir
+            $app = Start-Process -FilePath $portableExe -ArgumentList '--self-test' -WorkingDirectory $workingDir -PassThru
+            $processHandle = $app.Handle
+            if (-not $app.WaitForExit(90000)) {
+              $app.Kill($true)
+              throw 'Portable application self-test timed out.'
+            }
+            $app.Refresh()
+            if ($app.ExitCode -ne 0) {
+              throw "Portable application self-test failed with exit code $($app.ExitCode)"
+            }
+          } finally {
+            foreach ($key in @('PATH', 'TEMP', 'TMP')) { Remove-Item "Env:$key" -ErrorAction SilentlyContinue }
+            foreach ($key in $saved.Keys) { Set-Item "Env:$key" $saved[$key] }
           }
+      - name: Prepare user package
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path 'dist/package' | Out-Null
+          Copy-Item 'dist/ExcelTools.exe' 'dist/package/ExcelTools.exe'
+          $instructions = Get-Content -Raw -Encoding utf8 'packaging/使用说明.txt'
+          [System.IO.File]::WriteAllText("$PWD/dist/package/使用说明.txt", $instructions, [System.Text.UTF8Encoding]::new($true))
       - name: Upload Windows application
         uses: actions/upload-artifact@v7
         with:
-          name: ExcelUnmergeFill-Windows-x64
-          path: dist/ExcelUnmergeFill.exe
+          name: ExcelTools-Windows-x64
+          path: dist/package/*
           if-no-files-found: error
