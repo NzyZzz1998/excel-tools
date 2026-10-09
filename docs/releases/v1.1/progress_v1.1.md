@@ -12,7 +12,9 @@
 
 当前 ZIP：`dist/ExcelTools-v1.1-Windows-x64.zip`，SHA256 `07b801517060896c01ea9be2aaf1420784d2e87fe3a5f2ae4ea1b31f5b0488f6`。先前 `92870bdc…` 候选已归档，不能作为本版下载附件。
 
-未验证边界：用户约 100MB 月度表仍在公司电脑、尚未收到；WPS、干净 Windows 10/11、复杂 Office 内容和人工体验补证见 [清单](manual_verification_v1.1.md)。不宣称任意月度文件容量或速度保证。
+追加真实月度文件验收：用户已提供104MB、757,636行／22列文件，已发布v1.1默认模式约6分46秒完成，进程树峰值295MiB；独立16,667,988实体格与Excel16,667,994格位对照通过，原件未变。[月度验收](monthly-data-acceptance-2026-10-09/report.md)。程序及发布ZIP没有修改。
+
+未验证边界：此月度文件全拆分模式、更大全月明细、WPS、干净 Windows 10/11、复杂 Office 内容和人工体验补证见 [清单](manual_verification_v1.1.md)。不宣称任意月度文件容量或速度保证。
 
 用户“深度验收，没问题就发布”承接本项目必要修复、提交、推送、v1.1 tag、Release 和免安装附件上传。仓库保持 private，原业务文件及输出仅在忽略的 `testfile/`，二进制仅作 Release 附件。无安装器或商店发布面。
 

@@ -1,0 +1,295 @@
+{
+  "recorded_utc": "2026-10-09T06:23:45.899258+00:00",
+  "source_name": "天-缺货明细表沉淀数据 (1).xlsx",
+  "source_bytes": 104185338,
+  "source_sha256_before": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "method": "ZIP hashes + ElementTree row streaming; worksheet hash captured in first XML pass; rows removed immediately; second pass stores anchor flags only; row-coordinate set retained for duplicate checks; no engine import.",
+  "privacy": "No business values, formulas, names, custom format strings or external URLs recorded.",
+  "script_sha256": "d4821ea503880a24d092b0c0b974f017ff67c34b33b09213f2a5ba82bfb473a4",
+  "parts": [
+    {
+      "part": "[Content_Types].xml",
+      "compressed_bytes": 320,
+      "uncompressed_bytes": 1188,
+      "sha256": "57a76367d4ac83e7c9bfc102570ead4dafc7a1108f2befaf6bb9dea5f0aab007"
+    },
+    {
+      "part": "_rels/.rels",
+      "compressed_bytes": 227,
+      "uncompressed_bytes": 585,
+      "sha256": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3"
+    },
+    {
+      "part": "docProps/app.xml",
+      "compressed_bytes": 145,
+      "uncompressed_bytes": 183,
+      "sha256": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b"
+    },
+    {
+      "part": "docProps/core.xml",
+      "compressed_bytes": 261,
+      "uncompressed_bytes": 432,
+      "sha256": "b21cfe26111f65e3eb7ca166b52ccbd149786505e8b5904909048896521dd3f6"
+    },
+    {
+      "part": "xl/sharedStrings.xml",
+      "compressed_bytes": 120,
+      "uncompressed_bytes": 137,
+      "sha256": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206"
+    },
+    {
+      "part": "xl/styles.xml",
+      "compressed_bytes": 622,
+      "uncompressed_bytes": 3959,
+      "sha256": "4cba71e59052bc6f72e31cc7465e728db008e09075f3eebcccb60f76ec9559d9"
+    },
+    {
+      "part": "xl/workbook.xml",
+      "compressed_bytes": 290,
+      "uncompressed_bytes": 458,
+      "sha256": "6199d0ce2adb878c785afad47c7e323d1ec40810d812be71d3d34983a1bcc636"
+    },
+    {
+      "part": "xl/_rels/workbook.xml.rels",
+      "compressed_bytes": 219,
+      "uncompressed_bytes": 704,
+      "sha256": "5111e561ae4d7f7ec000200724d9b668191683f3cc65d88e0318b448d620bac4"
+    },
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "compressed_bytes": 104181447,
+      "uncompressed_bytes": 733128804,
+      "sha256": "bff7b7fc6e68329cc0ba84f1e24905c7504dce84725db56aaa1bd13c0e426c05"
+    },
+    {
+      "part": "xl/worksheets/sheet2.xml",
+      "compressed_bytes": 375,
+      "uncompressed_bytes": 553,
+      "sha256": "d4219e80c29d6f6cb5ba67bb1d9a2f04779266514855df93113218d274d533e6"
+    }
+  ],
+  "package_features": {
+    "media": 0,
+    "drawings": 0,
+    "charts": 0,
+    "external_links": 0,
+    "macros": 0,
+    "metadata": 0,
+    "rich_data": 0,
+    "tables": 0,
+    "comments": 0,
+    "document_signatures": 0
+  },
+  "shared_strings": {},
+  "styles": {
+    "numFmts/numFmt": 3,
+    "fonts/font": 3,
+    "fills/fill": 10,
+    "borders/border": 1,
+    "cellStyleXfs/xf": 1,
+    "cellXfs/xf": 16
+  },
+  "sheets": [
+    {
+      "sheet_name_sha256": "433c00f4b397e662d83cf979e6f4ad8f5ba0d9d422ae3a23a56138c975fd6033",
+      "state": "visible",
+      "part": "xl/worksheets/sheet1.xml",
+      "counts": {
+        "hidden_column_definitions": 0,
+        "styled_column_definitions": 0,
+        "physical_rows": 757636,
+        "missing_row_coordinates": 0,
+        "duplicate_row_coordinates": 0,
+        "out_of_order_rows": 0,
+        "hidden_rows": 0,
+        "styled_rows": 0,
+        "physical_cells": 13638731,
+        "noncanonical_cell_coordinates": 0,
+        "duplicate_cell_coordinates_within_row": 0,
+        "cell_row_mismatch": 0,
+        "out_of_order_cells": 0,
+        "formula_cells": 0,
+        "metadata_cells": 0,
+        "nonempty_payload_cells": 13638731
+      },
+      "dimension": "A1",
+      "dimension_covers_cells": false,
+      "actual_bounds": "A1:V757636",
+      "max_row": 757636,
+      "max_column": 22,
+      "distinct_physical_columns": 22,
+      "cell_types": {
+        "inlineStr": 2274638,
+        "n": 11364093
+      },
+      "style_indices": {
+        "1": 22,
+        "2": 14,
+        "3": 1137078,
+        "4": 3856299,
+        "5": 1825715,
+        "6": 1137077,
+        "7": 3856350,
+        "8": 1825714,
+        "9": 14,
+        "10": 191,
+        "11": 241,
+        "12": 1,
+        "13": 3,
+        "14": 12
+      },
+      "formula_types": {},
+      "worksheet_features": {
+        "dimension": 1,
+        "sheetViews": 1,
+        "sheetFormatPr": 1,
+        "cols": 1,
+        "sheetData": 1,
+        "mergeCells": 1,
+        "pageMargins": 1
+      },
+      "merge_count": 1280,
+      "merge_types": {
+        "vertical_only": 1279,
+        "horizontal_only": 1
+      },
+      "predictions": {
+        "default": {
+          "selected_merges": 1279,
+          "expected_filled_cells": 3029255,
+          "remaining_merges": 1,
+          "anchor_types": {
+            "inlineStr": 1279
+          },
+          "blocker_counts": {
+            "formula_anchors": 0,
+            "metadata_anchors": 0,
+            "hidden_independent_content_cells": 0
+          }
+        },
+        "all": {
+          "selected_merges": 1280,
+          "expected_filled_cells": 3029261,
+          "remaining_merges": 0,
+          "anchor_types": {
+            "inlineStr": 1280
+          },
+          "blocker_counts": {
+            "formula_anchors": 0,
+            "metadata_anchors": 0,
+            "hidden_independent_content_cells": 0
+          }
+        }
+      },
+      "merge_structure": {
+        "maximum_simultaneously_active_by_row": 4,
+        "overlapping_merge_pairs": 0,
+        "overlap_address_examples": [],
+        "maximum_merge_height": 31925,
+        "maximum_merge_width": 7
+      },
+      "conflict_examples": [],
+      "merge_address_samples": [
+        "D2:D1211",
+        "C2:C1211",
+        "D1212:D1498",
+        "C1212:C1498",
+        "D1499:D2450",
+        "C1499:C2450",
+        "D2451:D4868",
+        "C2451:C4868",
+        "D4869:D5002",
+        "C4869:C5002",
+        "B2:B5002",
+        "D5003:D6399",
+        "D6400:D7683",
+        "C5003:C7683",
+        "D7684:D8064",
+        "D8065:D8429",
+        "C7684:C8429",
+        "D8430:D9500",
+        "D9501:D10536",
+        "C8430:C10536"
+      ],
+      "sheet_index": 1
+    },
+    {
+      "sheet_name_sha256": "e0d97de8feb530139ac2e5b0249dfd0b613d0fd97b2963c86d319532c5587612",
+      "state": "visible",
+      "part": "xl/worksheets/sheet2.xml",
+      "counts": {
+        "physical_rows": 1,
+        "missing_row_coordinates": 0,
+        "duplicate_row_coordinates": 0,
+        "out_of_order_rows": 0,
+        "hidden_rows": 0,
+        "styled_rows": 0,
+        "physical_cells": 2,
+        "noncanonical_cell_coordinates": 0,
+        "duplicate_cell_coordinates_within_row": 0,
+        "cell_row_mismatch": 0,
+        "out_of_order_cells": 0,
+        "formula_cells": 0,
+        "metadata_cells": 0,
+        "nonempty_payload_cells": 2
+      },
+      "dimension": "A1",
+      "dimension_covers_cells": false,
+      "actual_bounds": "A1:B1",
+      "max_row": 1,
+      "max_column": 2,
+      "distinct_physical_columns": 2,
+      "cell_types": {
+        "inlineStr": 2
+      },
+      "style_indices": {
+        "15": 1,
+        "implicit": 1
+      },
+      "formula_types": {},
+      "worksheet_features": {
+        "dimension": 1,
+        "sheetViews": 1,
+        "sheetFormatPr": 1,
+        "sheetData": 1,
+        "pageMargins": 1
+      },
+      "merge_count": 0,
+      "merge_types": {},
+      "predictions": {
+        "default": {
+          "selected_merges": 0,
+          "expected_filled_cells": 0,
+          "remaining_merges": 0,
+          "anchor_types": {},
+          "blocker_counts": {
+            "hidden_independent_content_cells": 0
+          }
+        },
+        "all": {
+          "selected_merges": 0,
+          "expected_filled_cells": 0,
+          "remaining_merges": 0,
+          "anchor_types": {},
+          "blocker_counts": {
+            "hidden_independent_content_cells": 0
+          }
+        }
+      },
+      "merge_structure": {
+        "maximum_simultaneously_active_by_row": 0,
+        "overlapping_merge_pairs": 0,
+        "overlap_address_examples": [],
+        "maximum_merge_height": 0,
+        "maximum_merge_width": 0
+      },
+      "conflict_examples": [],
+      "merge_address_samples": [],
+      "sheet_index": 2
+    }
+  ],
+  "zip_crc_reads": "passed",
+  "source_sha256_after": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "source_unchanged": true,
+  "seconds": 118.52795049999258
+}

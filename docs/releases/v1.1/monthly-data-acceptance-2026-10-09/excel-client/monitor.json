@@ -1,0 +1,39 @@
+{
+  "recorded_utc": "2026-10-09T06:34:18.331632+00:00",
+  "run_id": "394f7b8a-d8ad-4ad5-89ea-ab1a07a6dde4",
+  "wrapper_sha256": "9e2b234408e9675dcef6bea4c1107f56c6680c9a1432242588b8bbdd38ed41c7",
+  "script_sha256": "7ad4c163f2d454a6b105654375801198f18b86b024c0f9360dab6214d651f10e",
+  "available_bytes_at_start": 29059874816,
+  "memory_cap_bytes": 8589934592,
+  "timeout_seconds": 900,
+  "cleanup_grace_seconds": 60,
+  "sample_interval_seconds": 0.1,
+  "monitored_scope": "Only COM-confirmed Excel PID with matching exact creation FILETIME, run nonce and producer identity; retained process handle prevents PID reuse.",
+  "owned_excel": {
+    "pid": 1664,
+    "creation_filetime": 134360012545406317,
+    "image_name": "EXCEL.EXE"
+  },
+  "samples": 29,
+  "peak_rss_mib": 156.117,
+  "peak_sampled_private_mib": 112.32,
+  "seconds": 7.25,
+  "stop_reason": null,
+  "confirmed_excel_terminated": false,
+  "excel_exited": true,
+  "powershell_pid": 43176,
+  "powershell_left_running": false,
+  "exit_code": 1,
+  "monitor_failure_type": null,
+  "client_report_present": true,
+  "client_passed": false,
+  "stages": [
+    {
+      "seconds": 4.125,
+      "stage": "owned-excel-confirmed",
+      "checked_cells_in_sheet": 0
+    }
+  ],
+  "passed": false,
+  "limitations": "Limits belong to this acceptance probe, not the product. A stop is active monitor intervention, not evidence of application OOM or a product crash. No process difference set, process tree, preexisting Excel, or PowerShell process is terminated. If no owned identity arrives, or finally remains stuck after grace, this report requires manual cleanup of the explicitly recorded worker only."
+}

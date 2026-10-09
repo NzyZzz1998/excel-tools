@@ -1,0 +1,6 @@
+Exception: E:\codex\excel-tools\docs\releases\v1.1\monthly-data-acceptance-2026-10-09\validate_excel_chunked.ps1:231
+Line |
+ 231 |  if(-not $passed){throw ('Excel validation failed; see '+$Report)}
+     |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Excel validation failed; see
+     | E:\codex\excel-tools\docs\releases\v1.1\monthly-data-acceptance-2026-10-09\excel-client\excel-client-validation.json

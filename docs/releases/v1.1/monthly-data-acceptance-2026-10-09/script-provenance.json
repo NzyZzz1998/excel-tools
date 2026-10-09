@@ -1,0 +1,19 @@
+{
+  "inventory_base_script": "docs\\releases\\v1.1\\large-data-acceptance-2026-10-09\\inventory_large.py",
+  "inventory_base_sha256": "e0ea58da55c6abec41f6d0406c73f087d93b4c2ece492fecd07fc4ced7f2b354",
+  "inventory_monthly_sha256": "d4821ea503880a24d092b0c0b974f017ff67c34b33b09213f2a5ba82bfb473a4",
+  "inventory_changes": [
+    "Fuse worksheet part SHA256 into existing first ET parse; avoid separate full worksheet decompression pass.",
+    "Add safe first-pass count progress.",
+    "Add merge overlap, height, width and maximum simultaneously active row diagnostics after existing merge collection."
+  ],
+  "synthetic_check": {
+    "original_inventory_fields_identical": true,
+    "fused_member_hash_equals_direct_hash": true,
+    "merge_height_and_overlap_counts_correct": true,
+    "evidence": "This turn terminal output: single synthetic inline string A1 and merge A1:A3; no real workbook data used."
+  },
+  "validator_copied_byte_identically": true,
+  "validator_sha256": "fc7d213a8b47f03a41c5b627ae3ee00130aeecab5b1f18358a6659534671c0c0",
+  "validation_plan": "After actual EXE completion notification, independently compare original and final output using per-row oracle. No full-sheet cell dictionary and no processing-engine imports. Report counts, coordinates, structure, hashes and issue labels only."
+}

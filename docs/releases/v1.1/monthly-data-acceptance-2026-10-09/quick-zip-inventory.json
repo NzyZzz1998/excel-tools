@@ -1,0 +1,114 @@
+{
+  "recorded_utc": "2026-10-09T06:22:11.143354+00:00",
+  "source_name": "天-缺货明细表沉淀数据 (1).xlsx",
+  "source_bytes": 104185338,
+  "source_sha256_before": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "script_sha256": "d6602d1e4de00e0d5dd679597878195abe90ef5b3b571328a1190afacb6a7527",
+  "method": "ZIP central directory and small workbook/relationship metadata only; worksheet XML not expanded.",
+  "privacy": "No cell values, sheet names, formulas, external URLs or custom formats recorded.",
+  "parts": [
+    {
+      "part": "[Content_Types].xml",
+      "compressed_bytes": 320,
+      "uncompressed_bytes": 1188,
+      "crc32": "b08b0295",
+      "compression": 8
+    },
+    {
+      "part": "_rels/.rels",
+      "compressed_bytes": 227,
+      "uncompressed_bytes": 585,
+      "crc32": "bd7a8ca7",
+      "compression": 8
+    },
+    {
+      "part": "docProps/app.xml",
+      "compressed_bytes": 145,
+      "uncompressed_bytes": 183,
+      "crc32": "d8777ce1",
+      "compression": 8
+    },
+    {
+      "part": "docProps/core.xml",
+      "compressed_bytes": 261,
+      "uncompressed_bytes": 432,
+      "crc32": "ed82a975",
+      "compression": 8
+    },
+    {
+      "part": "xl/sharedStrings.xml",
+      "compressed_bytes": 120,
+      "uncompressed_bytes": 137,
+      "crc32": "26d8bf70",
+      "compression": 8
+    },
+    {
+      "part": "xl/styles.xml",
+      "compressed_bytes": 622,
+      "uncompressed_bytes": 3959,
+      "crc32": "84a45a83",
+      "compression": 8
+    },
+    {
+      "part": "xl/workbook.xml",
+      "compressed_bytes": 290,
+      "uncompressed_bytes": 458,
+      "crc32": "6477b848",
+      "compression": 8
+    },
+    {
+      "part": "xl/_rels/workbook.xml.rels",
+      "compressed_bytes": 219,
+      "uncompressed_bytes": 704,
+      "crc32": "6c29978b",
+      "compression": 8
+    },
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "compressed_bytes": 104181447,
+      "uncompressed_bytes": 733128804,
+      "crc32": "fd8dcd8e",
+      "compression": 8
+    },
+    {
+      "part": "xl/worksheets/sheet2.xml",
+      "compressed_bytes": 375,
+      "uncompressed_bytes": 553,
+      "crc32": "b9ff549f",
+      "compression": 8
+    }
+  ],
+  "sheets": [
+    {
+      "index": 1,
+      "part": "xl/worksheets/sheet1.xml",
+      "state": "visible",
+      "sheet_name_sha256": "433c00f4b397e662d83cf979e6f4ad8f5ba0d9d422ae3a23a56138c975fd6033",
+      "xml_bytes": 733128804,
+      "compressed_bytes": 104181447
+    },
+    {
+      "index": 2,
+      "part": "xl/worksheets/sheet2.xml",
+      "state": "visible",
+      "sheet_name_sha256": "e0d97de8feb530139ac2e5b0249dfd0b613d0fd97b2963c86d319532c5587612",
+      "xml_bytes": 553,
+      "compressed_bytes": 375
+    }
+  ],
+  "package_features": {
+    "media": 0,
+    "drawings": 0,
+    "charts": 0,
+    "external_links": 0,
+    "macros": 0,
+    "metadata": 0,
+    "rich_data": 0,
+    "tables": 0,
+    "comments": 0,
+    "document_signatures": 0
+  },
+  "source_sha256_after": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "source_unchanged": true,
+  "seconds": 0.11695019999751821
+}

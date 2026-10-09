@@ -1,0 +1,18 @@
+2026-10-09
+Command: pwsh -NoProfile -File validate_excel_chunked.ps1 -SelfTest
+PASS: cross-5000-row anchors, ordinary blanks/spaces, zero, retained horizontal merge, negative mismatches, scalar; checked=60012
+Exit code: 0
+
+After actual progress-write failure repair:
+Command: pwsh -NoProfile -File test_progress_replacement.ps1
+PASS: actual progress function created and replaced JSON twice; final identity/stage/count retained; no temporary residue; no Excel launched.
+Exit code: 0
+Command: pwsh -NoProfile -File validate_excel_chunked.ps1 -SelfTest
+PASS: cross-5000-row anchors, ordinary blanks/spaces, zero, retained horizontal merge, negative mismatches, scalar; checked=60012
+Exit code: 0
+No Excel process was started; this validates the synthetic comparison helper only.
+
+Repeated after optional progress/identity handoff was added: same result, exit code 0.
+Command: python monitor_excel_validation.py --self-test
+PASS: identity/nonce/PID-reuse/pre-existing/image rejection; fake confirmed stop; current Python handle/memory read. No Excel or real process was terminated.
+Exit code: 0

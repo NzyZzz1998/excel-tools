@@ -1,0 +1,34 @@
+{
+  "recorded_utc": "2026-10-09T06:36:35.278019+00:00",
+  "mode": "default",
+  "passed": true,
+  "package_sha256": "07b801517060896c01ea9be2aaf1420784d2e87fe3a5f2ae4ea1b31f5b0488f6",
+  "exe_sha256": "239b1456771ae417f044dfd1ac2642f7ac36de7bc3781c6d2ac3ddc75d2d7ea4",
+  "source_sha256": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "output_sha256": "c28ee8a7646ac33315fb89f0a9483a51c5d9b7a8eb05195632493c2d7e02c4ae",
+  "source_bytes": 104185338,
+  "output_bytes": 117674593,
+  "checks": {
+    "oracle_passed": true,
+    "source_identity_matches_gui_and_inventory": true,
+    "output_identity_matches_gui": true,
+    "source_unchanged": true,
+    "output_unchanged": true,
+    "gui_completed_and_exited": true,
+    "validator_script_identity": true,
+    "helper_script_identity": true,
+    "all_untouched_parts_equal": true,
+    "counts_match_independent_inventory": true
+  },
+  "output_cells_checked": 16667988,
+  "rows_checked": 757637,
+  "source_cells_checked": 13638733,
+  "untouched_parts_checked": 9,
+  "validation_seconds": 197.54478950001067,
+  "evidence_sha256": {
+    "input-inventory.json": "58d4865047c6486b1a34479f116e3470d6d15ab13fd7bc993de2d0e4e75f9d5d",
+    "default-content-validation.json": "d169593a42935ae08f88180ca445415c13adc14571a7d8b4460573405b1a98fe",
+    "exe\\execution.json": "59051ae009c41aaa241f66d6bacfd83c44c5f3866f91104d77b1a1dfb12fe302"
+  },
+  "limitations": "Actual default-mode output only. All-merges counts in input inventory are predictions, not an executed monthly all-mode acceptance."
+}

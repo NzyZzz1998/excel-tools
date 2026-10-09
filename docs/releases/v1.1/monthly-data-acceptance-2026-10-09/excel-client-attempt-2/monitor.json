@@ -1,0 +1,214 @@
+{
+  "recorded_utc": "2026-10-09T06:36:45.172361+00:00",
+  "run_id": "ddb3284d-0328-47f4-83c9-43fa1100a61e",
+  "wrapper_sha256": "9e2b234408e9675dcef6bea4c1107f56c6680c9a1432242588b8bbdd38ed41c7",
+  "script_sha256": "f583916d702a12040c154edeb0b853a2d49c7060356f2e3ed0e7d967048ae974",
+  "available_bytes_at_start": 29166931968,
+  "memory_cap_bytes": 8589934592,
+  "timeout_seconds": 900,
+  "cleanup_grace_seconds": 60,
+  "sample_interval_seconds": 0.1,
+  "monitored_scope": "Only COM-confirmed Excel PID with matching exact creation FILETIME, run nonce and producer identity; retained process handle prevents PID reuse.",
+  "owned_excel": {
+    "pid": 38248,
+    "creation_filetime": 134360013771660957,
+    "image_name": "EXCEL.EXE"
+  },
+  "samples": 271,
+  "peak_rss_mib": 659.133,
+  "peak_sampled_private_mib": 609.211,
+  "seconds": 31.703,
+  "stop_reason": null,
+  "confirmed_excel_terminated": false,
+  "excel_exited": true,
+  "powershell_pid": 43776,
+  "powershell_left_running": false,
+  "exit_code": 0,
+  "monitor_failure_type": null,
+  "client_report_present": true,
+  "client_passed": true,
+  "stages": [
+    {
+      "seconds": 4.328,
+      "stage": "owned-excel-confirmed",
+      "checked_cells_in_sheet": 0
+    },
+    {
+      "seconds": 4.422,
+      "stage": "open-source-read-only",
+      "checked_cells_in_sheet": 0
+    },
+    {
+      "seconds": 11.266,
+      "stage": "open-output-read-only",
+      "checked_cells_in_sheet": 0
+    },
+    {
+      "seconds": 19.625,
+      "stage": "sheet-1-rows-1",
+      "checked_cells_in_sheet": 0
+    },
+    {
+      "seconds": 19.922,
+      "stage": "sheet-1-rows-25001",
+      "checked_cells_in_sheet": 550000
+    },
+    {
+      "seconds": 20.328,
+      "stage": "sheet-1-rows-50001",
+      "checked_cells_in_sheet": 1100000
+    },
+    {
+      "seconds": 20.625,
+      "stage": "sheet-1-rows-75001",
+      "checked_cells_in_sheet": 1650000
+    },
+    {
+      "seconds": 20.922,
+      "stage": "sheet-1-rows-100001",
+      "checked_cells_in_sheet": 2200000
+    },
+    {
+      "seconds": 21.235,
+      "stage": "sheet-1-rows-125001",
+      "checked_cells_in_sheet": 2750000
+    },
+    {
+      "seconds": 21.531,
+      "stage": "sheet-1-rows-150001",
+      "checked_cells_in_sheet": 3300000
+    },
+    {
+      "seconds": 21.828,
+      "stage": "sheet-1-rows-175001",
+      "checked_cells_in_sheet": 3850000
+    },
+    {
+      "seconds": 22.141,
+      "stage": "sheet-1-rows-200001",
+      "checked_cells_in_sheet": 4400000
+    },
+    {
+      "seconds": 22.438,
+      "stage": "sheet-1-rows-225001",
+      "checked_cells_in_sheet": 4950000
+    },
+    {
+      "seconds": 22.735,
+      "stage": "sheet-1-rows-250001",
+      "checked_cells_in_sheet": 5500000
+    },
+    {
+      "seconds": 23.047,
+      "stage": "sheet-1-rows-275001",
+      "checked_cells_in_sheet": 6050000
+    },
+    {
+      "seconds": 23.344,
+      "stage": "sheet-1-rows-300001",
+      "checked_cells_in_sheet": 6600000
+    },
+    {
+      "seconds": 23.547,
+      "stage": "sheet-1-rows-325001",
+      "checked_cells_in_sheet": 7150000
+    },
+    {
+      "seconds": 23.844,
+      "stage": "sheet-1-rows-350001",
+      "checked_cells_in_sheet": 7700000
+    },
+    {
+      "seconds": 24.141,
+      "stage": "sheet-1-rows-375001",
+      "checked_cells_in_sheet": 8250000
+    },
+    {
+      "seconds": 24.453,
+      "stage": "sheet-1-rows-400001",
+      "checked_cells_in_sheet": 8800000
+    },
+    {
+      "seconds": 24.75,
+      "stage": "sheet-1-rows-425001",
+      "checked_cells_in_sheet": 9350000
+    },
+    {
+      "seconds": 25.047,
+      "stage": "sheet-1-rows-450001",
+      "checked_cells_in_sheet": 9900000
+    },
+    {
+      "seconds": 25.36,
+      "stage": "sheet-1-rows-475001",
+      "checked_cells_in_sheet": 10450000
+    },
+    {
+      "seconds": 25.656,
+      "stage": "sheet-1-rows-500001",
+      "checked_cells_in_sheet": 11000000
+    },
+    {
+      "seconds": 25.953,
+      "stage": "sheet-1-rows-525001",
+      "checked_cells_in_sheet": 11550000
+    },
+    {
+      "seconds": 26.266,
+      "stage": "sheet-1-rows-550001",
+      "checked_cells_in_sheet": 12100000
+    },
+    {
+      "seconds": 26.469,
+      "stage": "sheet-1-rows-575001",
+      "checked_cells_in_sheet": 12650000
+    },
+    {
+      "seconds": 26.766,
+      "stage": "sheet-1-rows-600001",
+      "checked_cells_in_sheet": 13200000
+    },
+    {
+      "seconds": 27.063,
+      "stage": "sheet-1-rows-625001",
+      "checked_cells_in_sheet": 13750000
+    },
+    {
+      "seconds": 27.375,
+      "stage": "sheet-1-rows-650001",
+      "checked_cells_in_sheet": 14300000
+    },
+    {
+      "seconds": 27.672,
+      "stage": "sheet-1-rows-675001",
+      "checked_cells_in_sheet": 14850000
+    },
+    {
+      "seconds": 27.969,
+      "stage": "sheet-1-rows-700001",
+      "checked_cells_in_sheet": 15400000
+    },
+    {
+      "seconds": 28.281,
+      "stage": "sheet-1-rows-725001",
+      "checked_cells_in_sheet": 15950000
+    },
+    {
+      "seconds": 28.578,
+      "stage": "sheet-1-rows-750001",
+      "checked_cells_in_sheet": 16500000
+    },
+    {
+      "seconds": 28.672,
+      "stage": "sheet-1-complete",
+      "checked_cells_in_sheet": 16667992
+    },
+    {
+      "seconds": 28.781,
+      "stage": "closing-read-only-workbooks",
+      "checked_cells_in_sheet": 0
+    }
+  ],
+  "passed": true,
+  "limitations": "Limits belong to this acceptance probe, not the product. A stop is active monitor intervention, not evidence of application OOM or a product crash. No process difference set, process tree, preexisting Excel, or PowerShell process is terminated. If no owned identity arrives, or finally remains stuck after grace, this report requires manual cleanup of the explicitly recorded worker only."
+}

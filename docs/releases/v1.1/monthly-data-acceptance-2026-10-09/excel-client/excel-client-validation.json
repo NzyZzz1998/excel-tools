@@ -1,0 +1,34 @@
+{
+  "passed": false,
+  "saves": 0,
+  "sheets": [],
+  "excel_build": 17932.0,
+  "limitations": "Local Excel Value2 comparison; at most two 5000-row Value2 arrays plus selected merge anchors are retained by the comparator. Excel itself opens both workbooks and its own memory is not bounded by the chunk size. DisplayAlerts is disabled; no visual/repair-dialog/WPS/macro-execution claim.",
+  "privacy": "Only coordinates, counts, identities and exception types are recorded; no cell values.",
+  "source_unchanged": true,
+  "owned_pid": 1664,
+  "output_sha256": "c28ee8a7646ac33315fb89f0a9483a51c5d9b7a8eb05195632493c2d7e02c4ae",
+  "selected_merge_count": 1279,
+  "source_sha256": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "recorded_utc": "2026-10-09T06:34:18.1646273Z",
+  "owned_excel_exited": true,
+  "excel_file_version": "16.0.17932.21000",
+  "normal_read_only_load": false,
+  "cleanup_failures": [
+    "System.Management.Automation.MethodInvocationException",
+    "System.Management.Automation.MethodInvocationException"
+  ],
+  "output_unchanged": true,
+  "failure": {
+    "exception_type": "System.Management.Automation.MethodInvocationException",
+    "stage": "open-source-read-only"
+  },
+  "excel_version": "16.0",
+  "update_links": 0,
+  "preexisting_excel_pids": [],
+  "inventory_sha256": "58d4865047c6486b1a34479f116e3470d6d15ab13fd7bc993de2d0e4e75f9d5d",
+  "macro_security": 3,
+  "chunk_rows": 5000,
+  "script_sha256": "7ad4c163f2d454a6b105654375801198f18b86b024c0f9360dab6214d651f10e",
+  "mode": "default"
+}

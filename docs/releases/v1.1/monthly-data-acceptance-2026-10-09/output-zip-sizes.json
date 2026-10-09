@@ -1,0 +1,55 @@
+{
+  "output_bytes": 117674593,
+  "parts": [
+    {
+      "part": "[Content_Types].xml",
+      "compressed_bytes": 320,
+      "uncompressed_bytes": 1188
+    },
+    {
+      "part": "_rels/.rels",
+      "compressed_bytes": 227,
+      "uncompressed_bytes": 585
+    },
+    {
+      "part": "docProps/app.xml",
+      "compressed_bytes": 145,
+      "uncompressed_bytes": 183
+    },
+    {
+      "part": "docProps/core.xml",
+      "compressed_bytes": 261,
+      "uncompressed_bytes": 432
+    },
+    {
+      "part": "xl/sharedStrings.xml",
+      "compressed_bytes": 120,
+      "uncompressed_bytes": 137
+    },
+    {
+      "part": "xl/styles.xml",
+      "compressed_bytes": 622,
+      "uncompressed_bytes": 3959
+    },
+    {
+      "part": "xl/workbook.xml",
+      "compressed_bytes": 290,
+      "uncompressed_bytes": 458
+    },
+    {
+      "part": "xl/_rels/workbook.xml.rels",
+      "compressed_bytes": 219,
+      "uncompressed_bytes": 704
+    },
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "compressed_bytes": 117670862,
+      "uncompressed_bytes": 931952329
+    },
+    {
+      "part": "xl/worksheets/sheet2.xml",
+      "compressed_bytes": 375,
+      "uncompressed_bytes": 553
+    }
+  ]
+}

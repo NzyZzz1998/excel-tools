@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-09T06:37:57.214509+00:00",
+  "source_sha256": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "output_sha256": "c28ee8a7646ac33315fb89f0a9483a51c5d9b7a8eb05195632493c2d7e02c4ae",
+  "delivery_path": "E:\\codex\\excel-tools\\testfile\\月度验收_v1.1_2026-10-09\\交付结果\\天-缺货明细表沉淀数据 (1)_拆分填充.xlsx",
+  "bytes": 117674593,
+  "matches_actual_exe_result": true,
+  "oracle_passed": true,
+  "excel_client_passed": true,
+  "original_still_unchanged": true,
+  "application_modified": false
+}

@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-10-09T06:23:25.809698+00:00",
+  "version": "1.1",
+  "release_tag_commit": "067834455de167d86351b5ab338c518744ec4afa",
+  "documentation_head": "b0e2cae3122f3ee251358b76c4737d820397880c",
+  "source": {
+    "excel_unmerge_fill.py": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+    "excel_unmerge_gui.py": "d3a1c273f0d4bb333d26945b8b39061daa064824e413601e711aeb9ab8d2c4c0"
+  },
+  "package_sha256": "07b801517060896c01ea9be2aaf1420784d2e87fe3a5f2ae4ea1b31f5b0488f6"
+}

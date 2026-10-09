@@ -1,0 +1,53 @@
+{
+  "chunk_rows": 5000,
+  "script_sha256": "f583916d702a12040c154edeb0b853a2d49c7060356f2e3ed0e7d967048ae974",
+  "output_sha256": "c28ee8a7646ac33315fb89f0a9483a51c5d9b7a8eb05195632493c2d7e02c4ae",
+  "excel_file_version": "16.0.17932.21000",
+  "normal_read_only_load": true,
+  "mode": "default",
+  "output_unchanged": true,
+  "privacy": "Only coordinates, counts, identities and exception types are recorded; no cell values.",
+  "selected_merge_count": 1279,
+  "failure": null,
+  "preexisting_excel_pids": [],
+  "update_links": 0,
+  "macro_security": 3,
+  "source_unchanged": true,
+  "excel_build": 17932.0,
+  "owned_pid": 38248,
+  "owned_excel_exited": true,
+  "sheets": [
+    {
+      "sheet_index": 1,
+      "chunks": 152,
+      "source_used_range": "$A$1:$V$757636",
+      "output_used_range": "$A$1:$V$757636",
+      "mismatches": 0,
+      "issue_addresses": [],
+      "checked_cells": 16667992,
+      "columns": 22,
+      "rows": 757636,
+      "passed": true
+    },
+    {
+      "sheet_index": 2,
+      "chunks": 1,
+      "source_used_range": "$A$1:$B$1",
+      "output_used_range": "$A$1:$B$1",
+      "mismatches": 0,
+      "issue_addresses": [],
+      "checked_cells": 2,
+      "columns": 2,
+      "rows": 1,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_sha256": "0849fd0df036c0dc6e18b7a9f54ba5e0d9a512e9cb3d30beb3acacb382f4c6e8",
+  "inventory_sha256": "58d4865047c6486b1a34479f116e3470d6d15ab13fd7bc993de2d0e4e75f9d5d",
+  "limitations": "Local Excel Value2 comparison; at most two 5000-row Value2 arrays plus selected merge anchors are retained by the comparator. Excel itself opens both workbooks and its own memory is not bounded by the chunk size. DisplayAlerts is disabled; no visual/repair-dialog/WPS/macro-execution claim.",
+  "excel_version": "16.0",
+  "saves": 0,
+  "cleanup_failures": [],
+  "recorded_utc": "2026-10-09T06:36:45.1019450Z"
+}

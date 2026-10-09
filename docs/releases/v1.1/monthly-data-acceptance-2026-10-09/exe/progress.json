@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-09T06:32:48.0466755Z",
+  "state": "completed",
+  "pids": [],
+  "process_tree_alive": false,
+  "rss_bytes": 0,
+  "private_bytes": 0,
+  "output_files": 1,
+  "ui_completion_confirmed": true,
+  "observed_batch_seconds_including_idle_probe": 405.875,
+  "peak_rss_bytes": 309653504,
+  "peak_private_bytes": 242278400,
+  "memory_limit_bytes": 4294967296,
+  "probe_stop_reason": null,
+  "final_record": "execution.json",
+  "note": "Final status derived from completed execution record and reviewed fresh result screenshot; live process tree has exited."
+}
