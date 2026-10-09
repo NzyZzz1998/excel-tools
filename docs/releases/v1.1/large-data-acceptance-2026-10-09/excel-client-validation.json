@@ -1,0 +1,81 @@
+{
+  "excel_version": "16.0",
+  "script_sha256": "0ae6baa56056b45ac59b478e26d1199290e5f7f19ebd08f667f0fcf54d0cf40e",
+  "saves": 0,
+  "file_hash_checks": [
+    {
+      "file_name": "日明细表 (2)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256": "b787f7ae440cd2d302bbbfad549c675f14052ac207aaed83a3bc3d960d8c7c71"
+    },
+    {
+      "file_name": "日明细表 (2).xlsx",
+      "unchanged": true,
+      "sha256": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0"
+    },
+    {
+      "file_name": "日明细表 (2)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256": "b2066cb5fea042e8e7777498eec44dd8f1ac286a1fa07f11a66f7cfd75486314"
+    }
+  ],
+  "limitations": "Local Excel Value2 comparison with DisplayAlerts disabled; not a visual or repair-dialog observation, not WPS or macro execution.",
+  "preexisting_excel_pids": [
+    9284
+  ],
+  "recorded_utc": "2026-10-09T02:23:52.7538269Z",
+  "owned_excel_exited": true,
+  "normal_read_only_load": true,
+  "excel_build": 17932.0,
+  "source_sha256": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+  "owned_pid": 37256,
+  "update_links": 0,
+  "excel_file_version": "16.0.17932.21000",
+  "macro_security": 3,
+  "passed": true,
+  "failure": null,
+  "results": [
+    {
+      "passed": true,
+      "checked_cells": 2667930,
+      "mode": "default",
+      "sheets": [
+        {
+          "source_used_range": "$A$1:$N$190566",
+          "output_used_range": "$A$1:$N$190566",
+          "sheet_index": 1,
+          "checked_cells": 2667924
+        },
+        {
+          "source_used_range": "$A$1:$C$2",
+          "output_used_range": "$A$1:$C$2",
+          "sheet_index": 2,
+          "checked_cells": 6
+        }
+      ],
+      "output_sha256": "b787f7ae440cd2d302bbbfad549c675f14052ac207aaed83a3bc3d960d8c7c71",
+      "issues": []
+    },
+    {
+      "passed": true,
+      "checked_cells": 2667930,
+      "mode": "all",
+      "sheets": [
+        {
+          "source_used_range": "$A$1:$N$190566",
+          "output_used_range": "$A$1:$N$190566",
+          "sheet_index": 1,
+          "checked_cells": 2667924
+        },
+        {
+          "source_used_range": "$A$1:$C$2",
+          "output_used_range": "$A$1:$C$2",
+          "sheet_index": 2,
+          "checked_cells": 6
+        }
+      ],
+      "output_sha256": "b2066cb5fea042e8e7777498eec44dd8f1ac286a1fa07f11a66f7cfd75486314",
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "recorded_utc": "2026-10-09T01:46:23.694592+00:00",
+  "engine_sha256": "877485d3c497df2cdf83fe1a7729002ef0b91c1e964109cc2f684fc068227f75",
+  "cases": [
+    {
+      "case": "four_processes_same_input_with_existing_result",
+      "passed": true,
+      "distinct_new_outputs": 4,
+      "source_and_existing_result_unchanged": true
+    },
+    {
+      "case": "existing_directory_at_first_output_name",
+      "passed": true,
+      "directory_preserved": true,
+      "source_preserved": true,
+      "auto_suffix": true,
+      "observation": "Collision skipped."
+    },
+    {
+      "case": "read_only_source_in_writable_directory",
+      "passed": true,
+      "source_unchanged": true,
+      "attributes_restored": true
+    },
+    {
+      "case": "real_exclusive_source_lock_then_retry",
+      "passed": true,
+      "no_output_while_locked": true,
+      "lock_released_and_retry_succeeded": true,
+      "source_unchanged": true
+    }
+  ],
+  "scope": "Synthetic inputs, actual Windows locks/attributes and concurrent processes.",
+  "temporary_directory_removed": true,
+  "passed": true
+}

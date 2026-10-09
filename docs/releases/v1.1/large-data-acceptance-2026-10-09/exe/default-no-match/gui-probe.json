@@ -1,0 +1,494 @@
+{
+  "launcher_pid": 31456,
+  "windows": [
+    {
+      "hwnd": 4787644,
+      "pid": 43028,
+      "title": "Excel 数据处理工具 v1.1",
+      "klass": "TkTopLevel",
+      "rect": [
+        -20000,
+        -20000,
+        -19144,
+        -19301
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 12977992,
+      "pid": 43028,
+      "title": "TtkMonitorWindow",
+      "klass": "TtkMonitorClass",
+      "rect": [
+        234,
+        234,
+        2154,
+        1257
+      ],
+      "visible": false,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 1445438,
+      "pid": 31456,
+      "title": "PyInstaller Onefile Hidden Window",
+      "klass": "PyInstallerOnefileHiddenWindow",
+      "rect": [
+        208,
+        208,
+        2128,
+        1231
+      ],
+      "visible": false,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 10947130,
+      "pid": 43028,
+      "title": "MSCTFIME UI",
+      "klass": "MSCTFIME UI",
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible": false,
+      "enabled": false,
+      "control_id": 0
+    },
+    {
+      "hwnd": 4852608,
+      "pid": 43028,
+      "title": "Default IME",
+      "klass": "IME",
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible": false,
+      "enabled": false,
+      "control_id": 0
+    },
+    {
+      "hwnd": 24053938,
+      "pid": 31456,
+      "title": "Default IME",
+      "klass": "IME",
+      "rect": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible": false,
+      "enabled": false,
+      "control_id": 0
+    }
+  ],
+  "main_children": [
+    {
+      "hwnd": 17697960,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19992,
+        -19969,
+        -19152,
+        -19309
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 3542580,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19992,
+        -19969,
+        -19152,
+        -19309
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 20709682,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19541,
+        -19170,
+        -19327
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 200276,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19964,
+        -19514,
+        -19180,
+        -19337
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 2755790,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19964,
+        -19514,
+        -19197,
+        -19337
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 3149324,
+      "pid": 43028,
+      "title": "",
+      "klass": "ScrollBar",
+      "rect": [
+        -19197,
+        -19514,
+        -19180,
+        -19337
+      ],
+      "visible": true,
+      "enabled": false,
+      "control_id": 0
+    },
+    {
+      "hwnd": 593176,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19574,
+        -19170,
+        -19553
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 16910138,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19604,
+        -19170,
+        -19582
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 16320682,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19639,
+        -19170,
+        -19612
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 23988740,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19288,
+        -19639,
+        -19170,
+        -19612
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 12257956,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19879,
+        -19639,
+        -19792,
+        -19612
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 7146582,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19639,
+        -19887,
+        -19612
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 10685288,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19676,
+        -19170,
+        -19649
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 9767648,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19257,
+        -19676,
+        -19170,
+        -19649
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 20253508,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19676,
+        -19887,
+        -19649
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 3018266,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19880,
+        -19170,
+        -19690
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 9702506,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19962,
+        -19723,
+        -19658,
+        -19702
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 11930632,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19962,
+        -19752,
+        -19723,
+        -19729
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 2821680,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19962,
+        -19816,
+        -19182,
+        -19760
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 200270,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19962,
+        -19816,
+        -19199,
+        -19760
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 200264,
+      "pid": 43028,
+      "title": "",
+      "klass": "ScrollBar",
+      "rect": [
+        -19199,
+        -19816,
+        -19182,
+        -19760
+      ],
+      "visible": true,
+      "enabled": false,
+      "control_id": 0
+    },
+    {
+      "hwnd": 16975642,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19962,
+        -19851,
+        -19182,
+        -19824
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 16452284,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19795,
+        -19848,
+        -19697,
+        -19827
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 16059030,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19962,
+        -19851,
+        -19807,
+        -19824
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 2755792,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19913,
+        -19766,
+        -19892
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    },
+    {
+      "hwnd": 8193736,
+      "pid": 43028,
+      "title": "",
+      "klass": "TkChild",
+      "rect": [
+        -19974,
+        -19951,
+        -19760,
+        -19919
+      ],
+      "visible": true,
+      "enabled": true,
+      "control_id": 0
+    }
+  ],
+  "capture": {
+    "path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1\\large-data-acceptance-2026-10-09\\exe\\default-no-match\\exe-initial.png",
+    "captured": true,
+    "rows": 699,
+    "width": 856,
+    "height": 699
+  }
+}

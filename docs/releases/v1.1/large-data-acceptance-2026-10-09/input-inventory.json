@@ -1,0 +1,296 @@
+{
+  "recorded_utc": "2026-10-09T01:58:18.019636+00:00",
+  "source_name": "日明细表 (2).xlsx",
+  "source_bytes": 9632564,
+  "source_sha256_before": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+  "method": "ZIP hashes + ElementTree row streaming; rows removed immediately; second pass stores anchor flags only; no engine import.",
+  "privacy": "No business values, formulas, names, custom format strings or external URLs recorded.",
+  "script_sha256": "e0ea58da55c6abec41f6d0406c73f087d93b4c2ece492fecd07fc4ced7f2b354",
+  "parts": [
+    {
+      "part": "[Content_Types].xml",
+      "compressed_bytes": 320,
+      "uncompressed_bytes": 1188,
+      "sha256": "57a76367d4ac83e7c9bfc102570ead4dafc7a1108f2befaf6bb9dea5f0aab007"
+    },
+    {
+      "part": "_rels/.rels",
+      "compressed_bytes": 227,
+      "uncompressed_bytes": 585,
+      "sha256": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3"
+    },
+    {
+      "part": "docProps/app.xml",
+      "compressed_bytes": 145,
+      "uncompressed_bytes": 183,
+      "sha256": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b"
+    },
+    {
+      "part": "docProps/core.xml",
+      "compressed_bytes": 261,
+      "uncompressed_bytes": 432,
+      "sha256": "9e6e575bd39e30f6e1948447d58003e78eae9a338e5e6cad43fc9b3957071cb1"
+    },
+    {
+      "part": "xl/sharedStrings.xml",
+      "compressed_bytes": 120,
+      "uncompressed_bytes": 137,
+      "sha256": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206"
+    },
+    {
+      "part": "xl/styles.xml",
+      "compressed_bytes": 649,
+      "uncompressed_bytes": 4165,
+      "sha256": "99238270d8218543b171d5060139eb6fa9642b25129cb6a845f9989395d346ba"
+    },
+    {
+      "part": "xl/workbook.xml",
+      "compressed_bytes": 266,
+      "uncompressed_bytes": 420,
+      "sha256": "d85243d2cc6ef530a29244c97f4b766609e22935c4f52a7348786ce59f7339c1"
+    },
+    {
+      "part": "xl/_rels/workbook.xml.rels",
+      "compressed_bytes": 219,
+      "uncompressed_bytes": 704,
+      "sha256": "5111e561ae4d7f7ec000200724d9b668191683f3cc65d88e0318b448d620bac4"
+    },
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "compressed_bytes": 9628548,
+      "uncompressed_bytes": 89379171,
+      "sha256": "41ee69be0b62072110f960310a245cd24865f4105fa7c5b3b9454f0e27954000"
+    },
+    {
+      "part": "xl/worksheets/sheet2.xml",
+      "compressed_bytes": 497,
+      "uncompressed_bytes": 1072,
+      "sha256": "6454181e15d3536f0b83b41a41fdaa3ea8cdc79ea8e9e3b4dd9ddb807ae1c865"
+    }
+  ],
+  "zip_crc_reads": "passed",
+  "package_features": {
+    "media": 0,
+    "drawings": 0,
+    "charts": 0,
+    "external_links": 0,
+    "macros": 0,
+    "metadata": 0,
+    "rich_data": 0,
+    "tables": 0,
+    "comments": 0,
+    "document_signatures": 0
+  },
+  "shared_strings": {},
+  "styles": {
+    "numFmts/numFmt": 4,
+    "fonts/font": 3,
+    "fills/fill": 10,
+    "borders/border": 1,
+    "cellStyleXfs/xf": 1,
+    "cellXfs/xf": 17
+  },
+  "sheets": [
+    {
+      "sheet_name_sha256": "0d636d666dbb7dc012aa98e8f4c4e8d41462e2e43d8d5a6391ca9cd8503b72ba",
+      "state": "visible",
+      "part": "xl/worksheets/sheet1.xml",
+      "counts": {
+        "hidden_column_definitions": 0,
+        "styled_column_definitions": 0,
+        "physical_rows": 190566,
+        "missing_row_coordinates": 0,
+        "duplicate_row_coordinates": 0,
+        "out_of_order_rows": 0,
+        "hidden_rows": 0,
+        "styled_rows": 0,
+        "physical_cells": 1905923,
+        "noncanonical_cell_coordinates": 0,
+        "duplicate_cell_coordinates_within_row": 0,
+        "cell_row_mismatch": 0,
+        "out_of_order_cells": 0,
+        "formula_cells": 0,
+        "metadata_cells": 0,
+        "nonempty_payload_cells": 1905923
+      },
+      "dimension": "A1",
+      "dimension_covers_cells": false,
+      "actual_bounds": "A1:N190566",
+      "max_row": 190566,
+      "max_column": 14,
+      "distinct_physical_columns": 14,
+      "cell_types": {
+        "inlineStr": 190838,
+        "n": 1715085
+      },
+      "style_indices": {
+        "1": 14,
+        "2": 3,
+        "3": 95409,
+        "4": 590897,
+        "5": 76077,
+        "6": 190564,
+        "7": 95409,
+        "8": 590897,
+        "9": 76077,
+        "10": 190564,
+        "11": 2,
+        "12": 1,
+        "13": 4,
+        "14": 3,
+        "15": 2
+      },
+      "formula_types": {},
+      "worksheet_features": {
+        "dimension": 1,
+        "sheetViews": 1,
+        "sheetFormatPr": 1,
+        "cols": 1,
+        "sheetData": 1,
+        "mergeCells": 1,
+        "pageMargins": 1
+      },
+      "merge_count": 248,
+      "merge_types": {
+        "vertical_only": 247,
+        "horizontal_only": 1
+      },
+      "predictions": {
+        "default": {
+          "selected_merges": 247,
+          "expected_filled_cells": 761997,
+          "remaining_merges": 1,
+          "anchor_types": {
+            "inlineStr": 247
+          },
+          "blocker_counts": {
+            "formula_anchors": 0,
+            "metadata_anchors": 0,
+            "hidden_independent_content_cells": 0
+          }
+        },
+        "all": {
+          "selected_merges": 248,
+          "expected_filled_cells": 762001,
+          "remaining_merges": 0,
+          "anchor_types": {
+            "inlineStr": 248
+          },
+          "blocker_counts": {
+            "formula_anchors": 0,
+            "metadata_anchors": 0,
+            "hidden_independent_content_cells": 0
+          }
+        }
+      },
+      "conflict_examples": [],
+      "merge_address_samples": [
+        "D2:D1483",
+        "D1484:D1833",
+        "D1834:D1837",
+        "D1838:D2979",
+        "D2980:D5798",
+        "D5799:D6292",
+        "C2:C6292",
+        "D6293:D7661",
+        "D7662:D7951",
+        "D7952:D7955",
+        "D7956:D9035",
+        "D9036:D11483",
+        "D11484:D11924",
+        "C6293:C11924",
+        "D11925:D12618",
+        "D12619:D12738",
+        "D12739:D13243",
+        "D13244:D14416",
+        "D14417:D14696",
+        "C11925:C14696"
+      ],
+      "sheet_index": 1
+    },
+    {
+      "sheet_name_sha256": "dc66874477f744eff20e103be76f6df904ae2c851d277c7a1887635325ff7ada",
+      "state": "visible",
+      "part": "xl/worksheets/sheet2.xml",
+      "counts": {
+        "physical_rows": 2,
+        "missing_row_coordinates": 0,
+        "duplicate_row_coordinates": 0,
+        "out_of_order_rows": 0,
+        "hidden_rows": 0,
+        "styled_rows": 0,
+        "physical_cells": 4,
+        "noncanonical_cell_coordinates": 0,
+        "duplicate_cell_coordinates_within_row": 0,
+        "cell_row_mismatch": 0,
+        "out_of_order_cells": 0,
+        "formula_cells": 0,
+        "metadata_cells": 0,
+        "nonempty_payload_cells": 4
+      },
+      "dimension": "A1",
+      "dimension_covers_cells": false,
+      "actual_bounds": "A1:C2",
+      "max_row": 2,
+      "max_column": 3,
+      "distinct_physical_columns": 3,
+      "cell_types": {
+        "inlineStr": 4
+      },
+      "style_indices": {
+        "16": 2,
+        "implicit": 2
+      },
+      "formula_types": {},
+      "worksheet_features": {
+        "dimension": 1,
+        "sheetViews": 1,
+        "sheetFormatPr": 1,
+        "sheetData": 1,
+        "mergeCells": 1,
+        "pageMargins": 1
+      },
+      "merge_count": 2,
+      "merge_types": {
+        "vertical_only": 2
+      },
+      "predictions": {
+        "default": {
+          "selected_merges": 2,
+          "expected_filled_cells": 2,
+          "remaining_merges": 0,
+          "anchor_types": {
+            "inlineStr": 2
+          },
+          "blocker_counts": {
+            "formula_anchors": 0,
+            "metadata_anchors": 0,
+            "hidden_independent_content_cells": 0
+          }
+        },
+        "all": {
+          "selected_merges": 2,
+          "expected_filled_cells": 2,
+          "remaining_merges": 0,
+          "anchor_types": {
+            "inlineStr": 2
+          },
+          "blocker_counts": {
+            "formula_anchors": 0,
+            "metadata_anchors": 0,
+            "hidden_independent_content_cells": 0
+          }
+        }
+      },
+      "conflict_examples": [],
+      "merge_address_samples": [
+        "B1:B2",
+        "A1:A2"
+      ],
+      "sheet_index": 2
+    }
+  ],
+  "source_sha256_after": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+  "source_unchanged": true,
+  "seconds": 15.597967499983497
+}

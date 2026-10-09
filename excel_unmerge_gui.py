@@ -60,7 +60,7 @@ def describe_error(error):
     elif isinstance(error, FileNotFoundError):
         message = "找不到文件或目录。请确认原文件未被移动、磁盘已连接，再重新选择文件。"
     elif isinstance(error, OSError) and error.errno == errno.ENOSPC:
-        message = "保存结果所需的磁盘空间不足。请释放原文件所在磁盘的空间后重试。"
+        message = "处理所需的磁盘空间不足。请检查系统盘及结果目录所在磁盘的可用空间，再重试。"
     elif isinstance(error, OSError) and error.errno == errno.ENAMETOOLONG:
         message = "文件路径过长。请缩短文件名，或复制到较短的目录路径后重试。"
     elif isinstance(error, MemoryError):
@@ -265,12 +265,12 @@ class Application:
         self.status.set("{}：本轮已处理 0/{} 个文件。".format(label, len(files)))
         self.progress.configure(maximum=len(files), value=0)
         # 将主线程读取的参数副本传给工作线程；线程不得访问 Tk 变量。
-        worker = threading.Thread(target=process_batch,
-                                  args=(self.run_files, self.batch_all_merges,
-                                        self.events, self.stop_event))
         try:
+            worker = threading.Thread(target=process_batch,
+                                      args=(self.run_files, self.batch_all_merges,
+                                            self.events, self.stop_event))
             worker.start()
-        except RuntimeError as error:
+        except (RuntimeError, MemoryError) as error:
             self.append_result("无法启动处理任务：" + describe_error(error), "failure")
             self.events.put(("done", 0, 0, self.run_files))
         self.root.after(100, self.poll_results)

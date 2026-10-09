@@ -3,13 +3,23 @@
 
 import argparse
 import copy
+import heapq
 import posixpath
 import re
+import shutil
 import subprocess
 import sys
+from contextlib import ExitStack
+from io import StringIO
 from pathlib import Path
-from xml.dom import Node, XMLNS_NAMESPACE, minidom
+from tempfile import TemporaryFile
+from xml.dom import Node, XML_NAMESPACE, XMLNS_NAMESPACE, expatbuilder, minidom
 from zipfile import ZipFile
+
+
+# 以解压后的工作表 XML 大小判断，避免高压缩率文件进入完整 DOM。
+# 小表继续走既有路径；超过 8 MiB 时按行落盘，限制单元格树的驻留量。
+STREAM_THRESHOLD = 8 * 1024 * 1024
 
 
 def children(element, name):
@@ -48,6 +58,26 @@ def bounds(ref):
     return first[0], first[1], last[0], last[1]
 
 
+def reject_overlapping_merges(items):
+    """按行扫描活动区域；仅拒绝本次拆分涉及的相交合并。"""
+    active, selected, endings = {}, {}, []
+    for index, (node, box, chosen) in sorted(enumerate(items), key=lambda item: item[1][1][0]):
+        r1, c1, r2, c2 = box
+        while endings and endings[0][0] < r1:
+            _, expired = heapq.heappop(endings)
+            active.pop(expired, None)
+            selected.pop(expired, None)
+        candidates = active.values() if chosen else selected.values()
+        for other, (_, left, _, right), _ in candidates:
+            if c1 <= right and left <= c2:
+                raise ValueError("合并区域 " + other.getAttribute("ref") + " 与 "
+                                 + node.getAttribute("ref") + " 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。")
+        active[index] = (node, box, chosen)
+        if chosen:
+            selected[index] = (node, box, chosen)
+        heapq.heappush(endings, (r2, index))
+
+
 def namespace_bindings(element):
     """返回元素当前作用域中的声明，靠近元素的声明优先。"""
     bindings = {}
@@ -71,13 +101,25 @@ def new_element(doc, name, parent):
     return element
 
 
+def xml_space(element):
+    """xml:space 可从单元格或行继承；未声明时按 default 处理。"""
+    while element is not None:
+        if element.nodeType == Node.ELEMENT_NODE and element.hasAttributeNS(XML_NAMESPACE, "space"):
+            return element.getAttributeNS(XML_NAMESPACE, "space")
+        element = element.parentNode
+    return "default"
+
+
 def clone_payload(child, target):
-    """把源作用域补到复制子树上，避免源格局部前缀在目标格失联/被重绑定。"""
+    """把源前缀和空白处理作用域补到复制子树上。"""
     cloned = child.cloneNode(True)
     destination = namespace_bindings(target)
     for declaration, namespace in namespace_bindings(child).items():
         if not cloned.hasAttribute(declaration) and destination.get(declaration) != namespace:
             cloned.setAttributeNS(XMLNS_NAMESPACE, declaration, namespace)
+    source_space = xml_space(child)
+    if source_space != xml_space(target):
+        cloned.setAttributeNS(XML_NAMESPACE, "xml:space", source_space)
     return cloned
 
 
@@ -113,8 +155,8 @@ def reorder_children(parent, ordered):
         previous.nextSibling = None
 
 
-def serialize_xml(document):
-    """保留字符语义：文本 CR、属性 CR/LF/TAB 必须写成字符引用。"""
+def serialize_xml(document, stream=None, insertions=None):
+    """序列化文档或节点；可把落盘的行插回骨架，不累积整表字符串。"""
     def escape(value, attribute=False):
         value = (value.replace("&", "&amp;").replace("<", "&lt;")
                  .replace(">", "&gt;").replace("\r", "&#13;"))
@@ -123,35 +165,50 @@ def serialize_xml(document):
                      .replace("\t", "&#9;"))
         return value
 
-    declaration = '<?xml version="' + (document.version or "1.0") + '" encoding="utf-8"'
-    if document.standalone is not None:
-        declaration += ' standalone="' + ("yes" if document.standalone else "no") + '"'
-    output = [declaration + "?>"]
+    output = StringIO() if stream is None else None
+    write = output.write if output is not None else lambda text: stream.write(text.encode("utf-8"))
+    insertions = insertions or {}
+    if document.nodeType == Node.DOCUMENT_NODE:
+        declaration = '<?xml version="' + (document.version or "1.0") + '" encoding="utf-8"'
+        if document.standalone is not None:
+            declaration += ' standalone="' + ("yes" if document.standalone else "no") + '"'
+        write(declaration + "?>")
+        nodes = document.childNodes
+    else:
+        nodes = [document]
     # 显式栈避免工作表扩展 XML 的层级增加 Python 递归深度。
-    pending = list(reversed(document.childNodes))
+    pending = list(reversed(nodes))
     while pending:
         node = pending.pop()
-        if isinstance(node, str):
-            output.append(node)
+        if callable(node):
+            node()
+        elif isinstance(node, str):
+            write(node)
         elif node.nodeType == Node.ELEMENT_NODE:
-            output.append("<" + node.tagName)
+            write("<" + node.tagName)
             for attribute in node.attributes.values():
-                output.append(' ' + attribute.name + '="' + escape(attribute.value, True) + '"')
-            if node.childNodes:
-                output.append(">")
+                write(' ' + attribute.name + '="' + escape(attribute.value, True) + '"')
+            before, after = insertions.get(node, (None, None))
+            if node.childNodes or before or after:
+                write(">")
                 pending.append("</" + node.tagName + ">")
+                if after:
+                    pending.append(after)
                 pending.extend(reversed(node.childNodes))
+                if before:
+                    pending.append(before)
             else:
-                output.append("/>")
+                write("/>")
         elif node.nodeType == Node.TEXT_NODE:
-            output.append(escape(node.data))
+            write(escape(node.data))
         elif node.nodeType == Node.CDATA_SECTION_NODE:
             data = node.data.replace("]]>", "]]]]><![CDATA[>")
-            output.append("<![CDATA[" + data.replace("\r", "]]>&#13;<![CDATA[") + "]]>")
+            write("<![CDATA[" + data.replace("\r", "]]>&#13;<![CDATA[") + "]]>")
         else:
             # 注释、处理指令和文档类型不含需重新转义的属性/文本值。
-            output.append(node.toxml())
-    return "".join(output).encode("utf-8")
+            write(node.toxml())
+    if output is not None:
+        return output.getvalue().encode("utf-8")
 
 
 def transform_sheet(raw, all_merges=False):
@@ -163,21 +220,29 @@ def transform_sheet(raw, all_merges=False):
         if not merge_groups:
             return raw, 0, 0
         merges = merge_groups[0]
-        selected = []
+        selected, merge_boxes = [], []
         for merge in children(merges, "mergeCell"):
             box = bounds(merge.getAttribute("ref"))
-            if box[2] > box[0] or (all_merges and box[3] > box[1]):
+            chosen = box[2] > box[0] or (all_merges and box[3] > box[1])
+            merge_boxes.append((merge, box, chosen))
+            if chosen:
                 selected.append((merge, box))
         if not selected:
             return raw, 0, 0
+        reject_overlapping_merges(merge_boxes)
         data = children(root, "sheetData")[0]
         row_nodes = {int(row.getAttribute("r")): row for row in children(data, "row")}
-        cells = {cell.getAttribute("r"): cell for row in row_nodes.values()
-                 for cell in children(row, "c")}
-        cells_by_row = {}
-        for ref, cell in cells.items():
-            row, col = coordinate(ref)
-            cells_by_row.setdefault(row, {})[col] = cell
+        cells, cells_by_row = {}, {}
+        for row_node in row_nodes.values():
+            for cell in children(row_node, "c"):
+                ref = cell.getAttribute("r")
+                row, col = coordinate(ref)
+                # Excel 接受小写和绝对引用；只规范化索引，保留原格的 r 属性。
+                canonical = ref.replace("$", "").upper()
+                if canonical in cells:
+                    raise ValueError("工作表含重复单元格地址 " + canonical + "，请先在 Excel 中核对。")
+                cells[canonical] = cell
+                cells_by_row.setdefault(row, {})[col] = cell
         changed_rows = set()
         filled = 0
         for merge, (r1, c1, r2, c2) in selected:
@@ -275,6 +340,246 @@ def transform_sheet(raw, all_merges=False):
         doc.unlink()
 
 
+class RowSpoolBuilder(expatbuilder.ExpatBuilderNS):
+    """使用与 minidom 相同的解析器，每个完整行落盘后立即释放其 DOM。"""
+    def __init__(self, spool):
+        super().__init__()
+        self.spool = spool
+        self.rows = {}
+        self.extent = None
+        self.row_error = None
+
+    def end_element_handler(self, name):
+        node = self.curNode
+        super().end_element_handler(name)
+        parent = node.parentNode
+        if (node.localName != "row" or parent is None or parent.localName != "sheetData"
+                or parent.parentNode is not self.document.documentElement):
+            return
+        try:
+            if self.row_error is None:
+                self.store_row(node)
+        except ValueError as error:
+            # mergeCells 通常在 sheetData 后；无匹配时与旧路径一样不校验行/格坐标。
+            self.row_error = error
+        finally:
+            parent.removeChild(node)
+            node.unlink()
+
+    def store_row(self, node):
+        number = int(node.getAttribute("r"))
+        if number in self.rows:
+            raise ValueError("工作表含重复行号 " + str(number) + "，请先在 Excel 中核对。")
+        seen = set()
+        for cell in children(node, "c"):
+            row, col = coordinate(cell.getAttribute("r"))
+            if row != number:
+                raise ValueError("单元格 " + cell.getAttribute("r") + " 与所在行编号不一致，请先核对。")
+            if col in seen:
+                raise ValueError("工作表含重复单元格地址 " + address(row, col) + "，请先在 Excel 中核对。")
+            seen.add(col)
+            if self.extent is None:
+                self.extent = (row, col, row, col)
+            else:
+                a, b, c, d = self.extent
+                self.extent = min(a, row), min(b, col), max(c, row), max(d, col)
+        raw = serialize_xml(node)
+        self.rows[number] = (self.spool.tell(), len(raw))
+        self.spool.write(raw)
+
+
+def opening_xml(element):
+    clone = element.cloneNode(False)
+    try:
+        return serialize_xml(clone)[:-2] + b">"
+    finally:
+        clone.unlink()
+
+
+def detached_anchor(anchor):
+    """锚点离开原行后仍携带其有效 namespace 和 xml:space 作用域。"""
+    if anchor is None:
+        return None
+    cloned = anchor.cloneNode(True)
+    for declaration, namespace in namespace_bindings(anchor).items():
+        if not cloned.hasAttribute(declaration):
+            cloned.setAttributeNS(XMLNS_NAMESPACE, declaration, namespace)
+    cloned.setAttributeNS(XML_NAMESPACE, "xml:space", xml_space(anchor))
+    return cloned
+
+
+def transform_sheet_stream(source, output, all_merges=False):
+    """两遍行处理，输出只写入临时流；返回 (拆分区域数, 新填充格数)。"""
+    doc = None
+    plans = []
+    with TemporaryFile(mode="w+b") as original_rows, TemporaryFile(mode="w+b") as result_rows:
+        builder = RowSpoolBuilder(original_rows)
+        try:
+            doc = builder.parseFile(source)
+            root = doc.documentElement
+            groups = children(root, "mergeCells")
+            if not groups:
+                return 0, 0
+            merges = groups[0]
+            merge_boxes = []
+            for merge in children(merges, "mergeCell"):
+                box = bounds(merge.getAttribute("ref"))
+                chosen = box[2] > box[0] or (all_merges and box[3] > box[1])
+                merge_boxes.append((merge, box, chosen))
+                if chosen:
+                    plans.append({"node": merge, "box": box, "anchor": None, "has_value": False})
+            if not plans:
+                return 0, 0
+            reject_overlapping_merges(merge_boxes)
+            if builder.row_error is not None:
+                raise builder.row_error
+            data = children(root, "sheetData")[0]
+            prefix = (b'<?xml version="1.0" encoding="utf-8"?>'
+                      + opening_xml(root) + opening_xml(data))
+            suffix = ("</" + data.tagName + "></" + root.tagName + ">").encode("utf-8")
+            # 行索引只与行数有关，不为每个实体格保留全局 DOM/字典。
+            row_numbers = set(builder.rows)
+            for plan in plans:
+                a, _, c, _ = plan["box"]
+                row_numbers.update(range(a, c + 1))
+            starts = sorted(plans, key=lambda plan: plan["box"][0])
+            next_start, active, filled = 0, [], 0
+            for number in sorted(row_numbers):
+                still_active = []
+                for plan in active:
+                    if plan["box"][2] >= number:
+                        still_active.append(plan)
+                    elif plan["anchor"] is not None:
+                        plan["anchor"].unlink()
+                        plan["anchor"] = None
+                active = still_active
+                while next_start < len(starts) and starts[next_start]["box"][0] == number:
+                    active.append(starts[next_start])
+                    next_start += 1
+                record = builder.rows.get(number)
+                if record is not None:
+                    original_rows.seek(record[0])
+                    raw = original_rows.read(record[1])
+                else:
+                    raw = b""
+                if not active:
+                    result_rows.write(raw)
+                    continue
+                row_doc = minidom.parseString(prefix + raw + suffix)
+                try:
+                    row_data = children(row_doc.documentElement, "sheetData")[0]
+                    rows = children(row_data, "row")
+                    if rows:
+                        row_node = rows[0]
+                    else:
+                        row_node = new_element(row_doc, "row", row_data)
+                        row_node.setAttribute("r", str(number))
+                        row_data.appendChild(row_node)
+                    cells = {coordinate(cell.getAttribute("r"))[1]: cell
+                             for cell in children(row_node, "c")}
+                    # 每个合并锚点只保留一份，先保存上下文，再释放原行。
+                    for plan in active:
+                        r1, c1, _, _ = plan["box"]
+                        if r1 != number:
+                            continue
+                        anchor = cells.get(c1)
+                        ref = plan["node"].getAttribute("ref")
+                        if anchor is not None and children(anchor, "f"):
+                            raise ValueError("合并区域 " + ref + " 含公式，请先在 Excel 中复制并粘贴为值后重试。")
+                        if has_metadata(anchor):
+                            raise ValueError("合并区域 " + ref + " 含单元格图片或扩展元数据，暂不支持拆分填充。"
+                                             "请先在副本中人工核对并转换为普通单元格值后重试。")
+                        plan["anchor"] = detached_anchor(anchor)
+                        plan["has_value"] = payload(anchor)
+                    for plan in active:
+                        r1, c1, _, c2 = plan["box"]
+                        for col, cell in cells.items():
+                            if (c1 <= col <= c2 and (number, col) != (r1, c1)
+                                    and (payload(cell) or has_metadata(cell))):
+                                raise ValueError("合并区域内的 " + cell.getAttribute("r")
+                                                 + " 仍有独立内容或元数据，请先核对后再处理。")
+                    for plan in active:
+                        r1, c1, _, c2 = plan["box"]
+                        anchor = plan["anchor"]
+                        columns = range(c1, c2 + 1) if all_merges else (c1,)
+                        for col in columns:
+                            if (number, col) == (r1, c1):
+                                continue
+                            cell = new_element(row_doc, "c", row_node)
+                            cell.setAttribute("r", address(number, col))
+                            old = cells.get(col)
+                            if old is not None:
+                                row_node.replaceChild(cell, old)
+                            else:
+                                row_node.appendChild(cell)
+                            if anchor is not None:
+                                for attribute in ("s", "t"):
+                                    if anchor.hasAttribute(attribute):
+                                        cell.setAttribute(attribute, anchor.getAttribute(attribute))
+                                for child in anchor.childNodes:
+                                    if child.nodeType == Node.ELEMENT_NODE and child.localName in ("v", "is"):
+                                        cell.appendChild(clone_payload(child, cell))
+                            cells[col] = cell
+                            filled += int(plan["has_value"])
+                    if row_node.hasAttribute("spans"):
+                        row_node.removeAttribute("spans")
+                    other = [node for node in row_node.childNodes
+                             if node.nodeType != Node.ELEMENT_NODE or node.localName != "c"]
+                    reorder_children(row_node, [cells[col] for col in sorted(cells)] + other)
+                    result_rows.write(serialize_xml(row_node))
+                finally:
+                    row_doc.unlink()
+            for plan in plans:
+                merges.removeChild(plan["node"])
+            remaining = children(merges, "mergeCell")
+            horizontal_count = sum(c - a + 1 for a, b, c, d in (plan["box"] for plan in plans)
+                                   if not all_merges and d > b)
+            if remaining or horizontal_count:
+                merges.setAttribute("count", str(len(remaining) + horizontal_count))
+            else:
+                root.removeChild(merges)
+            dimensions = children(root, "dimension")
+            if dimensions:
+                r1, c1, r2, c2 = bounds(dimensions[0].getAttribute("ref"))
+                boxes = [plan["box"] for plan in plans] + [bounds(node.getAttribute("ref")) for node in remaining]
+                if builder.extent is not None:
+                    boxes.append(builder.extent)
+                for a, b, c, d in boxes:
+                    r1, c1, r2, c2 = min(r1, a), min(c1, b), max(r2, c), max(c2, d)
+                dimensions[0].setAttribute("ref", address(r1, c1) + ":" + address(r2, c2))
+
+            def copy_rows():
+                result_rows.seek(0)
+                shutil.copyfileobj(result_rows, output, 1024 * 1024)
+
+            def write_horizontal_merges():
+                # 延迟逐项生成，避免宽矩形拆分后的 mergeCells 重新形成大 DOM。
+                node = new_element(doc, "mergeCell", merges)
+                try:
+                    for plan in plans:
+                        a, b, c, d = plan["box"]
+                        if not all_merges and d > b:
+                            for row in range(a, c + 1):
+                                node.setAttribute("ref", address(row, b) + ":" + address(row, d))
+                                output.write(serialize_xml(node))
+                finally:
+                    node.unlink()
+
+            insertions = {data: (copy_rows, None)}
+            if horizontal_count:
+                insertions[merges] = (None, write_horizontal_merges)
+            serialize_xml(doc, output, insertions)
+            return len(plans), filled
+        finally:
+            for plan in plans:
+                if plan["anchor"] is not None:
+                    plan["anchor"].unlink()
+            if doc is not None:
+                doc.unlink()
+            builder.document.unlink()
+            builder._parser = None
+
+
 def worksheets(archive):
     """通过关系文件读取真正的工作表路径，包括中文名称和隐藏表。"""
     workbook = minidom.parseString(archive.read("xl/workbook.xml"))
@@ -308,7 +613,7 @@ def process_file(source, all_merges=False, sheets=None):
         raise ValueError("仅支持 .xlsx / .xlsm；旧版 .xls 请先在 Excel 中另存为 .xlsx。")
     if not source.is_file():
         raise ValueError("找不到文件：" + str(source))
-    with ZipFile(source) as original:
+    with ZipFile(source) as original, ExitStack() as temporary:
         if any(n.startswith("_xmlsignatures/") for n in original.namelist()):
             raise ValueError("文件含文档数字签名，请使用未签名副本处理。")
         available = worksheets(original)
@@ -321,12 +626,20 @@ def process_file(source, all_merges=False, sheets=None):
             if requested and name not in requested:
                 continue
             try:
-                raw, count, filled = transform_sheet(original.read(path), all_merges)
+                transformed = temporary.enter_context(TemporaryFile(mode="w+b"))
+                if original.getinfo(path).file_size >= STREAM_THRESHOLD:
+                    with original.open(path) as incoming:
+                        count, filled = transform_sheet_stream(incoming, transformed, all_merges)
+                else:
+                    raw, count, filled = transform_sheet(original.read(path), all_merges)
+                    if count:
+                        transformed.write(raw)
+                    del raw
             except ValueError as error:
                 raise ValueError("工作表“" + name + "”：" + str(error)) from error
             stats.append((name, count, filled))
             if count:
-                updates[path] = raw
+                updates[path] = transformed
         if not updates:
             return None, stats
         # 独占创建，重复运行也不会覆盖原文件或上一次结果。
@@ -339,14 +652,26 @@ def process_file(source, all_merges=False, sheets=None):
                 break
             except FileExistsError:
                 serial += 1
+            except PermissionError:
+                # Windows 对同名目录报告 PermissionError；实际写入权限错误仍需抛出。
+                if not output.is_dir():
+                    raise
+                serial += 1
         try:
             with stream, ZipFile(stream, "w") as result:
                 result.comment = original.comment
                 for info in original.infolist():
+                    outgoing = copy.copy(info)
                     contents = updates.get(info.filename)
-                    if contents is None:
-                        contents = original.read(info)
-                    result.writestr(copy.copy(info), contents)
+                    if contents is not None:
+                        outgoing.file_size = contents.seek(0, 2)
+                        contents.seek(0)
+                        with result.open(outgoing, "w") as destination:
+                            shutil.copyfileobj(contents, destination, 1024 * 1024)
+                    else:
+                        # 共享字符串、图片等未修改部件也不整体读入内存。
+                        with original.open(info) as incoming, result.open(outgoing, "w") as destination:
+                            shutil.copyfileobj(incoming, destination, 1024 * 1024)
         except BaseException:
             output.unlink(missing_ok=True)
             raise

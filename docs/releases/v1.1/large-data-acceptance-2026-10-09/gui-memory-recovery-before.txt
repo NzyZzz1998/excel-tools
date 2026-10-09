@@ -1,0 +1,41 @@
+test_thread_construction_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_construction_memory_failure_can_resume_and_close) ... FAIL
+test_thread_start_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_start_memory_failure_can_resume_and_close) ... FAIL
+
+======================================================================
+FAIL: test_thread_construction_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_construction_memory_failure_can_resume_and_close)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_windows_gui_helpers.py", line 235, in test_thread_construction_memory_failure_can_resume_and_close
+    self.check_thread_memory_failure_recovery("excel_unmerge_gui.threading.Thread", "构造")
+  File "E:\codex\excel-tools\tests\test_windows_gui_helpers.py", line 204, in check_thread_memory_failure_recovery
+    self.assertEqual(callback_errors, [])
+AssertionError: Lists differ: ['MemoryError'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'MemoryError'
+
+- ['MemoryError']
++ []
+
+======================================================================
+FAIL: test_thread_start_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_start_memory_failure_can_resume_and_close)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_windows_gui_helpers.py", line 238, in test_thread_start_memory_failure_can_resume_and_close
+    self.check_thread_memory_failure_recovery("excel_unmerge_gui.threading.Thread.start", "启动")
+  File "E:\codex\excel-tools\tests\test_windows_gui_helpers.py", line 204, in check_thread_memory_failure_recovery
+    self.assertEqual(callback_errors, [])
+AssertionError: Lists differ: ['MemoryError'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'MemoryError'
+
+- ['MemoryError']
++ []
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.307s
+
+FAILED (failures=2)

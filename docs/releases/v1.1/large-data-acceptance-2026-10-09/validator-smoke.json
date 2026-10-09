@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "scenario": "default",
+      "expected_pass": true,
+      "actual_pass": true,
+      "test_passed": true,
+      "issues": []
+    },
+    {
+      "scenario": "all",
+      "expected_pass": true,
+      "actual_pass": true,
+      "test_passed": true,
+      "issues": []
+    },
+    {
+      "scenario": "wrong_value",
+      "expected_pass": false,
+      "actual_pass": false,
+      "test_passed": true,
+      "issues": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "cell value/type/style/XML semantic mismatch",
+          "address": "C3"
+        }
+      ]
+    },
+    {
+      "scenario": "wrong_type",
+      "expected_pass": false,
+      "actual_pass": false,
+      "test_passed": true,
+      "issues": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "cell value/type/style/XML semantic mismatch",
+          "address": "D1"
+        }
+      ]
+    },
+    {
+      "scenario": "wrong_target_style",
+      "expected_pass": false,
+      "actual_pass": false,
+      "test_passed": true,
+      "issues": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "cell value/type/style/XML semantic mismatch",
+          "address": "A2"
+        }
+      ]
+    },
+    {
+      "scenario": "missing_cell",
+      "expected_pass": false,
+      "actual_pass": false,
+      "test_passed": true,
+      "issues": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "missing output cell",
+          "address": "A2"
+        }
+      ]
+    },
+    {
+      "scenario": "wrong_dimension",
+      "expected_pass": false,
+      "actual_pass": false,
+      "test_passed": true,
+      "issues": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "dimension excludes output cells",
+          "address": null
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "dimension excludes retained merge or shrinks original dimension",
+          "address": "E3:F3"
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "dimension excludes retained merge or shrinks original dimension",
+          "address": "A1:B1"
+        },
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "dimension excludes retained merge or shrinks original dimension",
+          "address": "A2:B2"
+        }
+      ]
+    },
+    {
+      "scenario": "changed_untouched_part",
+      "expected_pass": false,
+      "actual_pass": false,
+      "test_passed": true,
+      "issues": [
+        {
+          "part": "xl/styles.xml",
+          "reason": "untouched part bytes differ",
+          "address": null
+        }
+      ]
+    },
+    {
+      "scenario": "absent_dimension_preserved",
+      "expected_pass": true,
+      "actual_pass": true,
+      "test_passed": true,
+      "issues": []
+    },
+    {
+      "scenario": "hidden_source_content_must_not_be_overwritten",
+      "expected_pass": false,
+      "actual_pass": false,
+      "test_passed": true,
+      "issues": [
+        {
+          "part": "xl/worksheets/sheet1.xml",
+          "reason": "source merge hides independent content; processing should reject",
+          "address": "B1"
+        }
+      ]
+    }
+  ]
+}

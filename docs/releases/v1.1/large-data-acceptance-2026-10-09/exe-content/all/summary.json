@@ -1,0 +1,86 @@
+{
+  "recorded_utc": "2026-10-09T02:21:39.212202+00:00",
+  "mode": "all",
+  "package_sha256": "07b801517060896c01ea9be2aaf1420784d2e87fe3a5f2ae4ea1b31f5b0488f6",
+  "executable_sha256": "239b1456771ae417f044dfd1ac2642f7ac36de7bc3781c6d2ac3ddc75d2d7ea4",
+  "build_manifest_sha256": "3f870546b76b70fee48499fa24d260f5a083b2ad814b5f5ff7e05a6f0997dbc0",
+  "validator_sha256": "fc7d213a8b47f03a41c5b627ae3ee00130aeecab5b1f18358a6659534671c0c0",
+  "source_scope": "Six authorized original inputs; completed GUI outputs only.",
+  "results": [
+    {
+      "file": "供应商缺货Top20 (1).xlsx",
+      "passed": true,
+      "report": "exe-content\\all\\01.json",
+      "report_sha256": "68379365a532f6c4d0086452fdf3fbbec09e0986660560dbdabebd640d772ffe",
+      "output_sha256": "5856af27e4a038ac9217bd8f2311aa230d9e492836dfb2054840864bb98ea5c0",
+      "source_sha256": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "input_copy_matches_original": true,
+      "cells_checked": 99,
+      "issues": 0,
+      "seconds": 0.0067605999938678
+    },
+    {
+      "file": "库存满足率 (1).xlsx",
+      "passed": true,
+      "report": "exe-content\\all\\02.json",
+      "report_sha256": "e3cc706dbb4a15ffac29cd2c8f42a459fbe9e83d19bd7941496a829dfe0a5fe1",
+      "output_sha256": "78836c8898f9ebd6246d3a3b67c77e12afe2b7202c45bc2431a52895f80b101b",
+      "source_sha256": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "input_copy_matches_original": true,
+      "cells_checked": 443,
+      "issues": 0,
+      "seconds": 0.010213400004431605
+    },
+    {
+      "file": "期间缺货Top20.xlsx",
+      "passed": true,
+      "report": "exe-content\\all\\03.json",
+      "report_sha256": "6c2f66eb141d923d1274552f71cb89b3ec9d14b7528fe8689112df711c621a90",
+      "output_sha256": "b195a55f035a8707fb8cc37b8c1fbb93260735d14cfe54d7e7f0f4b819c64cc7",
+      "source_sha256": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "input_copy_matches_original": true,
+      "cells_checked": 503,
+      "issues": 0,
+      "seconds": 0.01188700000056997
+    },
+    {
+      "file": "每日缺货Top50 (1).xlsx",
+      "passed": true,
+      "report": "exe-content\\all\\04.json",
+      "report_sha256": "5eada609b1c1efef61aa71902020e8c345e47aefde61c57eb73d1b60875b7c13",
+      "output_sha256": "45599ec648b98aaba4bc3125b9ccd6acac68a2584a5d2a448ae30c46e8d7674f",
+      "source_sha256": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "input_copy_matches_original": true,
+      "cells_checked": 10860,
+      "issues": 0,
+      "seconds": 0.1335657000017818
+    },
+    {
+      "file": "缺货数据统计.xlsx",
+      "passed": true,
+      "report": "exe-content\\all\\05.json",
+      "report_sha256": "5425cd68db323a8e310d68ce2c077c72ec51b71451ebcf592f9e60eb86c51122",
+      "output_sha256": "cdddc39dd340421c242fa87767ec0217c244ac5311bccb1136616b170fd05f1d",
+      "source_sha256": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "input_copy_matches_original": true,
+      "cells_checked": 474,
+      "issues": 0,
+      "seconds": 0.01025119997211732
+    },
+    {
+      "file": "日明细表 (2).xlsx",
+      "passed": true,
+      "report": "exe-content\\all\\06.json",
+      "report_sha256": "2b0366c4a058164c82fbe4dfed953227d9e8d68c087f1b3d867b2043f4f6f2a2",
+      "output_sha256": "b2066cb5fea042e8e7777498eec44dd8f1ac286a1fa07f11a66f7cfd75486314",
+      "source_sha256": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+      "input_copy_matches_original": true,
+      "cells_checked": 2667930,
+      "issues": 0,
+      "seconds": 31.012567600002512
+    }
+  ],
+  "passed": true,
+  "file_count": 6,
+  "total_cells_checked": 2680309
+}

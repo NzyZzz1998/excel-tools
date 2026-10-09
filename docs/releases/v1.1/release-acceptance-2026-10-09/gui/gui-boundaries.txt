@@ -1,0 +1,13 @@
+test_choose_cancel_and_new_selection_follow_existing_task_contract (__main__.GuiBoundaryProbes.test_choose_cancel_and_new_selection_follow_existing_task_contract) ... ok
+test_each_error_keeps_loop_live_and_all_failed_files_retryable (__main__.GuiBoundaryProbes.test_each_error_keeps_loop_live_and_all_failed_files_retryable) ... ok
+test_interrupted_retry_and_resume_preserve_disjoint_recovery_sets (__main__.GuiBoundaryProbes.test_interrupted_retry_and_resume_preserve_disjoint_recovery_sets) ... ok
+test_late_stop_after_worker_done_does_not_invent_pending_files (__main__.GuiBoundaryProbes.test_late_stop_after_worker_done_does_not_invent_pending_files) ... ok
+test_moved_output_directory_reports_error_without_opening_external_window (__main__.GuiBoundaryProbes.test_moved_output_directory_reports_error_without_opening_external_window) ... ok
+test_repeated_close_and_actions_during_active_file_do_not_reenter (__main__.GuiBoundaryProbes.test_repeated_close_and_actions_during_active_file_do_not_reenter) ... ok
+test_thread_start_failure_keeps_pending_files_then_recovers (__main__.GuiBoundaryProbes.test_thread_start_failure_keeps_pending_files_then_recovers) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.423s
+
+OK
+GUI_BOUNDARY_REPORT={"source_sha256": "0d59d53e067da326984702ece5939347448a829012b564363eb9469c42b25f87", "tests_run": 7, "tests_passed": true, "source_unchanged": true, "long_filename_layout": {"synthetic_workbook_executed": true, "window": "680x540", "filename_characters": 250, "running_status_height_px": 106, "result_area_visible_while_long_status": false, "stop_control_visible_while_long_status": true, "result_area_visible_after_summary": true, "file_processed_successfully": true, "interpretation": "Nonblocking layout limitation at near-maximum filename length; stop controls remain available and completed results reappear."}}

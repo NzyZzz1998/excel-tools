@@ -1,0 +1,546 @@
+{
+  "synthetic_only": true,
+  "baseline_revision": "96cfbfe",
+  "baseline_engine_sha256": "f58179a9b30259859866ced6feec3aca8c894549f70f2675e0b0beaa6ce9c2c6",
+  "current_engine_sha256": "6580f5407dd33965e602571801acb43b73b4aeb5fc51bb9eb384662f45e31aaf",
+  "manifest_path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\manifest.json",
+  "excel_version": "16.0",
+  "excel_build": 17932.0,
+  "owned_pid": 27800,
+  "files_unchanged": true,
+  "files_checked": 27,
+  "all_fixed_cases_passed": true,
+  "results": [
+    {
+      "name": "row_style",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "cells": [
+            {
+              "address": "A1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": true,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "column_style",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "B1",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "cells": [
+            {
+              "address": "A1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "B1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "B1",
+              "value": 45292.0,
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": true,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "xmlspace_cell",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": false,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "xmlspace_row",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": false,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "xmlspace_target",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "padded",
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": false,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "xmlspace_root_target_default",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "  padded  ",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": false,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "xmlspace_text_default",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "padded",
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "padded",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": true,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "lowercase_cell",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "sentinel",
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "error": "不能取得类 Workbooks 的 Open 属性"
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "sentinel",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "sentinel",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": false,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    },
+    {
+      "name": "absolute_cell",
+      "files": [
+        {
+          "kind": "source",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "sentinel",
+              "format": "General",
+              "merge": true
+            },
+            {
+              "address": "A2",
+              "value": null,
+              "format": "General",
+              "merge": true
+            }
+          ],
+          "readOnly": true
+        },
+        {
+          "kind": "before",
+          "error": "不能取得类 Workbooks 的 Open 属性"
+        },
+        {
+          "kind": "after",
+          "cells": [
+            {
+              "address": "A1",
+              "value": "sentinel",
+              "format": "General",
+              "merge": false
+            },
+            {
+              "address": "A2",
+              "value": "sentinel",
+              "format": "General",
+              "merge": false
+            }
+          ],
+          "readOnly": true
+        }
+      ],
+      "before_target_matches_source_anchor": false,
+      "after_target_matches_source_anchor": true,
+      "after_anchor_unchanged": true
+    }
+  ],
+  "limitations": "Read-only normal-load Value2 comparison; no assertion about repair dialogs or visual rendering."
+}

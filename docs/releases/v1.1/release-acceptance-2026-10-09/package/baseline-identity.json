@@ -1,0 +1,14 @@
+{
+  "tag": "v1.0.0",
+  "tag_commit": "470a4e1b3c5346ed8bdfd3d770b4d235eb45f173",
+  "engine_git_blob_oid": "9d903d64caec59922fc1febf339ec0ab71dfd969",
+  "tag_engine_sha256": "348796863e6829bbf529f2b4629d7cca64fbab777af1a043f0af1b0fb6a40f21",
+  "baseline_path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1\\evidence\\baseline_engine.py",
+  "baseline_sha256": "252bbf1edfe9c24d78d4d3531b6d0be31c20f395bd79a6bdf171eb47a0690528",
+  "bytes_exactly_equal": false,
+  "lf_normalized_equal": true,
+  "tag_bytes": 13364,
+  "baseline_bytes": 13668,
+  "tag_crlf_count": 0,
+  "baseline_crlf_count": 304
+}

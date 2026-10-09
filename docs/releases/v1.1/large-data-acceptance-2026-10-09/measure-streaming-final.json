@@ -1,0 +1,35 @@
+{
+  "captured_utc": "2026-10-09T02:17:02.556771+00:00",
+  "revision": "streaming-final",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "source_sha256": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+  "source_unchanged": true,
+  "engine_dependencies": {},
+  "source_bytes": 9632564,
+  "memory_cap_bytes": 3221225472,
+  "timeout_seconds": 600,
+  "process_seconds": 63.56479639999452,
+  "peak_rss_mib": 71.92,
+  "peak_private_mib": 64.2,
+  "exit_code": 0,
+  "stop_reason": null,
+  "seconds": 63.45912169999792,
+  "output": "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\streaming-final\\日明细表 (2)_拆分填充.xlsx",
+  "sheet_counts": [
+    {
+      "index": 1,
+      "regions": 247,
+      "filled": 761997
+    },
+    {
+      "index": 2,
+      "regions": 2,
+      "filled": 2
+    }
+  ],
+  "output_sha256": "b787f7ae440cd2d302bbbfad549c675f14052ac207aaed83a3bc3d960d8c7c71",
+  "output_bytes": 12441055,
+  "completed": true,
+  "content_validation": "pending independent check"
+}

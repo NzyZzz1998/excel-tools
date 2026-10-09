@@ -1,0 +1,63 @@
+{
+  "captured_utc": "2026-10-09T01:42:14.994074+00:00",
+  "exe": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\app\\ExcelTools.exe",
+  "exe_sha256": "066ca4a1c7fe7fd2ac80a06ddc3969dbd178f5181983d8767d2c219078485d5c",
+  "app_version": "1.1",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "runs": [
+    {
+      "run": 1,
+      "launcher_pid": 3056,
+      "process_creation_seconds": 0.03508570001577027,
+      "native_child_controls_before_offscreen_map": 20,
+      "gui_pid": 38264,
+      "window_first_seen_seconds": 1.0233297000231687,
+      "window_and_controls_responsive_seconds": 1.0624230000248645,
+      "wm_null_response_seconds": 5.9699988923966885e-05,
+      "native_child_control_count": 26,
+      "responsive": true,
+      "launcher_exit_code": 0,
+      "forced_cleanup_pids": [],
+      "owned_processes_still_active": []
+    },
+    {
+      "run": 2,
+      "launcher_pid": 42716,
+      "process_creation_seconds": 0.0356686000013724,
+      "native_child_controls_before_offscreen_map": 20,
+      "gui_pid": 5540,
+      "window_first_seen_seconds": 1.073829000000842,
+      "window_and_controls_responsive_seconds": 1.1043460999790113,
+      "wm_null_response_seconds": 0.00044109998270869255,
+      "native_child_control_count": 26,
+      "responsive": true,
+      "launcher_exit_code": 0,
+      "forced_cleanup_pids": [],
+      "owned_processes_still_active": []
+    },
+    {
+      "run": 3,
+      "launcher_pid": 34312,
+      "process_creation_seconds": 0.03488120000110939,
+      "native_child_controls_before_offscreen_map": 20,
+      "gui_pid": 16324,
+      "window_first_seen_seconds": 0.98253070001374,
+      "window_and_controls_responsive_seconds": 1.0173972000193316,
+      "wm_null_response_seconds": 0.0004397000011522323,
+      "native_child_control_count": 26,
+      "responsive": true,
+      "launcher_exit_code": 0,
+      "forced_cleanup_pids": [],
+      "owned_processes_still_active": []
+    }
+  ],
+  "median_responsive_seconds": 1.0624230000248645,
+  "min_responsive_seconds": 1.0173972000193316,
+  "max_responsive_seconds": 1.1043460999790113,
+  "measurement": "perf_counter before Popen through owned GUI title, at least 26 native child controls, and successful WM_NULL SendMessageTimeout response; 10ms polling",
+  "isolation": "STARTUPINFO SW_HIDE, CREATE_NO_WINDOW, exact-image verified launcher descendants only; own window maps fully transparent at (-20000,-20000) with NOACTIVATE to let Tk create controls; WM_NULL/WM_CLOSE only; no keyboard/mouse input",
+  "instrumentation_note": "A premeasurement probe that repeatedly hid the root timed out on the 26-control criterion; Tk needed an offscreen nonactivating map. This was not counted as an application startup duration.",
+  "cache_caveat": "Sequential first and subsequent launches only. No reboot or OS cache clearing; prior acceptance and the prelaunch SHA read can warm file caches. No true cold-start comparison or service guarantee.",
+  "v1_0_comparison": "No directly available v1.0 executable/package was found in the project EXE/dist inventory; no download or old-version speed claim.",
+  "scope": "Startup only. No workbook processing, Excel opening, user windows, or application source edits."
+}

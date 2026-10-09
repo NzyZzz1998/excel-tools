@@ -1,0 +1,101 @@
+{
+  "recorded_utc": "2026-10-09T02:23:53.461258+00:00",
+  "source_name": "detail-2-sheets.xlsx",
+  "output_name": "detail-2-sheets_拆分填充.xlsx",
+  "source_sha256": "c55d95aa6d7f46b5521040b740207e675357c4eef72b9e91c911454b8344bc81",
+  "output_sha256": "2f0ecb626f951677093a81037eaf74e56452e600c920db4597dcc7ed8e7413c4",
+  "mode": "default",
+  "script_sha256": "fc7d213a8b47f03a41c5b627ae3ee00130aeecab5b1f18358a6659534671c0c0",
+  "inventory_helpers_sha256": "e0ea58da55c6abec41f6d0406c73f087d93b4c2ece492fecd07fc4ced7f2b354",
+  "method": "Independent ET per-row expected content from original merge anchors, no processing-engine import.",
+  "privacy": "Report omits all cell text/formulas/values; only counts, addresses, structure and hashes.",
+  "sheets": [
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "selected_merges": 247,
+      "remaining_merges": 1,
+      "source_cells_checked": 1905923,
+      "expected_cells": 2667920,
+      "output_cells_checked": 2667920,
+      "rows_checked": 190566,
+      "target_cells": 761997,
+      "expected_filled_cells": 761997,
+      "output_dimension": "A1:N190566",
+      "anchors_retained": 247
+    },
+    {
+      "part": "xl/worksheets/sheet2.xml",
+      "selected_merges": 2,
+      "remaining_merges": 0,
+      "source_cells_checked": 4,
+      "expected_cells": 6,
+      "output_cells_checked": 6,
+      "rows_checked": 2,
+      "target_cells": 2,
+      "expected_filled_cells": 2,
+      "output_dimension": "A1:C2",
+      "anchors_retained": 2
+    },
+    {
+      "part": "xl/worksheets/load3.xml",
+      "selected_merges": 247,
+      "remaining_merges": 1,
+      "source_cells_checked": 1905923,
+      "expected_cells": 2667920,
+      "output_cells_checked": 2667920,
+      "rows_checked": 190566,
+      "target_cells": 761997,
+      "expected_filled_cells": 761997,
+      "output_dimension": "A1:N190566",
+      "anchors_retained": 247
+    }
+  ],
+  "untouched_parts": [
+    {
+      "part": "[Content_Types].xml",
+      "sha256": "54a5a5808cab4f57a98c8f9747b91253420f913953afdde9d9ee1825aef4fadb",
+      "unchanged": true
+    },
+    {
+      "part": "_rels/.rels",
+      "sha256": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3",
+      "unchanged": true
+    },
+    {
+      "part": "docProps/app.xml",
+      "sha256": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b",
+      "unchanged": true
+    },
+    {
+      "part": "docProps/core.xml",
+      "sha256": "9e6e575bd39e30f6e1948447d58003e78eae9a338e5e6cad43fc9b3957071cb1",
+      "unchanged": true
+    },
+    {
+      "part": "xl/sharedStrings.xml",
+      "sha256": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206",
+      "unchanged": true
+    },
+    {
+      "part": "xl/styles.xml",
+      "sha256": "99238270d8218543b171d5060139eb6fa9642b25129cb6a845f9989395d346ba",
+      "unchanged": true
+    },
+    {
+      "part": "xl/workbook.xml",
+      "sha256": "86d22f98ba099b72f3a055ce44b0c7bc2eed88e7916d99684c0f10173fcc4b28",
+      "unchanged": true
+    },
+    {
+      "part": "xl/_rels/workbook.xml.rels",
+      "sha256": "2386d0508d641b36dade0b9b2d25cb8b436e096bc5f203f415efdf0c61eccbe7",
+      "unchanged": true
+    }
+  ],
+  "source_unchanged_during_validation": true,
+  "output_unchanged_during_validation": true,
+  "issues": [],
+  "issue_count": 0,
+  "passed": true,
+  "seconds": 59.954364600009285
+}

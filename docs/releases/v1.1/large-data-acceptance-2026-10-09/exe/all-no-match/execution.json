@@ -1,0 +1,568 @@
+{
+  "captured_utc": "2026-10-09T02:22:36.051679+00:00",
+  "mode": "all-no-match",
+  "zip_sha256": "07B801517060896C01EA9BE2AAF1420784D2E87FE3A5F2AE4EA1B31F5B0488F6",
+  "exe_sha256": "239B1456771AE417F044DFD1AC2642F7AC36DE7BC3781C6D2AC3DDC75D2D7EA4",
+  "selected_files": [
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\供应商缺货Top20 (1)_拆分填充.xlsx",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\库存满足率 (1)_拆分填充.xlsx",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\日明细表 (2)_拆分填充.xlsx",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\期间缺货Top20_拆分填充.xlsx",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\每日缺货Top50 (1)_拆分填充.xlsx",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\缺货数据统计_拆分填充.xlsx"
+  ],
+  "timeout_seconds": 900.0,
+  "before_files": {
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\供应商缺货Top20 (1).xlsx": "FFF09AEFF695C865EBEC8723F3F482CD96626F514E33B198432453AAEAB2AA63",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\供应商缺货Top20 (1)_拆分填充.xlsx": "5856AF27E4A038AC9217BD8F2311AA230D9E492836DFB2054840864BB98EA5C0",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\库存满足率 (1).xlsx": "489AFD7A65DC8FCE54B186AAA28A5882F1DF90A24E0AD059C686C78440F3C498",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\库存满足率 (1)_拆分填充.xlsx": "78836C8898F9EBD6246D3A3B67C77E12AFE2B7202C45BC2431A52895F80B101B",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\日明细表 (2).xlsx": "CAF18C566942D9A3348B71AFA660F3B2A0576A16039F5602784A016A55A0CEF0",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\日明细表 (2)_拆分填充.xlsx": "B2066CB5FEA042E8E7777498EEC44DD8F1AC286A1FA07F11A66F7CFD75486314",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\期间缺货Top20.xlsx": "48BEBEAF7C3E3BB77B9CE6405B652C67883E89BE7C697066357AFD2F4C2F2579",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\期间缺货Top20_拆分填充.xlsx": "B195A55F035A8707FB8CC37B8C1FBB93260735D14CFE54D7E7F0F4B819C64CC7",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\每日缺货Top50 (1).xlsx": "C8A8326ACED43CA62952583C39666A173F060592C735292FE98383B0D467442B",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\每日缺货Top50 (1)_拆分填充.xlsx": "45599EC648B98AABA4BC3125B9CCD6ACAC68A2584A5D2A448AE30C46E8D7674F",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\缺货数据统计.xlsx": "097D2B7BFEAA6E8C03A5E041A843B19377CFF7A0AB6844E9B769A591350AFEC1",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\缺货数据统计_拆分填充.xlsx": "CDDDC39DD340421C242FA87767EC0217C244AC5311BCCB1136616B170FD05F1D"
+  },
+  "assertions_passed": true,
+  "ui_conclusion": "Await fresh screenshot inspection; not inferred from file counts",
+  "startup": {
+    "launcher_pid": 10200,
+    "windows": [
+      {
+        "hwnd": 9833184,
+        "pid": 35308,
+        "title": "Excel 数据处理工具 v1.1",
+        "klass": "TkTopLevel",
+        "rect": [
+          -20000,
+          -20000,
+          -19144,
+          -19301
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 24119474,
+        "pid": 35308,
+        "title": "TtkMonitorWindow",
+        "klass": "TtkMonitorClass",
+        "rect": [
+          312,
+          312,
+          2232,
+          1335
+        ],
+        "visible": false,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 5180336,
+        "pid": 10200,
+        "title": "PyInstaller Onefile Hidden Window",
+        "klass": "PyInstallerOnefileHiddenWindow",
+        "rect": [
+          286,
+          286,
+          2206,
+          1309
+        ],
+        "visible": false,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 11996168,
+        "pid": 35308,
+        "title": "MSCTFIME UI",
+        "klass": "MSCTFIME UI",
+        "rect": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "enabled": false,
+        "control_id": 0
+      },
+      {
+        "hwnd": 4459210,
+        "pid": 35308,
+        "title": "Default IME",
+        "klass": "IME",
+        "rect": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "enabled": false,
+        "control_id": 0
+      },
+      {
+        "hwnd": 1510974,
+        "pid": 10200,
+        "title": "Default IME",
+        "klass": "IME",
+        "rect": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "enabled": false,
+        "control_id": 0
+      }
+    ],
+    "main_children": [
+      {
+        "hwnd": 4918144,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19992,
+          -19969,
+          -19152,
+          -19309
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 11012666,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19992,
+          -19969,
+          -19152,
+          -19309
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 10750824,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19541,
+          -19170,
+          -19327
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 265800,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19964,
+          -19514,
+          -19180,
+          -19337
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 2821328,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19964,
+          -19514,
+          -19197,
+          -19337
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 16124566,
+        "pid": 35308,
+        "title": "",
+        "klass": "ScrollBar",
+        "rect": [
+          -19197,
+          -19514,
+          -19180,
+          -19337
+        ],
+        "visible": true,
+        "enabled": false,
+        "control_id": 0
+      },
+      {
+        "hwnd": 7212118,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19574,
+          -19170,
+          -19553
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 12323492,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19604,
+          -19170,
+          -19582
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 658712,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19639,
+          -19170,
+          -19612
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 24054276,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19288,
+          -19639,
+          -19170,
+          -19612
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 16386218,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19879,
+          -19639,
+          -19792,
+          -19612
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 16975674,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19639,
+          -19887,
+          -19612
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 265812,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19676,
+          -19170,
+          -19649
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 3214860,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19257,
+          -19676,
+          -19170,
+          -19649
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 2821326,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19676,
+          -19887,
+          -19649
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 331362,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19880,
+          -19170,
+          -19690
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 20775218,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19962,
+          -19723,
+          -19658,
+          -19702
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 17763496,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19962,
+          -19752,
+          -19723,
+          -19729
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 265806,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19962,
+          -19816,
+          -19182,
+          -19760
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 16517820,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19962,
+          -19816,
+          -19199,
+          -19760
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 17041178,
+        "pid": 35308,
+        "title": "",
+        "klass": "ScrollBar",
+        "rect": [
+          -19199,
+          -19816,
+          -19182,
+          -19760
+        ],
+        "visible": true,
+        "enabled": false,
+        "control_id": 0
+      },
+      {
+        "hwnd": 7735480,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19962,
+          -19851,
+          -19182,
+          -19824
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 4853180,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19795,
+          -19848,
+          -19697,
+          -19827
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 13043528,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19962,
+          -19851,
+          -19807,
+          -19824
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 396892,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19913,
+          -19766,
+          -19892
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      },
+      {
+        "hwnd": 3280398,
+        "pid": 35308,
+        "title": "",
+        "klass": "TkChild",
+        "rect": [
+          -19974,
+          -19951,
+          -19760,
+          -19919
+        ],
+        "visible": true,
+        "enabled": true,
+        "control_id": 0
+      }
+    ],
+    "capture": {
+      "path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1\\large-data-acceptance-2026-10-09\\exe\\all-no-match\\exe-initial.png",
+      "captured": true,
+      "rows": 699,
+      "width": 856,
+      "height": 699
+    }
+  },
+  "actual_title": "Excel 数据处理工具 v1.1",
+  "actual_exe_pid": 35308,
+  "selection": {
+    "dialog_hwnd": 6949914,
+    "dialog_pid": 35308,
+    "filename_text_verified": true
+  },
+  "selected_capture": {
+    "path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1\\large-data-acceptance-2026-10-09\\exe\\all-no-match\\selected.png",
+    "captured": true,
+    "rows": 699,
+    "width": 856,
+    "height": 699
+  },
+  "ui_idle_confirmed_by_cancelled_file_dialog": true,
+  "observed_batch_seconds_including_idle_probe": 34.594,
+  "capture": {
+    "path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1\\large-data-acceptance-2026-10-09\\exe\\all-no-match\\result.png",
+    "captured": true,
+    "rows": 699,
+    "width": 856,
+    "height": 699
+  },
+  "after_files": {
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\供应商缺货Top20 (1).xlsx": "FFF09AEFF695C865EBEC8723F3F482CD96626F514E33B198432453AAEAB2AA63",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\供应商缺货Top20 (1)_拆分填充.xlsx": "5856AF27E4A038AC9217BD8F2311AA230D9E492836DFB2054840864BB98EA5C0",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\库存满足率 (1).xlsx": "489AFD7A65DC8FCE54B186AAA28A5882F1DF90A24E0AD059C686C78440F3C498",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\库存满足率 (1)_拆分填充.xlsx": "78836C8898F9EBD6246D3A3B67C77E12AFE2B7202C45BC2431A52895F80B101B",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\日明细表 (2).xlsx": "CAF18C566942D9A3348B71AFA660F3B2A0576A16039F5602784A016A55A0CEF0",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\日明细表 (2)_拆分填充.xlsx": "B2066CB5FEA042E8E7777498EEC44DD8F1AC286A1FA07F11A66F7CFD75486314",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\期间缺货Top20.xlsx": "48BEBEAF7C3E3BB77B9CE6405B652C67883E89BE7C697066357AFD2F4C2F2579",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\期间缺货Top20_拆分填充.xlsx": "B195A55F035A8707FB8CC37B8C1FBB93260735D14CFE54D7E7F0F4B819C64CC7",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\每日缺货Top50 (1).xlsx": "C8A8326ACED43CA62952583C39666A173F060592C735292FE98383B0D467442B",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\每日缺货Top50 (1)_拆分填充.xlsx": "45599EC648B98AABA4BC3125B9CCD6ACAC68A2584A5D2A448AE30C46E8D7674F",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\缺货数据统计.xlsx": "097D2B7BFEAA6E8C03A5E041A843B19377CFF7A0AB6844E9B769A591350AFEC1",
+    "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\all\\缺货数据统计_拆分填充.xlsx": "CDDDC39DD340421C242FA87767EC0217C244AC5311BCCB1136616B170FD05F1D"
+  },
+  "close": {
+    "remaining_owned_pids": [],
+    "launcher_exit": 0,
+    "forced_termination": false
+  },
+  "remaining_owned_pids": []
+}

@@ -1,0 +1,62 @@
+test_attribute_whitespace_and_xml_escapes_survive (test_engine_regressions.EngineRegressionTests.test_attribute_whitespace_and_xml_escapes_survive) ... ok
+test_copied_payload_keeps_local_and_shadowed_namespaces (test_engine_regressions.EngineRegressionTests.test_copied_payload_keeps_local_and_shadowed_namespaces) ... ok
+test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) ... ok
+test_dimension_also_covers_retained_empty_horizontal_merge (test_engine_regressions.EngineRegressionTests.test_dimension_also_covers_retained_empty_horizontal_merge) ... ok
+test_dimension_is_not_shrunk_or_rewritten_without_matching_merges (test_engine_regressions.EngineRegressionTests.test_dimension_is_not_shrunk_or_rewritten_without_matching_merges) ... ok
+test_equivalent_duplicate_addresses_are_rejected_without_output (test_engine_regressions.EngineRegressionTests.test_equivalent_duplicate_addresses_are_rejected_without_output) ... ok
+test_hidden_metadata_without_value_is_not_overwritten (test_engine_regressions.EngineRegressionTests.test_hidden_metadata_without_value_is_not_overwritten) ... ok
+test_inaccurate_dimension_keeps_remote_values_readable (test_engine_regressions.EngineRegressionTests.test_inaccurate_dimension_keeps_remote_values_readable) ... ok
+test_many_rows_keep_values_order_and_row_attributes (test_engine_regressions.EngineRegressionTests.test_many_rows_keep_values_order_and_row_attributes) ... ok
+test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) ... ok
+test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) ... ok
+test_output_permission_error_without_directory_is_not_retried (test_engine_regressions.EngineRegressionTests.test_output_permission_error_without_directory_is_not_retried) ... ok
+test_partial_write_failure_removes_only_the_new_output (test_engine_regressions.EngineRegressionTests.test_partial_write_failure_removes_only_the_new_output) ... ok
+test_prefixed_namespace_cdata_and_processing_instruction_survive (test_engine_regressions.EngineRegressionTests.test_prefixed_namespace_cdata_and_processing_instruction_survive) ... ok
+test_result_name_collision_with_directory_uses_next_serial (test_engine_regressions.EngineRegressionTests.test_result_name_collision_with_directory_uses_next_serial) ... ok
+test_selected_metadata_anchor_rejects_whole_workbook_without_output (test_engine_regressions.EngineRegressionTests.test_selected_metadata_anchor_rejects_whole_workbook_without_output) ... ok
+test_sheet_selection_does_not_inspect_unselected_metadata_anchor (test_engine_regressions.EngineRegressionTests.test_sheet_selection_does_not_inspect_unselected_metadata_anchor) ... ok
+test_sparse_wide_merge_does_not_enumerate_the_empty_grid (test_engine_regressions.EngineRegressionTests.test_sparse_wide_merge_does_not_enumerate_the_empty_grid) ... ok
+test_text_carriage_returns_and_unrelated_cells_keep_their_values (test_engine_regressions.EngineRegressionTests.test_text_carriage_returns_and_unrelated_cells_keep_their_values) ... ok
+test_unselected_metadata_cells_and_horizontal_anchor_are_preserved (test_engine_regressions.EngineRegressionTests.test_unselected_metadata_cells_and_horizontal_anchor_are_preserved) ... ok
+test_wide_merge_still_rejects_far_right_hidden_content (test_engine_regressions.EngineRegressionTests.test_wide_merge_still_rejects_far_right_hidden_content) ... ok
+test_all_merges (test_excel_unmerge.UnmergeTests.test_all_merges) ... ok
+test_conflicting_data_rejected (test_excel_unmerge.UnmergeTests.test_conflicting_data_rejected) ... ok
+test_empty_anchor (test_excel_unmerge.UnmergeTests.test_empty_anchor) ... ok
+test_empty_value_target_is_fillable (test_excel_unmerge.UnmergeTests.test_empty_value_target_is_fillable) ... ok
+test_formula_rejects_whole_workbook_without_output (test_excel_unmerge.UnmergeTests.test_formula_rejects_whole_workbook_without_output) ... ok
+test_multi_sheet_selection_and_hidden (test_excel_unmerge.UnmergeTests.test_multi_sheet_selection_and_hidden) ... ok
+test_no_matches_no_output (test_excel_unmerge.UnmergeTests.test_no_matches_no_output) ... ok
+test_non_overwrite (test_excel_unmerge.UnmergeTests.test_non_overwrite) ... ok
+test_rectangle_preserves_horizontal_and_header (test_excel_unmerge.UnmergeTests.test_rectangle_preserves_horizontal_and_header) ... ok
+test_row_extension_order (test_excel_unmerge.UnmergeTests.test_row_extension_order) ... ok
+test_types_and_ordinary_blanks (test_excel_unmerge.UnmergeTests.test_types_and_ordinary_blanks) ... ok
+test_unknown_sheet_no_output (test_excel_unmerge.UnmergeTests.test_unknown_sheet_no_output) ... ok
+test_unrelated_formula_preserved (test_excel_unmerge.UnmergeTests.test_unrelated_formula_preserved) ... ok
+test_vertical_and_original_not_modified (test_excel_unmerge.UnmergeTests.test_vertical_and_original_not_modified) ... ok
+test_xlsm_preserves_other_bytes (test_excel_unmerge.UnmergeTests.test_xlsm_preserves_other_bytes) ... ok
+test_all_merges_and_no_match_results (test_gui_batch.GuiBatchTests.test_all_merges_and_no_match_results) ... ok
+test_bad_file_does_not_stop_later_file (test_gui_batch.GuiBatchTests.test_bad_file_does_not_stop_later_file) ... ok
+test_common_failures_include_action_and_original_technical_details (test_gui_batch.GuiBatchTests.test_common_failures_include_action_and_original_technical_details) ... ok
+test_self_test_failure_writes_diagnostic_without_stderr (test_gui_batch.GuiBatchTests.test_self_test_failure_writes_diagnostic_without_stderr) ... ok
+test_stop_before_first_file_reports_no_completion (test_gui_batch.GuiBatchTests.test_stop_before_first_file_reports_no_completion) ... ok
+test_stop_waits_for_current_file_and_leaves_later_files_unprocessed (test_gui_batch.GuiBatchTests.test_stop_waits_for_current_file_and_leaves_later_files_unprocessed) ... ok
+test_batch_reports_completed_files_and_enables_output_directory (test_windows_gui_helpers.WindowTests.test_batch_reports_completed_files_and_enables_output_directory) ... ok
+test_failure_and_unprocessed_files_have_independent_recovery_buttons (test_windows_gui_helpers.WindowTests.test_failure_and_unprocessed_files_have_independent_recovery_buttons) ... ok
+test_long_status_wraps_to_available_width_after_resizing (test_windows_gui_helpers.WindowTests.test_long_status_wraps_to_available_width_after_resizing) ... FAIL
+test_new_controls_fit_minimum_window_width (test_windows_gui_helpers.WindowTests.test_new_controls_fit_minimum_window_width) ... ok
+test_result_directory_unavailable_until_output_exists (test_windows_gui_helpers.WindowTests.test_result_directory_unavailable_until_output_exists) ... ok
+test_retry_only_failed_files_keeps_history_output_and_initial_options (test_windows_gui_helpers.WindowTests.test_retry_only_failed_files_keeps_history_output_and_initial_options) ... ok
+test_stop_and_continue_keep_current_file_safe_and_report_pending (test_windows_gui_helpers.WindowTests.test_stop_and_continue_keep_current_file_safe_and_report_pending) ... ok
+
+======================================================================
+FAIL: test_long_status_wraps_to_available_width_after_resizing (test_windows_gui_helpers.WindowTests.test_long_status_wraps_to_available_width_after_resizing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\win\AppData\Local\Temp\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\candidate-source\tests\test_windows_gui_helpers.py", line 215, in test_long_status_wraps_to_available_width_after_resizing
+    self.assertGreater(heights[1], heights[0], "A narrower status should use more lines")
+AssertionError: 64 not greater than 64 : A narrower status should use more lines
+
+----------------------------------------------------------------------
+Ran 49 tests in 2.439s
+
+FAILED (failures=1)

@@ -1,0 +1,130 @@
+{
+  "captured_utc": "2026-10-09T01:29:24.586457+00:00",
+  "head": "96cfbfeab30be280129aa8af9fff74e5f6be2464",
+  "expected_head_matches": true,
+  "checks": [
+    {
+      "path": "packaging/使用说明.txt",
+      "working_sha256": "895f94674ee550e724ee012fc0e6acd9909616625ad271354918d36843e37cdb",
+      "snapshot_sha256": "895f94674ee550e724ee012fc0e6acd9909616625ad271354918d36843e37cdb",
+      "working_matches_accepted_snapshot": true,
+      "git_blob_sha256": "6a8dae5001adeffefb5333a4cc84f769bd4e5ff5b52ade9d14dfd26b48806ca9",
+      "git_exact_bytes_match_working": false,
+      "git_lf_normalized_matches_working": true
+    },
+    {
+      "path": "excel_unmerge_fill.py",
+      "working_sha256": "95b5455b5d10aab9436a8842bbc27f6814485c037247d8320e3c9b1cf81e6e30",
+      "snapshot_sha256": "95b5455b5d10aab9436a8842bbc27f6814485c037247d8320e3c9b1cf81e6e30",
+      "working_matches_accepted_snapshot": true,
+      "git_blob_sha256": "f58179a9b30259859866ced6feec3aca8c894549f70f2675e0b0beaa6ce9c2c6",
+      "git_exact_bytes_match_working": false,
+      "git_lf_normalized_matches_working": true
+    },
+    {
+      "path": "excel_unmerge_gui.py",
+      "working_sha256": "0d59d53e067da326984702ece5939347448a829012b564363eb9469c42b25f87",
+      "snapshot_sha256": "0d59d53e067da326984702ece5939347448a829012b564363eb9469c42b25f87",
+      "working_matches_accepted_snapshot": true,
+      "git_blob_sha256": "3917653ed366ec5353e7461de4d2b968906510d629972b5a3720bb52727979d2",
+      "git_exact_bytes_match_working": false,
+      "git_lf_normalized_matches_working": true
+    },
+    {
+      "path": "tests/test_engine_regressions.py",
+      "working_sha256": "721e8d5f4af9018da7dd61fbfa35e5e10b297466d5109a53bbd4a14d8a9be2ce",
+      "snapshot_sha256": "721e8d5f4af9018da7dd61fbfa35e5e10b297466d5109a53bbd4a14d8a9be2ce",
+      "working_matches_accepted_snapshot": true,
+      "git_blob_sha256": "721e8d5f4af9018da7dd61fbfa35e5e10b297466d5109a53bbd4a14d8a9be2ce",
+      "git_exact_bytes_match_working": true,
+      "git_lf_normalized_matches_working": true
+    },
+    {
+      "path": "tests/test_excel_unmerge.py",
+      "working_sha256": "b1e8fa062c8182902f587804e31f9d2a0d58e81a02862f46d1881761c4e56d9e",
+      "snapshot_sha256": "b1e8fa062c8182902f587804e31f9d2a0d58e81a02862f46d1881761c4e56d9e",
+      "working_matches_accepted_snapshot": true,
+      "git_blob_sha256": "3311962979372eca7f4ba5e242b15fa0f03e72429ea634256dd1baf36de52063",
+      "git_exact_bytes_match_working": false,
+      "git_lf_normalized_matches_working": true
+    },
+    {
+      "path": "tests/test_gui_batch.py",
+      "working_sha256": "8325821344cf96c78eed808f4b95267fbfd677b69287a494181b6ed0aa9fe05d",
+      "snapshot_sha256": "8325821344cf96c78eed808f4b95267fbfd677b69287a494181b6ed0aa9fe05d",
+      "working_matches_accepted_snapshot": true,
+      "git_blob_sha256": "02bab619f2b86107216cd9e712210311233defecd4f3c256f7ffdb37e1a3b9f5",
+      "git_exact_bytes_match_working": false,
+      "git_lf_normalized_matches_working": true
+    },
+    {
+      "path": "tests/test_windows_gui_helpers.py",
+      "working_sha256": "830bdf61e5f5ea1f8d73bbdb18260e1ad3ce2619a499aa067d94fd7fef847e43",
+      "snapshot_sha256": "830bdf61e5f5ea1f8d73bbdb18260e1ad3ce2619a499aa067d94fd7fef847e43",
+      "working_matches_accepted_snapshot": true,
+      "git_blob_sha256": "428799a78c261d842a4a49b54dc22b53bb1b5a284be52431a053ed53837f076c",
+      "git_exact_bytes_match_working": false,
+      "git_lf_normalized_matches_working": true
+    }
+  ],
+  "python": "3.12.8",
+  "script_sha256": "d298f6715de248f248db29983b47b4c079bdc374dc408760f16c0f4baccdecde",
+  "package": {
+    "path": "E:\\codex\\excel-tools\\dist\\ExcelTools-v1.1-Windows-x64.zip",
+    "bytes": 12162296,
+    "sha256": "92870bdc52451341c7268f6e1937a3741ecd3e1012de0cf2e4026c606ccdd4a9",
+    "matches_accepted_hash": true,
+    "members": [
+      "ExcelTools.exe",
+      "使用说明.txt"
+    ],
+    "crc_passed": true,
+    "unsafe_member_names": [],
+    "only_application_and_instructions": true,
+    "temporary_extraction": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-release-audit-40lvyocq\\发布 自检"
+  },
+  "executable": {
+    "sha256": "066ca4a1c7fe7fd2ac80a06ddc3969dbd178f5181983d8767d2c219078485d5c",
+    "matches_accepted_executable": true,
+    "pe_machine": "0x8664",
+    "pe_subsystem": 2,
+    "x64_windows_gui": true
+  },
+  "instructions": {
+    "sha256": "ba15d33ed8857525346d8d95c6d4f64b7e1fc552dcee498b0bb04c0f212f0a66",
+    "utf8_bom": true,
+    "exact_source_plus_utf8_bom": true,
+    "version_label": "Excel 数据处理工具 v1.1（Windows 免安装版）"
+  },
+  "binary_code_checks": [
+    {
+      "module": "excel_unmerge_gui",
+      "code_equal_except_co_filename": true,
+      "packaged_code_sha256": "632e91b7df5b92ea3760264dce78b95661ce4cb91ca4af31086bb3dd7b11cfb5",
+      "head_compiled_code_sha256": "632e91b7df5b92ea3760264dce78b95661ce4cb91ca4af31086bb3dd7b11cfb5"
+    },
+    {
+      "module": "excel_unmerge_fill",
+      "code_equal_except_co_filename": true,
+      "packaged_code_sha256": "d27cde0b9a0ae1724493f874d1feb275e16c6c08aadb01af8fa1e461734efb0a",
+      "head_compiled_code_sha256": "d27cde0b9a0ae1724493f874d1feb275e16c6c08aadb01af8fa1e461734efb0a"
+    }
+  ],
+  "embedded_application_data_members": [],
+  "app_versions": [
+    "1.1"
+  ],
+  "historical_self_test": {
+    "exit_code": 0,
+    "log": "ExcelTools v1.1 self-test passed.",
+    "process_log": "PORTABLE_SELF_TEST_EXIT=0",
+    "build_script_sha256_matches_manifest": true
+  },
+  "status": "passed",
+  "boundaries": [
+    "Only co_filename is excluded from embedded code comparison; bytecode, constants, names and line/exception tables are included.",
+    "Raw Git LF blobs and Windows working-tree CRLF are recorded separately.",
+    "This does not replace malware scanning or clean Windows/Office compatibility validation.",
+    "No CI artifact is substituted for this package; the accepted local binary retains its existing identity."
+  ]
+}

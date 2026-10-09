@@ -1,0 +1,96 @@
+{
+  "dpi": 96.04726735598227,
+  "tk_scaling": 1.3339898243886428,
+  "screen": [
+    2560,
+    1440
+  ],
+  "minsize": [
+    680,
+    540
+  ],
+  "app_default": [
+    840,
+    660
+  ],
+  "observations": [
+    {
+      "requested": "840x660",
+      "actual_geometry": "840x660+104+104",
+      "label_actual": [
+        804,
+        38
+      ],
+      "label_required": [
+        796,
+        38
+      ],
+      "wraplength": 800
+    },
+    {
+      "requested": "680x540",
+      "actual_geometry": "680x540+104+104",
+      "label_actual": [
+        644,
+        55
+      ],
+      "label_required": [
+        640,
+        55
+      ],
+      "wraplength": 640
+    },
+    {
+      "requested": "840x660",
+      "actual_geometry": "840x660+104+104",
+      "label_actual": [
+        804,
+        38
+      ],
+      "label_required": [
+        796,
+        38
+      ],
+      "wraplength": 800
+    },
+    {
+      "requested": "840x660",
+      "actual_geometry": "840x660+104+104",
+      "label_actual": [
+        804,
+        38
+      ],
+      "label_required": [
+        796,
+        38
+      ],
+      "wraplength": 800
+    },
+    {
+      "requested": "680x540",
+      "actual_geometry": "680x540+104+104",
+      "label_actual": [
+        644,
+        55
+      ],
+      "label_required": [
+        640,
+        55
+      ],
+      "wraplength": 640
+    },
+    {
+      "requested": "840x660",
+      "actual_geometry": "840x660+104+104",
+      "label_actual": [
+        804,
+        38
+      ],
+      "label_required": [
+        796,
+        38
+      ],
+      "wraplength": 800
+    }
+  ]
+}

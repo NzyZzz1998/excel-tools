@@ -1,0 +1,866 @@
+{
+  "captured_utc": "2026-10-09T02:13:34.665598+00:00",
+  "engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "script_sha256": "1afb298a0a130478d7126127fdd4ad1541fa745bf1e1b67421079f54ab95c928",
+  "cases": [
+    {
+      "name": "sparse_rectangle",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            2
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            2
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "sparse_rectangle",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            8
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            8
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "unordered_rows_and_cells",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "unordered_rows_and_cells",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "overlap_with_blank_anchor",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A2:A4 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A2:A4 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        }
+      }
+    },
+    {
+      "name": "overlap_with_blank_anchor",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A2:A4 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A2:A4 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        }
+      }
+    },
+    {
+      "name": "duplicate_merge",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A1:A3 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A1:A3 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        }
+      }
+    },
+    {
+      "name": "duplicate_merge",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A1:A3 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A3 与 A1:A3 相互重叠，填充值依赖处理顺序，请先在 Excel 中核对。"
+        }
+      }
+    },
+    {
+      "name": "disjoint_nested_row_spans",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            3,
+            5
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            3,
+            5
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "disjoint_nested_row_spans",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            3,
+            5
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            3,
+            5
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "character_fidelity",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "character_fidelity",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "inherited_space",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "inherited_space",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "prefixed_shadowing",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "prefixed_shadowing",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "local_payload_namespace",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "local_payload_namespace",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "formula_rejection",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含公式，请先在 Excel 中复制并粘贴为值后重试。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含公式，请先在 Excel 中复制并粘贴为值后重试。"
+        }
+      }
+    },
+    {
+      "name": "formula_rejection",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含公式，请先在 Excel 中复制并粘贴为值后重试。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含公式，请先在 Excel 中复制并粘贴为值后重试。"
+        }
+      }
+    },
+    {
+      "name": "metadata_rejection",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含单元格图片或扩展元数据，暂不支持拆分填充。请先在副本中人工核对并转换为普通单元格值后重试。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含单元格图片或扩展元数据，暂不支持拆分填充。请先在副本中人工核对并转换为普通单元格值后重试。"
+        }
+      }
+    },
+    {
+      "name": "metadata_rejection",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含单元格图片或扩展元数据，暂不支持拆分填充。请先在副本中人工核对并转换为普通单元格值后重试。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域 A1:A2 含单元格图片或扩展元数据，暂不支持拆分填充。请先在副本中人工核对并转换为普通单元格值后重试。"
+        }
+      }
+    },
+    {
+      "name": "hidden_target_rejection",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域内的 A2 仍有独立内容或元数据，请先核对后再处理。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域内的 A2 仍有独立内容或元数据，请先核对后再处理。"
+        }
+      }
+    },
+    {
+      "name": "hidden_target_rejection",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域内的 A2 仍有独立内容或元数据，请先核对后再处理。"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "合并区域内的 A2 仍有独立内容或元数据，请先核对后再处理。"
+        }
+      }
+    },
+    {
+      "name": "empty_anchor",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "empty_anchor",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "no_match_omitted_coordinates",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            0,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            0,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "no_match_omitted_coordinates",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            0,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            0,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "horizontal_only_omitted_coordinates",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            0,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            0,
+            0
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": false,
+            "<!--row-comment-->": false,
+            "<!--tail-comment-->": false
+          }
+        }
+      }
+    },
+    {
+      "name": "horizontal_only_omitted_coordinates",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "invalid literal for int() with base 10: ''"
+        },
+        "stream": {
+          "status": "error",
+          "type": "ValueError",
+          "message": "invalid literal for int() with base 10: ''"
+        }
+      }
+    },
+    {
+      "name": "cdata_pi_comment",
+      "all_merges": false,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": true,
+            "<!--row-comment-->": true,
+            "<!--tail-comment-->": true
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": true,
+            "<!--row-comment-->": true,
+            "<!--tail-comment-->": true
+          }
+        }
+      }
+    },
+    {
+      "name": "cdata_pi_comment",
+      "all_merges": true,
+      "equivalent": true,
+      "outcomes": {
+        "dom": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": true,
+            "<!--row-comment-->": true,
+            "<!--tail-comment-->": true
+          }
+        },
+        "stream": {
+          "status": "ok",
+          "stats": [
+            1,
+            1
+          ],
+          "comment_pi_tokens": {
+            "<?probe keep?>": true,
+            "<!--row-comment-->": true,
+            "<!--tail-comment-->": true
+          }
+        }
+      }
+    }
+  ],
+  "package_checks": [
+    {
+      "name": "metadata_untouched_and_no_match",
+      "passed": true
+    },
+    {
+      "name": "later_sheet_rejection_no_partial_output",
+      "passed": true
+    },
+    {
+      "name": "late_zip_write_failure_cleanup",
+      "passed": true
+    },
+    {
+      "name": "temporary_streams_closed",
+      "passed": true,
+      "stream_count": 15
+    }
+  ],
+  "all_differential_cases_equivalent": true,
+  "package_checks_passed": true
+}

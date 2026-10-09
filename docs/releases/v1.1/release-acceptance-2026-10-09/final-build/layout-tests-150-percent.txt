@@ -1,0 +1,7 @@
+test_new_controls_fit_minimum_window_width (test_windows_gui_helpers.WindowTests.test_new_controls_fit_minimum_window_width) ... ok
+test_long_status_wraps_to_available_width_after_resizing (test_windows_gui_helpers.WindowTests.test_long_status_wraps_to_available_width_after_resizing) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.600s
+
+OK

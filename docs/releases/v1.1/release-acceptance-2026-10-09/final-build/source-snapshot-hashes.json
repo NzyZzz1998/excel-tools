@@ -1,0 +1,30 @@
+[
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\\candidate-source\\使用说明.txt",
+    "Hash": "B40115CBA8374F727E63D1CDD04C93560B7433BDC21A87C0833AAACF8312D8DE"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\\candidate-source\\excel_unmerge_fill.py",
+    "Hash": "877485D3C497DF2CDF83FE1A7729002EF0B91C1E964109CC2F684FC068227F75"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\\candidate-source\\excel_unmerge_gui.py",
+    "Hash": "0D59D53E067DA326984702ECE5939347448A829012B564363EB9469C42B25F87"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\\candidate-source\\tests\\test_engine_regressions.py",
+    "Hash": "DE68B097F0F51446008167B85F9389DF8E43C74B6A7DD62D708E1C6A24D27141"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\\candidate-source\\tests\\test_excel_unmerge.py",
+    "Hash": "B1E8FA062C8182902F587804E31F9D2A0D58E81A02862F46D1881761C4E56D9E"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\\candidate-source\\tests\\test_gui_batch.py",
+    "Hash": "8325821344CF96C78EED808F4B95267FBFD677B69287A494181B6ED0AA9FE05D"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-final-build-7f8740e09ab447fd8ce9d0d0ba6caab2\\candidate-source\\tests\\test_windows_gui_helpers.py",
+    "Hash": "830BDF61E5F5EA1F8D73BBDB18260E1AD3CE2619A499AA067D94FD7FEF847E43"
+  }
+]

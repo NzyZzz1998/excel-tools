@@ -1,0 +1,278 @@
+[
+  {
+    "controlled_percent": 100,
+    "dpi": 96.04726735598227,
+    "minsize": [
+      680,
+      540
+    ],
+    "default_size": [
+      840,
+      660
+    ],
+    "observations": [
+      {
+        "requested": "840x660",
+        "actual_geometry": "840x660+156+156",
+        "label_actual": [
+          804,
+          38
+        ],
+        "label_required": [
+          796,
+          38
+        ],
+        "wraplength": 800
+      },
+      {
+        "requested": "680x540",
+        "actual_geometry": "680x540+156+156",
+        "label_actual": [
+          644,
+          55
+        ],
+        "label_required": [
+          640,
+          55
+        ],
+        "wraplength": 640
+      },
+      {
+        "requested": "840x660",
+        "actual_geometry": "840x660+156+156",
+        "label_actual": [
+          804,
+          38
+        ],
+        "label_required": [
+          796,
+          38
+        ],
+        "wraplength": 800
+      },
+      {
+        "requested": "840x660",
+        "actual_geometry": "840x660+156+156",
+        "label_actual": [
+          804,
+          38
+        ],
+        "label_required": [
+          796,
+          38
+        ],
+        "wraplength": 800
+      },
+      {
+        "requested": "680x540",
+        "actual_geometry": "680x540+156+156",
+        "label_actual": [
+          644,
+          55
+        ],
+        "label_required": [
+          640,
+          55
+        ],
+        "wraplength": 640
+      },
+      {
+        "requested": "840x660",
+        "actual_geometry": "840x660+156+156",
+        "label_actual": [
+          804,
+          38
+        ],
+        "label_required": [
+          796,
+          38
+        ],
+        "wraplength": 800
+      }
+    ]
+  },
+  {
+    "controlled_percent": 125,
+    "dpi": 119.97047970479704,
+    "minsize": [
+      850,
+      675
+    ],
+    "default_size": [
+      1050,
+      825
+    ],
+    "observations": [
+      {
+        "requested": "840x660",
+        "actual_geometry": "850x675+182+182",
+        "label_actual": [
+          806,
+          64
+        ],
+        "label_required": [
+          799,
+          64
+        ],
+        "wraplength": 802
+      },
+      {
+        "requested": "680x540",
+        "actual_geometry": "850x675+182+182",
+        "label_actual": [
+          806,
+          64
+        ],
+        "label_required": [
+          799,
+          64
+        ],
+        "wraplength": 802
+      },
+      {
+        "requested": "840x660",
+        "actual_geometry": "850x675+182+182",
+        "label_actual": [
+          806,
+          64
+        ],
+        "label_required": [
+          799,
+          64
+        ],
+        "wraplength": 802
+      },
+      {
+        "requested": "1050x825",
+        "actual_geometry": "1050x825+182+182",
+        "label_actual": [
+          1006,
+          44
+        ],
+        "label_required": [
+          994,
+          44
+        ],
+        "wraplength": 1002
+      },
+      {
+        "requested": "850x675",
+        "actual_geometry": "850x675+182+182",
+        "label_actual": [
+          806,
+          64
+        ],
+        "label_required": [
+          799,
+          64
+        ],
+        "wraplength": 802
+      },
+      {
+        "requested": "1050x825",
+        "actual_geometry": "1050x825+182+182",
+        "label_actual": [
+          1006,
+          44
+        ],
+        "label_required": [
+          994,
+          44
+        ],
+        "wraplength": 1002
+      }
+    ]
+  },
+  {
+    "controlled_percent": 150,
+    "dpi": 143.858407079646,
+    "minsize": [
+      1019,
+      809
+    ],
+    "default_size": [
+      1259,
+      989
+    ],
+    "observations": [
+      {
+        "requested": "840x660",
+        "actual_geometry": "1019x809+208+208",
+        "label_actual": [
+          965,
+          44
+        ],
+        "label_required": [
+          956,
+          44
+        ],
+        "wraplength": 961
+      },
+      {
+        "requested": "680x540",
+        "actual_geometry": "1019x809+208+208",
+        "label_actual": [
+          965,
+          44
+        ],
+        "label_required": [
+          956,
+          44
+        ],
+        "wraplength": 961
+      },
+      {
+        "requested": "840x660",
+        "actual_geometry": "1019x809+208+208",
+        "label_actual": [
+          965,
+          44
+        ],
+        "label_required": [
+          956,
+          44
+        ],
+        "wraplength": 961
+      },
+      {
+        "requested": "1259x989",
+        "actual_geometry": "1259x989+208+208",
+        "label_actual": [
+          1205,
+          44
+        ],
+        "label_required": [
+          1194,
+          44
+        ],
+        "wraplength": 1201
+      },
+      {
+        "requested": "1019x809",
+        "actual_geometry": "1019x809+208+208",
+        "label_actual": [
+          965,
+          44
+        ],
+        "label_required": [
+          956,
+          44
+        ],
+        "wraplength": 961
+      },
+      {
+        "requested": "1259x989",
+        "actual_geometry": "1259x989+208+208",
+        "label_actual": [
+          1205,
+          44
+        ],
+        "label_required": [
+          1194,
+          44
+        ],
+        "wraplength": 1201
+      }
+    ]
+  }
+]

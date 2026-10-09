@@ -1,0 +1,28 @@
+{
+  "recorded_utc": "2026-10-09T01:48:28.451515+00:00",
+  "input_sha256_before": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "memory_cap_bytes": 3221225472,
+  "worker_timeout_seconds": 120,
+  "baseline_sha256": "348796863e6829bbf529f2b4629d7cca64fbab777af1a043f0af1b0fb6a40f21",
+  "candidate_sha256": "877485d3c497df2cdf83fe1a7729002ef0b91c1e964109cc2f684fc068227f75",
+  "scope": "One daily sheet repeated by rows; summary/filter sheet unchanged. This is a load simulation, not a real monthly report or SLA.",
+  "results": [
+    {
+      "factor": 125,
+      "implementation": "candidate",
+      "first_sheet_rows": 50250,
+      "columns": 27,
+      "input_bytes": 9201657,
+      "peak_rss_mib": 3073.38,
+      "peak_private_mib": 3073.35,
+      "process_lifetime_seconds": 19.111,
+      "exit_code": 1,
+      "stop_reason": "memory_cap",
+      "source_unchanged": true,
+      "error_tail": "",
+      "passed": false
+    }
+  ],
+  "input_sha256_after": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b"
+}

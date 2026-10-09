@@ -1,0 +1,17 @@
+[
+  {
+    "controlled_percent": 100,
+    "exit_code": 0,
+    "passed": true
+  },
+  {
+    "controlled_percent": 125,
+    "exit_code": 0,
+    "passed": true
+  },
+  {
+    "controlled_percent": 150,
+    "exit_code": 0,
+    "passed": true
+  }
+]

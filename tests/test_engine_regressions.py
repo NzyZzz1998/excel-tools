@@ -46,6 +46,96 @@ class EngineRegressionTests(unittest.TestCase):
         self.assertEqual(before.attrib, after.attrib)
         self.assertEqual(after.attrib["prompt"], 'first\nsecond\ttab\rend & "quoted" <value>')
 
+    def test_copied_text_keeps_inherited_xml_space(self):
+        cases = [
+            ('', '', ' xml:space="preserve"', '', '', "preserve"),
+            ('', ' xml:space="preserve"', '', '', '', "preserve"),
+            (' xml:space="preserve"', '', '', '', ' xml:space="default"', "preserve"),
+            ('', '', '', '', ' xml:space="preserve"', "default"),
+            ('', '', ' xml:space="preserve"', ' xml:space="default"', '', "default"),
+            (' xml:space="preserve"', ' xml:space="default"', '', '', '', "default"),
+        ]
+
+        def effective_space(element):
+            while element is not None:
+                if element.nodeType == element.ELEMENT_NODE and element.hasAttribute("xml:space"):
+                    return element.getAttribute("xml:space")
+                element = element.parentNode
+            return "default"
+
+        for root_attrs, row_attrs, cell_attrs, text_attrs, target_attrs, expected in cases:
+            with self.subTest(expected=expected, source=(root_attrs, row_attrs, cell_attrs, text_attrs),
+                              target=target_attrs):
+                raw = ('<worksheet xmlns="' + NS + '"' + root_attrs + '><sheetData>'
+                       '<row r="1"' + row_attrs + '><c r="A1" t="inlineStr"' + cell_attrs + '>'
+                       '<is><t' + text_attrs + '>  padded  </t></is></c></row>'
+                       '<row r="2"' + target_attrs + '><c r="B2" t="inlineStr">'
+                       '<is><t>  unrelated  </t></is></c></row></sheetData>'
+                       '<mergeCells><mergeCell ref="A1:A2"/></mergeCells></worksheet>').encode()
+                transformed, count, filled = mod.transform_sheet(raw)
+                before, after = minidom.parseString(raw), minidom.parseString(transformed)
+                try:
+                    texts = after.getElementsByTagNameNS(NS, "t")
+                    self.assertEqual([text.firstChild.data for text in texts],
+                                     ["  padded  ", "  padded  ", "  unrelated  "])
+                    self.assertEqual([effective_space(text) for text in texts[:2]], [expected] * 2)
+                    self.assertEqual(effective_space(texts[2]),
+                                     effective_space(before.getElementsByTagNameNS(NS, "t")[1]))
+                    self.assertEqual((count, filled), (1, 1))
+                finally:
+                    before.unlink()
+                    after.unlink()
+
+    def test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs(self):
+        for anchor, target in (("a1", "a2"), ("$A$1", "$A$2")):
+            with self.subTest(anchor=anchor):
+                raw = sheet({1: [c(anchor, "group"), c("b1", "untouched")],
+                             2: [c(target, kind="blank")]}, ["A1:A2"])
+                transformed, count, filled = mod.transform_sheet(raw)
+                cells = ET.fromstring(transformed).findall(".//{" + NS + "}c")
+                self.assertEqual([cell.attrib["r"] for cell in cells], [anchor, "b1", "A2"])
+                self.assertEqual(cells[2].find("{" + NS + "}is/{" + NS + "}t").text, "group")
+                self.assertEqual(cells[1].find("{" + NS + "}is/{" + NS + "}t").text, "untouched")
+                self.assertEqual((count, filled), (1, 1))
+
+    def test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection(self):
+        for ref in ("a1", "$A$1"):
+            for body, attributes, message in (("<f>1+1</f><v>2</v>", "", "公式"),
+                                               ("<v>1</v>", ' vm="1"', "元数据"),
+                                               ("<v>1</v>", ' cm="1"', "元数据")):
+                with self.subTest(ref=ref, attributes=attributes, message=message):
+                    raw = sheet({1: ['<c r="' + ref + '"' + attributes + '>' + body + '</c>']},
+                                ["A1:A2"])
+                    with self.assertRaisesRegex(ValueError, message):
+                        mod.transform_sheet(raw)
+
+    def test_equivalent_duplicate_addresses_are_rejected_without_output(self):
+        source = makebook(self.root / "duplicate-address.xlsx", [
+            ("数据", sheet({1: [c("A1", "first"), c("a1", "second")]}, ["A1:A2"]))])
+        before = {path: sha(path) for path in self.root.iterdir()}
+        with self.assertRaisesRegex(ValueError, "重复.*A1"):
+            mod.process_file(source)
+        self.assertEqual({path: sha(path) for path in self.root.iterdir()}, before)
+
+    def test_selected_overlapping_merges_reject_but_unrelated_horizontal_overlap_stays(self):
+        cases = [("A1:A3", "A2:A4"), ("A1:A2", "A1:A3"), ("A1:A2", "A1:A2"),
+                 ("A1:A2", "A2:B2")]
+        for number, merges in enumerate(cases):
+            for value in (None, "value"):
+                with self.subTest(merges=merges, value=value):
+                    raw = sheet({1: [c("A1", value)]} if value is not None else {}, merges)
+                    source = makebook(self.root / ("overlap%d-%s.xlsx" % (number, value)), [("数据", raw)])
+                    before = {path: sha(path) for path in self.root.iterdir()}
+                    with self.assertRaisesRegex(ValueError, merges[0] + ".*" + merges[1] + ".*重叠"):
+                        mod.process_file(source)
+                    self.assertEqual({path: sha(path) for path in self.root.iterdir()}, before)
+        unchanged = sheet({1: [c("A1", "header")]}, ["A1:C1", "B1:D1"])
+        self.assertEqual(mod.transform_sheet(unchanged), (unchanged, 0, 0))
+        raw = sheet({1: [c("A1", "header")], 2: [c("E2", "group")]},
+                    ["A1:C1", "B1:D1", "E2:E3"])
+        _, count, filled = mod.transform_sheet(raw)
+        self.assertEqual((count, filled), (1, 1))
+
     def test_prefixed_namespace_cdata_and_processing_instruction_survive(self):
         raw = ('<?xml version="1.0"?><?probe unchanged?>'
                '<x:worksheet xmlns:x="' + NS + '"><x:sheetData><x:row r="1">'
@@ -243,20 +333,57 @@ class EngineRegressionTests(unittest.TestCase):
         previous = self.root / "source_拆分填充.xlsx"
         previous.write_bytes(b"previous result must survive")
         before = {path: sha(path) for path in self.root.iterdir()}
-        real_write = mod.ZipFile.writestr
+        real_open = mod.ZipFile.open
         writes = 0
 
-        def failing_write(archive, *args, **kwargs):
+        def failing_open(archive, name, mode="r", *args, **kwargs):
             nonlocal writes
-            writes += 1
-            if writes == 2:
-                raise OSError("injected disk write failure")
-            return real_write(archive, *args, **kwargs)
+            if mode == "w":
+                writes += 1
+                if writes == 2:
+                    raise OSError("injected disk write failure")
+            return real_open(archive, name, mode, *args, **kwargs)
 
-        with mock.patch.object(mod.ZipFile, "writestr", new=failing_write):
+        with mock.patch.object(mod.ZipFile, "open", new=failing_open):
             with self.assertRaisesRegex(OSError, "injected disk write failure"):
                 mod.process_file(source)
         self.assertEqual({path: sha(path) for path in self.root.iterdir()}, before)
+
+    def test_result_name_collision_with_directory_uses_next_serial(self):
+        source = makebook(self.root / "source.xlsx", [
+            ("数据", sheet({1: [c("A1", "value")]}, ["A1:A2"]))])
+        before = sha(source)
+        occupied = self.root / "source_拆分填充.xlsx"
+        occupied.mkdir()
+        marker = occupied / "keep.txt"
+        marker.write_bytes(b"existing directory content")
+        output, stats = mod.process_file(source)
+        self.assertEqual(output.name, "source_拆分填充_2.xlsx")
+        self.assertEqual(marker.read_bytes(), b"existing directory content")
+        self.assertEqual(sha(source), before)
+        self.assertEqual(stats, [("数据", 1, 1)])
+        with load(output) as workbook:
+            self.assertEqual(workbook.active["A2"].value, "value")
+
+    def test_output_permission_error_without_directory_is_not_retried(self):
+        source = makebook(self.root / "source.xlsx", [
+            ("数据", sheet({1: [c("A1", "value")]}, ["A1:A2"]))])
+        before = sha(source)
+        real_open = Path.open
+        attempts = []
+
+        def denied_output(path, *args, **kwargs):
+            if args and args[0] == "xb":
+                attempts.append(path)
+                raise PermissionError("injected directory write denial")
+            return real_open(path, *args, **kwargs)
+
+        with mock.patch.object(Path, "open", new=denied_output):
+            with self.assertRaisesRegex(PermissionError, "injected directory write denial"):
+                mod.process_file(source)
+        self.assertEqual(len(attempts), 1)
+        self.assertEqual(list(self.root.iterdir()), [source])
+        self.assertEqual(sha(source), before)
 
 
 if __name__ == "__main__":

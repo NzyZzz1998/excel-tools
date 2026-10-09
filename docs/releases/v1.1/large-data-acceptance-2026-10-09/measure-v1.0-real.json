@@ -1,0 +1,18 @@
+{
+  "captured_utc": "2026-10-09T02:02:32.180647+00:00",
+  "revision": "v1.0-real",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "engine_sha256": "348796863e6829bbf529f2b4629d7cca64fbab777af1a043f0af1b0fb6a40f21",
+  "source_sha256": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+  "source_unchanged": true,
+  "source_bytes": 9632564,
+  "memory_cap_bytes": 8589934592,
+  "timeout_seconds": 240,
+  "process_seconds": 240.56158239999786,
+  "peak_rss_mib": 6659.08,
+  "peak_private_mib": 6664.03,
+  "exit_code": 1,
+  "stop_reason": "probe_timeout",
+  "completed": false,
+  "diagnostic": ""
+}

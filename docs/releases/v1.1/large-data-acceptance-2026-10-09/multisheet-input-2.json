@@ -1,0 +1,10 @@
+{
+  "source_sha256": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+  "source_unchanged": true,
+  "copies": 2,
+  "detail_rows_total": 381132,
+  "output": "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\multisheet-input-2\\detail-2-sheets.xlsx",
+  "output_sha256": "c55d95aa6d7f46b5521040b740207e675357c4eef72b9e91c911454b8344bc81",
+  "bytes": 19261146,
+  "scope": "Same daily detail repeated on separate sheets to exercise resources and cross-sheet output; not real monthly transactions or valid monthly totals."
+}

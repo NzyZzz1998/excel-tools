@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-09T01:29:51.9701940Z",
+  "ended_utc": "2026-10-09T01:29:53.8747254Z",
+  "executable_path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-release-audit-40lvyocq\\发布 自检\\ExcelTools.exe",
+  "executable_sha256": "066ca4a1c7fe7fd2ac80a06ddc3969dbd178f5181983d8767d2c219078485d5c",
+  "package_sha256_after": "92870bdc52451341c7268f6e1937a3741ecd3e1012de0cf2e4026c606ccdd4a9",
+  "package_unchanged": true,
+  "process_id": 15548,
+  "process_exited": true,
+  "exit_code": 0,
+  "self_test_log": "ExcelTools v1.1 self-test passed.",
+  "authenticode_status": "NotSigned",
+  "isolation": "Fresh ZIP extraction; EXE+instructions only; Chinese and space paths; independent cwd; Python/Tcl variables removed; restricted PATH; distinct TEMP/TMP; hidden launch.",
+  "script_sha256": "577a5ce3e854c44d799c4fd422979e44a479f688e2ccd23a6e128df40b46012d",
+  "status": "passed"
+}

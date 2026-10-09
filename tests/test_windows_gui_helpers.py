@@ -4,6 +4,7 @@ import tempfile
 import threading
 import time
 import tkinter as tk
+from tkinter import font as tkfont
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -24,7 +25,8 @@ class WindowTests(unittest.TestCase):
         self.folder = Path(self.directory.name)
 
     def tearDown(self):
-        self.root.destroy()
+        if self.root is not None:
+            self.root.destroy()
         self.directory.cleanup()
 
     def workbook(self, name, merged):
@@ -190,8 +192,53 @@ class WindowTests(unittest.TestCase):
         self.assertIn("待处理 1", self.app.status.get())
         self.assertNotIn("disabled", self.app.resume_button.state())
 
+    def check_thread_memory_failure_recovery(self, target, stage):
+        source = self.workbook("线程内存-" + stage + ".xlsx", True)
+        original = source.read_bytes()
+        callback_errors = []
+        self.root.report_callback_exception = lambda *args: callback_errors.append(args[0].__name__)
+        self.app.files = (str(source),)
+        with patch(target, side_effect=MemoryError("synthetic thread allocation failure")):
+            self.root.after(0, self.app.start)
+            self.root.update()
+        self.assertEqual(callback_errors, [])
+        self.finish()
+        self.assertEqual(self.app.pending_files, (str(source),))
+        self.assertEqual(self.app.failed_files, ())
+        self.assertEqual((self.app.completed, self.app.succeeded, self.app.failed), (0, 0, 0))
+        self.assertEqual(list(self.folder.glob("*_拆分填充*.xlsx")), [])
+        self.assertEqual(source.read_bytes(), original)
+        self.assertNotIn("disabled", self.app.start_button.state())
+        self.assertNotIn("disabled", self.app.resume_button.state())
+        self.assertIn("disabled", self.app.stop_button.state())
+        self.assertIn("内存", self.app.results.get("1.0", "end"))
+        self.assertIn("MemoryError", self.app.results.get("1.0", "end"))
+
+        self.app.resume_pending()
+        self.finish()
+        self.assertEqual(self.app.succeeded, 1)
+        self.assertEqual(self.app.pending_files, ())
+        fresh = self.workbook("新批次-" + stage + ".xlsx", True)
+        self.app.files = (str(fresh),)
+        self.app.start()
+        self.finish()
+        self.assertEqual(self.app.succeeded, 1)
+        self.assertEqual(tuple(self.app.file_states), (str(fresh),))
+        self.assertEqual(callback_errors, [])
+        # Exercise a real idle-window close, then leave teardown only the files.
+        with patch.object(self.root, "destroy", wraps=self.root.destroy) as destroy:
+            self.app.close()
+            destroy.assert_called_once_with()
+        self.root = None
+
+    def test_thread_construction_memory_failure_can_resume_and_close(self):
+        self.check_thread_memory_failure_recovery("excel_unmerge_gui.threading.Thread", "构造")
+
+    def test_thread_start_memory_failure_can_resume_and_close(self):
+        self.check_thread_memory_failure_recovery("excel_unmerge_gui.threading.Thread.start", "启动")
+
     def test_new_controls_fit_minimum_window_width(self):
-        self.root.geometry("680x540")
+        self.root.geometry("{}x{}".format(*self.root.minsize()))
         self.root.update()
         for button in (self.app.start_button, self.app.open_button,
                        self.app.retry_button, self.app.resume_button, self.app.stop_button):
@@ -200,11 +247,25 @@ class WindowTests(unittest.TestCase):
                                  self.root.winfo_rootx() + self.root.winfo_width())
 
     def test_long_status_wraps_to_available_width_after_resizing(self):
-        self.app.status.set("正在处理：" + "年度业务合并明细核对" * 9
-                            + ".xlsx（本轮第 1/3 个，已处理 0 个）。")
+        wide_size = (self.root.winfo_width(), self.root.winfo_height())
+        narrow_size = self.root.minsize()
+        widths = []
+        for size in (wide_size, narrow_size):
+            self.root.geometry("{}x{}".format(*size))
+            self.root.update()
+            widths.append(self.app.status_label.winfo_width())
+        self.assertGreater(widths[0], widths[1], "The test must use distinct window widths")
+        # Physical sizes and font metrics vary with DPI. Choose text between
+        # two narrow lines and two wide lines so narrowing must add a line.
+        label_font = tkfont.nametofont("TkDefaultFont", root=self.root)
+        message = "正在处理："
+        suffix = ".xlsx（本轮第 1/3 个，已处理 0 个）。"
+        while label_font.measure(message + suffix) < sum(widths) - 20:
+            message += "明细"
+        self.app.status.set(message + suffix)
         heights = []
-        for geometry in ("840x660", "680x540", "840x660"):
-            self.root.geometry(geometry)
+        for size in (wide_size, narrow_size, wide_size):
+            self.root.geometry("{}x{}".format(*size))
             self.root.update()
             label = self.app.status_label
             self.assertLessEqual(label.winfo_reqwidth(), label.winfo_width())

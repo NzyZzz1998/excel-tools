@@ -1,0 +1,20 @@
+test_batch_reports_completed_files_and_enables_output_directory (test_windows_gui_helpers.WindowTests.test_batch_reports_completed_files_and_enables_output_directory) ... ok
+test_failure_and_unprocessed_files_have_independent_recovery_buttons (test_windows_gui_helpers.WindowTests.test_failure_and_unprocessed_files_have_independent_recovery_buttons) ... ok
+test_long_status_wraps_to_available_width_after_resizing (test_windows_gui_helpers.WindowTests.test_long_status_wraps_to_available_width_after_resizing) ... ok
+test_new_controls_fit_minimum_window_width (test_windows_gui_helpers.WindowTests.test_new_controls_fit_minimum_window_width) ... ok
+test_result_directory_unavailable_until_output_exists (test_windows_gui_helpers.WindowTests.test_result_directory_unavailable_until_output_exists) ... ok
+test_retry_only_failed_files_keeps_history_output_and_initial_options (test_windows_gui_helpers.WindowTests.test_retry_only_failed_files_keeps_history_output_and_initial_options) ... ok
+test_stop_and_continue_keep_current_file_safe_and_report_pending (test_windows_gui_helpers.WindowTests.test_stop_and_continue_keep_current_file_safe_and_report_pending) ... ok
+test_thread_construction_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_construction_memory_failure_can_resume_and_close) ... ok
+test_thread_start_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_start_memory_failure_can_resume_and_close) ... ok
+test_all_merges_and_no_match_results (test_gui_batch.GuiBatchTests.test_all_merges_and_no_match_results) ... ok
+test_bad_file_does_not_stop_later_file (test_gui_batch.GuiBatchTests.test_bad_file_does_not_stop_later_file) ... ok
+test_common_failures_include_action_and_original_technical_details (test_gui_batch.GuiBatchTests.test_common_failures_include_action_and_original_technical_details) ... ok
+test_self_test_failure_writes_diagnostic_without_stderr (test_gui_batch.GuiBatchTests.test_self_test_failure_writes_diagnostic_without_stderr) ... ok
+test_stop_before_first_file_reports_no_completion (test_gui_batch.GuiBatchTests.test_stop_before_first_file_reports_no_completion) ... ok
+test_stop_waits_for_current_file_and_leaves_later_files_unprocessed (test_gui_batch.GuiBatchTests.test_stop_waits_for_current_file_and_leaves_later_files_unprocessed) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 3.227s
+
+OK

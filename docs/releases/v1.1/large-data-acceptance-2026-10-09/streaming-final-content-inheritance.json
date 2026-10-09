@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-10-09T02:18:42.072015+00:00",
+  "method": "Full-file chunk byte comparison plus SHA256 links to the prior independent full-content oracle; no repeated cell parsing.",
+  "source_sha256": "caf18c566942d9a3348b71afa660f3b2a0576a16039f5602784a016a55a0cef0",
+  "first_output_sha256": "b787f7ae440cd2d302bbbfad549c675f14052ac207aaed83a3bc3d960d8c7c71",
+  "final_output_sha256": "b787f7ae440cd2d302bbbfad549c675f14052ac207aaed83a3bc3d960d8c7c71",
+  "final_engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "prior_oracle_path": "docs\\releases\\v1.1\\large-data-acceptance-2026-10-09\\streaming-first-content-validation.json",
+  "prior_oracle_sha256": "be3f11ca7cfa3ef4ef28161a57a4d5425bad9407dd4e66c594d39a496dd0cde4",
+  "prior_oracle_passed": true,
+  "prior_source_identity_matches": true,
+  "prior_output_identity_matches": true,
+  "outputs_exactly_byte_equal": true,
+  "final_measurement_identity_matches": true,
+  "inherited_checked_cells": 2667926,
+  "scope": "Actual default-mode daily workbook only; this does not establish EXE, all-merges, or derived multi-sheet acceptance.",
+  "passed": true
+}

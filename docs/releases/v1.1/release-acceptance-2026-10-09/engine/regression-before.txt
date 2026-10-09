@@ -1,0 +1,202 @@
+test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) ... 
+  test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='preserve', source=('', '', ' xml:space="preserve"', ''), target='') ... FAIL
+  test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='preserve', source=('', ' xml:space="preserve"', '', ''), target='') ... FAIL
+  test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='preserve', source=(' xml:space="preserve"', '', '', ''), target=' xml:space="default"') ... FAIL
+  test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='default', source=('', '', '', ''), target=' xml:space="preserve"') ... FAIL
+  test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='default', source=(' xml:space="preserve"', ' xml:space="default"', '', ''), target='') ... FAIL
+test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) ... 
+  test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) (anchor='a1') ... FAIL
+  test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) (anchor='$A$1') ... FAIL
+test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) ... 
+  test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='a1', attributes='', message='公式') ... FAIL
+  test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='a1', attributes=' vm="1"', message='元数据') ... FAIL
+  test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='a1', attributes=' cm="1"', message='元数据') ... FAIL
+  test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='$A$1', attributes='', message='公式') ... FAIL
+  test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='$A$1', attributes=' vm="1"', message='元数据') ... FAIL
+  test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='$A$1', attributes=' cm="1"', message='元数据') ... FAIL
+test_equivalent_duplicate_addresses_are_rejected_without_output (test_engine_regressions.EngineRegressionTests.test_equivalent_duplicate_addresses_are_rejected_without_output) ... FAIL
+
+======================================================================
+FAIL: test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='preserve', source=('', '', ' xml:space="preserve"', ''), target='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 81, in test_copied_text_keeps_inherited_xml_space
+    self.assertEqual([effective_space(text) for text in texts[:2]], [expected] * 2)
+AssertionError: Lists differ: ['preserve', 'default'] != ['preserve', 'preserve']
+
+First differing element 1:
+'default'
+'preserve'
+
+- ['preserve', 'default']
++ ['preserve', 'preserve']
+
+======================================================================
+FAIL: test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='preserve', source=('', ' xml:space="preserve"', '', ''), target='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 81, in test_copied_text_keeps_inherited_xml_space
+    self.assertEqual([effective_space(text) for text in texts[:2]], [expected] * 2)
+AssertionError: Lists differ: ['preserve', 'default'] != ['preserve', 'preserve']
+
+First differing element 1:
+'default'
+'preserve'
+
+- ['preserve', 'default']
++ ['preserve', 'preserve']
+
+======================================================================
+FAIL: test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='preserve', source=(' xml:space="preserve"', '', '', ''), target=' xml:space="default"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 81, in test_copied_text_keeps_inherited_xml_space
+    self.assertEqual([effective_space(text) for text in texts[:2]], [expected] * 2)
+AssertionError: Lists differ: ['preserve', 'default'] != ['preserve', 'preserve']
+
+First differing element 1:
+'default'
+'preserve'
+
+- ['preserve', 'default']
++ ['preserve', 'preserve']
+
+======================================================================
+FAIL: test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='default', source=('', '', '', ''), target=' xml:space="preserve"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 81, in test_copied_text_keeps_inherited_xml_space
+    self.assertEqual([effective_space(text) for text in texts[:2]], [expected] * 2)
+AssertionError: Lists differ: ['default', 'preserve'] != ['default', 'default']
+
+First differing element 1:
+'preserve'
+'default'
+
+- ['default', 'preserve']
++ ['default', 'default']
+
+======================================================================
+FAIL: test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) (expected='default', source=(' xml:space="preserve"', ' xml:space="default"', '', ''), target='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 81, in test_copied_text_keeps_inherited_xml_space
+    self.assertEqual([effective_space(text) for text in texts[:2]], [expected] * 2)
+AssertionError: Lists differ: ['default', 'preserve'] != ['default', 'default']
+
+First differing element 1:
+'preserve'
+'default'
+
+- ['default', 'preserve']
++ ['default', 'default']
+
+======================================================================
+FAIL: test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) (anchor='a1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 96, in test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs
+    self.assertEqual([cell.attrib["r"] for cell in cells], [anchor, "b1", "A2"])
+AssertionError: Lists differ: ['a1', 'b1', 'a2', 'A2'] != ['a1', 'b1', 'A2']
+
+First differing element 2:
+'a2'
+'A2'
+
+First list contains 1 additional elements.
+First extra element 3:
+'A2'
+
+- ['a1', 'b1', 'a2', 'A2']
+?              ------
+
++ ['a1', 'b1', 'A2']
+
+======================================================================
+FAIL: test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) (anchor='$A$1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 96, in test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs
+    self.assertEqual([cell.attrib["r"] for cell in cells], [anchor, "b1", "A2"])
+AssertionError: Lists differ: ['$A$1', 'b1', '$A$2', 'A2'] != ['$A$1', 'b1', 'A2']
+
+First differing element 2:
+'$A$2'
+'A2'
+
+First list contains 1 additional elements.
+First extra element 3:
+'A2'
+
+- ['$A$1', 'b1', '$A$2', 'A2']
+?                --------
+
++ ['$A$1', 'b1', 'A2']
+
+======================================================================
+FAIL: test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='a1', attributes='', message='公式')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 109, in test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection
+    with self.assertRaisesRegex(ValueError, message):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='a1', attributes=' vm="1"', message='元数据')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 109, in test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection
+    with self.assertRaisesRegex(ValueError, message):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='a1', attributes=' cm="1"', message='元数据')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 109, in test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection
+    with self.assertRaisesRegex(ValueError, message):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='$A$1', attributes='', message='公式')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 109, in test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection
+    with self.assertRaisesRegex(ValueError, message):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='$A$1', attributes=' vm="1"', message='元数据')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 109, in test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection
+    with self.assertRaisesRegex(ValueError, message):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) (ref='$A$1', attributes=' cm="1"', message='元数据')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 109, in test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection
+    with self.assertRaisesRegex(ValueError, message):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_equivalent_duplicate_addresses_are_rejected_without_output (test_engine_regressions.EngineRegressionTests.test_equivalent_duplicate_addresses_are_rejected_without_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\codex\excel-tools\tests\test_engine_regressions.py", line 116, in test_equivalent_duplicate_addresses_are_rejected_without_output
+    with self.assertRaisesRegex(ValueError, "重复.*A1"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.018s
+
+FAILED (failures=14)

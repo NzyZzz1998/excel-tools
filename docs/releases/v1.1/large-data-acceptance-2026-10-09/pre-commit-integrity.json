@@ -1,0 +1,119 @@
+{
+  "source_checks": [
+    {
+      "path": "packaging/使用说明.txt",
+      "sha256": "f7480c548fa7aff60e04a44f97761cae9995ffd363727f0b98eeeb3d20444499",
+      "matches_build_snapshot": true
+    },
+    {
+      "path": "excel_unmerge_fill.py",
+      "sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+      "matches_build_snapshot": true
+    },
+    {
+      "path": "excel_unmerge_gui.py",
+      "sha256": "d3a1c273f0d4bb333d26945b8b39061daa064824e413601e711aeb9ab8d2c4c0",
+      "matches_build_snapshot": true
+    },
+    {
+      "path": "tests/test_engine_regressions.py",
+      "sha256": "3f32e8860fc130393203ee9ca6c5f8a7784d7b7ea70bea23e90e5e7602935261",
+      "matches_build_snapshot": true
+    },
+    {
+      "path": "tests/test_excel_unmerge.py",
+      "sha256": "b1e8fa062c8182902f587804e31f9d2a0d58e81a02862f46d1881761c4e56d9e",
+      "matches_build_snapshot": true
+    },
+    {
+      "path": "tests/test_gui_batch.py",
+      "sha256": "8325821344cf96c78eed808f4b95267fbfd677b69287a494181b6ed0aa9fe05d",
+      "matches_build_snapshot": true
+    },
+    {
+      "path": "tests/test_streaming_engine.py",
+      "sha256": "a8b8e7e32274b9157e50a32a4af422799a4f56fe9b9981d73d86cd2e690afe94",
+      "matches_build_snapshot": true
+    },
+    {
+      "path": "tests/test_windows_gui_helpers.py",
+      "sha256": "c4fbb93c1278bfe95ec50cfc8f2cd1ac94484d47004c31e9de2c8a114057dfc7",
+      "matches_build_snapshot": true
+    }
+  ],
+  "package_matches_build": true,
+  "delivery_results": [
+    {
+      "mode": "default",
+      "name": "供应商缺货Top20 (1)_拆分填充.xlsx",
+      "sha256": "82a2c653af16ba6c4779efb0e30b030947ae5012f42eca7b863e08e9e1f1680a",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "default",
+      "name": "库存满足率 (1)_拆分填充.xlsx",
+      "sha256": "46fd622330da7044cd49b161aea994ac285a340d883f57885f423ac217191143",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "default",
+      "name": "日明细表 (2)_拆分填充.xlsx",
+      "sha256": "b787f7ae440cd2d302bbbfad549c675f14052ac207aaed83a3bc3d960d8c7c71",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "default",
+      "name": "期间缺货Top20_拆分填充.xlsx",
+      "sha256": "83206dcd64b780bc13b1469534cffdab794329a7a48794c9ac4c2357a14fc5d8",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "default",
+      "name": "每日缺货Top50 (1)_拆分填充.xlsx",
+      "sha256": "ceba1ff562defd5b2015d284206a585ad61536c405dcdea7bd9644caaaac58a3",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "default",
+      "name": "缺货数据统计_拆分填充.xlsx",
+      "sha256": "ada6b5e456af2239a0ccb3a7d3d10d54c323d6c4d9c75ce80d59e7280ad79ebc",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "all",
+      "name": "供应商缺货Top20 (1)_拆分填充.xlsx",
+      "sha256": "5856af27e4a038ac9217bd8f2311aa230d9e492836dfb2054840864bb98ea5c0",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "all",
+      "name": "库存满足率 (1)_拆分填充.xlsx",
+      "sha256": "78836c8898f9ebd6246d3a3b67c77e12afe2b7202c45bc2431a52895f80b101b",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "all",
+      "name": "日明细表 (2)_拆分填充.xlsx",
+      "sha256": "b2066cb5fea042e8e7777498eec44dd8f1ac286a1fa07f11a66f7cfd75486314",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "all",
+      "name": "期间缺货Top20_拆分填充.xlsx",
+      "sha256": "b195a55f035a8707fb8cc37b8c1fbb93260735d14cfe54d7e7f0f4b819c64cc7",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "all",
+      "name": "每日缺货Top50 (1)_拆分填充.xlsx",
+      "sha256": "45599ec648b98aaba4bc3125b9ccd6acac68a2584a5d2a448ae30c46e8d7674f",
+      "matches_accepted_exe_output": true
+    },
+    {
+      "mode": "all",
+      "name": "缺货数据统计_拆分填充.xlsx",
+      "sha256": "cdddc39dd340421c242fa87767ec0217c244ac5311bccb1136616b170fd05f1d",
+      "matches_accepted_exe_output": true
+    }
+  ]
+}

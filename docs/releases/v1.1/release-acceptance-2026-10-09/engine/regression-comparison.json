@@ -1,0 +1,14 @@
+{
+  "before": {
+    "tests": 4,
+    "failed_assertions": 14,
+    "errors": 0,
+    "passed": false
+  },
+  "after": {
+    "tests": 4,
+    "failed_assertions": 0,
+    "errors": 0,
+    "passed": true
+  }
+}

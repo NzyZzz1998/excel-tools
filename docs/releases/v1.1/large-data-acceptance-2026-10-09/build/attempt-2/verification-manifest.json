@@ -1,0 +1,94 @@
+{
+  "source_head": "96cfbfeab30be280129aa8af9fff74e5f6be2464",
+  "source_status": [
+    " M README.md",
+    " M docs/releases/v1.1/dev_log_v1.1.md",
+    " M docs/releases/v1.1/dev_plan_v1.1.md",
+    " M docs/releases/v1.1/prd_v1.1.md",
+    " M docs/releases/v1.1/progress_v1.1.md",
+    " M docs/releases/v1.1/verification_v1.1.md",
+    " M excel_unmerge_fill.py",
+    " M excel_unmerge_gui.py",
+    " M packaging/release-notes.md",
+    " M \"packaging/\\344\\275\\277\\347\\224\\250\\350\\257\\264\\346\\230\\216.txt\"",
+    " M tests/test_engine_regressions.py",
+    " M tests/test_windows_gui_helpers.py",
+    " M \"\\344\\275\\277\\347\\224\\250\\350\\257\\264\\346\\230\\216.md\"",
+    "?? docs/releases/v1.1/business-acceptance-2026-10-09/engine-content-validation-release.json",
+    "?? docs/releases/v1.1/large-data-acceptance-2026-10-09/",
+    "?? docs/releases/v1.1/release-acceptance-2026-10-09/",
+    "?? tests/test_streaming_engine.py"
+  ],
+  "source_snapshot": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source",
+  "source_hashes": [
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\使用说明.txt",
+      "Hash": "F7480C548FA7AFF60E04A44F97761CAE9995FFD363727F0B98EEEB3D20444499"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\excel_unmerge_fill.py",
+      "Hash": "1D761A9F897B545C367514069E755F1AA270F1D9A777D963FFE1AF41B606B5EB"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\excel_unmerge_gui.py",
+      "Hash": "D3A1C273F0D4BB333D26945B8B39061DAA064824E413601E711AEB9AB8D2C4C0"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\tests\\test_engine_regressions.py",
+      "Hash": "3F32E8860FC130393203EE9CA6C5F8A7784D7B7EA70BEA23E90E5E7602935261"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\tests\\test_excel_unmerge.py",
+      "Hash": "B1E8FA062C8182902F587804E31F9D2A0D58E81A02862F46D1881761C4E56D9E"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\tests\\test_gui_batch.py",
+      "Hash": "8325821344CF96C78EED808F4B95267FBFD677B69287A494181B6ED0AA9FE05D"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\tests\\test_streaming_engine.py",
+      "Hash": "A8B8E7E32274B9157E50A32A4AF422799A4F56FE9B9981D73D86CD2E690AFE94"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\candidate-source\\tests\\test_windows_gui_helpers.py",
+      "Hash": "C4FBB93C1278BFE95EC50CFC8F2CD1AC94484D47004C31E9DE2C8A114057DFC7"
+    }
+  ],
+  "independent_acceptance_hashes": [
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\independent-acceptance\\baseline_engine.py",
+      "Hash": "252BBF1EDFE9C24D78D4D3531B6D0BE31C20F395BD79A6BDF171EB47A0690528"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\independent-acceptance\\independent_acceptance.py",
+      "Hash": "5AC1073037910684125FAC1CEA72999216430F6EC3F30256005C3116FB150EB8"
+    }
+  ],
+  "build_script": {
+    "Path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1\\large-data-acceptance-2026-10-09\\build\\run_build.ps1",
+    "Hash": "AE5C8F3574207CFF10FE9529B307A41923E7210522B45277EDA32882CE2A8D91"
+  },
+  "app_version": "1.1",
+  "build_python": "C:/Users/win/AppData/Local/Temp/excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02/venv/Scripts/python.exe",
+  "dependencies": {
+    "python": "3.12.8",
+    "pyinstaller": "6.22.3",
+    "openpyxl": "3.1.5"
+  },
+  "portable_self_test_exit": 0,
+  "executable": {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-large-data-0fb27228dbb542259bb0254f021b95a7\\免安装 验收\\ExcelTools.exe",
+    "Hash": "239B1456771AE417F044DFD1AC2642F7AC36DE7BC3781C6D2AC3DDC75D2D7EA4"
+  },
+  "package": {
+    "Path": "E:\\codex\\excel-tools\\dist\\ExcelTools-v1.1-Windows-x64.zip",
+    "Hash": "07B801517060896C01EA9BE2AAF1420784D2E87FE3A5F2AE4EA1B31F5B0488F6"
+  },
+  "previous_candidate_archive": {
+    "Path": "E:\\codex\\excel-tools\\dist\\archive\\ExcelTools-v1.1-pre-deep-review-92870bdc.zip",
+    "Hash": "92870BDC52451341C7268F6E1937A3741ECD3E1012DE0CF2E4026C606CCDD4A9"
+  },
+  "captured_utc": "2026-10-09T02:17:27.1800695Z",
+  "isolation": "EXE only; Chinese/space paths; separate cwd; stripped Python/Tcl environment; restricted PATH; separate extraction directory; hidden launch",
+  "limitations": "Local Windows 11; no clean-machine/remote CI/official Release claim; build checks use synthetic fixtures only; business-client retesting is recorded separately."
+}

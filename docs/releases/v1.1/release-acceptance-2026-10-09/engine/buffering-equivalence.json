@@ -1,0 +1,124 @@
+{
+  "current_engine_sha256": "877485d3c497df2cdf83fe1a7729002ef0b91c1e964109cc2f684fc068227f75",
+  "p2_engine_sha256": "6580f5407dd33965e602571801acb43b73b4aeb5fc51bb9eb384662f45e31aaf",
+  "cases": [
+    {
+      "case": "row_style",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\row_style_拆分填充_3.xlsx",
+      "sha256": "c3302ec224db9ce532dc3bbb33d8db3dede4b7f88680b5e1639e27a251f55df5",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "column_style",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\column_style_拆分填充_3.xlsx",
+      "sha256": "621e94fc140922caa40db9c398570220905015c08d90e864f95c99064f1fb406",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "xmlspace_cell",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\xmlspace_cell_拆分填充_3.xlsx",
+      "sha256": "2925ec9326b3803ac16ca6e8c1c0a3faf0c7c1c1062696426006b78277653b6f",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "xmlspace_row",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\xmlspace_row_拆分填充_3.xlsx",
+      "sha256": "7681e21c069870a1d4c4efd7c54b7e1860248b7bd52884efa0bfc0c676415ada",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "xmlspace_target",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\xmlspace_target_拆分填充_3.xlsx",
+      "sha256": "11b2dd419d24df596a71a4d5f85413b212b749f11b690957755f7794db3cb231",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "xmlspace_root_target_default",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\xmlspace_root_target_default_拆分填充_3.xlsx",
+      "sha256": "d519ecf9cd6dee8c98e9726d85e9403ee72a709fcca301b56c10f746126012f4",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "xmlspace_text_default",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\xmlspace_text_default_拆分填充_3.xlsx",
+      "sha256": "93507e80f42040b4cb7d94e3e6bf03007057323c77664bf74ab1b8179be33ac0",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "lowercase_cell",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\lowercase_cell_拆分填充_3.xlsx",
+      "sha256": "9868ed03b027f3ed820e7a1167e06aca32db4bb7f6598c28fd87499f47cf7a49",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "case": "absolute_cell",
+      "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-engine-fixed-cabuo0uh\\absolute_cell_拆分填充_3.xlsx",
+      "sha256": "8f46f478fcfdb480b9d2c4e712ed323a5b384e93623e094ecf08d04c2b139b40",
+      "byte_identical_to_excel_checked_p2_output": true,
+      "stats": [
+        [
+          "Data",
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "all_byte_identical": true
+}

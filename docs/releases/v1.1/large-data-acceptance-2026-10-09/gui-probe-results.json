@@ -1,0 +1,65 @@
+{
+  "gui_sha256": "0d59d53e067da326984702ece5939347448a829012b564363eb9469c42b25f87",
+  "cpu_bound_worker": {
+    "workload": "2 seconds of bounded pure-Python arithmetic, then one tiny synthetic workbook",
+    "heartbeat_target_ms": 20,
+    "heartbeat_samples": 70,
+    "max_heartbeat_gap_ms": 60.333000001264736,
+    "median_heartbeat_gap_ms": 26.369200000772253,
+    "events": {
+      "stop_request_executed_seconds": 0.24701699998695403,
+      "close_request_executed_seconds": 0.42447870000614785,
+      "window_alive_after_close_request": true,
+      "current_file_finished_seconds": 2.01434419999714
+    },
+    "callback_errors": [],
+    "current_file_saved": true,
+    "next_file_not_started": true,
+    "pending_count": 1,
+    "passed": true
+  },
+  "worker_memory_error": {
+    "initial": {
+      "failed": 1,
+      "succeeded": 1,
+      "failed_item_retryable": true,
+      "contains_memory_guidance": true
+    },
+    "retry_succeeded": true,
+    "success_not_reprocessed": true,
+    "callback_errors": [],
+    "passed": true
+  },
+  "thread_allocation_memory_errors": [
+    {
+      "injected_stage": "construct",
+      "callback_errors": [
+        "MemoryError"
+      ],
+      "running_remains_true": true,
+      "queue_empty_without_done": true,
+      "window_still_exists_after_close": true,
+      "start_disabled": true,
+      "retry_disabled": true,
+      "resume_disabled": true,
+      "no_output_generated": true,
+      "stuck_state_confirmed": true
+    },
+    {
+      "injected_stage": "start",
+      "callback_errors": [
+        "MemoryError"
+      ],
+      "running_remains_true": true,
+      "queue_empty_without_done": true,
+      "window_still_exists_after_close": true,
+      "start_disabled": true,
+      "retry_disabled": true,
+      "resume_disabled": true,
+      "no_output_generated": true,
+      "stuck_state_confirmed": true
+    }
+  ],
+  "limitations": "Bounded synthetic probes only. Does not measure multi-GB RSS, long C-extension/GIL or GC pauses, OS OOM termination, or real large-workbook processing.",
+  "gui_source_unchanged": true
+}

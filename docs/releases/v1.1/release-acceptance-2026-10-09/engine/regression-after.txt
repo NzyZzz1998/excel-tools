@@ -1,0 +1,9 @@
+test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) ... ok
+test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) ... ok
+test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) ... ok
+test_equivalent_duplicate_addresses_are_rejected_without_output (test_engine_regressions.EngineRegressionTests.test_equivalent_duplicate_addresses_are_rejected_without_output) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.007s
+
+OK

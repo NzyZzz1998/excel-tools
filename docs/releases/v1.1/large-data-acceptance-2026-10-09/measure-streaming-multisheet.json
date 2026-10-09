@@ -1,0 +1,40 @@
+{
+  "captured_utc": "2026-10-09T02:20:26.154039+00:00",
+  "revision": "streaming-multisheet",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "source_sha256": "c55d95aa6d7f46b5521040b740207e675357c4eef72b9e91c911454b8344bc81",
+  "source_unchanged": true,
+  "engine_dependencies": {},
+  "source_bytes": 19261146,
+  "memory_cap_bytes": 3221225472,
+  "timeout_seconds": 600,
+  "process_seconds": 130.00252209999599,
+  "peak_rss_mib": 71.98,
+  "peak_private_mib": 64.66,
+  "exit_code": 0,
+  "stop_reason": null,
+  "seconds": 129.8730835999886,
+  "output": "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\streaming-multisheet\\detail-2-sheets_拆分填充.xlsx",
+  "sheet_counts": [
+    {
+      "index": 1,
+      "regions": 247,
+      "filled": 761997
+    },
+    {
+      "index": 2,
+      "regions": 2,
+      "filled": 2
+    },
+    {
+      "index": 3,
+      "regions": 247,
+      "filled": 761997
+    }
+  ],
+  "output_sha256": "2f0ecb626f951677093a81037eaf74e56452e600c920db4597dcc7ed8e7413c4",
+  "output_bytes": 24878472,
+  "completed": true,
+  "content_validation": "pending independent check"
+}
