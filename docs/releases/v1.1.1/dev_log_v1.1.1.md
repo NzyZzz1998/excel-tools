@@ -19,3 +19,5 @@
 ## 2026-10-10：远端验证与发布收口
 
 实现与本地验收证据已提交为 `1a928e7` 并推送。首轮 Windows CI `37955040642` 在 GUI 回归中发生 `RuntimeError: main thread is not in main loop`，随后 `Tcl_AsyncDelete: async handler deleted by the wrong thread`；保留失败记录，在修正和重新验证前不发布。此次失败没有覆盖或替换已经通过月表测试的候选包。
+
+`3e26aa9` 修正测试夹具销毁后仍持有Tk对象的生命周期，主线程释放并用弱引用断言验证。第二轮CI `37956290587` 全部GUI用例通过，完整执行115项后报告一处引擎测试断言失败：`runneradmin` 与 `RUNNER~1` 指向同一Windows临时目录，原断言比较了路径写法。首轮日志也已有该用例FAIL标记，但在Tk中止前未输出完整失败详情；第二轮给出了明确的长短路径差异。将该断言改为目录身份比较，不修改应用源码或重建候选。

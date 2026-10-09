@@ -108,7 +108,7 @@ class OutputProgressTests(unittest.TestCase):
         self.assertEqual(error.errno, errno.ENOSPC)
         self.assertGreater(state['written'], 0)
         self.assertIs(error.cleanup_error, cleanup)
-        self.assertEqual(error.partial_path.parent, self.root)
+        self.assertTrue(error.partial_path.parent.samefile(self.root))
         self.assertEqual(error.partial_path.suffix, '.part')
         self.assertTrue(error.partial_path.exists())
         self.assertIn('synthetic disk full', str(error))
