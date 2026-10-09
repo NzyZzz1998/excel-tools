@@ -1,0 +1,464 @@
+windows	Set up job	﻿2026-10-09T02:29:03.7952506Z Current runner version: '2.337.0'
+windows	Set up job	2026-10-09T02:29:03.8415339Z ##[group]Runner Image Provisioner
+windows	Set up job	2026-10-09T02:29:03.8416315Z Hosted Compute Agent
+windows	Set up job	2026-10-09T02:29:03.8416906Z Version: 20261002.596
+windows	Set up job	2026-10-09T02:29:03.8417540Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+windows	Set up job	2026-10-09T02:29:03.8418299Z Build Date: 2026-10-02T22:28:27Z
+windows	Set up job	2026-10-09T02:29:03.8419004Z Worker ID: {5f82b68e-daa7-49f5-9294-c212d400a177}
+windows	Set up job	2026-10-09T02:29:03.8419731Z Region: westus
+windows	Set up job	2026-10-09T02:29:03.8420259Z Cloud: Azure
+windows	Set up job	2026-10-09T02:29:03.8420779Z ##[endgroup]
+windows	Set up job	2026-10-09T02:29:03.8422145Z ##[group]Operating System
+windows	Set up job	2026-10-09T02:29:03.8422842Z Microsoft Windows Server 2022
+windows	Set up job	2026-10-09T02:29:03.8423457Z 10.0.20348
+windows	Set up job	2026-10-09T02:29:03.8423947Z Datacenter
+windows	Set up job	2026-10-09T02:29:03.8424476Z ##[endgroup]
+windows	Set up job	2026-10-09T02:29:03.8425033Z ##[group]Runner Image
+windows	Set up job	2026-10-09T02:29:03.8425626Z Image: windows-2022
+windows	Set up job	2026-10-09T02:29:03.8426195Z Version: 20261004.326.1
+windows	Set up job	2026-10-09T02:29:03.8427196Z Included Software: https://github.com/actions/runner-images/blob/win22/20261004.326/images/windows/Windows2022-Readme.md
+windows	Set up job	2026-10-09T02:29:03.8429416Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20261004.326
+windows	Set up job	2026-10-09T02:29:03.8430323Z ##[endgroup]
+windows	Set up job	2026-10-09T02:29:03.8431373Z ##[group]GITHUB_TOKEN Permissions
+windows	Set up job	2026-10-09T02:29:03.8433305Z Contents: read
+windows	Set up job	2026-10-09T02:29:03.8433874Z Metadata: read
+windows	Set up job	2026-10-09T02:29:03.8434363Z ##[endgroup]
+windows	Set up job	2026-10-09T02:29:03.8436533Z Secret source: Actions
+windows	Set up job	2026-10-09T02:29:03.8437422Z Cache mode: write
+windows	Set up job	2026-10-09T02:29:03.8438097Z Prepare workflow directory
+windows	Set up job	2026-10-09T02:29:03.9637832Z Prepare all required actions
+windows	Set up job	2026-10-09T02:29:03.9690010Z Getting action download info
+windows	Set up job	2026-10-09T02:29:04.3967745Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+windows	Set up job	2026-10-09T02:29:04.6040902Z Download action repository 'actions/setup-python@v7' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+windows	Set up job	2026-10-09T02:29:04.8569504Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+windows	Set up job	2026-10-09T02:29:06.0538392Z Complete job name: windows
+windows	Run actions/checkout@v7	﻿2026-10-09T02:29:06.2467460Z ##[group]Run actions/checkout@v7
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2468636Z with:
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2469147Z   repository: NzyZzz1998/excel-tools
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2472283Z   token: ***
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2472671Z   ssh-strict: true
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2473043Z   ssh-user: git
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2473429Z   persist-credentials: true
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2473842Z   clean: true
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2474239Z   sparse-checkout-cone-mode: true
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2474678Z   fetch-depth: 1
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2475051Z   fetch-tags: false
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2475431Z   show-progress: true
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2475805Z   lfs: false
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2476183Z   submodules: false
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2476561Z   set-safe-directory: true
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2476992Z   allow-unsafe-pr-checkout: false
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.2477648Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.6182816Z Syncing repository: NzyZzz1998/excel-tools
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.6185650Z ##[group]Getting Git version info
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.6186948Z Working directory is 'D:\a\excel-tools\excel-tools'
+windows	Run actions/checkout@v7	2026-10-09T02:29:06.7910032Z [command]"C:\Program Files\Git\bin\git.exe" version
+windows	Run actions/checkout@v7	2026-10-09T02:29:07.4623672Z git version 2.56.0.windows.1
+windows	Run actions/checkout@v7	2026-10-09T02:29:07.4684966Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:07.4702685Z Temporarily overriding HOME='D:\a\_temp\dff6cd0a-3c33-4735-93a0-05c48a4c51c0' before making global git config changes
+windows	Run actions/checkout@v7	2026-10-09T02:29:07.4704882Z Adding repository directory to the temporary git global config as a safe directory
+windows	Run actions/checkout@v7	2026-10-09T02:29:07.4718906Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\excel-tools\excel-tools
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1970258Z Deleting the contents of 'D:\a\excel-tools\excel-tools'
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1971793Z ##[group]Determining repository object format
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1972964Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1976668Z ##[group]Initializing the repository
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1977569Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\excel-tools\excel-tools
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1978601Z Initialized empty Git repository in D:/a/excel-tools/excel-tools/.git/
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1980811Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/NzyZzz1998/excel-tools
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1983009Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1983996Z ##[group]Disabling automatic garbage collection
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1985591Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1987519Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1988264Z ##[group]Setting up auth
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1989212Z Removing SSH command configuration
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1990390Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+windows	Run actions/checkout@v7	2026-10-09T02:29:09.1993656Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+windows	Run actions/checkout@v7	2026-10-09T02:29:11.7478123Z Removing HTTP extra header
+windows	Run actions/checkout@v7	2026-10-09T02:29:11.7490860Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+windows	Run actions/checkout@v7	2026-10-09T02:29:11.8108877Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+windows	Run actions/checkout@v7	2026-10-09T02:29:12.4811405Z Removing includeIf entries pointing to credentials config files
+windows	Run actions/checkout@v7	2026-10-09T02:29:12.4814600Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+windows	Run actions/checkout@v7	2026-10-09T02:29:12.5122474Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.0365494Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.0868539Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/excel-tools/excel-tools/.git.path D:\a\_temp\git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.1209859Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/excel-tools/excel-tools/.git/worktrees/*.path D:\a\_temp\git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.1592885Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.1899231Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.2423710Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.2426293Z ##[group]Fetching the repository
+windows	Run actions/checkout@v7	2026-10-09T02:29:13.2427900Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +067834455de167d86351b5ab338c518744ec4afa:refs/remotes/origin/main
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.4908992Z From https://github.com/NzyZzz1998/excel-tools
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.4910040Z  * [new ref]         067834455de167d86351b5ab338c518744ec4afa -> origin/main
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.4954309Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.5326167Z   origin/main
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.5368266Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.5692130Z 067834455de167d86351b5ab338c518744ec4afa
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.5829449Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.5843781Z ##[group]Determining the checkout info
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.5846830Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.5847473Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.6280826Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.6586728Z ##[group]Checking out the ref
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.6596528Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.7837433Z Switched to a new branch 'main'
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.7870534Z branch 'main' set up to track 'origin/main'.
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.7916008Z ##[endgroup]
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.8352880Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+windows	Run actions/checkout@v7	2026-10-09T02:29:14.8740277Z 067834455de167d86351b5ab338c518744ec4afa
+windows	Run actions/setup-python@v7	﻿2026-10-09T02:29:14.9270301Z ##[group]Run actions/setup-python@v7
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9270677Z with:
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9270879Z   python-version: 3.12
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9271106Z   architecture: x64
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9271334Z   check-latest: false
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9273647Z   token: ***
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9273858Z   update-environment: true
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9274097Z   allow-prereleases: false
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9274319Z   freethreaded: false
+windows	Run actions/setup-python@v7	2026-10-09T02:29:14.9274519Z ##[endgroup]
+windows	Run actions/setup-python@v7	2026-10-09T02:29:15.0778853Z ##[group]Installed versions
+windows	Run actions/setup-python@v7	2026-10-09T02:29:15.0970744Z Successfully set up CPython (3.12.10)
+windows	Run actions/setup-python@v7	2026-10-09T02:29:15.0993882Z ##[endgroup]
+windows	Install build and test dependencies	﻿2026-10-09T02:29:15.1249827Z ##[group]Run python -m pip install pyinstaller==6.22.3 openpyxl==3.1.5
+windows	Install build and test dependencies	2026-10-09T02:29:15.1250512Z ^[[36;1mpython -m pip install pyinstaller==6.22.3 openpyxl==3.1.5^[[0m
+windows	Install build and test dependencies	2026-10-09T02:29:15.1364711Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+windows	Install build and test dependencies	2026-10-09T02:29:15.1365179Z env:
+windows	Install build and test dependencies	2026-10-09T02:29:15.1365492Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Install build and test dependencies	2026-10-09T02:29:15.1366055Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+windows	Install build and test dependencies	2026-10-09T02:29:15.1366617Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Install build and test dependencies	2026-10-09T02:29:15.1367106Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Install build and test dependencies	2026-10-09T02:29:15.1367579Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Install build and test dependencies	2026-10-09T02:29:15.1367954Z ##[endgroup]
+windows	Install build and test dependencies	2026-10-09T02:29:20.9261226Z Collecting pyinstaller==6.22.3
+windows	Install build and test dependencies	2026-10-09T02:29:21.1197740Z   Downloading pyinstaller-6.22.3-py3-none-win_amd64.whl.metadata (8.5 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:21.2312161Z Collecting openpyxl==3.1.5
+windows	Install build and test dependencies	2026-10-09T02:29:21.2473342Z   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:21.3503107Z Collecting altgraph (from pyinstaller==6.22.3)
+windows	Install build and test dependencies	2026-10-09T02:29:21.3672072Z   Downloading altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:21.3968916Z Requirement already satisfied: packaging>=22.0 in C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages (from pyinstaller==6.22.3) (26.3)
+windows	Install build and test dependencies	2026-10-09T02:29:21.4770599Z Collecting pefile>=2022.5.30 (from pyinstaller==6.22.3)
+windows	Install build and test dependencies	2026-10-09T02:29:21.4912664Z   Downloading pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:21.6162123Z Collecting pyinstaller-hooks-contrib>=2026.7 (from pyinstaller==6.22.3)
+windows	Install build and test dependencies	2026-10-09T02:29:21.6307846Z   Downloading pyinstaller_hooks_contrib-2026.8-py3-none-any.whl.metadata (16 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:21.7596613Z Collecting pywin32-ctypes>=0.2.1 (from pyinstaller==6.22.3)
+windows	Install build and test dependencies	2026-10-09T02:29:21.7731228Z   Downloading pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.0238416Z Collecting setuptools>=42.0.0 (from pyinstaller==6.22.3)
+windows	Install build and test dependencies	2026-10-09T02:29:22.0378277Z   Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.1495406Z Collecting et-xmlfile (from openpyxl==3.1.5)
+windows	Install build and test dependencies	2026-10-09T02:29:22.1646030Z   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.2211741Z Downloading pyinstaller-6.22.3-py3-none-win_amd64.whl (1.5 MB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.3099206Z    ---------------------------------------- 1.5/1.5 MB 25.4 MB/s  0:00:00
+windows	Install build and test dependencies	2026-10-09T02:29:22.3238142Z Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.3584225Z Downloading pefile-2024.8.26-py3-none-any.whl (74 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.4005897Z Downloading pyinstaller_hooks_contrib-2026.8-py3-none-any.whl (462 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.4386879Z Downloading pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.4759854Z Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.5081876Z    ---------------------------------------- 818.2/818.2 kB 17.9 MB/s  0:00:00
+windows	Install build and test dependencies	2026-10-09T02:29:22.5250864Z Downloading altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:22.5576323Z Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+windows	Install build and test dependencies	2026-10-09T02:29:23.1816060Z Installing collected packages: altgraph, setuptools, pywin32-ctypes, pyinstaller-hooks-contrib, pefile, et-xmlfile, pyinstaller, openpyxl
+windows	Install build and test dependencies	2026-10-09T02:29:32.1343774Z 
+windows	Install build and test dependencies	2026-10-09T02:29:32.1368258Z Successfully installed altgraph-0.17.5 et-xmlfile-2.0.0 openpyxl-3.1.5 pefile-2024.8.26 pyinstaller-6.22.3 pyinstaller-hooks-contrib-2026.8 pywin32-ctypes-0.2.3 setuptools-84.0.0
+windows	Test source	﻿2026-10-09T02:29:32.3336212Z ##[group]Run python -m unittest discover -s tests -v
+windows	Test source	2026-10-09T02:29:32.3336750Z ^[[36;1mpython -m unittest discover -s tests -v^[[0m
+windows	Test source	2026-10-09T02:29:32.3378126Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+windows	Test source	2026-10-09T02:29:32.3378498Z env:
+windows	Test source	2026-10-09T02:29:32.3378789Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test source	2026-10-09T02:29:32.3379276Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+windows	Test source	2026-10-09T02:29:32.3379769Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test source	2026-10-09T02:29:32.3380185Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test source	2026-10-09T02:29:32.3380609Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test source	2026-10-09T02:29:32.3380946Z ##[endgroup]
+windows	Test source	2026-10-09T02:29:33.9012594Z test_attribute_whitespace_and_xml_escapes_survive (test_engine_regressions.EngineRegressionTests.test_attribute_whitespace_and_xml_escapes_survive) ... ok
+windows	Test source	2026-10-09T02:29:33.9035501Z test_copied_payload_keeps_local_and_shadowed_namespaces (test_engine_regressions.EngineRegressionTests.test_copied_payload_keeps_local_and_shadowed_namespaces) ... ok
+windows	Test source	2026-10-09T02:29:33.9092819Z test_copied_text_keeps_inherited_xml_space (test_engine_regressions.EngineRegressionTests.test_copied_text_keeps_inherited_xml_space) ... ok
+windows	Test source	2026-10-09T02:29:33.9105324Z test_dimension_also_covers_retained_empty_horizontal_merge (test_engine_regressions.EngineRegressionTests.test_dimension_also_covers_retained_empty_horizontal_merge) ... ok
+windows	Test source	2026-10-09T02:29:33.9124146Z test_dimension_is_not_shrunk_or_rewritten_without_matching_merges (test_engine_regressions.EngineRegressionTests.test_dimension_is_not_shrunk_or_rewritten_without_matching_merges) ... ok
+windows	Test source	2026-10-09T02:29:33.9187750Z test_equivalent_duplicate_addresses_are_rejected_without_output (test_engine_regressions.EngineRegressionTests.test_equivalent_duplicate_addresses_are_rejected_without_output) ... ok
+windows	Test source	2026-10-09T02:29:33.9386465Z test_hidden_metadata_without_value_is_not_overwritten (test_engine_regressions.EngineRegressionTests.test_hidden_metadata_without_value_is_not_overwritten) ... ok
+windows	Test source	2026-10-09T02:29:33.9511814Z test_inaccurate_dimension_keeps_remote_values_readable (test_engine_regressions.EngineRegressionTests.test_inaccurate_dimension_keeps_remote_values_readable) ... ok
+windows	Test source	2026-10-09T02:29:34.2247358Z test_many_rows_keep_values_order_and_row_attributes (test_engine_regressions.EngineRegressionTests.test_many_rows_keep_values_order_and_row_attributes) ... ok
+windows	Test source	2026-10-09T02:29:34.2267665Z test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_engine_regressions.EngineRegressionTests.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) ... ok
+windows	Test source	2026-10-09T02:29:34.2285479Z test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_engine_regressions.EngineRegressionTests.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) ... ok
+windows	Test source	2026-10-09T02:29:34.2353738Z test_output_permission_error_without_directory_is_not_retried (test_engine_regressions.EngineRegressionTests.test_output_permission_error_without_directory_is_not_retried) ... ok
+windows	Test source	2026-10-09T02:29:34.2455251Z test_partial_write_failure_removes_only_the_new_output (test_engine_regressions.EngineRegressionTests.test_partial_write_failure_removes_only_the_new_output) ... ok
+windows	Test source	2026-10-09T02:29:34.2468156Z test_prefixed_namespace_cdata_and_processing_instruction_survive (test_engine_regressions.EngineRegressionTests.test_prefixed_namespace_cdata_and_processing_instruction_survive) ... ok
+windows	Test source	2026-10-09T02:29:34.2617923Z test_result_name_collision_with_directory_uses_next_serial (test_engine_regressions.EngineRegressionTests.test_result_name_collision_with_directory_uses_next_serial) ... ok
+windows	Test source	2026-10-09T02:29:34.2815663Z test_selected_metadata_anchor_rejects_whole_workbook_without_output (test_engine_regressions.EngineRegressionTests.test_selected_metadata_anchor_rejects_whole_workbook_without_output) ... ok
+windows	Test source	2026-10-09T02:29:34.3470005Z test_selected_overlapping_merges_reject_but_unrelated_horizontal_overlap_stays (test_engine_regressions.EngineRegressionTests.test_selected_overlapping_merges_reject_but_unrelated_horizontal_overlap_stays) ... ok
+windows	Test source	2026-10-09T02:29:34.3591095Z test_sheet_selection_does_not_inspect_unselected_metadata_anchor (test_engine_regressions.EngineRegressionTests.test_sheet_selection_does_not_inspect_unselected_metadata_anchor) ... ok
+windows	Test source	2026-10-09T02:29:34.3799333Z test_sparse_wide_merge_does_not_enumerate_the_empty_grid (test_engine_regressions.EngineRegressionTests.test_sparse_wide_merge_does_not_enumerate_the_empty_grid) ... ok
+windows	Test source	2026-10-09T02:29:34.3930768Z test_text_carriage_returns_and_unrelated_cells_keep_their_values (test_engine_regressions.EngineRegressionTests.test_text_carriage_returns_and_unrelated_cells_keep_their_values) ... ok
+windows	Test source	2026-10-09T02:29:34.4115291Z test_unselected_metadata_cells_and_horizontal_anchor_are_preserved (test_engine_regressions.EngineRegressionTests.test_unselected_metadata_cells_and_horizontal_anchor_are_preserved) ... ok
+windows	Test source	2026-10-09T02:29:34.4125705Z test_wide_merge_still_rejects_far_right_hidden_content (test_engine_regressions.EngineRegressionTests.test_wide_merge_still_rejects_far_right_hidden_content) ... ok
+windows	Test source	2026-10-09T02:29:34.4290157Z test_all_merges (test_excel_unmerge.UnmergeTests.test_all_merges) ... ok
+windows	Test source	2026-10-09T02:29:34.4344791Z test_conflicting_data_rejected (test_excel_unmerge.UnmergeTests.test_conflicting_data_rejected) ... ok
+windows	Test source	2026-10-09T02:29:34.4473889Z test_empty_anchor (test_excel_unmerge.UnmergeTests.test_empty_anchor) ... ok
+windows	Test source	2026-10-09T02:29:34.4597008Z test_empty_value_target_is_fillable (test_excel_unmerge.UnmergeTests.test_empty_value_target_is_fillable) ... ok
+windows	Test source	2026-10-09T02:29:34.4662374Z test_formula_rejects_whole_workbook_without_output (test_excel_unmerge.UnmergeTests.test_formula_rejects_whole_workbook_without_output) ... ok
+windows	Test source	2026-10-09T02:29:34.4947690Z test_multi_sheet_selection_and_hidden (test_excel_unmerge.UnmergeTests.test_multi_sheet_selection_and_hidden) ... ok
+windows	Test source	2026-10-09T02:29:34.5052955Z test_no_matches_no_output (test_excel_unmerge.UnmergeTests.test_no_matches_no_output) ... ok
+windows	Test source	2026-10-09T02:29:34.5342979Z test_non_overwrite (test_excel_unmerge.UnmergeTests.test_non_overwrite) ... ok
+windows	Test source	2026-10-09T02:29:34.5615195Z test_rectangle_preserves_horizontal_and_header (test_excel_unmerge.UnmergeTests.test_rectangle_preserves_horizontal_and_header) ... ok
+windows	Test source	2026-10-09T02:29:34.5622488Z test_row_extension_order (test_excel_unmerge.UnmergeTests.test_row_extension_order) ... ok
+windows	Test source	2026-10-09T02:29:34.5771498Z test_types_and_ordinary_blanks (test_excel_unmerge.UnmergeTests.test_types_and_ordinary_blanks) ... ok
+windows	Test source	2026-10-09T02:29:34.5818579Z test_unknown_sheet_no_output (test_excel_unmerge.UnmergeTests.test_unknown_sheet_no_output) ... ok
+windows	Test source	2026-10-09T02:29:34.5944689Z test_unrelated_formula_preserved (test_excel_unmerge.UnmergeTests.test_unrelated_formula_preserved) ... ok
+windows	Test source	2026-10-09T02:29:34.6083584Z test_vertical_and_original_not_modified (test_excel_unmerge.UnmergeTests.test_vertical_and_original_not_modified) ... ok
+windows	Test source	2026-10-09T02:29:34.6206753Z test_xlsm_preserves_other_bytes (test_excel_unmerge.UnmergeTests.test_xlsm_preserves_other_bytes) ... ok
+windows	Test source	2026-10-09T02:29:34.6340151Z test_all_merges_and_no_match_results (test_gui_batch.GuiBatchTests.test_all_merges_and_no_match_results) ... ok
+windows	Test source	2026-10-09T02:29:34.6465793Z test_bad_file_does_not_stop_later_file (test_gui_batch.GuiBatchTests.test_bad_file_does_not_stop_later_file) ... ok
+windows	Test source	2026-10-09T02:29:34.6467816Z test_common_failures_include_action_and_original_technical_details (test_gui_batch.GuiBatchTests.test_common_failures_include_action_and_original_technical_details) ... ok
+windows	Test source	2026-10-09T02:29:34.6551378Z test_self_test_failure_writes_diagnostic_without_stderr (test_gui_batch.GuiBatchTests.test_self_test_failure_writes_diagnostic_without_stderr) ... ok
+windows	Test source	2026-10-09T02:29:34.6554939Z test_stop_before_first_file_reports_no_completion (test_gui_batch.GuiBatchTests.test_stop_before_first_file_reports_no_completion) ... ok
+windows	Test source	2026-10-09T02:29:34.6566592Z test_stop_waits_for_current_file_and_leaves_later_files_unprocessed (test_gui_batch.GuiBatchTests.test_stop_waits_for_current_file_and_leaves_later_files_unprocessed) ... ok
+windows	Test source	2026-10-09T02:29:34.6600190Z test_attribute_whitespace_and_xml_escapes_survive (test_streaming_engine.ForcedStreamingRegressions.test_attribute_whitespace_and_xml_escapes_survive) ... ok
+windows	Test source	2026-10-09T02:29:34.6694131Z test_copied_payload_keeps_local_and_shadowed_namespaces (test_streaming_engine.ForcedStreamingRegressions.test_copied_payload_keeps_local_and_shadowed_namespaces) ... ok
+windows	Test source	2026-10-09T02:29:34.6852562Z test_copied_text_keeps_inherited_xml_space (test_streaming_engine.ForcedStreamingRegressions.test_copied_text_keeps_inherited_xml_space) ... ok
+windows	Test source	2026-10-09T02:29:34.6882663Z test_dimension_also_covers_retained_empty_horizontal_merge (test_streaming_engine.ForcedStreamingRegressions.test_dimension_also_covers_retained_empty_horizontal_merge) ... ok
+windows	Test source	2026-10-09T02:29:34.6920873Z test_dimension_is_not_shrunk_or_rewritten_without_matching_merges (test_streaming_engine.ForcedStreamingRegressions.test_dimension_is_not_shrunk_or_rewritten_without_matching_merges) ... ok
+windows	Test source	2026-10-09T02:29:34.7044484Z test_each_spool_write_failure_closes_temporary_files_without_output (test_streaming_engine.ForcedStreamingRegressions.test_each_spool_write_failure_closes_temporary_files_without_output) ... ok
+windows	Test source	2026-10-09T02:29:34.7108760Z test_equivalent_duplicate_addresses_are_rejected_without_output (test_streaming_engine.ForcedStreamingRegressions.test_equivalent_duplicate_addresses_are_rejected_without_output) ... ok
+windows	Test source	2026-10-09T02:29:34.7329871Z test_hidden_metadata_without_value_is_not_overwritten (test_streaming_engine.ForcedStreamingRegressions.test_hidden_metadata_without_value_is_not_overwritten) ... ok
+windows	Test source	2026-10-09T02:29:34.7476694Z test_inaccurate_dimension_keeps_remote_values_readable (test_streaming_engine.ForcedStreamingRegressions.test_inaccurate_dimension_keeps_remote_values_readable) ... ok
+windows	Test source	2026-10-09T02:29:35.1487023Z test_many_rows_keep_values_order_and_row_attributes (test_streaming_engine.ForcedStreamingRegressions.test_many_rows_keep_values_order_and_row_attributes) ... ok
+windows	Test source	2026-10-09T02:29:35.1553788Z test_no_matching_merges_do_not_validate_unused_coordinates (test_streaming_engine.ForcedStreamingRegressions.test_no_matching_merges_do_not_validate_unused_coordinates) ... ok
+windows	Test source	2026-10-09T02:29:35.1636236Z test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection (test_streaming_engine.ForcedStreamingRegressions.test_noncanonical_anchor_does_not_bypass_formula_or_metadata_protection) ... ok
+windows	Test source	2026-10-09T02:29:35.1689090Z test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs (test_streaming_engine.ForcedStreamingRegressions.test_noncanonical_cell_addresses_fill_once_and_keep_unrelated_refs) ... ok
+windows	Test source	2026-10-09T02:29:35.1765518Z test_output_permission_error_without_directory_is_not_retried (test_streaming_engine.ForcedStreamingRegressions.test_output_permission_error_without_directory_is_not_retried) ... ok
+windows	Test source	2026-10-09T02:29:35.1875332Z test_partial_write_failure_removes_only_the_new_output (test_streaming_engine.ForcedStreamingRegressions.test_partial_write_failure_removes_only_the_new_output) ... ok
+windows	Test source	2026-10-09T02:29:35.1905606Z test_prefixed_namespace_cdata_and_processing_instruction_survive (test_streaming_engine.ForcedStreamingRegressions.test_prefixed_namespace_cdata_and_processing_instruction_survive) ... ok
+windows	Test source	2026-10-09T02:29:35.2073319Z test_result_name_collision_with_directory_uses_next_serial (test_streaming_engine.ForcedStreamingRegressions.test_result_name_collision_with_directory_uses_next_serial) ... ok
+windows	Test source	2026-10-09T02:29:35.2370807Z test_selected_metadata_anchor_rejects_whole_workbook_without_output (test_streaming_engine.ForcedStreamingRegressions.test_selected_metadata_anchor_rejects_whole_workbook_without_output) ... ok
+windows	Test source	2026-10-09T02:29:35.2981764Z test_selected_overlapping_merges_reject_but_unrelated_horizontal_overlap_stays (test_streaming_engine.ForcedStreamingRegressions.test_selected_overlapping_merges_reject_but_unrelated_horizontal_overlap_stays) ... ok
+windows	Test source	2026-10-09T02:29:35.3098256Z test_sheet_selection_does_not_inspect_unselected_metadata_anchor (test_streaming_engine.ForcedStreamingRegressions.test_sheet_selection_does_not_inspect_unselected_metadata_anchor) ... ok
+windows	Test source	2026-10-09T02:29:35.3396267Z test_sparse_wide_merge_does_not_enumerate_the_empty_grid (test_streaming_engine.ForcedStreamingRegressions.test_sparse_wide_merge_does_not_enumerate_the_empty_grid) ... ok
+windows	Test source	2026-10-09T02:29:35.3551061Z test_streaming_matches_dom_for_values_merges_attributes_and_comments (test_streaming_engine.ForcedStreamingRegressions.test_streaming_matches_dom_for_values_merges_attributes_and_comments) ... ok
+windows	Test source	2026-10-09T02:29:35.3689433Z test_text_carriage_returns_and_unrelated_cells_keep_their_values (test_streaming_engine.ForcedStreamingRegressions.test_text_carriage_returns_and_unrelated_cells_keep_their_values) ... ok
+windows	Test source	2026-10-09T02:29:35.3726876Z test_unordered_rows_and_missing_target_rows_are_sorted (test_streaming_engine.ForcedStreamingRegressions.test_unordered_rows_and_missing_target_rows_are_sorted) ... ok
+windows	Test source	2026-10-09T02:29:35.3876823Z test_unselected_metadata_cells_and_horizontal_anchor_are_preserved (test_streaming_engine.ForcedStreamingRegressions.test_unselected_metadata_cells_and_horizontal_anchor_are_preserved) ... ok
+windows	Test source	2026-10-09T02:29:35.3998274Z test_utf16_and_later_sheet_rejection_leave_no_output_and_close_spools (test_streaming_engine.ForcedStreamingRegressions.test_utf16_and_later_sheet_rejection_leave_no_output_and_close_spools) ... ok
+windows	Test source	2026-10-09T02:29:35.4263655Z test_wide_merge_still_rejects_far_right_hidden_content (test_streaming_engine.ForcedStreamingRegressions.test_wide_merge_still_rejects_far_right_hidden_content) ... ok
+windows	Test source	2026-10-09T02:29:35.5486053Z test_zip_payloads_are_copied_in_chunks_with_metadata_preserved (test_streaming_engine.ForcedStreamingRegressions.test_zip_payloads_are_copied_in_chunks_with_metadata_preserved) ... ok
+windows	Test source	2026-10-09T02:29:35.5684661Z test_all_merges (test_streaming_engine.ForcedStreamingWorkbookTests.test_all_merges) ... ok
+windows	Test source	2026-10-09T02:29:35.5814511Z test_conflicting_data_rejected (test_streaming_engine.ForcedStreamingWorkbookTests.test_conflicting_data_rejected) ... ok
+windows	Test source	2026-10-09T02:29:35.5948655Z test_empty_anchor (test_streaming_engine.ForcedStreamingWorkbookTests.test_empty_anchor) ... ok
+windows	Test source	2026-10-09T02:29:35.6079335Z test_empty_value_target_is_fillable (test_streaming_engine.ForcedStreamingWorkbookTests.test_empty_value_target_is_fillable) ... ok
+windows	Test source	2026-10-09T02:29:35.6169732Z test_formula_rejects_whole_workbook_without_output (test_streaming_engine.ForcedStreamingWorkbookTests.test_formula_rejects_whole_workbook_without_output) ... ok
+windows	Test source	2026-10-09T02:29:35.6460251Z test_multi_sheet_selection_and_hidden (test_streaming_engine.ForcedStreamingWorkbookTests.test_multi_sheet_selection_and_hidden) ... ok
+windows	Test source	2026-10-09T02:29:35.6572496Z test_no_matches_no_output (test_streaming_engine.ForcedStreamingWorkbookTests.test_no_matches_no_output) ... ok
+windows	Test source	2026-10-09T02:29:35.6798245Z test_non_overwrite (test_streaming_engine.ForcedStreamingWorkbookTests.test_non_overwrite) ... ok
+windows	Test source	2026-10-09T02:29:35.6953567Z test_rectangle_preserves_horizontal_and_header (test_streaming_engine.ForcedStreamingWorkbookTests.test_rectangle_preserves_horizontal_and_header) ... ok
+windows	Test source	2026-10-09T02:29:35.6965073Z test_row_extension_order (test_streaming_engine.ForcedStreamingWorkbookTests.test_row_extension_order) ... ok
+windows	Test source	2026-10-09T02:29:35.7127090Z test_types_and_ordinary_blanks (test_streaming_engine.ForcedStreamingWorkbookTests.test_types_and_ordinary_blanks) ... ok
+windows	Test source	2026-10-09T02:29:35.7175021Z test_unknown_sheet_no_output (test_streaming_engine.ForcedStreamingWorkbookTests.test_unknown_sheet_no_output) ... ok
+windows	Test source	2026-10-09T02:29:35.7318748Z test_unrelated_formula_preserved (test_streaming_engine.ForcedStreamingWorkbookTests.test_unrelated_formula_preserved) ... ok
+windows	Test source	2026-10-09T02:29:35.7471795Z test_vertical_and_original_not_modified (test_streaming_engine.ForcedStreamingWorkbookTests.test_vertical_and_original_not_modified) ... ok
+windows	Test source	2026-10-09T02:29:35.7607082Z test_xlsm_preserves_other_bytes (test_streaming_engine.ForcedStreamingWorkbookTests.test_xlsm_preserves_other_bytes) ... ok
+windows	Test source	2026-10-09T02:29:38.6362847Z test_batch_reports_completed_files_and_enables_output_directory (test_windows_gui_helpers.WindowTests.test_batch_reports_completed_files_and_enables_output_directory) ... ok
+windows	Test source	2026-10-09T02:29:39.2047630Z test_failure_and_unprocessed_files_have_independent_recovery_buttons (test_windows_gui_helpers.WindowTests.test_failure_and_unprocessed_files_have_independent_recovery_buttons) ... ok
+windows	Test source	2026-10-09T02:29:39.5541831Z test_long_status_wraps_to_available_width_after_resizing (test_windows_gui_helpers.WindowTests.test_long_status_wraps_to_available_width_after_resizing) ... ok
+windows	Test source	2026-10-09T02:29:39.7897065Z test_new_controls_fit_minimum_window_width (test_windows_gui_helpers.WindowTests.test_new_controls_fit_minimum_window_width) ... ok
+windows	Test source	2026-10-09T02:29:39.8957848Z test_result_directory_unavailable_until_output_exists (test_windows_gui_helpers.WindowTests.test_result_directory_unavailable_until_output_exists) ... ok
+windows	Test source	2026-10-09T02:29:40.3866916Z test_retry_only_failed_files_keeps_history_output_and_initial_options (test_windows_gui_helpers.WindowTests.test_retry_only_failed_files_keeps_history_output_and_initial_options) ... ok
+windows	Test source	2026-10-09T02:29:41.3187986Z test_stop_and_continue_keep_current_file_safe_and_report_pending (test_windows_gui_helpers.WindowTests.test_stop_and_continue_keep_current_file_safe_and_report_pending) ... ok
+windows	Test source	2026-10-09T02:29:41.8785532Z test_thread_construction_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_construction_memory_failure_can_resume_and_close) ... ok
+windows	Test source	2026-10-09T02:29:42.4367584Z test_thread_start_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_start_memory_failure_can_resume_and_close) ... ok
+windows	Test source	2026-10-09T02:29:42.4369037Z 
+windows	Test source	2026-10-09T02:29:42.4369470Z ----------------------------------------------------------------------
+windows	Test source	2026-10-09T02:29:42.4370259Z Ran 95 tests in 8.539s
+windows	Test source	2026-10-09T02:29:42.4370607Z 
+windows	Test source	2026-10-09T02:29:42.4370824Z OK
+windows	Build portable application	﻿2026-10-09T02:29:42.6115987Z ##[group]Run python -m PyInstaller --noconfirm --clean --onefile --windowed --name ExcelTools excel_unmerge_gui.py
+windows	Build portable application	2026-10-09T02:29:42.6117463Z ^[[36;1mpython -m PyInstaller --noconfirm --clean --onefile --windowed --name ExcelTools excel_unmerge_gui.py^[[0m
+windows	Build portable application	2026-10-09T02:29:42.6184855Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+windows	Build portable application	2026-10-09T02:29:42.6185219Z env:
+windows	Build portable application	2026-10-09T02:29:42.6185496Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Build portable application	2026-10-09T02:29:42.6185976Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+windows	Build portable application	2026-10-09T02:29:42.6186627Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Build portable application	2026-10-09T02:29:42.6187027Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Build portable application	2026-10-09T02:29:42.6187420Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Build portable application	2026-10-09T02:29:42.6187731Z ##[endgroup]
+windows	Build portable application	2026-10-09T02:29:44.1665116Z 1000 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+windows	Build portable application	2026-10-09T02:29:44.1666538Z 1000 INFO: Python: 3.12.10
+windows	Build portable application	2026-10-09T02:29:44.2103782Z 1032 INFO: Platform: Windows-2022Server-10.0.20348-SP0
+windows	Build portable application	2026-10-09T02:29:44.2104860Z 1032 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Build portable application	2026-10-09T02:29:44.2105738Z 1032 INFO: wrote D:\a\excel-tools\excel-tools\ExcelTools.spec
+windows	Build portable application	2026-10-09T02:29:44.2664737Z 1094 INFO: Removing temporary files and cleaning cache in C:\Users\runneradmin\AppData\Local\pyinstaller
+windows	Build portable application	2026-10-09T02:29:44.2674404Z 1094 INFO: Module search paths (PYTHONPATH):
+windows	Build portable application	2026-10-09T02:29:44.2691588Z ['D:\\a\\excel-tools\\excel-tools',
+windows	Build portable application	2026-10-09T02:29:44.6440494Z  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python312.zip',
+windows	Build portable application	2026-10-09T02:29:44.6450826Z  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\DLLs',
+windows	Build portable application	2026-10-09T02:29:44.6457085Z  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib',
+windows	Build portable application	2026-10-09T02:29:44.6573979Z  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64',
+windows	Build portable application	2026-10-09T02:29:44.6575817Z  'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages',
+windows	Build portable application	2026-10-09T02:29:44.6577035Z  'D:\\a\\excel-tools\\excel-tools']
+windows	Build portable application	2026-10-09T02:29:44.8858835Z 1689 INFO: checking Analysis
+windows	Build portable application	2026-10-09T02:29:44.8859925Z 1689 INFO: Building Analysis because Analysis-00.toc is non existent
+windows	Build portable application	2026-10-09T02:29:44.8860734Z 1689 INFO: Looking for Python shared library...
+windows	Build portable application	2026-10-09T02:29:44.8861653Z 1689 INFO: Using Python shared library: C:\hostedtoolcache\windows\Python\3.12.10\x64\python312.dll
+windows	Build portable application	2026-10-09T02:29:44.8862629Z 1689 INFO: Running Analysis Analysis-00.toc
+windows	Build portable application	2026-10-09T02:29:44.8863300Z 1689 INFO: Target bytecode optimization level: 0
+windows	Build portable application	2026-10-09T02:29:44.8864035Z 1689 INFO: Initializing module dependency graph...
+windows	Build portable application	2026-10-09T02:29:44.8864742Z 1689 INFO: Initializing module graph hook caches...
+windows	Build portable application	2026-10-09T02:29:44.8909466Z 1720 INFO: Analyzing modules for base_library.zip ...
+windows	Build portable application	2026-10-09T02:29:47.1258871Z 3956 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:47.5525036Z 4379 INFO: Processing standard module hook 'hook-math.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:48.9847118Z 5819 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:50.3164978Z 7148 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:50.8454800Z 7680 INFO: Caching module dependency graph...
+windows	Build portable application	2026-10-09T02:29:50.8831084Z 7711 INFO: Analyzing D:\a\excel-tools\excel-tools\excel_unmerge_gui.py
+windows	Build portable application	2026-10-09T02:29:50.9652317Z 7789 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:50.9851446Z 7820 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:50.9879135Z 7820 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+windows	Build portable application	2026-10-09T02:29:50.9888042Z 7820 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+windows	Build portable application	2026-10-09T02:29:51.6017301Z 8430 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:51.7209498Z 8555 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:52.2091898Z 9040 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:52.2201717Z 9055 INFO: Processing module hooks (post-graph stage)...
+windows	Build portable application	2026-10-09T02:29:52.2240686Z 9055 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks'
+windows	Build portable application	2026-10-09T02:29:52.2348879Z 9071 INFO: Performing binary vs. data reclassification (927 entries)
+windows	Build portable application	2026-10-09T02:29:52.6831734Z 9510 INFO: Looking for ctypes DLLs
+windows	Build portable application	2026-10-09T02:29:52.6940314Z 9525 INFO: Analyzing run-time hooks ...
+windows	Build portable application	2026-10-09T02:29:52.6953110Z 9525 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+windows	Build portable application	2026-10-09T02:29:52.6981234Z 9525 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+windows	Build portable application	2026-10-09T02:29:52.7264916Z 9557 INFO: Creating base_library.zip...
+windows	Build portable application	2026-10-09T02:29:52.7470253Z 9572 INFO: Looking for dynamic libraries
+windows	Build portable application	2026-10-09T02:29:52.8859957Z 9713 INFO: Extra DLL search directories (AddDllDirectory): []
+windows	Build portable application	2026-10-09T02:29:52.8860960Z 9713 INFO: Extra DLL search directories (PATH): []
+windows	Build portable application	2026-10-09T02:29:53.6380263Z 10463 INFO: Warnings written to D:\a\excel-tools\excel-tools\build\ExcelTools\warn-ExcelTools.txt
+windows	Build portable application	2026-10-09T02:29:53.6573834Z 10494 INFO: Graph cross-reference written to D:\a\excel-tools\excel-tools\build\ExcelTools\xref-ExcelTools.html
+windows	Build portable application	2026-10-09T02:29:53.6900282Z 10526 INFO: checking PYZ
+windows	Build portable application	2026-10-09T02:29:53.6901241Z 10526 INFO: Building PYZ because PYZ-00.toc is non existent
+windows	Build portable application	2026-10-09T02:29:53.6902446Z 10526 INFO: Building PYZ (ZlibArchive) D:\a\excel-tools\excel-tools\build\ExcelTools\PYZ-00.pyz
+windows	Build portable application	2026-10-09T02:29:53.8987271Z 10729 INFO: Building PYZ (ZlibArchive) D:\a\excel-tools\excel-tools\build\ExcelTools\PYZ-00.pyz completed successfully.
+windows	Build portable application	2026-10-09T02:29:53.9200263Z 10744 INFO: checking PKG
+windows	Build portable application	2026-10-09T02:29:53.9201515Z 10744 INFO: Building PKG because PKG-00.toc is non existent
+windows	Build portable application	2026-10-09T02:29:53.9202403Z 10744 INFO: Building PKG (CArchive) ExcelTools.pkg
+windows	Build portable application	2026-10-09T02:29:58.0754248Z 14903 INFO: Building PKG (CArchive) ExcelTools.pkg completed successfully.
+windows	Build portable application	2026-10-09T02:29:58.0949297Z 14919 INFO: Bootloader C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+windows	Build portable application	2026-10-09T02:29:58.0950865Z 14919 INFO: checking EXE
+windows	Build portable application	2026-10-09T02:29:58.0951571Z 14919 INFO: Building EXE because EXE-00.toc is non existent
+windows	Build portable application	2026-10-09T02:29:58.0952307Z 14919 INFO: Building EXE from EXE-00.toc
+windows	Build portable application	2026-10-09T02:29:58.0953212Z 14919 INFO: Copying bootloader EXE to D:\a\excel-tools\excel-tools\dist\ExcelTools.exe
+windows	Build portable application	2026-10-09T02:29:58.1063092Z 14934 INFO: Copying icon to EXE
+windows	Build portable application	2026-10-09T02:29:58.1082506Z 14934 INFO: Copying 0 resources to EXE
+windows	Build portable application	2026-10-09T02:29:58.1083279Z 14934 INFO: Embedding manifest in EXE
+windows	Build portable application	2026-10-09T02:29:58.1099001Z 14934 INFO: Appending PKG archive to EXE
+windows	Build portable application	2026-10-09T02:29:58.1161584Z 14950 INFO: Fixing EXE headers
+windows	Build portable application	2026-10-09T02:29:58.2212166Z 15044 INFO: Building EXE from EXE-00.toc completed successfully.
+windows	Build portable application	2026-10-09T02:29:58.2425083Z 15075 INFO: Build complete! The results are available in: D:\a\excel-tools\excel-tools\dist
+windows	Test portable app without Python paths or source files	﻿2026-10-09T02:29:58.3981755Z ##[group]Run $portableDir = Join-Path $env:RUNNER_TEMP '免安装 验收'
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3982701Z ^[[36;1m$portableDir = Join-Path $env:RUNNER_TEMP '免安装 验收'^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3983363Z ^[[36;1m$workingDir = Join-Path $env:RUNNER_TEMP '独立 工作目录'^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3983990Z ^[[36;1m$scratchDir = Join-Path $env:RUNNER_TEMP '临时 解压目录'^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3984732Z ^[[36;1m$selfTestLog = Join-Path $env:RUNNER_TEMP 'ExcelTools-self-test.log'^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3986633Z ^[[36;1mNew-Item -ItemType Directory -Force -Path $portableDir, $workingDir, $scratchDir | Out-Null^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3987600Z ^[[36;1m$portableExe = Join-Path $portableDir 'ExcelTools.exe'^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3988246Z ^[[36;1mCopy-Item 'dist/ExcelTools.exe' $portableExe^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3988752Z ^[[36;1m$saved = @{}^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3989139Z ^[[36;1mGet-ChildItem Env: | Where-Object {^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3989841Z ^[[36;1m  $_.Name -match '^(PYTHON.*|TCL.*|TK.*|VIRTUAL_ENV|CONDA.*|PATH|TEMP|TMP)$'^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3990695Z ^[[36;1m} | ForEach-Object { $saved[$_.Name] = $_.Value }^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3991215Z ^[[36;1mtry {^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3991832Z ^[[36;1m  foreach ($key in $saved.Keys) { Remove-Item "Env:$key" -ErrorAction SilentlyContinue }^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3992715Z ^[[36;1m  $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot"^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3993319Z ^[[36;1m  $env:TEMP = $scratchDir^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3993772Z ^[[36;1m  $env:TMP = $scratchDir^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3995057Z ^[[36;1m  $app = Start-Process -FilePath $portableExe -ArgumentList @('--self-test', '--self-test-log', ('"{0}"' -f $selfTestLog)) -WorkingDirectory $workingDir -WindowStyle Hidden -PassThru^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3996414Z ^[[36;1m  $processHandle = $app.Handle^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3996935Z ^[[36;1m  if (-not $app.WaitForExit(90000)) {^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3997415Z ^[[36;1m    $app.Kill($true)^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3997888Z ^[[36;1m    throw 'Portable application self-test timed out.'^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3998412Z ^[[36;1m  }^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3998711Z ^[[36;1m  $app.Refresh()^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3999095Z ^[[36;1m  if ($app.ExitCode -ne 0) {^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.3999782Z ^[[36;1m    throw "Portable application self-test failed with exit code $($app.ExitCode)"^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4000475Z ^[[36;1m  }^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4000766Z ^[[36;1m} finally {^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4001434Z ^[[36;1m  foreach ($key in @('PATH', 'TEMP', 'TMP')) { Remove-Item "Env:$key" -ErrorAction SilentlyContinue }^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4002379Z ^[[36;1m  foreach ($key in $saved.Keys) { Set-Item "Env:$key" $saved[$key] }^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4002956Z ^[[36;1m}^[[0m
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4065857Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4066254Z env:
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4066539Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4067005Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4067494Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4067901Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4068289Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Test portable app without Python paths or source files	2026-10-09T02:29:58.4068604Z ##[endgroup]
+windows	Prepare user package	﻿2026-10-09T02:30:00.3145444Z ##[group]Run New-Item -ItemType Directory -Force -Path 'dist/package' | Out-Null
+windows	Prepare user package	2026-10-09T02:30:00.3146504Z ^[[36;1mNew-Item -ItemType Directory -Force -Path 'dist/package' | Out-Null^[[0m
+windows	Prepare user package	2026-10-09T02:30:00.3147312Z ^[[36;1mCopy-Item 'dist/ExcelTools.exe' 'dist/package/ExcelTools.exe'^[[0m
+windows	Prepare user package	2026-10-09T02:30:00.3148112Z ^[[36;1m$instructions = Get-Content -Raw -Encoding utf8 'packaging/使用说明.txt'^[[0m
+windows	Prepare user package	2026-10-09T02:30:00.3149227Z ^[[36;1m[System.IO.File]::WriteAllText("$PWD/dist/package/使用说明.txt", $instructions, [System.Text.UTF8Encoding]::new($true))^[[0m
+windows	Prepare user package	2026-10-09T02:30:00.3192005Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+windows	Prepare user package	2026-10-09T02:30:00.3192384Z env:
+windows	Prepare user package	2026-10-09T02:30:00.3192660Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Prepare user package	2026-10-09T02:30:00.3193128Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+windows	Prepare user package	2026-10-09T02:30:00.3193579Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Prepare user package	2026-10-09T02:30:00.3194011Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Prepare user package	2026-10-09T02:30:00.3194666Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Prepare user package	2026-10-09T02:30:00.3194997Z ##[endgroup]
+windows	Upload Windows application	﻿2026-10-09T02:30:00.8289128Z ##[group]Run actions/upload-artifact@v7
+windows	Upload Windows application	2026-10-09T02:30:00.8289677Z with:
+windows	Upload Windows application	2026-10-09T02:30:00.8289978Z   name: ExcelTools-Windows-x64
+windows	Upload Windows application	2026-10-09T02:30:00.8290347Z   path: dist/package/*
+windows	Upload Windows application	2026-10-09T02:30:00.8290677Z   if-no-files-found: error
+windows	Upload Windows application	2026-10-09T02:30:00.8291025Z   compression-level: 6
+windows	Upload Windows application	2026-10-09T02:30:00.8291339Z   overwrite: false
+windows	Upload Windows application	2026-10-09T02:30:00.8291650Z   include-hidden-files: false
+windows	Upload Windows application	2026-10-09T02:30:00.8292019Z   archive: true
+windows	Upload Windows application	2026-10-09T02:30:00.8292311Z env:
+windows	Upload Windows application	2026-10-09T02:30:00.8292734Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Upload Windows application	2026-10-09T02:30:00.8293529Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+windows	Upload Windows application	2026-10-09T02:30:00.8294302Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Upload Windows application	2026-10-09T02:30:00.8295029Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Upload Windows application	2026-10-09T02:30:00.8295739Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+windows	Upload Windows application	2026-10-09T02:30:00.8296281Z ##[endgroup]
+windows	Upload Windows application	2026-10-09T02:30:01.0449485Z With the provided path, there will be 2 files uploaded
+windows	Upload Windows application	2026-10-09T02:30:01.0476788Z Artifact name is valid!
+windows	Upload Windows application	2026-10-09T02:30:01.0477390Z Root directory input is valid!
+windows	Upload Windows application	2026-10-09T02:30:01.4291771Z Uploading artifact: ExcelTools-Windows-x64.zip
+windows	Upload Windows application	2026-10-09T02:30:01.4356708Z Beginning upload of artifact content to blob storage
+windows	Upload Windows application	2026-10-09T02:30:02.9904967Z Uploaded bytes 8388608
+windows	Upload Windows application	2026-10-09T02:30:03.2356649Z Uploaded bytes 12140096
+windows	Upload Windows application	2026-10-09T02:30:03.3120500Z Finished uploading artifact content to blob storage!
+windows	Upload Windows application	2026-10-09T02:30:03.3125078Z SHA256 digest of uploaded artifact is 017243c1c9ab69259e681e0b161ae69edff13cfa64105ca7463ffcf8b5683dbd
+windows	Upload Windows application	2026-10-09T02:30:03.3126238Z Finalizing artifact upload
+windows	Upload Windows application	2026-10-09T02:30:03.7100246Z Artifact ExcelTools-Windows-x64 successfully finalized. Artifact ID 11591358950
+windows	Upload Windows application	2026-10-09T02:30:03.7101594Z Artifact ExcelTools-Windows-x64 has been successfully uploaded! Final size is 12140096 bytes. Artifact ID is 11591358950
+windows	Upload Windows application	2026-10-09T02:30:03.7103593Z Artifact download URL: https://github.com/NzyZzz1998/excel-tools/actions/runs/37874774963/artifacts/11591358950
+windows	Post Run actions/setup-python@v7	﻿2026-10-09T02:30:03.7410844Z Post job cleanup.
+windows	Post Run actions/checkout@v7	﻿2026-10-09T02:30:03.9227456Z Post job cleanup.
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.1749102Z [command]"C:\Program Files\Git\bin\git.exe" version
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.2208226Z git version 2.56.0.windows.1
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.2352905Z Temporarily overriding HOME='D:\a\_temp\350e2366-95ed-47ca-9739-d393211832d2' before making global git config changes
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.2357246Z Adding repository directory to the temporary git global config as a safe directory
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.2358547Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\excel-tools\excel-tools
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.2654732Z Removing SSH command configuration
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.2685724Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.3025359Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.8618324Z Removing HTTP extra header
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.8629991Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:04.8976020Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5092921Z Removing includeIf entries pointing to credentials config files
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5104589Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5406052Z includeif.gitdir:D:/a/excel-tools/excel-tools/.git.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5407067Z includeif.gitdir:D:/a/excel-tools/excel-tools/.git/worktrees/*.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5408434Z includeif.gitdir:/github/workspace/.git.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5409120Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5453390Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/excel-tools/excel-tools/.git.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5744274Z D:\a\_temp\git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.5801805Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/excel-tools/excel-tools/.git.path D\:\\a\\_temp\\git\-credentials\-d29ddb23\-4977\-4d94\-9d72\-91cfc6f4e5df\.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.6247299Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/excel-tools/excel-tools/.git/worktrees/*.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.6542963Z D:\a\_temp\git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.6592694Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/excel-tools/excel-tools/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-d29ddb23\-4977\-4d94\-9d72\-91cfc6f4e5df\.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.6942375Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.7242355Z /github/runner_temp/git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.7288785Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-d29ddb23\-4977\-4d94\-9d72\-91cfc6f4e5df\.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.7633688Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.7926407Z /github/runner_temp/git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.7974547Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-d29ddb23\-4977\-4d94\-9d72\-91cfc6f4e5df\.config
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:05.8319279Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+windows	Post Run actions/checkout@v7	2026-10-09T02:30:06.4103552Z Removing credentials config 'D:\a\_temp\git-credentials-d29ddb23-4977-4d94-9d72-91cfc6f4e5df.config'
+windows	Complete job	﻿2026-10-09T02:30:06.4344961Z Cleaning up orphan processes

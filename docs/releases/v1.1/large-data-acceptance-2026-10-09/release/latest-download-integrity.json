@@ -1,0 +1,13 @@
+{
+  "captured_utc": "2026-10-09T02:31:40.017043+00:00",
+  "download_source": "gh release download without tag: latest published release",
+  "downloaded_path": "dist\\published-latest-v1.1\\ExcelTools-Windows-x64.zip",
+  "sha256": "07b801517060896c01ea9be2aaf1420784d2e87fe3a5f2ae4ea1b31f5b0488f6",
+  "bytes": 12173951,
+  "byte_equal_to_draft_download_with_successful_isolated_self_test": true,
+  "remote_refs": [
+    "067834455de167d86351b5ab338c518744ec4afa\trefs/heads/main",
+    "067834455de167d86351b5ab338c518744ec4afa\trefs/tags/v1.1"
+  ],
+  "passed": true
+}

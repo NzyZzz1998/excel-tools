@@ -1,0 +1,18 @@
+{
+  "started_utc": "2026-10-09T02:30:16.8090139Z",
+  "ended_utc": "2026-10-09T02:30:18.6271205Z",
+  "downloaded_package": "E:\\codex\\excel-tools\\dist\\release-download-v1.1\\ExcelTools-Windows-x64.zip",
+  "package_sha256": "07b801517060896c01ea9be2aaf1420784d2e87fe3a5f2ae4ea1b31f5b0488f6",
+  "executable_sha256": "239b1456771ae417f044dfd1ac2642f7ac36de7bc3781c6d2ac3ddc75d2d7ea4",
+  "extracted_contents": [
+    "使用说明.txt",
+    "ExcelTools.exe"
+  ],
+  "executable_path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-release-download-a5c7d2ab8ed3498c918f1de353a7b5c9\\下载 解压\\ExcelTools.exe",
+  "exit_code": 0,
+  "process_exited": true,
+  "self_test_log": "ExcelTools v1.1 self-test passed.",
+  "isolation": "Downloaded Release asset; fresh extraction; Chinese/space paths; separate cwd; no Python/Tcl environment; restricted PATH; separate TEMP/TMP; hidden launch.",
+  "script_sha256": "4a4ba6695eea52db4e9f5a7ef479d6d5e2f5b6e80d6b9b4b3b94dc2f210e8a07",
+  "passed": true
+}

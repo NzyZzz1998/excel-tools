@@ -1,0 +1,65 @@
+{
+  "captured_utc": "2026-10-09T02:29:10.157299+00:00",
+  "source_commit": "067834455de167d86351b5ab338c518744ec4afa",
+  "branch": "main",
+  "build_baseline": "96cfbfeab30be280129aa8af9fff74e5f6be2464",
+  "source_checks": [
+    {
+      "path": "packaging/使用说明.txt",
+      "sha256": "f7480c548fa7aff60e04a44f97761cae9995ffd363727f0b98eeeb3d20444499",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "b5037a3a7be748ac71a7ae079d11871c8adeaeda0cea39480138253573e3a919",
+      "matches_commit_after_crlf_normalization": true
+    },
+    {
+      "path": "excel_unmerge_fill.py",
+      "sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "4ab6c778f2c4cd17fd1720d6d9f868ff322a5cdcb93d66f9b7b27cf3c6c12712",
+      "matches_commit_after_crlf_normalization": true
+    },
+    {
+      "path": "excel_unmerge_gui.py",
+      "sha256": "d3a1c273f0d4bb333d26945b8b39061daa064824e413601e711aeb9ab8d2c4c0",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "3d3ef57d2edced80e834c379b8d9d1d17f4f14013c59827d46ed0d3bde1c1735",
+      "matches_commit_after_crlf_normalization": true
+    },
+    {
+      "path": "tests/test_engine_regressions.py",
+      "sha256": "3f32e8860fc130393203ee9ca6c5f8a7784d7b7ea70bea23e90e5e7602935261",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "3f32e8860fc130393203ee9ca6c5f8a7784d7b7ea70bea23e90e5e7602935261",
+      "matches_commit_after_crlf_normalization": true
+    },
+    {
+      "path": "tests/test_excel_unmerge.py",
+      "sha256": "b1e8fa062c8182902f587804e31f9d2a0d58e81a02862f46d1881761c4e56d9e",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "3311962979372eca7f4ba5e242b15fa0f03e72429ea634256dd1baf36de52063",
+      "matches_commit_after_crlf_normalization": true
+    },
+    {
+      "path": "tests/test_gui_batch.py",
+      "sha256": "8325821344cf96c78eed808f4b95267fbfd677b69287a494181b6ed0aa9fe05d",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "02bab619f2b86107216cd9e712210311233defecd4f3c256f7ffdb37e1a3b9f5",
+      "matches_commit_after_crlf_normalization": true
+    },
+    {
+      "path": "tests/test_streaming_engine.py",
+      "sha256": "a8b8e7e32274b9157e50a32a4af422799a4f56fe9b9981d73d86cd2e690afe94",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "a8b8e7e32274b9157e50a32a4af422799a4f56fe9b9981d73d86cd2e690afe94",
+      "matches_commit_after_crlf_normalization": true
+    },
+    {
+      "path": "tests/test_windows_gui_helpers.py",
+      "sha256": "c4fbb93c1278bfe95ec50cfc8f2cd1ac94484d47004c31e9de2c8a114057dfc7",
+      "matches_build_snapshot": true,
+      "commit_blob_sha256": "1c1a3718d7b1280737044e7ff1d845633bb8a4b9686885b839356539f4e4ebbc",
+      "matches_commit_after_crlf_normalization": true
+    }
+  ],
+  "normalization": "Git CRLF to LF only; all Python tokens and instruction text identical to frozen build snapshot."
+}
