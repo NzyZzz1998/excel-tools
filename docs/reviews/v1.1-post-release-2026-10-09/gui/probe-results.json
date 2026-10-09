@@ -1,0 +1,54 @@
+{
+  "recorded_utc": "2026-10-09T11:18:01.761630+00:00",
+  "own_python_pid": 42408,
+  "gui_sha256": "d3a1c273f0d4bb333d26945b8b39061daa064824e413601e711aeb9ab8d2c4c0",
+  "gui_unchanged": true,
+  "probe_sha256": "c7e1de04182e5daa83591dcf556cedf76d3e087d1ef91635bd185d299b1be952",
+  "scope": "Two existing UX contracts; only owned withdrawn Tk, temporary synthetic workbooks; no user EXE inspection or control.",
+  "cases": {
+    "recovery_selection": {
+      "before_retry": {
+        "visible_file_list": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\new-selection.xlsx",
+        "selected_files": [
+          "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\new-selection.xlsx"
+        ],
+        "recovery_files": [
+          "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\old-failed.xlsx"
+        ],
+        "status": "已选择 1 个文件。",
+        "retry_button": "仅重试失败项",
+        "retry_enabled": true
+      },
+      "after_retry": {
+        "visible_file_list": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\new-selection.xlsx",
+        "processed_files": [
+          "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\old-failed.xlsx"
+        ],
+        "selected_files": [
+          "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\new-selection.xlsx"
+        ],
+        "status": "本轮处理结束；任务已处理 1/1：成功 1 个，无需处理 0 个，失败 0 个，待处理 0 个。",
+        "successful": 1,
+        "old_output_exists": true,
+        "new_output_exists": false,
+        "log_contains_old_target": true,
+        "callback_errors": []
+      },
+      "interpretation": "Existing PRD contract confirmed: new selection and old recovery task coexist; the visible list remains the new selection during old-task recovery."
+    },
+    "multiple_directories": {
+      "successful": 2,
+      "output_paths": [
+        "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\directory-a\\same-name_拆分填充.xlsx",
+        "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\directory-b\\same-name_拆分填充.xlsx"
+      ],
+      "button_text": "打开结果目录",
+      "opened_directory": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-post-release-ux-p35d7ui7\\directory-b",
+      "first_directory_not_opened": true,
+      "both_paths_are_in_text_log": true,
+      "callback_errors": [],
+      "interpretation": "All outputs are safe; the single result-directory button opens only the latest successful directory. Explorer launch was mocked."
+    }
+  },
+  "temporary_fixtures_cleaned": true
+}

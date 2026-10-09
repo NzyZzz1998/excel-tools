@@ -1,0 +1,26 @@
+test_all_merges_and_no_match_results (test_gui_batch.GuiBatchTests.test_all_merges_and_no_match_results) ... ok
+test_bad_file_does_not_stop_later_file (test_gui_batch.GuiBatchTests.test_bad_file_does_not_stop_later_file) ... ok
+test_common_failures_include_action_and_original_technical_details (test_gui_batch.GuiBatchTests.test_common_failures_include_action_and_original_technical_details) ... ok
+test_progress_preserves_file_order_and_snapshots_engine_details (test_gui_batch.GuiBatchTests.test_progress_preserves_file_order_and_snapshots_engine_details) ... ok
+test_self_test_failure_writes_diagnostic_without_stderr (test_gui_batch.GuiBatchTests.test_self_test_failure_writes_diagnostic_without_stderr) ... ok
+test_stop_before_first_file_reports_no_completion (test_gui_batch.GuiBatchTests.test_stop_before_first_file_reports_no_completion) ... ok
+test_stop_waits_for_current_file_and_leaves_later_files_unprocessed (test_gui_batch.GuiBatchTests.test_stop_waits_for_current_file_and_leaves_later_files_unprocessed) ... ok
+test_batch_reports_completed_files_and_enables_output_directory (test_windows_gui_helpers.WindowTests.test_batch_reports_completed_files_and_enables_output_directory) ... ok
+test_elapsed_and_real_phases_do_not_advance_file_completion (test_windows_gui_helpers.WindowTests.test_elapsed_and_real_phases_do_not_advance_file_completion) ... ok
+test_elapsed_restarts_for_each_file (test_windows_gui_helpers.WindowTests.test_elapsed_restarts_for_each_file) ... ok
+test_failure_and_unprocessed_files_have_independent_recovery_buttons (test_windows_gui_helpers.WindowTests.test_failure_and_unprocessed_files_have_independent_recovery_buttons) ... ok
+test_long_status_wraps_to_available_width_after_resizing (test_windows_gui_helpers.WindowTests.test_long_status_wraps_to_available_width_after_resizing) ... ok
+test_new_controls_fit_minimum_window_width (test_windows_gui_helpers.WindowTests.test_new_controls_fit_minimum_window_width) ... ok
+test_progress_after_error_cannot_overwrite_failure_or_done_status (test_windows_gui_helpers.WindowTests.test_progress_after_error_cannot_overwrite_failure_or_done_status) ... ok
+test_result_directory_unavailable_until_output_exists (test_windows_gui_helpers.WindowTests.test_result_directory_unavailable_until_output_exists) ... ok
+test_resume_shows_old_task_then_starts_preserved_new_selection (test_windows_gui_helpers.WindowTests.test_resume_shows_old_task_then_starts_preserved_new_selection) ... ok
+test_retry_only_failed_files_keeps_history_output_and_initial_options (test_windows_gui_helpers.WindowTests.test_retry_only_failed_files_keeps_history_output_and_initial_options) ... ok
+test_retry_shows_old_task_then_starts_preserved_new_selection (test_windows_gui_helpers.WindowTests.test_retry_shows_old_task_then_starts_preserved_new_selection) ... ok
+test_stop_and_continue_keep_current_file_safe_and_report_pending (test_windows_gui_helpers.WindowTests.test_stop_and_continue_keep_current_file_safe_and_report_pending) ... ok
+test_thread_construction_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_construction_memory_failure_can_resume_and_close) ... ok
+test_thread_start_memory_failure_can_resume_and_close (test_windows_gui_helpers.WindowTests.test_thread_start_memory_failure_can_resume_and_close) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 5.093s
+
+OK

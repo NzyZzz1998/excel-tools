@@ -1,0 +1,82 @@
+{
+  "engine_sha256": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+  "live_engine_path": "E:\\codex\\excel-tools\\excel_unmerge_fill.py",
+  "frozen_engine_path": "E:\\codex\\excel-tools\\testfile\\v1.1.1-publication-4q8zun84\\frozen_engine.py",
+  "script_sha256": "9fe2d6b49fe1bcadeabf23a8edb1ce2abb6e3b8b56502f71c596e053fbe67c88",
+  "work_directory": "E:\\codex\\excel-tools\\testfile\\v1.1.1-publication-4q8zun84",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "scope": "Owned hidden subprocess hard stop and synthetic genuine Windows read lock. No business workbook or GUI/EXE interaction.",
+  "started_utc": "2026-10-09T15:43:59Z",
+  "hard_stop": {
+    "passed": true,
+    "child_python": "D:\\Work\\Software\\Python\\python.exe",
+    "owned_pid": 46544,
+    "owned_exit_code": 1,
+    "checkpoint": {
+      "nonce": "ea22462372b9453286d872e3b076afe9",
+      "pid": 46544,
+      "part": "E:\\codex\\excel-tools\\testfile\\v1.1.1-publication-4q8zun84\\hard-stop\\.synthetic_拆分填充-buqaphi7.part",
+      "part_bytes": 113,
+      "engine_sha256": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3"
+    },
+    "no_final_name_during_write_or_after_hard_stop": true,
+    "source_and_prior_sha_unchanged": true,
+    "prior_result": {
+      "valid_zip_and_crc": true,
+      "expected_cells": 5,
+      "non_target_parts_unchanged": true,
+      "sha256": "1e88b6eb361e63092431a98ba20bf4d15ee838c9b2c9d627fbb49ea0c8116e55",
+      "bytes": 2318
+    },
+    "abandoned_parts": {
+      ".synthetic_拆分填充-buqaphi7.part": "92b78aac58c1c5de75a791b3bce8718d818192032704177ccb0a210202df5d4a"
+    },
+    "retry_name": "synthetic_拆分填充_2.xlsx",
+    "retry_stats": [
+      [
+        "SYNTHETIC",
+        1,
+        2
+      ]
+    ],
+    "retry_result": {
+      "valid_zip_and_crc": true,
+      "expected_cells": 5,
+      "non_target_parts_unchanged": true,
+      "sha256": "1e88b6eb361e63092431a98ba20bf4d15ee838c9b2c9d627fbb49ea0c8116e55",
+      "bytes": 2318
+    },
+    "only_one_new_valid_final_after_retry": true,
+    "child_stderr": ""
+  },
+  "lock_plus_enospc": {
+    "passed": true,
+    "write_calls": 2,
+    "original_error_type": "OSError",
+    "original_errno": 28,
+    "visible_error": "[Errno 28] SYNTHETIC ENOSPC during ZIP output\n本次临时文件清理失败，请关闭占用后手动删除：E:\\codex\\excel-tools\\testfile\\v1.1.1-publication-4q8zun84\\lock-failure\\.locked_拆分填充-ujpj1uzh.part（PermissionError）",
+    "partial_path": "E:\\codex\\excel-tools\\testfile\\v1.1.1-publication-4q8zun84\\lock-failure\\.locked_拆分填充-ujpj1uzh.part",
+    "cleanup_error_type": "PermissionError",
+    "cleanup_winerror": 32,
+    "no_new_final_on_failure": true,
+    "owned_read_handle_closed": true,
+    "source_and_prior_sha_unchanged": true,
+    "retry_stats": [
+      [
+        "SYNTHETIC",
+        1,
+        2
+      ]
+    ],
+    "retry_result": {
+      "valid_zip_and_crc": true,
+      "expected_cells": 5,
+      "non_target_parts_unchanged": true,
+      "sha256": "d338e6e20936ec78d6d48bc3873a9b380074877c7ea6c67081185656c9a2e961",
+      "bytes": 2318
+    },
+    "retained_part_unchanged_after_retry": true
+  },
+  "live_source_unchanged": true,
+  "passed": true
+}

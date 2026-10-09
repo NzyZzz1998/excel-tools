@@ -1,0 +1,82 @@
+{
+  "head": "4e013c4ded2af26c6546fa16a1860fff282e5842",
+  "engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "script_sha256": "742bb7fd11b9a413f5439a3428df851eac3184da2657022acd92f68c339adf97",
+  "fixture_root": "E:\\codex\\excel-tools\\testfile\\post-release-quality-probes-8ofcvmud",
+  "fixtures": "Synthetic only; no real user workbook reads, no EXE interaction.",
+  "lock_during_write_failure": {
+    "injected_primary_error": "OSError ENOSPC",
+    "write_calls": 2,
+    "propagated_exception": {
+      "type": "PermissionError",
+      "errno": 13,
+      "winerror": 32,
+      "context_type": "OSError",
+      "context_errno": 28
+    },
+    "partial_final_name_retained": true,
+    "partial_bytes": 376,
+    "partial_is_workbook": false,
+    "partial_zip_parts": [
+      "xl/worksheets/sheet1.xml"
+    ],
+    "source_and_existing_result_unchanged": true,
+    "scope": "Synthetic output-write exception plus genuine externally held Win32 read handle; uncommon combined failure, supporting atomic-publication finding only."
+  },
+  "formatting_probe": [
+    {
+      "rows": 8000,
+      "formatted": false,
+      "source_bytes": 380791,
+      "stored_rows": 8000,
+      "retained_sheet_data_nodes": 0,
+      "retained_interrow_text_chars": 0,
+      "seconds": 0.12668489999487065
+    },
+    {
+      "rows": 8000,
+      "formatted": true,
+      "source_bytes": 452800,
+      "stored_rows": 8000,
+      "retained_sheet_data_nodes": 1,
+      "retained_interrow_text_chars": 72009,
+      "seconds": 0.14150319999316707
+    },
+    {
+      "rows": 16000,
+      "formatted": false,
+      "source_bytes": 782794,
+      "stored_rows": 16000,
+      "retained_sheet_data_nodes": 0,
+      "retained_interrow_text_chars": 0,
+      "seconds": 0.2489054000179749
+    },
+    {
+      "rows": 16000,
+      "formatted": true,
+      "source_bytes": 926803,
+      "stored_rows": 16000,
+      "retained_sheet_data_nodes": 1,
+      "retained_interrow_text_chars": 144009,
+      "seconds": 0.2857713999983389
+    },
+    {
+      "rows": 32000,
+      "formatted": false,
+      "source_bytes": 1598794,
+      "stored_rows": 32000,
+      "retained_sheet_data_nodes": 0,
+      "retained_interrow_text_chars": 0,
+      "seconds": 0.5100660000171047
+    },
+    {
+      "rows": 32000,
+      "formatted": true,
+      "source_bytes": 1886803,
+      "stored_rows": 32000,
+      "retained_sheet_data_nodes": 1,
+      "retained_interrow_text_chars": 288009,
+      "seconds": 0.6106680000084452
+    }
+  ]
+}

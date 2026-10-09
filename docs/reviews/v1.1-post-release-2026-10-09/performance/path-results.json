@@ -1,0 +1,626 @@
+{
+  "engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "rows": 4000,
+  "columns": 22,
+  "original_cells": 72016,
+  "active_merges_max": 4,
+  "input_bytes": 3016774,
+  "observations": {
+    "matched": {
+      "baseline": [
+        {
+          "seconds": 1.7196827000007033,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.7215056999993976,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.757109300000593,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.7292660000093747,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.7304341999988537,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        }
+      ],
+      "skip_empty_attribute_maps": [
+        {
+          "seconds": 1.6675552999950014,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.6706840999831911,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.6768284999998286,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.6765270000032615,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.6792801000119653,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        }
+      ],
+      "preflight": [
+        {
+          "seconds": 1.7929342999996152,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.785507199994754,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.7873828000156209,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.7938041999877896,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.8030099000025075,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        }
+      ],
+      "raw_row_upper_bound": [
+        {
+          "seconds": 1.5745908999815583,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.5635169000015594,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.5591318999940995,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.5659385000180919,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        },
+        {
+          "seconds": 1.5689825000008568,
+          "counts": [
+            16,
+            15984
+          ],
+          "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+          "output_bytes": 4118790
+        }
+      ]
+    },
+    "no_selected_merges": {
+      "baseline": [
+        {
+          "seconds": 0.6971032000146806,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.7038167999999132,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.6988615000154823,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.7009422999981325,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.7034285000117961,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        }
+      ],
+      "preflight": [
+        {
+          "seconds": 0.05991349997930229,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.059502899996005,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.06024639998213388,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.06035649997647852,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        },
+        {
+          "seconds": 0.05952619999879971,
+          "counts": [
+            0,
+            0
+          ],
+          "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "output_bytes": 0
+        }
+      ]
+    }
+  },
+  "median_seconds": {
+    "matched": {
+      "baseline": 1.7292660000093747,
+      "skip_empty_attribute_maps": 1.6765270000032615,
+      "preflight": 1.7929342999996152,
+      "raw_row_upper_bound": 1.5659385000180919
+    },
+    "no_selected_merges": {
+      "baseline": 0.7009422999981325,
+      "preflight": 0.05991349997930229
+    }
+  },
+  "profiler_no_match": {
+    "seconds": 2.975018299999647,
+    "counts": [
+      0,
+      0
+    ],
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output_bytes": 0
+  },
+  "profiler_no_match_top": [
+    {
+      "file": "profile_stream.py",
+      "line": 54,
+      "function": "run",
+      "total_calls": 1,
+      "self_seconds": 0.0002053,
+      "cumulative_seconds": 2.9762385
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 411,
+      "function": "transform_sheet_stream",
+      "total_calls": 1,
+      "self_seconds": 1.7e-05,
+      "cumulative_seconds": 2.9748312
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 197,
+      "function": "parseFile",
+      "total_calls": 1,
+      "self_seconds": 0.00020620000000000002,
+      "cumulative_seconds": 2.97329
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'Parse' of 'pyexpat.xmlparser' objects>",
+      "total_calls": 186,
+      "self_seconds": 0.1133001,
+      "cumulative_seconds": 2.9726828000000003
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 352,
+      "function": "end_element_handler",
+      "total_calls": 160051,
+      "self_seconds": 0.0709439,
+      "cumulative_seconds": 2.1486936
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 369,
+      "function": "store_row",
+      "total_calls": 4000,
+      "self_seconds": 0.07872380000000001,
+      "cumulative_seconds": 1.3637415000000002
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 158,
+      "function": "serialize_xml",
+      "total_calls": 4000,
+      "self_seconds": 0.4704566,
+      "cumulative_seconds": 1.0535232
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 733,
+      "function": "start_element_handler",
+      "total_calls": 160051,
+      "self_seconds": 0.2085719,
+      "cumulative_seconds": 0.6343257
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 786,
+      "function": "end_element_handler",
+      "total_calls": 160051,
+      "self_seconds": 0.08211800000000001,
+      "cumulative_seconds": 0.3432543
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 114,
+      "function": "_parse_ns_name",
+      "total_calls": 320102,
+      "self_seconds": 0.19018790000000002,
+      "cumulative_seconds": 0.329789
+    },
+    {
+      "file": "minidom.py",
+      "line": 715,
+      "function": "unlink",
+      "total_calls": 160051,
+      "self_seconds": 0.0939739,
+      "cumulative_seconds": 0.2854527
+    },
+    {
+      "file": "minidom.py",
+      "line": 263,
+      "function": "unlink",
+      "total_calls": 380103,
+      "self_seconds": 0.0891122,
+      "cumulative_seconds": 0.2765192
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 160,
+      "function": "escape",
+      "total_calls": 220048,
+      "self_seconds": 0.1224197,
+      "cumulative_seconds": 0.21916780000000002
+    },
+    {
+      "file": "minidom.py",
+      "line": 706,
+      "function": "_get_localName",
+      "total_calls": 396120,
+      "self_seconds": 0.1552831,
+      "cumulative_seconds": 0.1901711
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 30,
+      "function": "coordinate",
+      "total_calls": 72016,
+      "self_seconds": 0.0430344,
+      "cumulative_seconds": 0.1174409
+    },
+    {
+      "file": "minidom.py",
+      "line": 421,
+      "function": "unlink",
+      "total_calls": 148034,
+      "self_seconds": 0.0714481,
+      "cumulative_seconds": 0.1060056
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'replace' of 'str' objects>",
+      "total_calls": 1324294,
+      "self_seconds": 0.0967501,
+      "cumulative_seconds": 0.0967501
+    },
+    {
+      "file": "minidom.py",
+      "line": 355,
+      "function": "__init__",
+      "total_calls": 148034,
+      "self_seconds": 0.060174200000000004,
+      "cumulative_seconds": 0.0962601
+    },
+    {
+      "file": "minidom.py",
+      "line": 903,
+      "function": "_get_attributes",
+      "total_calls": 160048,
+      "self_seconds": 0.0576356,
+      "cumulative_seconds": 0.0833367
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 271,
+      "function": "character_data_handler_cdata",
+      "total_calls": 72041,
+      "self_seconds": 0.0410611,
+      "cumulative_seconds": 0.07635750000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'split' of 'str' objects>",
+      "total_calls": 716222,
+      "self_seconds": 0.0748762,
+      "cumulative_seconds": 0.0748762
+    },
+    {
+      "file": "minidom.py",
+      "line": 392,
+      "function": "_set_value",
+      "total_calls": 148034,
+      "self_seconds": 0.051597500000000004,
+      "cumulative_seconds": 0.0717966
+    },
+    {
+      "file": "minidom.py",
+      "line": 285,
+      "function": "_append_child",
+      "total_calls": 232067,
+      "self_seconds": 0.0484401,
+      "cumulative_seconds": 0.0693472
+    },
+    {
+      "file": "__init__.py",
+      "line": 169,
+      "function": "fullmatch",
+      "total_calls": 72016,
+      "self_seconds": 0.021151,
+      "cumulative_seconds": 0.06243340000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'setdefault' of 'dict' objects>",
+      "total_calls": 640204,
+      "self_seconds": 0.06127730000000001,
+      "cumulative_seconds": 0.06127730000000001
+    }
+  ],
+  "edge_equivalence_checks": [
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "entities",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "inherited_space_and_local_prefix",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "prefixed_root",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "prefix_shadow",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "cdata_pi_attribute",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "noncanonical",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "hidden_metadata_reject",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "formula_reject",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "no_match",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "skip_empty_attribute_maps",
+      "case": "rectangle",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "entities",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "inherited_space_and_local_prefix",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "prefixed_root",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "prefix_shadow",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "cdata_pi_attribute",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "noncanonical",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "hidden_metadata_reject",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "formula_reject",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "no_match",
+      "baseline_identical": true
+    },
+    {
+      "candidate": "preflight",
+      "case": "rectangle",
+      "baseline_identical": true
+    }
+  ],
+  "limitations": [
+    "Synthetic transform timings exclude ZIP inflation/compression.",
+    "Raw-row lookup fixture preparation and memory are excluded: this is an upper-bound counterfactual, not an implementation or promised gain.",
+    "Preflight prototype needs seekable input; its extra real ZIP decompression cost and broad malformed-XML behavior are not validated."
+  ]
+}

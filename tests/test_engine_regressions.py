@@ -369,16 +369,13 @@ class EngineRegressionTests(unittest.TestCase):
         source = makebook(self.root / "source.xlsx", [
             ("数据", sheet({1: [c("A1", "value")]}, ["A1:A2"]))])
         before = sha(source)
-        real_open = Path.open
         attempts = []
 
-        def denied_output(path, *args, **kwargs):
-            if args and args[0] == "xb":
-                attempts.append(path)
-                raise PermissionError("injected directory write denial")
-            return real_open(path, *args, **kwargs)
+        def denied_output(*args, **kwargs):
+            attempts.append(kwargs.get("dir"))
+            raise PermissionError("injected directory write denial")
 
-        with mock.patch.object(Path, "open", new=denied_output):
+        with mock.patch.object(mod, "mkstemp", new=denied_output):
             with self.assertRaisesRegex(PermissionError, "injected directory write denial"):
                 mod.process_file(source)
         self.assertEqual(len(attempts), 1)

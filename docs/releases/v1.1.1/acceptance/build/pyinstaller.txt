@@ -1,0 +1,70 @@
+505 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+505 INFO: Python: 3.12.8
+539 INFO: Platform: Windows-11-10.0.26300-SP0
+539 INFO: Python environment: C:\Users\win\AppData\Local\Temp\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\venv
+540 INFO: wrote E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\source\ExcelTools.spec
+548 INFO: Removing temporary files and cleaning cache in C:\Users\win\AppData\Local\pyinstaller
+550 INFO: Module search paths (PYTHONPATH):
+['E:\\codex\\excel-tools\\testfile\\v1.1.1-build-81607e8b\\source',
+ 'D:\\Work\\Software\\Python\\python312.zip',
+ 'D:\\Work\\Software\\Python\\DLLs',
+ 'D:\\Work\\Software\\Python\\Lib',
+ 'D:\\Work\\Software\\Python',
+ 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv',
+ 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages',
+ 'E:\\codex\\excel-tools\\testfile\\v1.1.1-build-81607e8b\\source']
+828 INFO: checking Analysis
+828 INFO: Building Analysis because Analysis-00.toc is non existent
+828 INFO: Looking for Python shared library...
+828 INFO: Using Python shared library: D:\Work\Software\Python\python312.dll
+828 INFO: Running Analysis Analysis-00.toc
+828 INFO: Target bytecode optimization level: 0
+828 INFO: Initializing module dependency graph...
+829 INFO: Initializing module graph hook caches...
+841 INFO: Analyzing modules for base_library.zip ...
+1645 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+1906 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+2271 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+3021 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4280 INFO: Caching module dependency graph...
+4297 INFO: Analyzing E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\source\excel_unmerge_gui.py
+4375 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4399 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4402 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+4428 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+4701 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4835 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5217 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5228 INFO: Processing module hooks (post-graph stage)...
+5229 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5235 INFO: Performing binary vs. data reclassification (927 entries)
+5344 INFO: Looking for ctypes DLLs
+5349 INFO: Analyzing run-time hooks ...
+5350 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5354 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5368 INFO: Creating base_library.zip...
+5380 INFO: Looking for dynamic libraries
+5520 INFO: Extra DLL search directories (AddDllDirectory): []
+5521 INFO: Extra DLL search directories (PATH): []
+5822 INFO: Warnings written to E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\build\ExcelTools\warn-ExcelTools.txt
+5830 INFO: Graph cross-reference written to E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\build\ExcelTools\xref-ExcelTools.html
+5861 INFO: checking PYZ
+5861 INFO: Building PYZ because PYZ-00.toc is non existent
+5861 INFO: Building PYZ (ZlibArchive) E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\build\ExcelTools\PYZ-00.pyz
+5978 INFO: Building PYZ (ZlibArchive) E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\build\ExcelTools\PYZ-00.pyz completed successfully.
+5987 INFO: checking PKG
+5987 INFO: Building PKG because PKG-00.toc is non existent
+5988 INFO: Building PKG (CArchive) ExcelTools.pkg
+8234 INFO: Building PKG (CArchive) ExcelTools.pkg completed successfully.
+8241 INFO: Bootloader C:\Users\win\AppData\Local\Temp\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+8241 INFO: checking EXE
+8241 INFO: Building EXE because EXE-00.toc is non existent
+8241 INFO: Building EXE from EXE-00.toc
+8241 INFO: Copying bootloader EXE to E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\built\ExcelTools.exe
+8504 INFO: Copying icon to EXE
+8646 INFO: Copying 0 resources to EXE
+8646 INFO: Embedding manifest in EXE
+8788 INFO: Appending PKG archive to EXE
+8798 INFO: Fixing EXE headers
+8861 INFO: Building EXE from EXE-00.toc completed successfully.
+8869 INFO: Build complete! The results are available in: E:\codex\excel-tools\testfile\v1.1.1-build-81607e8b\built

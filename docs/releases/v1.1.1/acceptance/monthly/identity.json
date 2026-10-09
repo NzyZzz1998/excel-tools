@@ -1,0 +1,13 @@
+{
+  "source": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\天-缺货明细表沉淀数据 (1).xlsx",
+  "source_bytes": 104185338,
+  "source_sha256": "0849FD0DF036C0DC6E18B7A9F54BA5E0D9A512E9CB3D30BEB3ACACB382F4C6E8",
+  "copied_input": "E:\\codex\\excel-tools\\testfile\\月度验收_v1.1.1_2026-10-09\\default\\天-缺货明细表沉淀数据 (1).xlsx",
+  "package": "E:\\codex\\excel-tools\\dist\\ExcelTools-v1.1.1-Windows-x64.zip",
+  "package_sha256": "7D3954B5A898C14F42AEF8C8881ACD8F075097D941689204C68E18FAA4C45B52",
+  "exe": "E:\\codex\\excel-tools\\testfile\\月度验收_v1.1.1_2026-10-09\\app\\ExcelTools.exe",
+  "exe_sha256": "B5ECA2E5837698E677BDB3F6B9BF844275F734BA0CE7643275FD46871CCAA2ED",
+  "controller_sha256": "FBC6E87A7B3111D28BCDCA9A69A156CB353AF62AA68DC6F56BB0456B79979D32",
+  "runner_sha256": "7D0AFA39F5121D80C49599F2955B2F92F6BC18C8137CBD62DCDC1D403FFFF69E",
+  "reused_helper_sha256": "EEF8D1B55BEAB4DDBC97C632976457525A70F3CF6897E2646CF5F77FCD2590E9"
+}

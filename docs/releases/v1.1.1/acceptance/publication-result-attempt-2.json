@@ -1,0 +1,15 @@
+{
+  "engine_sha256": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+  "live_engine_path": "E:\\codex\\excel-tools\\excel_unmerge_fill.py",
+  "frozen_engine_path": "E:\\codex\\excel-tools\\testfile\\v1.1.1-publication-jyyl97__\\frozen_engine.py",
+  "script_sha256": "a0901249fcff1be20f07e13d343c9e6b503459db9473a602aef3aa669164e28d",
+  "work_directory": "E:\\codex\\excel-tools\\testfile\\v1.1.1-publication-jyyl97__",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "scope": "Owned hidden subprocess hard stop and synthetic genuine Windows read lock. No business workbook or GUI/EXE interaction.",
+  "started_utc": "2026-10-09T15:41:28Z",
+  "passed": false,
+  "failure": {
+    "type": "AssertionError",
+    "message": ""
+  }
+}

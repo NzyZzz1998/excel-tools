@@ -1,0 +1,790 @@
+{
+  "head": "4e013c4ded2af26c6546fa16a1860fff282e5842",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "fixture": {
+    "rows": 4000,
+    "columns": 22,
+    "original_cells": 72016,
+    "active_merges_max": 4,
+    "merges": 16,
+    "fills": 15984,
+    "input_bytes": 3016774,
+    "business_data": false
+  },
+  "warmup": {
+    "seconds": 0.4316779999935534,
+    "counts": [
+      4,
+      3996
+    ],
+    "output_sha256": "5aca0cef6d60843a91f316d12e64c13f17ccd208f3bfe82e69953a4abef151be",
+    "output_bytes": 986790
+  },
+  "unprofiled": [
+    {
+      "seconds": 1.7275549999903888,
+      "counts": [
+        16,
+        15984
+      ],
+      "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+      "output_bytes": 4118790
+    },
+    {
+      "seconds": 1.7128658999863546,
+      "counts": [
+        16,
+        15984
+      ],
+      "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+      "output_bytes": 4118790
+    },
+    {
+      "seconds": 1.7426589999813586,
+      "counts": [
+        16,
+        15984
+      ],
+      "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+      "output_bytes": 4118790
+    }
+  ],
+  "unprofiled_median_seconds": 1.7275549999903888,
+  "profiled": {
+    "seconds": 7.082751100009773,
+    "counts": [
+      16,
+      15984
+    ],
+    "output_sha256": "c983a83ed4413b136a36f40f35239d576519679629c8051136935205bbc679e6",
+    "output_bytes": 4118790
+  },
+  "profiler_total_seconds": 7.0863414,
+  "total_function_calls": 29760212,
+  "top_cumulative": [
+    {
+      "file": "profile_stream.py",
+      "line": 54,
+      "function": "run",
+      "primitive_calls": 1,
+      "total_calls": 1,
+      "self_seconds": 0.00034470000000000003,
+      "cumulative_seconds": 7.0863266000000005
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 411,
+      "function": "transform_sheet_stream",
+      "primitive_calls": 1,
+      "total_calls": 1,
+      "self_seconds": 0.135601,
+      "cumulative_seconds": 7.0825445
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'Parse' of 'pyexpat.xmlparser' objects>",
+      "primitive_calls": 4186,
+      "total_calls": 4186,
+      "self_seconds": 0.24425570000000002,
+      "cumulative_seconds": 4.1408275
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 197,
+      "function": "parseFile",
+      "primitive_calls": 1,
+      "total_calls": 1,
+      "self_seconds": 0.0002153,
+      "cumulative_seconds": 2.9072314
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 158,
+      "function": "serialize_xml",
+      "primitive_calls": 8003,
+      "total_calls": 8003,
+      "self_seconds": 1.027446,
+      "cumulative_seconds": 2.2988634
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 352,
+      "function": "end_element_handler",
+      "primitive_calls": 160068,
+      "total_calls": 160068,
+      "self_seconds": 0.0703228,
+      "cumulative_seconds": 2.0983683
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 369,
+      "function": "store_row",
+      "primitive_calls": 4000,
+      "total_calls": 4000,
+      "self_seconds": 0.076819,
+      "cumulative_seconds": 1.3211247000000002
+    },
+    {
+      "file": "minidom.py",
+      "line": 1996,
+      "function": "parseString",
+      "primitive_calls": 4000,
+      "total_calls": 4000,
+      "self_seconds": 0.007220600000000001,
+      "cumulative_seconds": 1.305921
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 914,
+      "function": "parseString",
+      "primitive_calls": 4000,
+      "total_calls": 4000,
+      "self_seconds": 0.0075475,
+      "cumulative_seconds": 1.2951001
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 733,
+      "function": "start_element_handler",
+      "primitive_calls": 328116,
+      "total_calls": 328116,
+      "self_seconds": 0.42439520000000003,
+      "cumulative_seconds": 1.2865657000000001
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 216,
+      "function": "parseString",
+      "primitive_calls": 4000,
+      "total_calls": 4000,
+      "self_seconds": 0.0041598,
+      "cumulative_seconds": 1.2761159
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 786,
+      "function": "end_element_handler",
+      "primitive_calls": 328116,
+      "total_calls": 328116,
+      "self_seconds": 0.1661019,
+      "cumulative_seconds": 0.6919828
+    },
+    {
+      "file": "minidom.py",
+      "line": 715,
+      "function": "unlink",
+      "primitive_calls": 8019,
+      "total_calls": 376101,
+      "self_seconds": 0.2195299,
+      "cumulative_seconds": 0.67732
+    },
+    {
+      "file": "minidom.py",
+      "line": 263,
+      "function": "unlink",
+      "primitive_calls": 12085,
+      "total_calls": 872234,
+      "self_seconds": 0.2077632,
+      "cumulative_seconds": 0.671424
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 114,
+      "function": "_parse_ns_name",
+      "primitive_calls": 656232,
+      "total_calls": 656232,
+      "self_seconds": 0.3837513,
+      "cumulative_seconds": 0.6599837000000001
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 160,
+      "function": "escape",
+      "primitive_calls": 488051,
+      "total_calls": 488051,
+      "self_seconds": 0.2573789,
+      "cumulative_seconds": 0.46226740000000005
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 113,
+      "function": "clone_payload",
+      "primitive_calls": 15984,
+      "total_calls": 15984,
+      "self_seconds": 0.025580600000000002,
+      "cumulative_seconds": 0.402471
+    },
+    {
+      "file": "minidom.py",
+      "line": 1646,
+      "function": "unlink",
+      "primitive_calls": 4002,
+      "total_calls": 4002,
+      "self_seconds": 0.0015926,
+      "cumulative_seconds": 0.3970205
+    },
+    {
+      "file": "minidom.py",
+      "line": 706,
+      "function": "_get_localName",
+      "primitive_calls": 748321,
+      "total_calls": 748321,
+      "self_seconds": 0.2963657,
+      "cumulative_seconds": 0.36146920000000005
+    },
+    {
+      "file": "minidom.py",
+      "line": 903,
+      "function": "_get_attributes",
+      "primitive_calls": 543991,
+      "total_calls": 543991,
+      "self_seconds": 0.18738980000000002,
+      "cumulative_seconds": 0.26983830000000003
+    },
+    {
+      "file": "minidom.py",
+      "line": 421,
+      "function": "unlink",
+      "primitive_calls": 332099,
+      "total_calls": 332099,
+      "self_seconds": 0.1617769,
+      "cumulative_seconds": 0.2612761
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 30,
+      "function": "coordinate",
+      "primitive_calls": 144066,
+      "total_calls": 144066,
+      "self_seconds": 0.0853512,
+      "cumulative_seconds": 0.22953030000000002
+    },
+    {
+      "file": "minidom.py",
+      "line": 355,
+      "function": "__init__",
+      "primitive_calls": 332116,
+      "total_calls": 332116,
+      "self_seconds": 0.1362198,
+      "cumulative_seconds": 0.2167338
+    },
+    {
+      "file": "minidom.py",
+      "line": 206,
+      "function": "cloneNode",
+      "primitive_calls": 16002,
+      "total_calls": 16002,
+      "self_seconds": 0.0078455,
+      "cumulative_seconds": 0.21027520000000002
+    },
+    {
+      "file": "minidom.py",
+      "line": 747,
+      "function": "setAttribute",
+      "primitive_calls": 31969,
+      "total_calls": 31969,
+      "self_seconds": 0.026813800000000002,
+      "cumulative_seconds": 0.20725700000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'replace' of 'str' objects>",
+      "primitive_calls": 2936315,
+      "total_calls": 2936315,
+      "self_seconds": 0.2048899,
+      "cumulative_seconds": 0.2048899
+    },
+    {
+      "file": "minidom.py",
+      "line": 1889,
+      "function": "_clone_node",
+      "primitive_calls": 16002,
+      "total_calls": 48018,
+      "self_seconds": 0.0693183,
+      "cumulative_seconds": 0.20118360000000002
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 81,
+      "function": "namespace_bindings",
+      "primitive_calls": 47968,
+      "total_calls": 47968,
+      "self_seconds": 0.0789074,
+      "cumulative_seconds": 0.1966236
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'split' of 'str' objects>",
+      "primitive_calls": 1548541,
+      "total_calls": 1548541,
+      "self_seconds": 0.1615809,
+      "cumulative_seconds": 0.1615809
+    },
+    {
+      "file": "minidom.py",
+      "line": 392,
+      "function": "_set_value",
+      "primitive_calls": 332117,
+      "total_calls": 332117,
+      "self_seconds": 0.11528210000000001,
+      "cumulative_seconds": 0.1603845
+    },
+    {
+      "file": "minidom.py",
+      "line": 285,
+      "function": "_append_child",
+      "primitive_calls": 536132,
+      "total_calls": 536132,
+      "self_seconds": 0.11106980000000001,
+      "cumulative_seconds": 0.1579498
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 271,
+      "function": "character_data_handler_cdata",
+      "primitive_calls": 144057,
+      "total_calls": 144057,
+      "self_seconds": 0.0802639,
+      "cumulative_seconds": 0.1496001
+    },
+    {
+      "file": "minidom.py",
+      "line": 522,
+      "function": "values",
+      "primitive_calls": 543991,
+      "total_calls": 543991,
+      "self_seconds": 0.09017910000000001,
+      "cumulative_seconds": 0.14002340000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'write' of '_io.StringIO' objects>",
+      "primitive_calls": 1592197,
+      "total_calls": 1592197,
+      "self_seconds": 0.1355522,
+      "cumulative_seconds": 0.1355522
+    },
+    {
+      "file": "minidom.py",
+      "line": 786,
+      "function": "setAttributeNode",
+      "primitive_calls": 32033,
+      "total_calls": 32033,
+      "self_seconds": 0.033374100000000004,
+      "cumulative_seconds": 0.13265470000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'setdefault' of 'dict' objects>",
+      "primitive_calls": 1408400,
+      "total_calls": 1408400,
+      "self_seconds": 0.1303862,
+      "cumulative_seconds": 0.1303862
+    },
+    {
+      "file": "__init__.py",
+      "line": 169,
+      "function": "fullmatch",
+      "primitive_calls": 144066,
+      "total_calls": 144066,
+      "self_seconds": 0.0407973,
+      "cumulative_seconds": 0.12119990000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'append' of 'list' objects>",
+      "primitive_calls": 1256349,
+      "total_calls": 1256349,
+      "self_seconds": 0.1126583,
+      "cumulative_seconds": 0.1126583
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 94,
+      "function": "new_element",
+      "primitive_calls": 15984,
+      "total_calls": 15984,
+      "self_seconds": 0.014688300000000001,
+      "cumulative_seconds": 0.10843910000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.len>",
+      "primitive_calls": 1520622,
+      "total_calls": 1520622,
+      "self_seconds": 0.09148210000000001,
+      "cumulative_seconds": 0.09148210000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "primitive_calls": 1060210,
+      "total_calls": 1060210,
+      "self_seconds": 0.08769,
+      "cumulative_seconds": 0.08769
+    },
+    {
+      "file": "minidom.py",
+      "line": 370,
+      "function": "_get_localName",
+      "primitive_calls": 400199,
+      "total_calls": 400199,
+      "self_seconds": 0.0722627,
+      "cumulative_seconds": 0.08695
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 25,
+      "function": "children",
+      "primitive_calls": 16069,
+      "total_calls": 16069,
+      "self_seconds": 0.020010800000000002,
+      "cumulative_seconds": 0.0853547
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'values' of 'dict' objects>",
+      "primitive_calls": 920108,
+      "total_calls": 920108,
+      "self_seconds": 0.0794489,
+      "cumulative_seconds": 0.0794489
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'pop' of 'list' objects>",
+      "primitive_calls": 896120,
+      "total_calls": 896120,
+      "self_seconds": 0.077393,
+      "cumulative_seconds": 0.077393
+    }
+  ],
+  "top_self": [
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 158,
+      "function": "serialize_xml",
+      "primitive_calls": 8003,
+      "total_calls": 8003,
+      "self_seconds": 1.027446,
+      "cumulative_seconds": 2.2988634
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 733,
+      "function": "start_element_handler",
+      "primitive_calls": 328116,
+      "total_calls": 328116,
+      "self_seconds": 0.42439520000000003,
+      "cumulative_seconds": 1.2865657000000001
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 114,
+      "function": "_parse_ns_name",
+      "primitive_calls": 656232,
+      "total_calls": 656232,
+      "self_seconds": 0.3837513,
+      "cumulative_seconds": 0.6599837000000001
+    },
+    {
+      "file": "minidom.py",
+      "line": 706,
+      "function": "_get_localName",
+      "primitive_calls": 748321,
+      "total_calls": 748321,
+      "self_seconds": 0.2963657,
+      "cumulative_seconds": 0.36146920000000005
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 160,
+      "function": "escape",
+      "primitive_calls": 488051,
+      "total_calls": 488051,
+      "self_seconds": 0.2573789,
+      "cumulative_seconds": 0.46226740000000005
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'Parse' of 'pyexpat.xmlparser' objects>",
+      "primitive_calls": 4186,
+      "total_calls": 4186,
+      "self_seconds": 0.24425570000000002,
+      "cumulative_seconds": 4.1408275
+    },
+    {
+      "file": "minidom.py",
+      "line": 715,
+      "function": "unlink",
+      "primitive_calls": 8019,
+      "total_calls": 376101,
+      "self_seconds": 0.2195299,
+      "cumulative_seconds": 0.67732
+    },
+    {
+      "file": "minidom.py",
+      "line": 263,
+      "function": "unlink",
+      "primitive_calls": 12085,
+      "total_calls": 872234,
+      "self_seconds": 0.2077632,
+      "cumulative_seconds": 0.671424
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'replace' of 'str' objects>",
+      "primitive_calls": 2936315,
+      "total_calls": 2936315,
+      "self_seconds": 0.2048899,
+      "cumulative_seconds": 0.2048899
+    },
+    {
+      "file": "minidom.py",
+      "line": 903,
+      "function": "_get_attributes",
+      "primitive_calls": 543991,
+      "total_calls": 543991,
+      "self_seconds": 0.18738980000000002,
+      "cumulative_seconds": 0.26983830000000003
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 786,
+      "function": "end_element_handler",
+      "primitive_calls": 328116,
+      "total_calls": 328116,
+      "self_seconds": 0.1661019,
+      "cumulative_seconds": 0.6919828
+    },
+    {
+      "file": "minidom.py",
+      "line": 421,
+      "function": "unlink",
+      "primitive_calls": 332099,
+      "total_calls": 332099,
+      "self_seconds": 0.1617769,
+      "cumulative_seconds": 0.2612761
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'split' of 'str' objects>",
+      "primitive_calls": 1548541,
+      "total_calls": 1548541,
+      "self_seconds": 0.1615809,
+      "cumulative_seconds": 0.1615809
+    },
+    {
+      "file": "minidom.py",
+      "line": 355,
+      "function": "__init__",
+      "primitive_calls": 332116,
+      "total_calls": 332116,
+      "self_seconds": 0.1362198,
+      "cumulative_seconds": 0.2167338
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 411,
+      "function": "transform_sheet_stream",
+      "primitive_calls": 1,
+      "total_calls": 1,
+      "self_seconds": 0.135601,
+      "cumulative_seconds": 7.0825445
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'write' of '_io.StringIO' objects>",
+      "primitive_calls": 1592197,
+      "total_calls": 1592197,
+      "self_seconds": 0.1355522,
+      "cumulative_seconds": 0.1355522
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'setdefault' of 'dict' objects>",
+      "primitive_calls": 1408400,
+      "total_calls": 1408400,
+      "self_seconds": 0.1303862,
+      "cumulative_seconds": 0.1303862
+    },
+    {
+      "file": "minidom.py",
+      "line": 392,
+      "function": "_set_value",
+      "primitive_calls": 332117,
+      "total_calls": 332117,
+      "self_seconds": 0.11528210000000001,
+      "cumulative_seconds": 0.1603845
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'append' of 'list' objects>",
+      "primitive_calls": 1256349,
+      "total_calls": 1256349,
+      "self_seconds": 0.1126583,
+      "cumulative_seconds": 0.1126583
+    },
+    {
+      "file": "minidom.py",
+      "line": 285,
+      "function": "_append_child",
+      "primitive_calls": 536132,
+      "total_calls": 536132,
+      "self_seconds": 0.11106980000000001,
+      "cumulative_seconds": 0.1579498
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.len>",
+      "primitive_calls": 1520622,
+      "total_calls": 1520622,
+      "self_seconds": 0.09148210000000001,
+      "cumulative_seconds": 0.09148210000000001
+    },
+    {
+      "file": "minidom.py",
+      "line": 522,
+      "function": "values",
+      "primitive_calls": 543991,
+      "total_calls": 543991,
+      "self_seconds": 0.09017910000000001,
+      "cumulative_seconds": 0.14002340000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "primitive_calls": 1060210,
+      "total_calls": 1060210,
+      "self_seconds": 0.08769,
+      "cumulative_seconds": 0.08769
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 30,
+      "function": "coordinate",
+      "primitive_calls": 144066,
+      "total_calls": 144066,
+      "self_seconds": 0.0853512,
+      "cumulative_seconds": 0.22953030000000002
+    },
+    {
+      "file": "expatbuilder.py",
+      "line": 271,
+      "function": "character_data_handler_cdata",
+      "primitive_calls": 144057,
+      "total_calls": 144057,
+      "self_seconds": 0.0802639,
+      "cumulative_seconds": 0.1496001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'values' of 'dict' objects>",
+      "primitive_calls": 920108,
+      "total_calls": 920108,
+      "self_seconds": 0.0794489,
+      "cumulative_seconds": 0.0794489
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 81,
+      "function": "namespace_bindings",
+      "primitive_calls": 47968,
+      "total_calls": 47968,
+      "self_seconds": 0.0789074,
+      "cumulative_seconds": 0.1966236
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'pop' of 'list' objects>",
+      "primitive_calls": 896120,
+      "total_calls": 896120,
+      "self_seconds": 0.077393,
+      "cumulative_seconds": 0.077393
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 369,
+      "function": "store_row",
+      "primitive_calls": 4000,
+      "total_calls": 4000,
+      "self_seconds": 0.076819,
+      "cumulative_seconds": 1.3211247000000002
+    },
+    {
+      "file": "minidom.py",
+      "line": 1021,
+      "function": "__init__",
+      "primitive_calls": 492148,
+      "total_calls": 492148,
+      "self_seconds": 0.07633490000000001,
+      "cumulative_seconds": 0.07633490000000001
+    },
+    {
+      "file": "minidom.py",
+      "line": 370,
+      "function": "_get_localName",
+      "primitive_calls": 400199,
+      "total_calls": 400199,
+      "self_seconds": 0.0722627,
+      "cumulative_seconds": 0.08695
+    },
+    {
+      "file": "excel_unmerge_fill.py",
+      "line": 352,
+      "function": "end_element_handler",
+      "primitive_calls": 160068,
+      "total_calls": 160068,
+      "self_seconds": 0.0703228,
+      "cumulative_seconds": 2.0983683
+    },
+    {
+      "file": "minidom.py",
+      "line": 1889,
+      "function": "_clone_node",
+      "primitive_calls": 16002,
+      "total_calls": 48018,
+      "self_seconds": 0.0693183,
+      "cumulative_seconds": 0.20118360000000002
+    },
+    {
+      "file": "minidom.py",
+      "line": 701,
+      "function": "_ensure_attributes",
+      "primitive_calls": 764108,
+      "total_calls": 764108,
+      "self_seconds": 0.06442840000000001,
+      "cumulative_seconds": 0.06442840000000001
+    },
+    {
+      "file": "minidom.py",
+      "line": 681,
+      "function": "__init__",
+      "primitive_calls": 376118,
+      "total_calls": 376118,
+      "self_seconds": 0.063073,
+      "cumulative_seconds": 0.063073
+    }
+  ],
+  "scope": "Direct forced streaming transform with bytes input and disk-backed temporary output; excludes fixture construction, ZIP inflation/compression and output hashing from transform timing. Synthetic narrow rows with four active vertical merges; not actual monthly-workbook timing."
+}

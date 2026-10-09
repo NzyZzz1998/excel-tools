@@ -12,6 +12,15 @@ from excel_unmerge_gui import describe_error, main, process_batch
 
 
 class GuiBatchTests(unittest.TestCase):
+    @staticmethod
+    def without_progress(events):
+        terminal = []
+        while not events.empty():
+            event = events.get_nowait()
+            if event[0] != "progress":
+                terminal.append(event)
+        return terminal
+
     def test_bad_file_does_not_stop_later_file(self):
         with tempfile.TemporaryDirectory() as folder:
             source = makebook(Path(folder) / "中文 路径.xlsx", [
@@ -19,11 +28,9 @@ class GuiBatchTests(unittest.TestCase):
             missing = Path(folder) / "不存在.xlsx"
             events = queue.Queue()
             process_batch([str(missing), str(source)], False, events)
-            self.assertEqual(events.get_nowait(), ("started", str(missing), 1, 2))
-            failure = events.get_nowait()
-            self.assertEqual(events.get_nowait(), ("started", str(source), 2, 2))
-            success = events.get_nowait()
-            done = events.get_nowait()
+            started_missing, failure, started_source, success, done = self.without_progress(events)
+            self.assertEqual(started_missing, ("started", str(missing), 1, 2))
+            self.assertEqual(started_source, ("started", str(source), 2, 2))
             self.assertEqual(failure[0], "result")
             self.assertTrue(failure[4])
             self.assertEqual(success[0], "result")
@@ -39,20 +46,48 @@ class GuiBatchTests(unittest.TestCase):
                 ("数据", sheet({1: [c("A1", "标题")]}, ["A1:C1"]))])
             no_match = queue.Queue()
             process_batch([str(source)], False, no_match)
-            self.assertEqual(no_match.get_nowait(), ("started", str(source), 1, 1))
-            result = no_match.get_nowait()
+            started, result, done = self.without_progress(no_match)
+            self.assertEqual(started, ("started", str(source), 1, 1))
             self.assertIsNone(result[2])
             self.assertIsNone(result[4])
-            self.assertEqual(no_match.get_nowait(), ("done", 1, 0, ()))
+            self.assertEqual(done, ("done", 1, 0, ()))
 
             events = queue.Queue()
             process_batch([str(source)], True, events)
-            self.assertEqual(events.get_nowait(), ("started", str(source), 1, 1))
-            result = events.get_nowait()
+            started, result, done = self.without_progress(events)
+            self.assertEqual(started, ("started", str(source), 1, 1))
             self.assertIsNone(result[4])
             with load(result[2]) as book:
                 self.assertEqual(book.active["C1"].value, "标题")
-            self.assertEqual(events.get_nowait(), ("done", 1, 0, ()))
+            self.assertEqual(done, ("done", 1, 0, ()))
+
+    def test_progress_preserves_file_order_and_snapshots_engine_details(self):
+        events = queue.Queue()
+
+        def process(file, all_merges, progress=None):
+            self.assertIs(all_merges, False)
+            detail = dict(phase="reading", sheet="测试", completed=12, total=None, unit="rows")
+            progress(detail)
+            detail.update(phase="filling", completed=20, total=30)
+            progress(detail)
+            detail["completed"] = 99
+            if file == "failed.xlsx":
+                raise PermissionError("synthetic progress failure")
+            return Path("output.xlsx"), [("测试", 1, 2)]
+
+        with patch("excel_unmerge_gui.process_file", side_effect=process):
+            process_batch(("failed.xlsx", "success.xlsx"), False, events)
+        for index, file in enumerate(("failed.xlsx", "success.xlsx"), 1):
+            self.assertEqual(events.get_nowait(), ("started", file, index, 2))
+            self.assertEqual(events.get_nowait(), ("progress", file, dict(
+                phase="reading", sheet="测试", completed=12, total=None, unit="rows")))
+            self.assertEqual(events.get_nowait(), ("progress", file, dict(
+                phase="filling", sheet="测试", completed=20, total=30, unit="rows")))
+            result = events.get_nowait()
+            self.assertEqual(result[:2], ("result", file))
+            self.assertEqual(result[4] is not None, index == 1)
+        self.assertEqual(events.get_nowait(), ("done", 2, 1, ()))
+        self.assertTrue(events.empty())
 
     def test_stop_waits_for_current_file_and_leaves_later_files_unprocessed(self):
         events = queue.Queue()
@@ -60,7 +95,7 @@ class GuiBatchTests(unittest.TestCase):
         entered = threading.Event()
         release = threading.Event()
 
-        def process(file, all_merges):
+        def process(file, all_merges, progress=None):
             entered.set()
             if not release.wait(5):
                 raise AssertionError("Test did not release the current file")

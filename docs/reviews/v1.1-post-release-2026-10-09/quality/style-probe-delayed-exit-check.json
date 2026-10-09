@@ -1,0 +1,7 @@
+{
+  "forced_termination": false,
+  "owned_pid": 564,
+  "process_alive": false,
+  "checked_utc": "2026-10-09T11:22:51.7743921Z",
+  "note": "Delayed check after the earlier immediate post-Quit result; no process was terminated."
+}

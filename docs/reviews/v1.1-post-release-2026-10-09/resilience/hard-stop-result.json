@@ -1,0 +1,27 @@
+{
+  "scope": "synthetic OOXML package, OS hard termination during final ZIP write; not ordinary Stop button or handled exception",
+  "engine_sha256": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+  "scratch_directory": "E:\\codex\\excel-tools\\testfile\\review-hard-stop-03f9bd4a",
+  "owned_child_exit_code": 1,
+  "child_stderr": "",
+  "source_unchanged": true,
+  "prior_valid_result_unchanged": true,
+  "interrupted_output": {
+    "name": "synthetic_拆分填充_2.xlsx",
+    "exists": true,
+    "bytes": 45,
+    "is_valid_zip": false
+  },
+  "retry_output": {
+    "name": "synthetic_拆分填充_3.xlsx",
+    "is_valid_zip": true,
+    "stats": [
+      [
+        "Synthetic",
+        1,
+        2
+      ]
+    ]
+  },
+  "partial_output_retained_after_retry": true
+}

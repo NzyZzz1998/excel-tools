@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-10-09T11:24:51.082644+00:00",
+  "head": "4e013c4ded2af26c6546fa16a1860fff282e5842",
+  "application_sha256": {
+    "excel_unmerge_fill.py": "1d761a9f897b545c367514069e755f1aa270f1d9a777d963ffe1af41b606b5eb",
+    "excel_unmerge_gui.py": "d3a1c273f0d4bb333d26945b8b39061daa064824e413601e711aeb9ab8d2c4c0"
+  },
+  "application_unchanged": true,
+  "tracked_files_changed": false,
+  "new_review_file_count_before_this_record": 22,
+  "json_valid": true,
+  "markdown_relative_links_valid": true,
+  "artifact_extensions": [
+    ".json",
+    ".md",
+    ".ps1",
+    ".py"
+  ],
+  "scope": "Local review evidence and synthetic probes only; no product build, commit, push, or release performed."
+}

@@ -1,0 +1,2315 @@
+{
+  "recorded_utc": "2026-10-09T15:50:19.915539+00:00",
+  "head": "4e013c4ded2af26c6546fa16a1860fff282e5842",
+  "scope": "Current tracked and nonignored untracked files plus v1.1.1/post-release text logs; no remote calls.",
+  "files": [
+    {
+      "path": ".github/workflows/windows-build.yml",
+      "bytes": 3613,
+      "sha256": "d6d4d44fc05c4b1e15f876f4f0eb90526a13c70fa2cdc5d282d3da7b0faffa40"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 230,
+      "sha256": "c8c83442f37baf4cd79ce0fab4a31bfdde80a8fb6ee2597c4eb06734cd881b32"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5628,
+      "sha256": "cc557dfd94994b40a3e9fe799fcc2b3ff371f867e6758bb5f6256d66e4f68725"
+    },
+    {
+      "path": "assets/readme/merge-example.svg",
+      "bytes": 2368,
+      "sha256": "40d70b94d5cd12e9960143d7e971f3296e8ea3831fa13b5f4cef2873f9eb2b82"
+    },
+    {
+      "path": "dev/Windows双击运行.bat",
+      "bytes": 1045,
+      "sha256": "588eeb739a8a18b1140b08a96e61d32b9552a30ed9b8856db985e0875c0f6df7"
+    },
+    {
+      "path": "dev/双击运行.command",
+      "bytes": 172,
+      "sha256": "d8f625ca77dc82fd434f9b72d7bcfff229bcee910c6a49c794e94104be81f694"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/audit_public_history.py",
+      "bytes": 7757,
+      "sha256": "c138aed8bfff461d24b74dcf499ec1deb320ee0e33b51126477b155032cba428"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/audit_public_increment.py",
+      "bytes": 3109,
+      "sha256": "9d79f27971ea93b797c7fdada4e553e0089f0e3dc5c5635447fbbc78142f701d"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/independent-acceptance.txt",
+      "bytes": 1442,
+      "sha256": "e919465a08e4794f0af1f5acff6b4c41384f74822343aedc568c2f62788348df"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/portable-process.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/portable-self-test.txt",
+      "bytes": 37,
+      "sha256": "0c4f279e8ab7c3d3ed4e057d76b5d18982e787b9f7361e6c0c2e53af33020908"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/pyinstaller.txt",
+      "bytes": 6544,
+      "sha256": "3b24379728ca8f952fd2c015747f4f341a3ebc2bb1a2f61eec752a0f90e2d1b6"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/source-process.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/source-self-test.txt",
+      "bytes": 37,
+      "sha256": "0c4f279e8ab7c3d3ed4e057d76b5d18982e787b9f7361e6c0c2e53af33020908"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/unit-tests.txt",
+      "bytes": 18395,
+      "sha256": "8ebb3ce8a6d040323dda8260c70352540381b227a489f65d0773e6d6c525c621"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build/verification-manifest.json",
+      "bytes": 2660,
+      "sha256": "4d08454d415e7536c31d010b59ac6469bcc476196ce322ff666bdc29d6249c90"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/build_candidate.py",
+      "bytes": 5768,
+      "sha256": "aaecacafc25aefaaf67e6accdd6cd17606a4bca23e2ba09be0247ca2a3823e25"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/capture_tk.py",
+      "bytes": 6044,
+      "sha256": "ff0f6f1e26f11a71ec7402840663c456df74b460ee87a149748c149464c66b2c"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/gui-tests.log",
+      "bytes": 3445,
+      "sha256": "683f98883f3794fe5b4c567063cbf5bc28ab6c6c6f2f70a0574ab919f0e31aac"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/gui-tests.txt",
+      "bytes": 3445,
+      "sha256": "683f98883f3794fe5b4c567063cbf5bc28ab6c6c6f2f70a0574ab919f0e31aac"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/layout-evidence.json",
+      "bytes": 4313,
+      "sha256": "b4786e1d2aeca915e635d2d2417530cd171549955d7756655601641b92b04601"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/review.md",
+      "bytes": 2715,
+      "sha256": "527a0f411fdea99ed3ef4f5dc600b1afcdf871be4b73699233f993610e79e714"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/source-self-test.log",
+      "bytes": 37,
+      "sha256": "0c4f279e8ab7c3d3ed4e057d76b5d18982e787b9f7361e6c0c2e53af33020908"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/source-self-test.txt",
+      "bytes": 37,
+      "sha256": "0c4f279e8ab7c3d3ed4e057d76b5d18982e787b9f7361e6c0c2e53af33020908"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/ui-default.png",
+      "bytes": 30886,
+      "sha256": "d708b8126ab521a9300e0ef2398ec3c8d87e970f120f89c83f769d6137dfb19a"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/ui-minimum.png",
+      "bytes": 29637,
+      "sha256": "731a11fdfd033cbfdfb545558c91e7466c96f6626277947533856ad488b40d5e"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/independent_acceptance.py",
+      "bytes": 15508,
+      "sha256": "cfe134f9ea3b6914252145e5fa18b4c378ac6500b146a6fdf3187850eab51b26"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/integration-review.md",
+      "bytes": 3449,
+      "sha256": "b2cfe25f7acf804fa5f7327097db3b9e0f8599feed138ea676f545daf999f378"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/actual-input-actions.jsonl",
+      "bytes": 2070,
+      "sha256": "77e771cb78e4d88ca34aefa8a52fe012b8ee63d02842e2327399e5604f3ac5c1"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/exe-initial.png",
+      "bytes": 24361,
+      "sha256": "aed0532b45bec0addeade69c9d7a71907111ce08943e943d8d1ceace571b96ef"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/gui-probe.json",
+      "bytes": 9067,
+      "sha256": "f309ee60851350dc7e4850190558a8fc7d0ed2df656925f603db5f53dc5f45b1"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/identity.json",
+      "bytes": 1000,
+      "sha256": "107e969d19b62825d46a24c24912c0362cc1f7237fe31d70996c41c38deaa39b"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/memory-trace.jsonl",
+      "bytes": 76877,
+      "sha256": "daae92f8c85306355d1da15a47d086a18b35ffdae00c26a05f960d75ab8111cf"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/native_gui_controller.py",
+      "bytes": 13401,
+      "sha256": "fbc6e87a7b3111d28bcdca9a69a156cb353af62aa68dc6f56bb0456b79979d32"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/processing.png",
+      "bytes": 32506,
+      "sha256": "74a9a20c333b8818413afd5bd34f622880702480687ca326241aa58c009ffc9b"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/progress.json",
+      "bytes": 440,
+      "sha256": "5c1e6c0b09384e281d9fa3427ab709594dbb7695f49fc79665df32e9a4e9c606"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/run_monthly_default.py",
+      "bytes": 15548,
+      "sha256": "7d0afa39f5121d80c49599f2955b2f92f6bc18c8137cbd62dcdc1d403ffff69e"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/selected.png",
+      "bytes": 26772,
+      "sha256": "af7366ccbbf994e10ce47fee3dd852953f7bef082694bad50ce18b991c1c083e"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/plan.md",
+      "bytes": 3492,
+      "sha256": "8a20a47a79e1d036f85297b21a2959379e9129489b52a3d1bcd1f11ea06c4a90"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/probe_output_publication.py",
+      "bytes": 15639,
+      "sha256": "9fe2d6b49fe1bcadeabf23a8edb1ce2abb6e3b8b56502f71c596e053fbe67c88"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/public-history-scan.json",
+      "bytes": 35110,
+      "sha256": "1cf00288fc124014cb7c1f73aa6295e2a0825a7147b3850fdc914da3bd690f41"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/publication-result-attempt-2.json",
+      "bytes": 811,
+      "sha256": "da78d882f32bbf96646fe200a9117aa27c9e4e23790e93862a3125687e135438"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/publication-result-attempt-3.json",
+      "bytes": 3368,
+      "sha256": "490e35e587c72d9dca5f22107ea4175776337c85c292142740e4b1895a065cce"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/publication-result.json",
+      "bytes": 856,
+      "sha256": "5a723aff70a04ce64c71bad82ce2abaa9a8f5022dbe41b207f7521ed674e7b03"
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/publication-review.md",
+      "bytes": 3699,
+      "sha256": "2f4b8891249fe6881d2a06bcda9a522712cbb11b90b3b9472afd1410f2b44087"
+    },
+    {
+      "path": "docs/releases/v1.1.1/dev_log_v1.1.1.md",
+      "bytes": 1899,
+      "sha256": "a48829e6e5352dc4699a282936d1614f2ea4db63292826e02158dd360a279c29"
+    },
+    {
+      "path": "docs/releases/v1.1.1/dev_plan_v1.1.1.md",
+      "bytes": 2344,
+      "sha256": "e0fc3894bd9df157840243d8b4aaabe3249f0f68e182c0fecc91f7df1956ca4b"
+    },
+    {
+      "path": "docs/releases/v1.1.1/engine-implementation.md",
+      "bytes": 4151,
+      "sha256": "3cea2204a24a962145d6cf234f5d3bc4e044810a5e1b241a15c1880998c94c95"
+    },
+    {
+      "path": "docs/releases/v1.1.1/prd_v1.1.1.md",
+      "bytes": 6121,
+      "sha256": "1481a09c5d6c5605ca05129383aa6e7e21e3ff6206a4f983836ad3d8468698d9"
+    },
+    {
+      "path": "docs/releases/v1.1.1/progress_v1.1.1.md",
+      "bytes": 1239,
+      "sha256": "4624097bfddd3efd1110cde73e551f3d2da997ac5c8d556b5f9d63641932258d"
+    },
+    {
+      "path": "docs/releases/v1.1.1/public-readiness.md",
+      "bytes": 3561,
+      "sha256": "3f3426b72f934b67605ed1c63f201eb3415cf2b374a162330673e11ee36f84cf"
+    },
+    {
+      "path": "docs/releases/v1.1.1/readme-validation.md",
+      "bytes": 3728,
+      "sha256": "c05f9a3fd837993ab1ae38537ce967b9e7fd879bf6b32d7ea14707559bb569e1"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/delivery-integrity.json",
+      "bytes": 8277,
+      "sha256": "bcc6269cc0fa1dcfbdbd437f867820ca93be12a268b497da06b73d9f8c411524"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/dimension-finding.json",
+      "bytes": 12470,
+      "sha256": "1f8c5fb9df99e429d741dbc3644477e2da34c0144bd6059377f283e7175adefa"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/engine-content-validation-fixed.json",
+      "bytes": 17902,
+      "sha256": "5026e20b3c9afe88ca8021e0e77b2d907f64f19a9332995142f5f8ab69d72df3"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/engine-content-validation-release.json",
+      "bytes": 17946,
+      "sha256": "78bfc1b40e3b6be91d56f8eafb9c2bfc7d208a3521099ff75bcff426d9d99391"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/engine-content-validation.json",
+      "bytes": 16526,
+      "sha256": "c91b44a3512dbdd17432899f893bd90eccd646aac726cd64c0df8856a0daadfa"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/excel-client-engine-attempt2.json",
+      "bytes": 9578,
+      "sha256": "08ea89862173ea8baea85c476d5f2567ceab78be4142f1d01c827619e5e76278"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/excel-client-engine-attempt3.json",
+      "bytes": 16773,
+      "sha256": "688902982147ccce88a013a88de18b3254f283781783370ab37f9daea61d45a0"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/excel-client-engine.json",
+      "bytes": 9269,
+      "sha256": "adf77db12f3278e0cf305d946a85d55c8a572aeca837852d787e886950dd6d29"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/excel-client-exe-fixed.json",
+      "bytes": 17245,
+      "sha256": "900c124c1e407a608da18d9751ca0b8ad392f9fae2f7b5923af7cda38f85ef77"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/exe-content-validation-fixed.json",
+      "bytes": 17307,
+      "sha256": "711e2e9e11f4d13734449569aa01d1dad1589b01e7a94f79fcc0e98aac0d5120"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/finalize_delivery.py",
+      "bytes": 4511,
+      "sha256": "65ce4f41e6af45a21a0404f1e2acae76527d43ce51f4e29db961d4c2bec3b80b"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/build.txt",
+      "bytes": 7018,
+      "sha256": "97e2720a366a4ee404af8a38204c091c08481af56fd37c42b19e5a90b731bde7"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/independent-acceptance.txt",
+      "bytes": 2819,
+      "sha256": "4740c626186390b91a872ace06e56f386c6b67f20a693557b0838ba12ab8b28f"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/package-content-check.json",
+      "bytes": 392,
+      "sha256": "f2163027d574707b122072419b1681a93bd4acf6adf4015dc37d00a200a9e7d6"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/portable-process.txt",
+      "bytes": 27,
+      "sha256": "b34dfd29827465f45d7834980ddb013624b5f2280f9b113a92f86ac9aefe63fe"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/portable-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/run_fixed_build.ps1",
+      "bytes": 8968,
+      "sha256": "06ba046304a1e5210b2709bd87a374da129513420de3398989f0e87919f0db45"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/source-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/source-snapshot-hashes.json",
+      "bytes": 2326,
+      "sha256": "b3a1ccf44966a9144aedce0790634ba578af073c2eac8ecfbbd35261e7fced2b"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/source-status.txt",
+      "bytes": 480,
+      "sha256": "a70ffa2943e7fcf66b02f4c51dc00f101e9f3c90b6edf34921a5601e3b5749bc"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/unit-tests.txt",
+      "bytes": 6337,
+      "sha256": "642bc753d4d2761e7b6db7d00858d549d2486e7930f84f9bce8b086f15344d8d"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/fixed-build/verification-manifest.json",
+      "bytes": 5436,
+      "sha256": "ca3af258b8bd214f10bea71655595d4f657013c2afb4f3d865de3c505432749f"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/all-no-match-result-final.png",
+      "bytes": 40861,
+      "sha256": "deb734032f919e884ecef15f2e1f48723ad125d697e5c2b3438c085bd9c37adb"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/all-result-final.png",
+      "bytes": 40761,
+      "sha256": "11b432150f128fd7f1c7599a03daf924fb31d6e3e147ff7ff52f449d69bd81e3"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/default-no-match-result-final.png",
+      "bytes": 40417,
+      "sha256": "6f9ed1b6be4741c9c209d7358dc557076fd08fef4941eb4b93bfbc1e63d7ad3d"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/default-proof-result-final.png",
+      "bytes": 40872,
+      "sha256": "b8e2d1dac9043b1f861d52af663fa572b078cde541b5c645f00a20cd963eb38d"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/gui-result.json",
+      "bytes": 7081,
+      "sha256": "2ca3a0f68299647a61e7c8431407152f086536bd67580a35e04aca57fd8d7828"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/input-inventory.json",
+      "bytes": 45255,
+      "sha256": "0fed0956dc96be6f848cb5ea984c022f2dd5e47059549f575ff906fd10308b45"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/inventory_inputs.py",
+      "bytes": 19272,
+      "sha256": "2740a0abaf2ea96b71e391dd0c593b567911bf2c1dfcaaf1ebf33f0d6d8fc446"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/report.md",
+      "bytes": 8056,
+      "sha256": "07297eae2af5e3589cf1c6fbe8ad86bcac89922b55e70bdb575e213b5647a412"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/validate_business.py",
+      "bytes": 14120,
+      "sha256": "da3457d8fe8776e26d6ca18374e30092fc8ab868e9cd651a521526c763ac9b6a"
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/validate_excel.ps1",
+      "bytes": 10030,
+      "sha256": "284fd73696829d43c5bea06f3ad0c06634cbcc752f80c298cfe88aaf7010bfed"
+    },
+    {
+      "path": "docs/releases/v1.1/dev_log_v1.1.md",
+      "bytes": 8177,
+      "sha256": "ff499c8c9b51e38a117babff2058f63551535e8052ff85e74b31f91b1fb701c9"
+    },
+    {
+      "path": "docs/releases/v1.1/dev_plan_v1.1.md",
+      "bytes": 2935,
+      "sha256": "72af4a9a9083293999ec7fe675a6047971054d42a889005a6cf47f75895d92e3"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/baseline_engine.py",
+      "bytes": 13668,
+      "sha256": "252bbf1edfe9c24d78d4d3531b6d0be31c20f395bd79a6bdf171eb47a0690528"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/build.txt",
+      "bytes": 6998,
+      "sha256": "ccbecb7cd66a63f0fad2a1412575f2d6ded6a456b6675cab7c741505869af28c"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/capture_ui.py",
+      "bytes": 3250,
+      "sha256": "658dec460706f07d66732c3e1fd989be5ee07d166ee0e5f02702ea28e5f53949"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/dependency-install.txt",
+      "bytes": 2137,
+      "sha256": "8b06b56f6c920166510eb614dfd49b203a190276c9305ace004de8d566625531"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/final-integrity.json",
+      "bytes": 2327,
+      "sha256": "9119bcd4afec81a0ef5a0629706071e8d9bfc14ef4f438a2e27ebda953df1855"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/independent-acceptance.txt",
+      "bytes": 2822,
+      "sha256": "190538bbcb87d2b5d3476b2fe95470c8bba4a622d2ba629b47827d47f375f9a3"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/independent_acceptance.py",
+      "bytes": 17353,
+      "sha256": "7da49415894b07991169defcf401d92d6bae40d82aa2bb6c4e14b154b4124f97"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/package-content-check.json",
+      "bytes": 304,
+      "sha256": "3ddc37b8a9ea7c131b5d1e27b29e690712d3dd1e7d9529b7014cb6ad7341f4f9"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/portable-process.txt",
+      "bytes": 27,
+      "sha256": "b34dfd29827465f45d7834980ddb013624b5f2280f9b113a92f86ac9aefe63fe"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/portable-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/run_acceptance.ps1",
+      "bytes": 5913,
+      "sha256": "3b1dd73215aa0759b5f5cc62b766dc45d222d160bb18dbaa8b906b7557e019f5"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/source-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/source-snapshot-hashes.json",
+      "bytes": 1521,
+      "sha256": "15013a955b8f262c8aba4f4a1770a34875cb41a4d40376c54ed6cfcd8820c747"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/source-status.txt",
+      "bytes": 480,
+      "sha256": "a70ffa2943e7fcf66b02f4c51dc00f101e9f3c90b6edf34921a5601e3b5749bc"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/ui-default.png",
+      "bytes": 27353,
+      "sha256": "a31c4afac965acb7ccb5203faa7ab27ac61057ff3b82870095fac3eac58ff51a"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/ui-minimum.png",
+      "bytes": 24425,
+      "sha256": "1c58365d3aada3aa0a303abe33ffb87bdadabea0830b8ec21b8786fb768d87c2"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/unit-tests.txt",
+      "bytes": 5809,
+      "sha256": "fb062ead3c0c4b4f48289e46cee63a2776936b59532e3c794be7b2d85ed33f7a"
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/verification-manifest.json",
+      "bytes": 3426,
+      "sha256": "6b815feda69b83d5d3631172e559aa8c98c5daffc56ae2dc522de17846521d92"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/build.txt",
+      "bytes": 6998,
+      "sha256": "71a46a785f616e1a5cb68471251281bf0ea9da466ec9ef8f29afce4cd88c2396"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/independent-acceptance.txt",
+      "bytes": 2820,
+      "sha256": "9e1ead41f3e6008610e0cd68c559d1aed1e6b5b86a55280c2ff9e0e9a3859e18"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/portable-process.txt",
+      "bytes": 27,
+      "sha256": "b34dfd29827465f45d7834980ddb013624b5f2280f9b113a92f86ac9aefe63fe"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/portable-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/source-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/source-snapshot-hashes.json",
+      "bytes": 2020,
+      "sha256": "f74fe07643ca05a8b4d02bdba195d114bd1fd503bcaa7c60e0d019f63ec55a5b"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/source-status.txt",
+      "bytes": 735,
+      "sha256": "25368476e8f8cab3bdae846402de512f07604841a9e59840ffda2b5e1e1a05cf"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/unit-tests.txt",
+      "bytes": 14894,
+      "sha256": "051187d3c225ebdbddfa1ab612b74494f50933dc35c2e5dc78d484a12cc4e5fe"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/attempt-2/verification-manifest.json",
+      "bytes": 5365,
+      "sha256": "3f870546b76b70fee48499fa24d260f5a083b2ad814b5f5ff7e05a6f0997dbc0"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/independent-acceptance.txt",
+      "bytes": 2113,
+      "sha256": "309d765c05ae205e50f2ff05c49df96fa2f22f18b5b94bbda4532a20c6a469a3"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/run_build-first-attempt.ps1",
+      "bytes": 9183,
+      "sha256": "8d08a5ba0b01a0e8c0a09a48a02d85a95e17c0bc0aa3da40efa7d6e2b933d789"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/run_build.ps1",
+      "bytes": 9207,
+      "sha256": "ae5c8f3574207cff10fe9529b307a41923e7210522b45277eda32882ce2a8d91"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/source-snapshot-hashes.json",
+      "bytes": 2020,
+      "sha256": "0a6fae7889ca0e5bbcb8e224c8259da987900267b32c6739ac69e96864f11751"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/source-status.txt",
+      "bytes": 735,
+      "sha256": "25368476e8f8cab3bdae846402de512f07604841a9e59840ffda2b5e1e1a05cf"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/build/unit-tests.txt",
+      "bytes": 14894,
+      "sha256": "69b258be6edbe8b19b1481a95ca532a809bca006d90b7392485a11eb3bfb8fba"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/check_validator.py",
+      "bytes": 5829,
+      "sha256": "90c78aaa74fc78a358d50798553230001b7867fe6497cc4ff8791410d83e183e"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/excel-client-validation.json",
+      "bytes": 2495,
+      "sha256": "810990d4090887468d436143999322990cf865a7ac8d3d7bb50137a48787643c"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/all/01.json",
+      "bytes": 3037,
+      "sha256": "68379365a532f6c4d0086452fdf3fbbec09e0986660560dbdabebd640d772ffe"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/all/02.json",
+      "bytes": 3032,
+      "sha256": "e3cc706dbb4a15ffac29cd2c8f42a459fbe9e83d19bd7941496a829dfe0a5fe1"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/all/03.json",
+      "bytes": 3029,
+      "sha256": "6c2f66eb141d923d1274552f71cb89b3ec9d14b7528fe8689112df711c621a90"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/all/04.json",
+      "bytes": 3046,
+      "sha256": "5eada609b1c1efef61aa71902020e8c345e47aefde61c57eb73d1b60875b7c13"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/all/05.json",
+      "bytes": 3031,
+      "sha256": "5425cd68db323a8e310d68ce2c077c72ec51b71451ebcf592f9e60eb86c51122"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/all/06.json",
+      "bytes": 3054,
+      "sha256": "2b0366c4a058164c82fbe4dfed953227d9e8d68c087f1b3d867b2043f4f6f2a2"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/all/summary.json",
+      "bytes": 3829,
+      "sha256": "2e85e80f13789b5575c5539e24109655378867c5fbb0f8c31a1842bdb27cb2ef"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/default/01.json",
+      "bytes": 3043,
+      "sha256": "eb4cc969cd21698a751618653826f9b15c01f996fc3c2ecb5ad2b82a128ef38b"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/default/02.json",
+      "bytes": 3036,
+      "sha256": "fa6ed93dcb24b05de5c1131ef2748c8a0cb33eebd0b0d52a77958c18ddbb038d"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/default/03.json",
+      "bytes": 3034,
+      "sha256": "f73c17adc4aa7f3f6d6d70a311764a6dcf429e00a5a402942617eafc98bd8bd0"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/default/04.json",
+      "bytes": 3051,
+      "sha256": "bf794b5ee66eb262c45e574c9837ac7ba60ce3680e0bb4d4a67f802c307ea060"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/default/05.json",
+      "bytes": 3036,
+      "sha256": "6a23312033dc6c39fed214293f5b012854292a2fa86f8fb5e8391b39f62bd8a1"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/default/06.json",
+      "bytes": 3058,
+      "sha256": "3e10e4a5109d973fabc09990e9e9c58638de8c1b89098f6c99ec750e9a55a2e1"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/default/summary.json",
+      "bytes": 3862,
+      "sha256": "dfb9a95e6306506e0e51836c9670701249ea8c7607da34f1289b03ae7706f0cd"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe-content/report.md",
+      "bytes": 2254,
+      "sha256": "ebe980a573a86a20a87f45331a1c308f256576ff59f00b1ca6684e0d5845ec75"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/actual-input-actions.jsonl",
+      "bytes": 2378,
+      "sha256": "3e95cbeef4de925b1cefe2f30b3bf8b46380dc03dc1f1ded683f45d049710c02"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/execution.json",
+      "bytes": 16847,
+      "sha256": "1d1ed1e70c4f90f6beb69d16d4b22c6ac268446ee9ad177eef4ae6dce241a70d"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/gui-probe.json",
+      "bytes": 9096,
+      "sha256": "5c8b8b14965c02801c5fb60b33be7344c892a78ee5e1617008d324d018293ae8"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/result.png",
+      "bytes": 40072,
+      "sha256": "0b9b5dce05d2c779c2293b00166f5a7802147f0f47a5b7322002d843ea7137f9"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/selected.png",
+      "bytes": 30390,
+      "sha256": "75ec64a3bffb2a0f430572c75ce9d5b71c37bbbc5f67694c39bd24bbec498392"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/actual-input-actions.jsonl",
+      "bytes": 550,
+      "sha256": "e38bc0152ff15964870a6760d1b28a69d31407f167ec6895ea2cdcb330599f07"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/execution.json",
+      "bytes": 15550,
+      "sha256": "e112977b62018a90fca7be8ccf2e85f7a96962e1fbd839f0c7cd305d7a333cbc"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/gui-probe.json",
+      "bytes": 9087,
+      "sha256": "ebf9a4b6a636a455c4ad1a4f83b55000da1869326a4a9e0e25350ed1759273e7"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/result.png",
+      "bytes": 40767,
+      "sha256": "0b2bde10f596b11697e9baea4e0e22613461f0e1f07c70c87ee306598e8972bd"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/selected.png",
+      "bytes": 29657,
+      "sha256": "8930249d8489eeec372780232e8c824997c8f06607d119f447f9ba3b8f9137bc"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/actual-input-actions.jsonl",
+      "bytes": 2240,
+      "sha256": "5b760b74b396629e31d6bf3d360b458c1f66abaa39b47f3539a43b2430783604"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/execution.json",
+      "bytes": 16986,
+      "sha256": "08f0da91136576ccf5ab3a4dc9d9143196c082ce6f3b683ba6b6e1534b7d9fc6"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/gui-probe.json",
+      "bytes": 9103,
+      "sha256": "3107d82120815f688d9f5a1af38b594b311f782dc2c9d2ed955ee5958bca0a65"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/result.png",
+      "bytes": 40328,
+      "sha256": "b446433bac0e483fe5eb46f38c84297f7e71f005cee7107b04370f2105f4abaa"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/selected.png",
+      "bytes": 30657,
+      "sha256": "9871ea808f011bb25e3cd5aef8a0f39953e95e28d3afaf7bbf43fd6e549d3b3e"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/actual-input-actions.jsonl",
+      "bytes": 416,
+      "sha256": "6c66e517bd9acd881c4deac7a1112c4a521a83fa519d53df39e08ded0b70e0c8"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/execution.json",
+      "bytes": 15668,
+      "sha256": "214b6330896a874ebb74140c71f2157712ad5854f153b05a144cfae1c1e3d85a"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/gui-probe.json",
+      "bytes": 9096,
+      "sha256": "9bb8ef7ebf5bf842dcb5496ae823833aa3295d3852537f31adaa0dc2f2c8fe71"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/result.png",
+      "bytes": 41085,
+      "sha256": "a0ab3f4c039b99c42d03347aa8d3bda1b9f758df00fc3adb15d53993b21920b7"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/selected.png",
+      "bytes": 29930,
+      "sha256": "2d8adc52fd4df714ebde19fe59f23c99c72b60ef71628aa4441d465e2ac04eb6"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/identity-and-inputs.json",
+      "bytes": 3819,
+      "sha256": "43fb8e93e83c40aa3eca6b4d003d4f8a49858e7b75a750ffa41e1648f43c7fec"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/native_gui_controller.py",
+      "bytes": 13016,
+      "sha256": "43a8205fcf257bd97063404f167bc587fee3a6a8c939fb23abb058de21b5073b"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/review.md",
+      "bytes": 3827,
+      "sha256": "a86af3ea55640cfd20ee677b0f9272f6ed14a2804f5b8e1a8ed52584ba32bd2b"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/run_real_exe_batch.py",
+      "bytes": 12872,
+      "sha256": "eef8d1b55beab4ddbc97c632976457525a70f3cf6897e2646cf5f77fcd2590e9"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/gui-memory-recovery-after.txt",
+      "bytes": 2469,
+      "sha256": "548117eb28a5d5e6b90e8e1943dd28fe25f8fb24963980b205349685cce85543"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/gui-memory-recovery-before.txt",
+      "bytes": 2251,
+      "sha256": "777381c413f53b52af2d489c56025c5bda4795c8f2a36e045e257ac239d26bac"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/gui-probe-results.json",
+      "bytes": 2136,
+      "sha256": "e9782acd689ae0c64a07b4de9b30079bf9313c96bcf3ebde72147d9d6f9bc17c"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/gui-review.md",
+      "bytes": 4555,
+      "sha256": "20fe1d7f73298028eb45854660e1b9dce30f6bc6d629424f7f2a2758b4ee3c30"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/independent_acceptance.py",
+      "bytes": 18270,
+      "sha256": "5ac1073037910684125fac1cea72999216430f6ec3f30256005c3116fb150eb8"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/input-inventory.json",
+      "bytes": 8659,
+      "sha256": "b0716a90e60b4ed923e657011134d93b2ad8ac2e86817c9a07f31bfc6b1b350c"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/inspect_structure.py",
+      "bytes": 3645,
+      "sha256": "f5d144646e41c0609935bb3ec26a6db9e1ffb3d5529b044fa417bd2388114a62"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/inventory-and-oracle.md",
+      "bytes": 3639,
+      "sha256": "850377dcc64792f8be6c2197e746396f11f4a459eeeb2b07f91777a41ee6f022"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/inventory_large.py",
+      "bytes": 14116,
+      "sha256": "e0ea58da55c6abec41f6d0406c73f087d93b4c2ece492fecd07fc4ced7f2b354"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/make_multisheet_load.py",
+      "bytes": 3800,
+      "sha256": "171fbdb5a5993ed0d6b3c4c10d07bca0dd69c0b2d4811651aaf2219b282d34b2"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/measure-before-streaming.json",
+      "bytes": 687,
+      "sha256": "35a985c735a1b23e6aa8f80f4a16dc065fa16326fffde81b7561d8b699b5241c"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/measure-streaming-final.json",
+      "bytes": 1195,
+      "sha256": "750fcdd0098f39343be39809d5be1668ec405c843093949b361675ea291086a5"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/measure-streaming-first.json",
+      "bytes": 1196,
+      "sha256": "92b2fbbff20de67c05a1577d866f6a7774b6f3130b13c756f7d35e2edafe7edb"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/measure-streaming-multisheet.json",
+      "bytes": 1288,
+      "sha256": "d0294284e1d9128d2390e609c19c92e1e7e2a6e63101e9b0b85e7480a0767d77"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/measure-v1.0-real.json",
+      "bytes": 678,
+      "sha256": "0700db9973889a0ecc30ebe87b1f3561191df2cc1b939e1104e64796ec477522"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/measure_real.py",
+      "bytes": 4785,
+      "sha256": "687a0148c74aa4fbcce0af57c302e19befea972c56a0e514f5f1de0f201a070f"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/multisheet-input-2.json",
+      "bytes": 564,
+      "sha256": "c3eca62a89583f6bba279053be158df858370211b6b81561caa4fcf40214b587"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/oracle-legacy-all.json",
+      "bytes": 3046,
+      "sha256": "19205fd3a3614d18c151058b58e99645e35a9c7f2143178d31ae81ac1556441b"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/oracle-legacy-default.json",
+      "bytes": 3051,
+      "sha256": "a4d8cdb036de51d69f64e82ba115e1e8e5bb2b083e28b7621c8cfa3784d6a984"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/pre-commit-integrity.json",
+      "bytes": 4242,
+      "sha256": "4a8f267e16345d85337dae45679649c66b9a11eda42c305d0e2b0b915caf82bd"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/probe_gui.py",
+      "bytes": 6983,
+      "sha256": "537f057cafd97c4f3d4da0e887bf2eff7eba9f42afd11060477bcfa75c6f6ce2"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release-readiness-audit.md",
+      "bytes": 4151,
+      "sha256": "68914d68e8b2c07aed4e1c7a5aa801a7a71f357794130cc563eb3f17bc8647e9"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/ci-run.json",
+      "bytes": 2676,
+      "sha256": "717ba7bd2c074724eae44846cf528719bcd62ced32b6debb1456bbbc88d1e38e"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/ci-steps.txt",
+      "bytes": 67421,
+      "sha256": "a0679645606f9b295e34a67e2cfcd1898832160264373f72ac31e869b8b7be37"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/download-self-test.json",
+      "bytes": 1014,
+      "sha256": "a684cfabdaffa48eb1d69769ae7c3384ae30b659bb8776950934f9a0568d6a1f"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/download-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/latest-download-integrity.json",
+      "bytes": 578,
+      "sha256": "01e5d303ac8a350d206cc520ada39984363aaac53839a03e0ae912f8d90b3647"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/published-release.json",
+      "bytes": 761,
+      "sha256": "ea83e80b1de0458d3a004d50d5a79f124318b417057ceef4334af37b662671e1"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/report.md",
+      "bytes": 2744,
+      "sha256": "015163dfa6563de567558fc220ec04d6775018b536e71fd6c0829b15b8d61f8e"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/source-commit-binding.json",
+      "bytes": 3048,
+      "sha256": "0bee83575aa01e787ae72ccadc23893398946eff4fad3c8f659430091c80ee12"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/release/verify_download.ps1",
+      "bytes": 3796,
+      "sha256": "4a4ba6695eea52db4e9f5a7ef479d6d5e2f5b6e80d6b9b4b3b94dc2f210e8a07"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/report.md",
+      "bytes": 12069,
+      "sha256": "e1a57e8de6f2514ec0d2695ae3fada9359f5dea20b1918b27a08c494c37aca45"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/review_streaming.py",
+      "bytes": 10429,
+      "sha256": "1afb298a0a130478d7126127fdd4ad1541fa745bf1e1b67421079f54ab95c928"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/stream-differential-review.json",
+      "bytes": 22326,
+      "sha256": "f08b0c70dd1654d79d773fa28c9dade0f23f837067155ac78cb4186a0ea65e79"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/streaming-final-content-inheritance.json",
+      "bytes": 1175,
+      "sha256": "e58d7beea85d61862189d74d8f3db67d90f288442eb5614fda3905b565a87387"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/streaming-final-independent-summary.md",
+      "bytes": 2927,
+      "sha256": "4ad4529807a427522d1704c5ce27cd9a06f6f09178220c6f847dcb63e8d8ffe2"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/streaming-first-content-validation.json",
+      "bytes": 3057,
+      "sha256": "be3f11ca7cfa3ef4ef28161a57a4d5425bad9407dd4e66c594d39a496dd0cde4"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/streaming-implementation.md",
+      "bytes": 3909,
+      "sha256": "2fada15de8fb416fbd494aac5ae94d0a1f071ec96358df8d7a01d837c81b867d"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/streaming-independent-review.md",
+      "bytes": 3340,
+      "sha256": "72dee84a099e5744c08c165b061de3d85d0324efe8c11d53d4bc325c67b0cf02"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/streaming-multisheet-content-validation.json",
+      "bytes": 3462,
+      "sha256": "6f78840c39b79e303f19185513ff5ea05f7abb5b966544757422ad4794dd8c73"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/streaming-tests.txt",
+      "bytes": 14894,
+      "sha256": "71800b7e53a624542114e6b72883d552c604ff93b3ef9b31cd6b86c0898a36fd"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/structure-details.json",
+      "bytes": 3188,
+      "sha256": "945eb708552acbc8c6f232b0d8cb08a2b6f8adbcae3601233e97ea9fa696f902"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/validate_excel.ps1",
+      "bytes": 7906,
+      "sha256": "0ae6baa56056b45ac59b478e26d1199290e5f7f19ebd08f667f0fcf54d0cf40e"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/validate_exe_batch.py",
+      "bytes": 3545,
+      "sha256": "321fb94937a6d08626369c84b4a61559a3f5fe72faea6ce6dbc9dfeb727c0cb7"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/validate_large.py",
+      "bytes": 16648,
+      "sha256": "fc7d213a8b47f03a41c5b627ae3ee00130aeecab5b1f18358a6659534671c0c0"
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/validator-smoke.json",
+      "bytes": 3390,
+      "sha256": "de3ba2c1aa2bdc8de8f89f80d127e1f661eeb401246b2f5fe9efc562112e5a13"
+    },
+    {
+      "path": "docs/releases/v1.1/manual_verification_v1.1.md",
+      "bytes": 4542,
+      "sha256": "147ee447fb1267da07a894ddc714bde80c761984bbdae0db30ddc77b8e375110"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/candidate-identity.json",
+      "bytes": 523,
+      "sha256": "85043dd412c7109c63e0620fbaba30c8929a8f20bcccb208410ae6f04cc41b4c"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/default-content-binding.json",
+      "bytes": 1584,
+      "sha256": "28988806a396a2e9c405870805f2f741b7f41efe68190858dd77137d1f24702b"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/default-content-review.md",
+      "bytes": 2289,
+      "sha256": "8266968876be7ed4d1949bc1264fd92cb3fde2d5c0f5274b0d2ca01d5d9fadac"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/default-content-validation.json",
+      "bytes": 3268,
+      "sha256": "d169593a42935ae08f88180ca445415c13adc14571a7d8b4460573405b1a98fe"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/delivery-integrity.json",
+      "bytes": 581,
+      "sha256": "a880bca72b009b9195abfa033990328f48170a660ae01a133fb1221bac945506"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/engine-capacity-review.md",
+      "bytes": 9323,
+      "sha256": "aaa23cebd76c216ed605e19016d8e7f60bfa5e675e44e763f7c5b872a274dea0"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client-attempt-2/excel-client-validation.json",
+      "bytes": 1924,
+      "sha256": "dae5289d45db20c295641594412b89bb153d8661a019fdfa68a5160669215862"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client-attempt-2/monitor.json",
+      "bytes": 5914,
+      "sha256": "7d866d72ae1109ae4e29d2031abf2e8ac20d957b2c861ab2f92694bc5cd27c18"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client-attempt-2/progress.json",
+      "bytes": 339,
+      "sha256": "a7ea7b495509b0aad888c52a8a3585a79ec5277dc92a1a96ae13d7f9f7d3400b"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client-attempt-2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client-attempt-2/stdout.txt",
+      "bytes": 87,
+      "sha256": "ca242ac16382559d74987b48c5a0b4426d725c1724751cd4513bcdab9dd4f41a"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client/excel-client-validation.json",
+      "bytes": 1579,
+      "sha256": "79fde37dd0827dc594465a3a9199242ab92e5875ffe9e08a0662fb05c3e224bf"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client/monitor.json",
+      "bytes": 1690,
+      "sha256": "c01cae6564061e998d0bd666ecff1ee16dd4952fc37081007cdeecaeab1bbc2a"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client/progress-write-failure.json",
+      "bytes": 338,
+      "sha256": "b19aeedca50d1834df445f3169b478e9ba02f3659b943f6b07656ca61268746a"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client/progress.json",
+      "bytes": 340,
+      "sha256": "33b5075131b890cdb9dd78445e01a2d8804175057e2eb93fec10949df21f8a22"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client/stderr.txt",
+      "bytes": 437,
+      "sha256": "76e65195c6760aa0b65f2866c8618b02d5293cc716ca728e0a64a709ad9b99f3"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-client/validate_excel_chunked-attempt-1.ps1",
+      "bytes": 16735,
+      "sha256": "7ad4c163f2d454a6b105654375801198f18b86b024c0f9360dab6214d651f10e"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/excel-comparer-self-test.txt",
+      "bytes": 1092,
+      "sha256": "c1e64aa7da6af76f177796628158ae4036b9b41ab946fe45ad3992324aa38459"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/actual-input-actions.jsonl",
+      "bytes": 2194,
+      "sha256": "c0a4ad833e0a3049635918b02eb78c5ff15106f1173010b683a5265991090aab"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/execution.json",
+      "bytes": 13668,
+      "sha256": "59051ae009c41aaa241f66d6bacfd83c44c5f3866f91104d77b1a1dfb12fe302"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/gui-probe.json",
+      "bytes": 9081,
+      "sha256": "67dfd4f9139f45cda2c7083a45c957e5b5c5b55a1fb968d7d8de1c5db5dfd6db"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/identity.json",
+      "bytes": 994,
+      "sha256": "9b6d6db4af7e1beec2bb636abaf42d50d4feff070fb2e609a7ae5d70090e054d"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/memory-trace.jsonl",
+      "bytes": 78569,
+      "sha256": "f3834226522fa0adee29609665350b1cdb82502e8f542caa6f7ad8219bab93c7"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/native_gui_controller.py",
+      "bytes": 13093,
+      "sha256": "ee6c9e1bdbd1b8f385699d94fb60c6a225b1f2f614958d5f85c3da50a70a473e"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/processing.png",
+      "bytes": 29155,
+      "sha256": "330ad8c1cdf9a946d325a4361866e91a8cac9e7d05f0bf8ddf3f4795984ce693"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/progress.json",
+      "bytes": 594,
+      "sha256": "1d2acb39b03236d5a2acca98ad67c35394d33acd948d651694815707db99efbe"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/result.png",
+      "bytes": 34996,
+      "sha256": "bac591a0061c0fbe46dbe2c607012a63fe27142ded648f9b2730b3ee7a26ccd7"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/review.md",
+      "bytes": 4648,
+      "sha256": "71538abd4ba9939a6f4bfdc0db1b12ddfc9709b8d6c965774e02da8d786f0b47"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/run_monthly_default.py",
+      "bytes": 14194,
+      "sha256": "e59699205f15fd8b1f898d5486601bce90226c2d925c4f256a59c834000fdeb1"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/selected.png",
+      "bytes": 25942,
+      "sha256": "859d91f2b1feedc33dff0e5b59af37ace6439c856b4897222758afd37b5cbb38"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/input-inventory.json",
+      "bytes": 8916,
+      "sha256": "58d4865047c6486b1a34479f116e3470d6d15ab13fd7bc993de2d0e4e75f9d5d"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/inventory-and-oracle.md",
+      "bytes": 3175,
+      "sha256": "eb0c8da0891d2a54d1f0a0ed3c3975b8a6535adf1e5c7eee2f4ce8153d1517c4"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/inventory_large.py",
+      "bytes": 16488,
+      "sha256": "d4821ea503880a24d092b0c0b974f017ff67c34b33b09213f2a5ba82bfb473a4"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/monitor_excel_validation.py",
+      "bytes": 15383,
+      "sha256": "9e2b234408e9675dcef6bea4c1107f56c6680c9a1432242588b8bbdd38ed41c7"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/output-zip-sizes.json",
+      "bytes": 1243,
+      "sha256": "fb594c1e53d0bedab41d595e723623abf3d8aa898b05a535e628cc16e59f91ab"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/progress-write-repair.md",
+      "bytes": 2109,
+      "sha256": "053d24a2f34f4960e86ec3109a97791399e3451697a3848783fb1dc335d19823"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/quick-zip-inventory.json",
+      "bytes": 3223,
+      "sha256": "0536f6f9d15bb5ea2300f8603eaac15518992672ffed6419f38819a735e99517"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/quick_zip_inventory.py",
+      "bytes": 3796,
+      "sha256": "d6602d1e4de00e0d5dd679597878195abe90ef5b3b571328a1190afacb6a7527"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/readiness-review.md",
+      "bytes": 1973,
+      "sha256": "01ff021b6eb4c6135387381422dd65f526c135935922e8045fe5d326719eef18"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/release-notes-update.json",
+      "bytes": 523,
+      "sha256": "191cbf59a22124b034551afdea61e326d4e543a0d8b3fe3e1cbce4a45d346208"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/report.md",
+      "bytes": 6775,
+      "sha256": "cf4fa2d404644dc871d77730e1ff8ac5471d7d4a7584880e08079ef5ce33f9a7"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/script-provenance.json",
+      "bytes": 1335,
+      "sha256": "7094fe543744ec6aa1da12882ca58c529522fd1590fa29543c5324adc8223980"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/test_progress_replacement.ps1",
+      "bytes": 1493,
+      "sha256": "e25b9a9687d507e948bf665d0885a8d89a493a9f90495fa8809f0d4626ecbb2e"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/validate_excel_chunked.ps1",
+      "bytes": 17121,
+      "sha256": "f583916d702a12040c154edeb0b853a2d49c7060356f2e3ed0e7d967048ae974"
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/validate_large.py",
+      "bytes": 16648,
+      "sha256": "fc7d213a8b47f03a41c5b627ae3ee00130aeecab5b1f18358a6659534671c0c0"
+    },
+    {
+      "path": "docs/releases/v1.1/prd_v1.1.md",
+      "bytes": 11515,
+      "sha256": "24a3d935909b3976fb384e13a5a6eaf9599cf782a668d952dd1f6fd43f292da8"
+    },
+    {
+      "path": "docs/releases/v1.1/progress_v1.1.md",
+      "bytes": 2715,
+      "sha256": "24ddf22718c7b08f9693b00919699fa46981dc5658a14d74b7588da75f15d54a"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/buffering-equivalence.json",
+      "bytes": 4060,
+      "sha256": "3cff1c660b15e65add39d9d3b8799e6f8cc22efde5aa304feec1861d71017279"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json",
+      "bytes": 13890,
+      "sha256": "1f0d31748fba7f9f149c95042090bc583354c5043b13592a3b661e4bde079571"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/findings.md",
+      "bytes": 3790,
+      "sha256": "88d33ee2db6a7b9b5c0cfdc85d008bfb22789a77ae962ddfb76436bf05481020"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/full-tests-after-buffering.txt",
+      "bytes": 7407,
+      "sha256": "01835c031dcb2639ec679c95789e7e9d563342033a09f85ce465c5d0a945d8b2"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/full-tests-after-p2.txt",
+      "bytes": 7053,
+      "sha256": "52bbbaac357397c93cc6c5fed7366e614153f931bfec95d94ef938463783dfec"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/probe_engine_edges.py",
+      "bytes": 3725,
+      "sha256": "f699eb1d146321d5372d3972332b21e3e09af492f3e0a1c3ee52bb02c9c3b3a6"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/probe_excel.ps1",
+      "bytes": 4927,
+      "sha256": "88be91efe0db74e4745743431ae472d1dfe80425ff243a7d41928ad59b0a7c7e"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/regression-after.txt",
+      "bytes": 819,
+      "sha256": "4203d440f47622e42c492d50fe73a93ca367565d0b38745f034f618264f3c61f"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/regression-before.txt",
+      "bytes": 14813,
+      "sha256": "1f9493091a733c3bb73d8eec6897eec0f38f0976f04c2b53465ab973c266a55e"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/regression-comparison.json",
+      "bytes": 214,
+      "sha256": "ae982106b21adffe67915b8188cd9044a2e7b83877f3325ff8a448b188ea7e5c"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/filesystem-results-final-audit.json",
+      "bytes": 1118,
+      "sha256": "36e699f3e637f1ee500a0ae86285815304fe9d978a467e0088e7999ff286c285"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/filesystem-results-final.json",
+      "bytes": 1118,
+      "sha256": "c3c96dd84256722417361c89795fb746ac043e5675bb6eef24e47e361de2a078"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/filesystem-results.json",
+      "bytes": 1203,
+      "sha256": "148a0326e81e97aac19d9b81175c6d56d13d5d8cf6822fecf0cda8c4fde5a2c4"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/filesystem_probes.py",
+      "bytes": 6609,
+      "sha256": "6812723c9846ae7566fcd34bcf6999c2ac97adee1f7c39631c38c3bad075b38d"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/layout-controlled-dpi.json",
+      "bytes": 5435,
+      "sha256": "b66db00911990ac484ef5b5ba05ffe1f40fd85e36208325a61090e525df84280"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/layout-environment-dpi-aware.json",
+      "bytes": 1663,
+      "sha256": "10736dc6e90063a57ca2997a96f333b4d25cf76ecd1771124cef38445c0e6063"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/layout-environment.json",
+      "bytes": 892,
+      "sha256": "06a199aded24c1770ac16910dd01599e083bb63b60af6caa7d2a37f56dcad8aa"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/layout-test-results.json",
+      "bytes": 255,
+      "sha256": "eb62e011554e10c4e81f68c346e3499bf730e60c0a090566326a0a78085ccb83"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/layout-tests-100-percent.txt",
+      "bytes": 397,
+      "sha256": "f74abfd0b8c63f003a153a815a33b571fbd83fabfac586937408257a5be49e73"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/layout-tests-125-percent.txt",
+      "bytes": 397,
+      "sha256": "12d209c5fcf5af5cabc2b31e85daee6e551dcbbd8e6246b47959721061202251"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/layout-tests-150-percent.txt",
+      "bytes": 397,
+      "sha256": "e188e5aff43b0386d9a93cc302fd0c883cc06af62480e7d8b2d539b390bd7ad8"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/run_final_build.ps1",
+      "bytes": 10253,
+      "sha256": "774216f3b3579f719eae7d4c641b4e2e381021067647a0408e41be00a497b94d"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/source-snapshot-hashes.json",
+      "bytes": 1770,
+      "sha256": "7d7382a980a2474e2ce51ca06947c8e8781a1f6b5d06184d3d9fbf34290082d1"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/source-status.txt",
+      "bytes": 279,
+      "sha256": "a78555663569388bbbf09ecddf480c846763162f090395d935858720b15d8282"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/status.md",
+      "bytes": 2666,
+      "sha256": "980dceb9d4a86a8da0f8edaeda8e4431dfc94cb51a60ea2d191d2176d45eea53"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/unit-tests-after-layout-fix.txt",
+      "bytes": 7407,
+      "sha256": "036c0f4a31bef242b77297ef62f5b8d38e0344ca259a46bef83dd6c9271dfcd4"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/final-build/unit-tests.txt",
+      "bytes": 8167,
+      "sha256": "e0819aa08473c72ad3b01d6c8235434165875cec3f50cac923ab798457f2c3f1"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/gui/gui-boundaries.txt",
+      "bytes": 1919,
+      "sha256": "54e8d9cf2bf3048d2810d6418c220e497ac24af670428504932367a4d46eb8d3"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/gui/measure_startup.py",
+      "bytes": 10985,
+      "sha256": "e8ec09726872d3d02f5c518c198d8211ca689139d123421f3203edb228d4796b"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/gui/probe_gui_boundaries.py",
+      "bytes": 12341,
+      "sha256": "dc1e7fec829948a06e837b93ac189756d9ee1a790eba88081117c47032b48455"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/gui/review.md",
+      "bytes": 4618,
+      "sha256": "3a740bbd5f957d08a097743430e2b909eda6ea109a73d9d61304f91c03af25a9"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/gui/startup-timing.json",
+      "bytes": 3285,
+      "sha256": "64d723442a2d0d40d86853262cbf37724f291c42dd9509274e8b48c43d5a71a6"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/audit_package.py",
+      "bytes": 8596,
+      "sha256": "d298f6715de248f248db29983b47b4c079bdc374dc408760f16c0f4baccdecde"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/baseline-identity.json",
+      "bytes": 605,
+      "sha256": "30a487ba03a0cd42ed494d7e47e78aa5aec7edf0d6008d6b86f845581cbaaefe"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/ci-run.json",
+      "bytes": 2737,
+      "sha256": "6e1d68c12b0776c412501179ba717730835626bbcd9aeb9ab4aff9c1160090c2"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/ci-steps.txt",
+      "bytes": 56294,
+      "sha256": "6e5883905c4d0f57ab81dc8ef58efe2c098e38952e239a942e3ed443ca06e3e6"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/fresh-portable-process.json",
+      "bytes": 918,
+      "sha256": "8cde34ab7328b3ab5cead5095ea5750615a2dfd765f81dfd3664009d7ab25c0f"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/fresh-portable-self-test.txt",
+      "bytes": 35,
+      "sha256": "49b806ea0f47d3ddd07af34bfd65a9803739329494b6146635322d5a3e74f228"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/package-audit.json",
+      "bytes": 6114,
+      "sha256": "b904a763aedc7cf58ea74aa79be27962bee1bc3521757a36788c53cea06f0dcc"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/previous-latest-release.json",
+      "bytes": 722,
+      "sha256": "ce099bb5aab4667eec9f1d350bef0f0752f257f4e8d53d68dee948936b233d2e"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/report.md",
+      "bytes": 7114,
+      "sha256": "715060b7db6e1f73727d8a3721aaa9382f5cdd6d122f4c2f9a101a435213e91e"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/package/run_package_self_test.ps1",
+      "bytes": 3416,
+      "sha256": "577a5ce3e854c44d799c4fd422979e44a479f688e2ccd23a6e128df40b46012d"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/performance-final.json",
+      "bytes": 2902,
+      "sha256": "b5bb6657d7af7a46b94c48e597ae5e5826ff32504777fdbc9e7f556888dc87bc"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/performance-initial.json",
+      "bytes": 5029,
+      "sha256": "c4643f76a0fc49afb300d9cfad0ff3df22b4e1845f311b5bf9d0ebdc70098520"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/performance-review.md",
+      "bytes": 3432,
+      "sha256": "7258803990c4286e53e9cf633df2923021568ebfb00cc4e3c39cb215c58a454d"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/performance-stress-50k.json",
+      "bytes": 1168,
+      "sha256": "7c7811129bd6b6ec48bd77504dd7d006f785c614ff388559f34dbf8f7de043b9"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/performance_benchmark.py",
+      "bytes": 11015,
+      "sha256": "ee0f24917f942890c342f6ab8aaecd76c32779b602dcb855063875d8741cd53c"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/post-audit-validation.json",
+      "bytes": 4043,
+      "sha256": "5ae131bc20f0783d6ce656c3100b2b88a5d64154f0ff6b72de9fb97b683ca9b4"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/post_audit_validate.py",
+      "bytes": 6809,
+      "sha256": "92f1b19c27cb12e1e69c6f48c30e6f23d789ba64e7bdc5851c77c1d5d4e14fac"
+    },
+    {
+      "path": "docs/releases/v1.1/release-acceptance-2026-10-09/report.md",
+      "bytes": 9943,
+      "sha256": "325aa1eaad1626c21f56833c838dbd352d2a6d75d459d26e03723bb9ecb4892a"
+    },
+    {
+      "path": "docs/releases/v1.1/verification_v1.1.md",
+      "bytes": 9283,
+      "sha256": "96997e36222852944b73dad2a25a3bf494b77c24030f4cc85c5d0d9c940f6731"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-evidence/engine-fidelity.json",
+      "bytes": 2316,
+      "sha256": "de4e098fde6603cdd8021562e21b5f864407e4384c701c30523a5d847e0d0464"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-evidence/input-sheet.xml",
+      "bytes": 598,
+      "sha256": "59a305d7d486f93ec28ab2dc4077c9771afcd17445e1e89ad16af1fb9051eb0a"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-evidence/output-sheet.xml",
+      "bytes": 559,
+      "sha256": "123b07174c9cce429befadf880430573281911cc5ff797d4da66aadae561a464"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-evidence/probe_engine_fidelity.py",
+      "bytes": 4081,
+      "sha256": "1cda1c86e92990966d393daa3b61449ea3d298d241c380afa80ad4e77e14bb28"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-evidence/probes.json",
+      "bytes": 3244,
+      "sha256": "97fd934e9adb764b4d36c65c4e7604ef624b3f5ab6774fc61077d04cf48925c8"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-evidence/review-evidence.md",
+      "bytes": 4268,
+      "sha256": "35181870bb7a10881271521a5cc3d64781900fbcaa0b1a36f60e6a0defaa63a6"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-evidence/verification-manifest.json",
+      "bytes": 1354,
+      "sha256": "c6212e3e7c1eca9bc20543f937aedcaaab14263b62fe30e56762b37d478b5e2f"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-probes.py",
+      "bytes": 5014,
+      "sha256": "718098d8f88f59f872d3cbba0782ce781d2fc27e552a5a362f3a9a3d8c51d89f"
+    },
+    {
+      "path": "docs/reviews/2026-10-08-review.md",
+      "bytes": 18802,
+      "sha256": "3bc8150699cc9ed642adadb6bc80c47c0c392dd96278f11519638dd6f045b7ea"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/gui/probe-results.json",
+      "bytes": 2771,
+      "sha256": "bbfebc254b23c03faac09361ed0357080161ec630073a54f85bd7c0b002fbf66"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/gui/probe_ux_states.py",
+      "bytes": 6034,
+      "sha256": "c7e1de04182e5daa83591dcf556cedf76d3e087d1ef91635bd185d299b1be952"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/gui/review.md",
+      "bytes": 7577,
+      "sha256": "c448e66635047e2c41b724cf5151668c659d5d4e68c790574585c011662f3f54"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/gui/version-copies.json",
+      "bytes": 1332,
+      "sha256": "91811d0ce8ae64fdb4f50e4f10d40f23d7b9c23026c59968f89929879d090731"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/performance/baseline.json",
+      "bytes": 21920,
+      "sha256": "b2f1cf354e639e10020701e0e7542101ec7a99436762eea92d01ac78f8a8f466"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/performance/candidate-results.json",
+      "bytes": 13585,
+      "sha256": "684fc980118de5920e6b9e0e8ca48305d830506c6d0516accc5005262725b351"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/performance/path-results.json",
+      "bytes": 17297,
+      "sha256": "b17732a5e300ab2d862cde42680ba12011a3ada759c7374e652fafa8cda430c6"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/performance/probe_candidates.py",
+      "bytes": 8546,
+      "sha256": "ef2bca7050d2a053ee83bdb66ad7db0c286e5b50b0096fb920b27657953d70c8"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/performance/probe_paths.py",
+      "bytes": 7078,
+      "sha256": "12623e72b72fcbe4c34431701c3518a2ad453b51cb8958acb17569d7006ff920"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/performance/profile_stream.py",
+      "bytes": 5250,
+      "sha256": "06d80fb3bb43a93aecdf263277026d2bd68860272acf908a052f30b3a139fc55"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/performance/review.md",
+      "bytes": 6856,
+      "sha256": "ac20047b8d374e0a1aa0f83fdbb99535786fb4a5b6798c4b0a6bdb6c4ce6d087"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/quality/inherited-styles-probe.json",
+      "bytes": 1337,
+      "sha256": "acda084575486bdffee2841982b08d948785316341eb546ab1990bde1d5dfc05"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/quality/prepare_style_fixtures.py",
+      "bytes": 1386,
+      "sha256": "42666ead099ba4a2298940d83b1d3cb4c76897fd3bca788271452d03182f21c4"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/quality/probe_inherited_styles.ps1",
+      "bytes": 2439,
+      "sha256": "8b9773227282292ba2271692be242b5b610193652e32fa8668b02ed968595c8c"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/quality/review.md",
+      "bytes": 5825,
+      "sha256": "5b601563137fd30f80db5c0e42769775122c45948860af691d0710bce04a395e"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/quality/style-probe-delayed-exit-check.json",
+      "bytes": 234,
+      "sha256": "5f4b71297420426ed97ea755541840ae4fe0493419c1568678da7adebcf534e9"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/quality/synthetic-probe-results.json",
+      "bytes": 2585,
+      "sha256": "f70106f09d4589457008a71fb13783f563c46332dd3768c5fe36948d7bfb9f88"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/quality/synthetic_probes.py",
+      "bytes": 5939,
+      "sha256": "742bb7fd11b9a413f5439a3428df851eac3184da2657022acd92f68c339adf97"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/report.md",
+      "bytes": 16548,
+      "sha256": "24ed474a9a115cd03b82ee57f6a6844261bcb371d79bc30ee171c2a146510925"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/resilience/hard-stop-result.json",
+      "bytes": 813,
+      "sha256": "511222f39b77ecc27434e69f53048cd8bcbe6a6414dd25493b1d0c312f4cd776"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/resilience/probe_hard_stop.py",
+      "bytes": 4491,
+      "sha256": "18dc2aeaaf4eac00d6800999f69d2d72811c8b1599bb6922aed327117fd19255"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/resilience/review.md",
+      "bytes": 2168,
+      "sha256": "55a459bf33333b6c07bed11c92a0c74b04922c1023a50800b9bd932668adaacf"
+    },
+    {
+      "path": "docs/reviews/v1.1-post-release-2026-10-09/review-integrity.json",
+      "bytes": 729,
+      "sha256": "d2928b5697aff110718e9533a2f7406ba0617dbf4a0b5f2b8835b47007013ecb"
+    },
+    {
+      "path": "docs/开发说明.md",
+      "bytes": 2020,
+      "sha256": "51e577e3bd3215ef799a8dbf60159ac3880cae7ae4ff7252c0d6fd9f926e3cce"
+    },
+    {
+      "path": "excel_unmerge_fill.py",
+      "bytes": 41768,
+      "sha256": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3"
+    },
+    {
+      "path": "excel_unmerge_gui.py",
+      "bytes": 30595,
+      "sha256": "50ea03ad60ed6f86003132b9d4c951213f5f01b6c202a677bf765a8df01d2094"
+    },
+    {
+      "path": "packaging/release-notes.md",
+      "bytes": 1436,
+      "sha256": "c441699a76bc8eaf3d84699c0815c614026e6c6f7894543529b404fd6f0ac065"
+    },
+    {
+      "path": "packaging/使用说明.txt",
+      "bytes": 3487,
+      "sha256": "cf7c8938ac7a886159e6b011dd0dfe7ee6e431eb062160ad200412cd4ac92db4"
+    },
+    {
+      "path": "tests/test_engine_io_progress.py",
+      "bytes": 14865,
+      "sha256": "9637a826a2c24347ac8b379f04e63aecf1548497f5769e31a1ba0a17902ab294"
+    },
+    {
+      "path": "tests/test_engine_regressions.py",
+      "bytes": 21502,
+      "sha256": "7edb726fce76caee8e0a5a24724f6c5a3f6d3d132cc2c91ea241e982d290d176"
+    },
+    {
+      "path": "tests/test_excel_unmerge.py",
+      "bytes": 12555,
+      "sha256": "b1e8fa062c8182902f587804e31f9d2a0d58e81a02862f46d1881761c4e56d9e"
+    },
+    {
+      "path": "tests/test_gui_batch.py",
+      "bytes": 7663,
+      "sha256": "c429cf20dc3eb65721de7174cb3d6dd41f4a75a34d8ada637375e1b286df07e4"
+    },
+    {
+      "path": "tests/test_streaming_engine.py",
+      "bytes": 8607,
+      "sha256": "a8b8e7e32274b9157e50a32a4af422799a4f56fe9b9981d73d86cd2e690afe94"
+    },
+    {
+      "path": "tests/test_windows_gui_helpers.py",
+      "bytes": 24082,
+      "sha256": "1ceb49b6828cdf5ae31a9a63ea7f19b6eeec2f13519e970a77e498dbce674da9"
+    },
+    {
+      "path": "使用说明.md",
+      "bytes": 6288,
+      "sha256": "faeb9eb21093844d0ef8ed5eedcbc5964fb5f6126a17a905967b398f610aa391"
+    }
+  ],
+  "count": 355,
+  "credential_candidates": [],
+  "raw_json_value_candidates": [
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/8/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/8/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/8/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/7/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/7/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/7/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/2/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/2/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/1/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/1/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/0/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/2/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/2/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/1/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/1/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/0/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_path": "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+      },
+      "json_pointer": "/embedded_image/after_cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "current_path": "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+      },
+      "json_pointer": "/embedded_image/after_cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "current_path": "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+      },
+      "json_pointer": "/embedded_image/before_cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "current_path": "docs/reviews/2026-10-08-evidence/probes.json"
+      },
+      "json_pointer": "/fidelity/values",
+      "value_type": "list",
+      "item_count_or_length": 2
+    }
+  ],
+  "binary_files": [
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/ui-default.png",
+      "bytes": 30886,
+      "sha256": "d708b8126ab521a9300e0ef2398ec3c8d87e970f120f89c83f769d6137dfb19a",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/gui/ui-minimum.png",
+      "bytes": 29637,
+      "sha256": "731a11fdfd033cbfdfb545558c91e7466c96f6626277947533856ad488b40d5e",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/exe-initial.png",
+      "bytes": 24361,
+      "sha256": "aed0532b45bec0addeade69c9d7a71907111ce08943e943d8d1ceace571b96ef",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/processing.png",
+      "bytes": 32506,
+      "sha256": "74a9a20c333b8818413afd5bd34f622880702480687ca326241aa58c009ffc9b",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1.1/acceptance/monthly/selected.png",
+      "bytes": 26772,
+      "sha256": "af7366ccbbf994e10ce47fee3dd852953f7bef082694bad50ce18b991c1c083e",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/all-no-match-result-final.png",
+      "bytes": 40861,
+      "sha256": "deb734032f919e884ecef15f2e1f48723ad125d697e5c2b3438c085bd9c37adb",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/all-result-final.png",
+      "bytes": 40761,
+      "sha256": "11b432150f128fd7f1c7599a03daf924fb31d6e3e147ff7ff52f449d69bd81e3",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/default-no-match-result-final.png",
+      "bytes": 40417,
+      "sha256": "6f9ed1b6be4741c9c209d7358dc557076fd08fef4941eb4b93bfbc1e63d7ad3d",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/business-acceptance-2026-10-09/gui/default-proof-result-final.png",
+      "bytes": 40872,
+      "sha256": "b8e2d1dac9043b1f861d52af663fa572b078cde541b5c645f00a20cd963eb38d",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/ui-default.png",
+      "bytes": 27353,
+      "sha256": "a31c4afac965acb7ccb5203faa7ab27ac61057ff3b82870095fac3eac58ff51a",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/evidence/ui-minimum.png",
+      "bytes": 24425,
+      "sha256": "1c58365d3aada3aa0a303abe33ffb87bdadabea0830b8ec21b8786fb768d87c2",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/result.png",
+      "bytes": 40072,
+      "sha256": "0b9b5dce05d2c779c2293b00166f5a7802147f0f47a5b7322002d843ea7137f9",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/selected.png",
+      "bytes": 30390,
+      "sha256": "75ec64a3bffb2a0f430572c75ce9d5b71c37bbbc5f67694c39bd24bbec498392",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/result.png",
+      "bytes": 40767,
+      "sha256": "0b2bde10f596b11697e9baea4e0e22613461f0e1f07c70c87ee306598e8972bd",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/selected.png",
+      "bytes": 29657,
+      "sha256": "8930249d8489eeec372780232e8c824997c8f06607d119f447f9ba3b8f9137bc",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/result.png",
+      "bytes": 40328,
+      "sha256": "b446433bac0e483fe5eb46f38c84297f7e71f005cee7107b04370f2105f4abaa",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/selected.png",
+      "bytes": 30657,
+      "sha256": "9871ea808f011bb25e3cd5aef8a0f39953e95e28d3afaf7bbf43fd6e549d3b3e",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/result.png",
+      "bytes": 41085,
+      "sha256": "a0ab3f4c039b99c42d03347aa8d3bda1b9f758df00fc3adb15d53993b21920b7",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/selected.png",
+      "bytes": 29930,
+      "sha256": "2d8adc52fd4df714ebde19fe59f23c99c72b60ef71628aa4441d465e2ac04eb6",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/exe-initial.png",
+      "bytes": 24028,
+      "sha256": "51756670b395db6a44f1de015c079783d1f852f10ace156397c4ba2f96cf04db",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/processing.png",
+      "bytes": 29155,
+      "sha256": "330ad8c1cdf9a946d325a4361866e91a8cac9e7d05f0bf8ddf3f4795984ce693",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/result.png",
+      "bytes": 34996,
+      "sha256": "bac591a0061c0fbe46dbe2c607012a63fe27142ded648f9b2730b3ee7a26ccd7",
+      "png_signature": true
+    },
+    {
+      "path": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/selected.png",
+      "bytes": 25942,
+      "sha256": "859d91f2b1feedc33dff0e5b59af37ace6439c856b4897222758afd37b5cbb38",
+      "png_signature": true
+    }
+  ],
+  "business_archive_key_or_ignored_tree_paths": [],
+  "limits": [
+    "Concurrent future additions/changes are not covered; final index should be compared to this manifest.",
+    "Pattern scan requires human provenance checks for JSON values and visual image review."
+  ]
+}

@@ -4,15 +4,17 @@
 import argparse
 import copy
 import heapq
+import os
 import posixpath
 import re
 import shutil
 import subprocess
 import sys
+import time
 from contextlib import ExitStack
 from io import StringIO
 from pathlib import Path
-from tempfile import TemporaryFile
+from tempfile import TemporaryFile, mkstemp
 from xml.dom import Node, XML_NAMESPACE, XMLNS_NAMESPACE, expatbuilder, minidom
 from zipfile import ZipFile
 
@@ -20,6 +22,30 @@ from zipfile import ZipFile
 # 以解压后的工作表 XML 大小判断，避免高压缩率文件进入完整 DOM。
 # 小表继续走既有路径；超过 8 MiB 时按行落盘，限制单元格树的驻留量。
 STREAM_THRESHOLD = 8 * 1024 * 1024
+
+
+class _ProgressReporter:
+    """进度只用于观测；普通回调异常不影响数据，BaseException 仍传播。"""
+    def __init__(self, callback):
+        self.callback = callback
+        self.last_time = None
+        self.last_key = None
+
+    def emit(self, phase, sheet=None, completed=None, total=None, unit=None, force=False):
+        if self.callback is None:
+            return
+        now = time.monotonic()
+        key = phase, sheet
+        if (not force and key == self.last_key and self.last_time is not None
+                and now - self.last_time < 0.3):
+            return
+        self.last_time, self.last_key = now, key
+        detail = dict(phase=phase, sheet=sheet, completed=completed, total=total, unit=unit)
+        try:
+            self.callback(detail)
+        except Exception:
+            # GUI/日志等观察者失效不能把有效工作簿变成处理失败。
+            pass
 
 
 def children(element, name):
@@ -342,12 +368,14 @@ def transform_sheet(raw, all_merges=False):
 
 class RowSpoolBuilder(expatbuilder.ExpatBuilderNS):
     """使用与 minidom 相同的解析器，每个完整行落盘后立即释放其 DOM。"""
-    def __init__(self, spool):
+    def __init__(self, spool, progress=None):
         super().__init__()
         self.spool = spool
         self.rows = {}
         self.extent = None
         self.row_error = None
+        self.progress = progress
+        self.rows_read = 0
 
     def end_element_handler(self, name):
         node = self.curNode
@@ -365,6 +393,9 @@ class RowSpoolBuilder(expatbuilder.ExpatBuilderNS):
         finally:
             parent.removeChild(node)
             node.unlink()
+            self.rows_read += 1
+            if self.progress is not None:
+                self.progress("reading", self.rows_read, None, "rows")
 
     def store_row(self, node):
         number = int(node.getAttribute("r"))
@@ -408,14 +439,18 @@ def detached_anchor(anchor):
     return cloned
 
 
-def transform_sheet_stream(source, output, all_merges=False):
+def transform_sheet_stream(source, output, all_merges=False, progress=None):
     """两遍行处理，输出只写入临时流；返回 (拆分区域数, 新填充格数)。"""
     doc = None
     plans = []
     with TemporaryFile(mode="w+b") as original_rows, TemporaryFile(mode="w+b") as result_rows:
-        builder = RowSpoolBuilder(original_rows)
+        builder = RowSpoolBuilder(original_rows, progress)
         try:
+            if progress is not None:
+                progress("reading", 0, None, "rows", force=True)
             doc = builder.parseFile(source)
+            if progress is not None:
+                progress("reading", builder.rows_read, builder.rows_read, "rows", force=True)
             root = doc.documentElement
             groups = children(root, "mergeCells")
             if not groups:
@@ -444,7 +479,10 @@ def transform_sheet_stream(source, output, all_merges=False):
                 row_numbers.update(range(a, c + 1))
             starts = sorted(plans, key=lambda plan: plan["box"][0])
             next_start, active, filled = 0, [], 0
-            for number in sorted(row_numbers):
+            row_total = len(row_numbers)
+            if progress is not None:
+                progress("filling", 0, row_total, "rows", force=True)
+            for completed, number in enumerate(sorted(row_numbers), 1):
                 still_active = []
                 for plan in active:
                     if plan["box"][2] >= number:
@@ -464,6 +502,8 @@ def transform_sheet_stream(source, output, all_merges=False):
                     raw = b""
                 if not active:
                     result_rows.write(raw)
+                    if progress is not None:
+                        progress("filling", completed, row_total, "rows")
                     continue
                 row_doc = minidom.parseString(prefix + raw + suffix)
                 try:
@@ -529,6 +569,8 @@ def transform_sheet_stream(source, output, all_merges=False):
                     result_rows.write(serialize_xml(row_node))
                 finally:
                     row_doc.unlink()
+                if progress is not None:
+                    progress("filling", completed, row_total, "rows")
             for plan in plans:
                 merges.removeChild(plan["node"])
             remaining = children(merges, "mergeCell")
@@ -569,6 +611,8 @@ def transform_sheet_stream(source, output, all_merges=False):
             if horizontal_count:
                 insertions[merges] = (None, write_horizontal_merges)
             serialize_xml(doc, output, insertions)
+            if progress is not None:
+                progress("filling", row_total, row_total, "rows", force=True)
             return len(plans), filled
         finally:
             for plan in plans:
@@ -606,13 +650,91 @@ def worksheets(archive):
         relationships.unlink()
 
 
-def process_file(source, all_merges=False, sheets=None):
-    """返回 (新文件路径或 None, [(工作表名, 拆分区域数, 新填充格数)])。"""
+def _append_error_detail(error, detail):
+    """保留原异常身份/errno，并让简短错误信息也包含残片定位。"""
+    if isinstance(error, OSError) and error.strerror is not None:
+        error.strerror += "\n" + detail
+        if len(error.args) >= 2:
+            error.args = (error.args[0], error.strerror) + error.args[2:]
+    else:
+        error.args = (str(error) + "\n" + detail,)
+
+
+def _cleanup_part(part, error):
+    try:
+        part.unlink(missing_ok=True)
+    except BaseException as cleanup_error:
+        error.partial_path = part
+        error.cleanup_error = cleanup_error
+        _append_error_detail(error, "本次临时文件清理失败，请关闭占用后手动删除：" + str(part)
+                             + "（" + type(cleanup_error).__name__ + "）")
+
+
+def _publish_no_replace(part, output):
+    if os.name == "nt":
+        # Windows rename 在目标已存在时失败，不能换成会覆盖目标的 replace。
+        os.rename(part, output)
+    else:
+        # POSIX rename 可能覆盖，使用同目录 hard link 的原子、排他创建。
+        os.link(part, output)
+        try:
+            part.unlink()
+        except BaseException as error:
+            error.partial_path = part
+            error.published_output = output
+            _append_error_detail(error, "结果已完整保存至：" + str(output)
+                                 + "；本次临时文件未能删除：" + str(part))
+            raise
+
+
+def _name_occupied(path):
+    try:
+        path.lstat()
+        return True
+    except OSError:
+        return False
+
+
+def _publish_part(part, source):
+    serial = 1
+    while True:
+        suffix = "" if serial == 1 else "_" + str(serial)
+        output = source.with_name(source.stem + "_拆分填充" + suffix + source.suffix)
+        try:
+            _publish_no_replace(part, output)
+            return output
+        except (FileExistsError, PermissionError) as error:
+            if hasattr(error, "published_output"):
+                raise
+            # Windows 对已有目录/被占用的同名文件也可能报告拒绝访问。
+            # 只有确认名称已被占用才尝试下个名称；真正发布权限错误直接返回。
+            if not isinstance(error, FileExistsError) and not _name_occupied(output):
+                raise
+            serial += 1
+
+
+def _copy_zip_payload(source, destination, reporter, completed, total):
+    while True:
+        block = source.read(1024 * 1024)
+        if not block:
+            return completed
+        destination.write(block)
+        completed += len(block)
+        reporter.emit("saving", completed=completed, total=total, unit="bytes")
+
+
+def process_file(source, all_merges=False, sheets=None, progress=None):
+    """返回 (新文件路径或 None, [(工作表名, 拆分区域数, 新填充格数)])。
+
+    progress 可接收阶段/工作表/真实计数 dict；通知约每 0.3 秒一次，阶段起止除外。
+    普通回调异常不改变结果；BaseException 传播并执行本次临时文件清理。
+    """
     source = Path(source).expanduser().resolve()
     if source.suffix.lower() not in (".xlsx", ".xlsm"):
         raise ValueError("仅支持 .xlsx / .xlsm；旧版 .xls 请先在 Excel 中另存为 .xlsx。")
     if not source.is_file():
         raise ValueError("找不到文件：" + str(source))
+    reporter = _ProgressReporter(progress)
     with ZipFile(source) as original, ExitStack() as temporary:
         if any(n.startswith("_xmlsignatures/") for n in original.namelist()):
             raise ValueError("文件含文档数字签名，请使用未签名副本处理。")
@@ -625,16 +747,25 @@ def process_file(source, all_merges=False, sheets=None):
         for name, path in available:
             if requested and name not in requested:
                 continue
+            def sheet_progress(phase, completed=None, total=None, unit=None, force=False):
+                reporter.emit(phase, name, completed, total, unit, force)
             try:
                 transformed = temporary.enter_context(TemporaryFile(mode="w+b"))
                 if original.getinfo(path).file_size >= STREAM_THRESHOLD:
                     with original.open(path) as incoming:
-                        count, filled = transform_sheet_stream(incoming, transformed, all_merges)
+                        count, filled = transform_sheet_stream(incoming, transformed, all_merges,
+                                                              sheet_progress if progress is not None else None)
                 else:
-                    raw, count, filled = transform_sheet(original.read(path), all_merges)
+                    size = original.getinfo(path).file_size
+                    sheet_progress("reading", 0, size, "bytes", force=True)
+                    raw = original.read(path)
+                    sheet_progress("reading", len(raw), size, "bytes", force=True)
+                    sheet_progress("filling", force=True)
+                    raw, count, filled = transform_sheet(raw, all_merges)
                     if count:
                         transformed.write(raw)
                     del raw
+                    sheet_progress("filling", force=True)
             except ValueError as error:
                 raise ValueError("工作表“" + name + "”：" + str(error)) from error
             stats.append((name, count, filled))
@@ -642,22 +773,23 @@ def process_file(source, all_merges=False, sheets=None):
                 updates[path] = transformed
         if not updates:
             return None, stats
-        # 独占创建，重复运行也不会覆盖原文件或上一次结果。
-        serial = 1
-        while True:
-            suffix = "" if serial == 1 else "_" + str(serial)
-            output = source.with_name(source.stem + "_拆分填充" + suffix + source.suffix)
-            try:
-                stream = output.open("xb")
-                break
-            except FileExistsError:
-                serial += 1
-            except PermissionError:
-                # Windows 对同名目录报告 PermissionError；实际写入权限错误仍需抛出。
-                if not output.is_dir():
-                    raise
-                serial += 1
+        total = sum(updates[info.filename].seek(0, 2) if info.filename in updates else info.file_size
+                    for info in original.infolist())
+        reporter.emit("saving", completed=0, total=total, unit="bytes", force=True)
+        # 最终命名文件只在 ZIP 完整关闭后出现；强制终止最多遗留独立 .part。
+        descriptor, part_name = mkstemp(prefix="." + source.stem[:32] + "_拆分填充-",
+                                       suffix=".part", dir=source.parent)
+        part = Path(part_name)
         try:
+            try:
+                stream = os.fdopen(descriptor, "w+b")
+            except BaseException as error:
+                try:
+                    os.close(descriptor)
+                except OSError as close_error:
+                    _append_error_detail(error, "临时文件句柄关闭失败（" + type(close_error).__name__ + "）")
+                raise
+            completed = 0
             with stream, ZipFile(stream, "w") as result:
                 result.comment = original.comment
                 for info in original.infolist():
@@ -667,13 +799,16 @@ def process_file(source, all_merges=False, sheets=None):
                         outgoing.file_size = contents.seek(0, 2)
                         contents.seek(0)
                         with result.open(outgoing, "w") as destination:
-                            shutil.copyfileobj(contents, destination, 1024 * 1024)
+                            completed = _copy_zip_payload(contents, destination, reporter, completed, total)
                     else:
                         # 共享字符串、图片等未修改部件也不整体读入内存。
                         with original.open(info) as incoming, result.open(outgoing, "w") as destination:
-                            shutil.copyfileobj(incoming, destination, 1024 * 1024)
-        except BaseException:
-            output.unlink(missing_ok=True)
+                            completed = _copy_zip_payload(incoming, destination, reporter, completed, total)
+            reporter.emit("saving", completed=completed, total=total, unit="bytes", force=True)
+            output = _publish_part(part, source)
+        except BaseException as error:
+            if not hasattr(error, "published_output"):
+                _cleanup_part(part, error)
             raise
     return output, stats
 

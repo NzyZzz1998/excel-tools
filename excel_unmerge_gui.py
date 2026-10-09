@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import threading
+import time
 import traceback
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -22,7 +23,7 @@ from tkinter.scrolledtext import ScrolledText
 from excel_unmerge_fill import process_file
 
 APP_TITLE = "Excel 数据处理工具"
-APP_VERSION = "1.1"
+APP_VERSION = "1.1.1"
 
 
 def enable_windows_dpi_awareness():
@@ -88,7 +89,12 @@ def process_batch(files, all_merges, events, stop_event=None):
             break
         events.put(("started", file, index + 1, len(files)))
         try:
-            output, stats = process_file(file, all_merges=all_merges)
+            def report_progress(detail):
+                # 脱离引擎持有的字典，队列中的消息只描述发送时的状态。
+                events.put(("progress", file, dict(detail)))
+
+            output, stats = process_file(file, all_merges=all_merges,
+                                         progress=report_progress)
             events.put(("result", file, output, stats, None))
         except Exception as error:
             failures += 1
@@ -107,6 +113,9 @@ class Application:
         self.run_files = ()
         self.run_completed = 0
         self.current_file = None
+        self.current_file_started_at = None
+        self.current_file_index = 0
+        self.current_detail = None
         self.batch_all_merges = False
         self.stop_event = threading.Event()
         self.output_directory = None
@@ -129,7 +138,7 @@ class Application:
         ttk.Label(frame, text="拆开合并行，让每一行都有原来的值。"
                   ).pack(anchor="w", pady=(6, 12))
 
-        input_frame = ttk.LabelFrame(frame, text="1. 选择文件", padding=10)
+        self.input_frame = input_frame = ttk.LabelFrame(frame, text="1. 待开始的文件", padding=10)
         input_frame.pack(fill="x")
         input_toolbar = ttk.Frame(input_frame)
         input_toolbar.pack(fill="x")
@@ -155,10 +164,10 @@ class Application:
         self.open_button.pack(side="right")
         recovery_toolbar = ttk.Frame(frame)
         recovery_toolbar.pack(fill="x", pady=(0, 8))
-        self.retry_button = ttk.Button(recovery_toolbar, text="仅重试失败项", state="disabled",
+        self.retry_button = ttk.Button(recovery_toolbar, text="重试上次失败（0）", state="disabled",
                                        command=self.retry_failed)
         self.retry_button.pack(side="left")
-        self.resume_button = ttk.Button(recovery_toolbar, text="继续未处理项", state="disabled",
+        self.resume_button = ttk.Button(recovery_toolbar, text="继续上次未处理（0）", state="disabled",
                                         command=self.resume_pending)
         self.resume_button.pack(side="left", padx=8)
         self.stop_button = ttk.Button(recovery_toolbar, text="当前文件完成后停止", state="disabled",
@@ -197,9 +206,17 @@ class Application:
             filetypes=[("Excel 文件", "*.xlsx *.xlsm")])
         if files:
             self.files = tuple(files)
-            self.replace_text(self.file_list, "\n".join(self.files))
-            self.status.set("已选择 {} 个文件。".format(len(self.files)))
+            self.show_next_selection()
+            message = "已选择 {} 个待开始文件。".format(len(self.files))
+            if self.failed_files or self.pending_files:
+                message += "恢复按钮仍处理上次任务：失败 {} 个，未处理 {} 个。".format(
+                    len(self.failed_files), len(self.pending_files))
+            self.status.set(message)
             self.start_button.configure(state="normal")
+
+    def show_next_selection(self):
+        self.input_frame.configure(text="1. 待开始的文件（{}）".format(len(self.files)))
+        self.replace_text(self.file_list, "\n".join(self.files))
 
     def start(self):
         if self.running or not self.files:
@@ -220,11 +237,13 @@ class Application:
 
     def retry_failed(self):
         if not self.running and self.failed_files:
-            self.launch_batch(self.failed_files, "仅重试失败项（沿用首次处理规则）")
+            self.launch_batch(self.failed_files, "重试上次失败项（沿用首次处理规则）",
+                              recovering=True)
 
     def resume_pending(self):
         if not self.running and self.pending_files:
-            self.launch_batch(self.pending_files, "继续未处理项（沿用首次处理规则）")
+            self.launch_batch(self.pending_files, "继续上次未处理项（沿用首次处理规则）",
+                              recovering=True)
 
     def update_counts(self):
         states = tuple(self.file_states.values())
@@ -232,6 +251,8 @@ class Application:
         self.unchanged = states.count("unchanged")
         self.failed = states.count("failed")
         self.completed = self.succeeded + self.unchanged + self.failed
+        self.retry_button.configure(text="重试上次失败（{}）".format(self.failed))
+        self.resume_button.configure(text="继续上次未处理（{}）".format(len(self.pending_files)))
 
     def task_summary(self):
         return "任务已处理 {}/{}：成功 {} 个，无需处理 {} 个，失败 {} 个，待处理 {} 个。".format(
@@ -244,11 +265,13 @@ class Application:
         self.results.see("end")
         self.results.configure(state="disabled")
 
-    def launch_batch(self, files, label):
+    def launch_batch(self, files, label, recovering=False):
         self.running = True
         self.run_files = tuple(files)
         self.run_completed = 0
         self.current_file = None
+        self.current_file_started_at = None
+        self.current_detail = None
         self.stop_event = threading.Event()
         self.update_counts()
         # 重试/继续时，复选框也反映真正使用的首次规则。
@@ -260,6 +283,9 @@ class Application:
         self.resume_button.configure(state="disabled")
         self.stop_button.configure(state="normal")
         self.option.configure(state="disabled")
+        target_label = "上次任务：本轮处理文件" if recovering else "本轮处理文件"
+        self.input_frame.configure(text="1. {}（{}）".format(target_label, len(files)))
+        self.replace_text(self.file_list, "\n".join(self.run_files))
         rule = "同时拆开横向合并" if self.batch_all_merges else "只拆纵向合并，保留横向表头"
         self.append_result("{}：{} 个文件；规则：{}。".format(label, len(files), rule))
         self.status.set("{}：本轮已处理 0/{} 个文件。".format(label, len(files)))
@@ -274,6 +300,34 @@ class Application:
             self.append_result("无法启动处理任务：" + describe_error(error), "failure")
             self.events.put(("done", 0, 0, self.run_files))
         self.root.after(100, self.poll_results)
+
+    def refresh_running_status(self):
+        # 计时只是等待时长，不推断引擎活性；停止/关闭请求及最终结果优先。
+        if (not self.running or self.current_file is None
+                or self.current_file_started_at is None or self.stop_event.is_set()):
+            return
+        elapsed = max(0, int(time.monotonic() - self.current_file_started_at))
+        hours, remainder = divmod(elapsed, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        duration = ("{}:{:02d}:{:02d}".format(hours, minutes, seconds) if hours else
+                    "{:02d}:{:02d}".format(minutes, seconds))
+        detail = self.current_detail or {}
+        phase = {"reading": "读取", "filling": "填充", "saving": "保存"}.get(
+            detail.get("phase"), "等待处理")
+        sheet = detail.get("sheet")
+        if sheet is not None:
+            phase += " · 工作表：{}".format(sheet)
+        completed, total, unit = (detail.get(key) for key in ("completed", "total", "unit"))
+        if completed is not None and unit in ("rows", "bytes"):
+            unit_text = "行" if unit == "rows" else "字节"
+            phase += " · 已处理 {:,} {}".format(completed, unit_text)
+            if total is not None:
+                phase += " / {:,} {}".format(total, unit_text)
+        message = "正在处理：{}（本轮第 {}/{} 个，已完成 {} 个）\n{} · 已用时 {}".format(
+            Path(self.current_file).name, self.current_file_index, len(self.run_files),
+            self.run_completed, phase, duration)
+        if self.status.get() != message:
+            self.status.set(message)
 
     def request_stop(self):
         if self.running:
@@ -290,13 +344,20 @@ class Application:
             if event[0] == "started":
                 _, file, index, total = event
                 self.current_file = file
-                prefix = "正在完成当前文件后停止" if self.stop_event.is_set() else "正在处理"
-                self.status.set("{}：{}（本轮第 {}/{} 个，已处理 {} 个）。".format(
-                    prefix, Path(file).name, index, total, self.run_completed))
+                self.current_file_started_at = time.monotonic()
+                self.current_file_index = index
+                self.current_detail = None
+            elif event[0] == "progress":
+                _, file, detail = event
+                if self.running and file == self.current_file:
+                    self.current_detail = detail
             elif event[0] == "done":
                 _, count, failures, remaining = event
                 self.running = False
                 self.current_file = None
+                self.current_file_started_at = None
+                self.current_detail = None
+                self.show_next_selection()
                 self.choose_button.configure(state="normal")
                 self.start_button.configure(state="normal")
                 self.option.configure(state="normal")
@@ -306,11 +367,16 @@ class Application:
                 if self.output_directory is not None:
                     self.open_button.configure(state="normal")
                 prefix = "已停止" if remaining else "本轮处理结束"
-                summary = "{}；{}".format(prefix, self.task_summary())
+                summary = "{}；上次{}".format(prefix, self.task_summary())
+                if tuple(self.file_states) != self.files:
+                    summary += " 待开始选择已保留（{} 个），点击“开始处理”处理。".format(len(self.files))
                 self.status.set(summary)
                 self.append_result(summary)
             elif event[0] == "result":
                 _, file, output, stats, error = event
+                self.current_file = None
+                self.current_file_started_at = None
+                self.current_detail = None
                 self.run_completed += 1
                 self.progress.configure(value=self.run_completed)
                 if error is not None:
@@ -333,7 +399,12 @@ class Application:
                                  "没有符合条件的合并区域，未生成新文件。")
                 self.update_counts()
                 self.append_result("\n".join(lines), tag)
+                if not self.stop_event.is_set():
+                    self.status.set("本轮已处理 {}/{} 个文件；{}：{}。".format(
+                        self.run_completed, len(self.run_files),
+                        "失败" if error is not None else "已完成", Path(file).name))
         if self.running:
+            self.refresh_running_status()
             self.root.after(100, self.poll_results)
 
     def open_results(self):
@@ -437,6 +508,14 @@ def self_test():
             app.run_files = app.files
             app.running = True
             app.events.put(("started", str(source), 1, 1))
+            app.events.put(("progress", str(source), dict(
+                phase="filling", sheet="测试", completed=2, total=3, unit="rows")))
+            app.poll_results()
+            if ("填充" not in app.status.get() or "2 行 / 3 行" not in app.status.get()
+                    or "已用时" not in app.status.get() or app.completed != 0
+                    or float(app.progress["value"]) != 0
+                    or "v{}".format(APP_VERSION) not in root.title()):
+                raise AssertionError("处理中的阶段、计时或文件完成计数不正确")
             app.events.put(("result", str(source), output, stats, None))
             app.events.put(("done", 1, 0, ()))
             app.poll_results()
@@ -446,6 +525,8 @@ def self_test():
                     or "disabled" in app.open_button.state()
                     or str(output) not in app.results.get("1.0", "end")
                     or app.failed_files or app.pending_files
+                    or app.current_file_started_at is not None
+                    or "待开始" not in app.input_frame.cget("text")
                     or any("disabled" not in button.state() for button in (
                         app.retry_button, app.resume_button, app.stop_button))
                     or float(app.progress["value"]) != 1):

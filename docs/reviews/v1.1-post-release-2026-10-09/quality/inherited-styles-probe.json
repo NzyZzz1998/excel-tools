@@ -1,0 +1,51 @@
+{
+  "excel_version": "16.0",
+  "owned_pid": 564,
+  "cases": [
+    {
+      "output": {
+        "target_value2": 45292.0,
+        "target_text": "45292",
+        "anchor_value2": 45292.0,
+        "target_number_format": "General",
+        "anchor_text": "45292",
+        "anchor_number_format": "General"
+      },
+      "source": {
+        "target_value2": null,
+        "target_text": "",
+        "anchor_value2": 45292.0,
+        "target_number_format": "General",
+        "anchor_text": "45292",
+        "anchor_number_format": "General"
+      },
+      "name": "row_style",
+      "target": "A2"
+    },
+    {
+      "output": {
+        "target_value2": 45292.0,
+        "target_text": "45292",
+        "anchor_value2": 45292.0,
+        "target_number_format": "General",
+        "anchor_text": "#",
+        "anchor_number_format": "General"
+      },
+      "source": {
+        "target_value2": null,
+        "target_text": "",
+        "anchor_value2": 45292.0,
+        "target_number_format": "General",
+        "anchor_text": "45292",
+        "anchor_number_format": "General"
+      },
+      "name": "column_style",
+      "target": "B1"
+    }
+  ],
+  "saves": 0,
+  "preexisting_excel_pids": [],
+  "owned_excel_exited": false,
+  "fixture_scope": "synthetic only",
+  "excel_build": 17932.0
+}

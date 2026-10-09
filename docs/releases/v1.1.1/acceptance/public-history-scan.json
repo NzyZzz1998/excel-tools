@@ -1,0 +1,1048 @@
+{
+  "recorded_utc": "2026-10-09T15:38:47.094844+00:00",
+  "head": "4e013c4ded2af26c6546fa16a1860fff282e5842",
+  "refs": [
+    "refs/codex/turn-diffs/captures/1791559721300/bab68935-7ede-4350-a155-a69071ec4609/base 1d7f693b13698bdd188c44e80e0b6279640557f5",
+    "refs/codex/turn-diffs/checkpoints/bf666a90dd415fc3af8b67183f8add3e/af0cfd871e85ccd89c065e5e838a3b19/1791545140460/51b4d8ab-f623-4430-b073-719fccbd924d 1d7f693b13698bdd188c44e80e0b6279640557f5",
+    "refs/heads/main 4e013c4ded2af26c6546fa16a1860fff282e5842",
+    "refs/remotes/origin/HEAD 4e013c4ded2af26c6546fa16a1860fff282e5842",
+    "refs/remotes/origin/main 4e013c4ded2af26c6546fa16a1860fff282e5842",
+    "refs/tags/v1.0.0 470a4e1b3c5346ed8bdfd3d770b4d235eb45f173"
+  ],
+  "reachable_commits": 8,
+  "unique_history_blobs": 310,
+  "historical_paths": 286,
+  "current_tracked_files": 284,
+  "current_missing_paths": [],
+  "total_unique_blob_bytes": 2481915,
+  "historical_extension_counts": {
+    ".json": 112,
+    ".py": 40,
+    ".txt": 49,
+    ".ps1": 13,
+    ".md": 36,
+    ".png": 22,
+    ".jsonl": 6,
+    ".yml": 1,
+    ".bat": 2,
+    ".xml": 2,
+    ".command": 2,
+    "(none)": 1
+  },
+  "business_archive_key_or_ignored_tree_paths": [],
+  "credential_candidates": [],
+  "json_raw_value_candidates": [
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/8/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/8/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/8/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/7/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/7/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/7/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/6/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/6/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/6/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/6/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/6/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/5/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/5/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/5/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/5/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/5/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/4/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/4/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/4/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/4/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/4/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/3/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/3/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/3/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/3/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/3/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/2/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/2/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/2/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/2/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/2/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/1/files/2/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/1/files/2/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/1/files/1/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/1/files/1/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/1/files/0/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/0/files/2/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/0/files/2/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/0/files/1/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/0/files/1/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "91089e38edb1453f6ef8c99e3f346b15a087da36",
+        "paths": [
+          "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+        ]
+      },
+      "json_pointer": "/results/0/files/0/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "blob": "89cf3956596aed3b86341d0d0f4c1a7d02372ad4",
+        "paths": [
+          "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+        ]
+      },
+      "json_pointer": "/embedded_image/after_cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "blob": "89cf3956596aed3b86341d0d0f4c1a7d02372ad4",
+        "paths": [
+          "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+        ]
+      },
+      "json_pointer": "/embedded_image/after_cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "blob": "89cf3956596aed3b86341d0d0f4c1a7d02372ad4",
+        "paths": [
+          "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+        ]
+      },
+      "json_pointer": "/embedded_image/before_cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "blob": "57f95e5ec5d55385cacb741f1ea1b72cab557e08",
+        "paths": [
+          "docs/reviews/2026-10-08-evidence/probes.json"
+        ]
+      },
+      "json_pointer": "/fidelity/values",
+      "value_type": "list",
+      "item_count_or_length": 2
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/8/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/8/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/8/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/7/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/7/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/7/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 8
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/6/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/5/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/4/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/3/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/2/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/2/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/1/cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 6
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/1/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/2/files/0/cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 10
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/2/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/2/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/1/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/1/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/1/files/0/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/2/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/2/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/1/cells/1/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/1/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/releases/v1.1/release-acceptance-2026-10-09/engine/excel-edge-validation.json"
+      },
+      "json_pointer": "/results/0/files/0/cells/0/value",
+      "value_type": "float",
+      "item_count_or_length": null
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+      },
+      "json_pointer": "/embedded_image/after_cells/1/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+      },
+      "json_pointer": "/embedded_image/after_cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/reviews/2026-10-08-evidence/engine-fidelity.json"
+      },
+      "json_pointer": "/embedded_image/before_cells/0/value",
+      "value_type": "str",
+      "item_count_or_length": 7
+    },
+    {
+      "location": {
+        "current_tracked_path": "docs/reviews/2026-10-08-evidence/probes.json"
+      },
+      "json_pointer": "/fidelity/values",
+      "value_type": "list",
+      "item_count_or_length": 2
+    }
+  ],
+  "binary_blobs": [
+    {
+      "blob": "d67f949791120a443d5865d56d844888a5142875",
+      "paths": [
+        "docs/releases/v1.1/business-acceptance-2026-10-09/gui/all-no-match-result-final.png"
+      ],
+      "bytes": 40861,
+      "png_signature": true
+    },
+    {
+      "blob": "1744e09edc5895e8a557e37d2d2755408d2631c4",
+      "paths": [
+        "docs/releases/v1.1/business-acceptance-2026-10-09/gui/all-result-final.png"
+      ],
+      "bytes": 40761,
+      "png_signature": true
+    },
+    {
+      "blob": "9755f7ea1b887a7cc2f28d9168e488c729ed3771",
+      "paths": [
+        "docs/releases/v1.1/business-acceptance-2026-10-09/gui/default-no-match-result-final.png"
+      ],
+      "bytes": 40417,
+      "png_signature": true
+    },
+    {
+      "blob": "51ef2511b2fff348b243a10c943e4ab86720140f",
+      "paths": [
+        "docs/releases/v1.1/business-acceptance-2026-10-09/gui/default-proof-result-final.png"
+      ],
+      "bytes": 40872,
+      "png_signature": true
+    },
+    {
+      "blob": "dd8e9dc2f879de87098bb4e0746c64f8d371444f",
+      "paths": [
+        "docs/releases/v1.1/evidence/ui-default.png"
+      ],
+      "bytes": 27353,
+      "png_signature": true
+    },
+    {
+      "blob": "61dd312d5ed80bd8e8689de2ec2b7d42abdf4032",
+      "paths": [
+        "docs/releases/v1.1/evidence/ui-minimum.png"
+      ],
+      "bytes": 24425,
+      "png_signature": true
+    },
+    {
+      "blob": "5de9e5cf5bd73dd22222ce89f66ceca69e389cdd",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/exe-initial.png",
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/exe-initial.png",
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/exe-initial.png",
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/exe-initial.png",
+        "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/exe-initial.png"
+      ],
+      "bytes": 24028,
+      "png_signature": true
+    },
+    {
+      "blob": "6c791b0b286adc3871a1e21b91cd3fcacc1ec5dd",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/result.png"
+      ],
+      "bytes": 40072,
+      "png_signature": true
+    },
+    {
+      "blob": "94865eeb922115f884fb801872bc0e0a90c0bc8f",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all-no-match/selected.png"
+      ],
+      "bytes": 30390,
+      "png_signature": true
+    },
+    {
+      "blob": "7f103c2f469e1f6b984e4e944f441142ab60c9b7",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/result.png"
+      ],
+      "bytes": 40767,
+      "png_signature": true
+    },
+    {
+      "blob": "81625b3027bd17deefbe32909ff3a07c3e8b1dfb",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/all/selected.png"
+      ],
+      "bytes": 29657,
+      "png_signature": true
+    },
+    {
+      "blob": "44515666ca8f318cc331b8fce7b95c008d3745f6",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/result.png"
+      ],
+      "bytes": 40328,
+      "png_signature": true
+    },
+    {
+      "blob": "554c7d531167ffa4b27a4b1e9dcb1e2bbd3b171b",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default-no-match/selected.png"
+      ],
+      "bytes": 30657,
+      "png_signature": true
+    },
+    {
+      "blob": "b77ecc4ce0890f0b57f566fc4c26a72be01a9c5c",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/result.png"
+      ],
+      "bytes": 41085,
+      "png_signature": true
+    },
+    {
+      "blob": "3397ae961adde8ff764e2b1c775aa204ac8712b3",
+      "paths": [
+        "docs/releases/v1.1/large-data-acceptance-2026-10-09/exe/default/selected.png"
+      ],
+      "bytes": 29930,
+      "png_signature": true
+    },
+    {
+      "blob": "8a57538144dcad84455218ed748c982f5bf7fd27",
+      "paths": [
+        "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/processing.png"
+      ],
+      "bytes": 29155,
+      "png_signature": true
+    },
+    {
+      "blob": "6640b23f8eb7418fb057694d487c2323fc0352f0",
+      "paths": [
+        "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/result.png"
+      ],
+      "bytes": 34996,
+      "png_signature": true
+    },
+    {
+      "blob": "3f70929a9477b70e2cfc98a590056799cde11cdc",
+      "paths": [
+        "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/selected.png"
+      ],
+      "bytes": 25942,
+      "png_signature": true
+    }
+  ],
+  "limits": [
+    "All local refs reachable history and current tracked files; no network call.",
+    "Deleted reachable files are included; local unreachable objects, remote-only refs, LFS servers and external attachments are not scanned.",
+    "Credential patterns are heuristic; filenames and structure are not a proof of absence of all sensitive content.",
+    "Images require separate visual review; binary blobs are not OCR-scanned.",
+    "Values matching patterns are never copied into this report."
+  ]
+}

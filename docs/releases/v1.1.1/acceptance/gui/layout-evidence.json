@@ -1,0 +1,196 @@
+{
+  "version": "1.1.1",
+  "pid": 45528,
+  "kind": "synthetic source Tk layout; not EXE or business acceptance",
+  "gui_sha256": "50ea03ad60ed6f86003132b9d4c951213f5f01b6c202a677bf765a8df01d2094",
+  "physical_input_used": false,
+  "captures": [
+    {
+      "size_name": "default",
+      "title": "Excel 数据处理工具 v1.1.1",
+      "client_size": [
+        840,
+        660
+      ],
+      "status": "正在处理：上次任务A.xlsx（本轮第 1/1 个，已完成 0 个）\n填充 · 工作表：合成测试表 · 已处理 1,200 行 / 3,000 行 · 已用时 00:01",
+      "shown_files": "C:\\合成演示\\上次任务A.xlsx",
+      "next_selection": [
+        "C:\\合成演示\\待开始B.xlsx"
+      ],
+      "file_progress": [
+        0,
+        1
+      ],
+      "controls": {
+        "choose_button": [
+          30,
+          118,
+          155,
+          27
+        ],
+        "file_list": [
+          30,
+          153,
+          763,
+          56
+        ],
+        "option": [
+          30,
+          217,
+          239,
+          23
+        ],
+        "start_button": [
+          18,
+          293,
+          87,
+          27
+        ],
+        "open_button": [
+          735,
+          293,
+          87,
+          27
+        ],
+        "retry_button": [
+          18,
+          330,
+          113,
+          27
+        ],
+        "resume_button": [
+          139,
+          330,
+          125,
+          27
+        ],
+        "stop_button": [
+          704,
+          330,
+          118,
+          27
+        ],
+        "progress": [
+          18,
+          365,
+          804,
+          22
+        ],
+        "status_label": [
+          18,
+          395,
+          804,
+          38
+        ],
+        "results": [
+          28,
+          472,
+          767,
+          160
+        ]
+      },
+      "screenshot": {
+        "path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1.1\\acceptance\\gui\\ui-default.png",
+        "captured": true,
+        "rows": 699,
+        "width": 856,
+        "height": 699
+      }
+    },
+    {
+      "size_name": "minimum",
+      "title": "Excel 数据处理工具 v1.1.1",
+      "client_size": [
+        680,
+        540
+      ],
+      "status": "正在处理：上次任务A.xlsx（本轮第 1/1 个，已完成 0 个）\n填充 · 工作表：合成测试表 · 已处理 1,200 行 / 3,000 行 · 已用时 00:01",
+      "shown_files": "C:\\合成演示\\上次任务A.xlsx",
+      "next_selection": [
+        "C:\\合成演示\\待开始B.xlsx"
+      ],
+      "file_progress": [
+        0,
+        1
+      ],
+      "controls": {
+        "choose_button": [
+          30,
+          118,
+          155,
+          27
+        ],
+        "file_list": [
+          30,
+          153,
+          603,
+          56
+        ],
+        "option": [
+          30,
+          217,
+          239,
+          23
+        ],
+        "start_button": [
+          18,
+          293,
+          87,
+          27
+        ],
+        "open_button": [
+          575,
+          293,
+          87,
+          27
+        ],
+        "retry_button": [
+          18,
+          330,
+          113,
+          27
+        ],
+        "resume_button": [
+          139,
+          330,
+          125,
+          27
+        ],
+        "stop_button": [
+          544,
+          330,
+          118,
+          27
+        ],
+        "progress": [
+          18,
+          365,
+          644,
+          22
+        ],
+        "status_label": [
+          18,
+          395,
+          644,
+          38
+        ],
+        "results": [
+          28,
+          472,
+          607,
+          40
+        ]
+      },
+      "screenshot": {
+        "path": "E:\\codex\\excel-tools\\docs\\releases\\v1.1.1\\acceptance\\gui\\ui-minimum.png",
+        "captured": true,
+        "rows": 579,
+        "width": 696,
+        "height": 579
+      }
+    }
+  ],
+  "next_selection_restored": true,
+  "idle_status": "本轮处理结束；上次任务已处理 1/1：成功 0 个，无需处理 1 个，失败 0 个，待处理 0 个。 待开始选择已保留（1 个），点击“开始处理”处理。",
+  "own_window_closed": true
+}

@@ -1,0 +1,36 @@
+{
+  "recorded_utc": "2026-10-09T15:42:12.296152+00:00",
+  "app_version": "1.1.1",
+  "head": "4e013c4ded2af26c6546fa16a1860fff282e5842",
+  "source_status": " M README.md\n M \"docs/\\345\\274\\200\\345\\217\\221\\350\\257\\264\\346\\230\\216.md\"\n M excel_unmerge_fill.py\n M excel_unmerge_gui.py\n M packaging/release-notes.md\n M \"packaging/\\344\\275\\277\\347\\224\\250\\350\\257\\264\\346\\230\\216.txt\"\n M tests/test_engine_regressions.py\n M tests/test_gui_batch.py\n M tests/test_windows_gui_helpers.py\n M \"\\344\\275\\277\\347\\224\\250\\350\\257\\264\\346\\230\\216.md\"\n?? assets/\n?? docs/releases/v1.1.1/\n?? docs/reviews/v1.1-post-release-2026-10-09/\n?? tests/test_engine_io_progress.py\n",
+  "source_snapshot": "E:\\codex\\excel-tools\\testfile\\v1.1.1-build-81607e8b\\source",
+  "source_hashes": {
+    "excel_unmerge_fill.py": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+    "excel_unmerge_gui.py": "50ea03ad60ed6f86003132b9d4c951213f5f01b6c202a677bf765a8df01d2094",
+    "使用说明.txt": "cf7c8938ac7a886159e6b011dd0dfe7ee6e431eb062160ad200412cd4ac92db4",
+    "tests\\test_engine_io_progress.py": "9637a826a2c24347ac8b379f04e63aecf1548497f5769e31a1ba0a17902ab294",
+    "tests\\test_engine_regressions.py": "7edb726fce76caee8e0a5a24724f6c5a3f6d3d132cc2c91ea241e982d290d176",
+    "tests\\test_excel_unmerge.py": "b1e8fa062c8182902f587804e31f9d2a0d58e81a02862f46d1881761c4e56d9e",
+    "tests\\test_gui_batch.py": "c429cf20dc3eb65721de7174cb3d6dd41f4a75a34d8ada637375e1b286df07e4",
+    "tests\\test_streaming_engine.py": "a8b8e7e32274b9157e50a32a4af422799a4f56fe9b9981d73d86cd2e690afe94",
+    "tests\\test_windows_gui_helpers.py": "1ceb49b6828cdf5ae31a9a63ea7f19b6eeec2f13519e970a77e498dbce674da9"
+  },
+  "dependencies": {
+    "python": "3.12.8",
+    "pyinstaller": "6.22.3",
+    "openpyxl": "3.1.5"
+  },
+  "build_python": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Scripts\\python.exe",
+  "executable": {
+    "path": "E:\\codex\\excel-tools\\testfile\\v1.1.1-build-81607e8b\\免安装 验收\\ExcelTools.exe",
+    "sha256": "b5eca2e5837698e677bdb3f6b9bf844275f734ba0ce7643275fd46871ccaa2ed"
+  },
+  "package": {
+    "path": "E:\\codex\\excel-tools\\dist\\ExcelTools-v1.1.1-Windows-x64.zip",
+    "sha256": "7d3954b5a898c14f42aef8c8881acd8f075097d941689204c68e18faa4c45b52"
+  },
+  "portable_self_test_exit": 0,
+  "source_and_snapshot_equal": true,
+  "previous_release_zip_unchanged": true,
+  "limits": "Local Windows 11; isolated paths/environment, not a clean-machine claim; synthetic tests only at build stage."
+}

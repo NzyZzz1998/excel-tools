@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">合并单元格拆分前后示意</title>
+  <desc id="desc">处理前，华东仓占用一个跨三行的合并单元格；处理后，三行分别填入华东仓，对应数量120、80、60保持不变。图中全部为虚构示例。</desc>
+  <rect width="1200" height="440" rx="20" fill="#f4f8f5"/>
+  <g font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" fill="#172c23">
+    <text x="66" y="70" font-size="40" font-weight="600">处理前</text>
+    <text x="690" y="70" font-size="40" font-weight="600">处理后</text>
+    <g id="before-table">
+      <rect x="64" y="104" width="444" height="272" rx="8" fill="#ffffff" stroke="#c6d7cd" stroke-width="2"/>
+      <path d="M64 176H508 M304 104V376 M304 244H508 M304 312H508" stroke="#c6d7cd" stroke-width="2"/>
+      <rect x="66" y="178" width="236" height="196" fill="#e2f0e7"/>
+      <g font-size="36" text-anchor="middle">
+        <text x="184" y="154" fill="#536b5d">仓库</text>
+        <text x="406" y="154" fill="#536b5d">数量</text>
+        <text x="184" y="288" font-weight="600" fill="#187345">华东仓</text>
+        <text x="406" y="222">120</text>
+        <text x="406" y="290">80</text>
+        <text x="406" y="358">60</text>
+      </g>
+    </g>
+    <path d="M558 244H635 M617 226L635 244L617 262" fill="none" stroke="#187345" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g id="after-table">
+      <rect x="688" y="104" width="444" height="272" rx="8" fill="#ffffff" stroke="#c6d7cd" stroke-width="2"/>
+      <rect x="690" y="178" width="236" height="196" fill="#e2f0e7"/>
+      <path d="M688 176H1132 M928 104V376 M688 244H1132 M688 312H1132" stroke="#c6d7cd" stroke-width="2"/>
+      <g font-size="36" text-anchor="middle">
+        <text x="808" y="154" fill="#536b5d">仓库</text>
+        <text x="1030" y="154" fill="#536b5d">数量</text>
+        <g font-weight="600" fill="#187345">
+          <text x="808" y="222">华东仓</text>
+          <text x="808" y="290">华东仓</text>
+          <text x="808" y="358">华东仓</text>
+        </g>
+        <text x="1030" y="222">120</text>
+        <text x="1030" y="290">80</text>
+        <text x="1030" y="358">60</text>
+      </g>
+    </g>
+  </g>
+</svg>

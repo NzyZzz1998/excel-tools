@@ -1,5 +1,6 @@
 """Exercise the real Tk window; business fixtures stay in temporary directories."""
 
+import queue
 import tempfile
 import threading
 import time
@@ -11,7 +12,7 @@ from unittest.mock import patch
 
 from openpyxl import Workbook
 
-from excel_unmerge_gui import Application
+from excel_unmerge_gui import APP_VERSION, Application
 from excel_unmerge_fill import process_file
 
 
@@ -45,6 +46,193 @@ class WindowTests(unittest.TestCase):
             self.root.update()
             time.sleep(0.01)
         self.assertFalse(self.app.running, "Batch did not finish")
+
+    def wait_for(self, condition):
+        deadline = time.monotonic() + 5
+        while not condition() and time.monotonic() < deadline:
+            self.root.update()
+            time.sleep(0.01)
+        self.assertTrue(condition(), "Window did not reach the expected state")
+
+    def test_elapsed_and_real_phases_do_not_advance_file_completion(self):
+        source = str(self.folder / "慢速合成.xlsx")
+        commands = queue.Queue()
+        self.app.files = (source,)
+
+        def slow_process(file, all_merges, progress=None):
+            progress(dict(phase="reading", sheet="测试表", completed=1200,
+                          total=None, unit="rows"))
+            while True:
+                detail = commands.get(timeout=5)
+                if detail is None:
+                    return None, []
+                progress(detail)
+
+        with patch("excel_unmerge_gui.process_file", side_effect=slow_process):
+            self.app.start()
+            try:
+                self.wait_for(lambda: "1,200 行" in self.app.status.get())
+                self.assertIn("读取", self.app.status.get())
+                self.assertIn("测试表", self.app.status.get())
+                self.assertNotIn("%", self.app.status.get())
+                self.assertNotIn("1,200 行 /", self.app.status.get())
+                self.assertEqual(self.app.completed, 0)
+                self.assertEqual(float(self.app.progress["value"]), 0)
+                self.assertEqual(float(self.app.progress["maximum"]), 1)
+
+                # Advance the per-file origin, then let the real 100ms Tk poll
+                # refresh elapsed time without any further worker notification.
+                self.app.current_file_started_at -= 65
+                self.wait_for(lambda: "已用时 01:" in self.app.status.get())
+                commands.put(dict(phase="filling", sheet="测试表", completed=1200,
+                                  total=3000, unit="rows"))
+                self.wait_for(lambda: "填充" in self.app.status.get())
+                self.assertIn("1,200 行 / 3,000 行", self.app.status.get())
+                commands.put(dict(phase="saving", sheet=None, completed=4096,
+                                  total=8192, unit="bytes"))
+                self.wait_for(lambda: "保存" in self.app.status.get())
+                self.assertIn("4,096 字节 / 8,192 字节", self.app.status.get())
+                self.assertEqual(float(self.app.progress["value"]), 0)
+
+                self.app.close()
+                stopped_status = self.app.status.get()
+                commands.put(dict(phase="saving", sheet=None, completed=8192,
+                                  total=8192, unit="bytes"))
+                self.wait_for(lambda: self.app.current_detail.get("completed") == 8192)
+                self.assertEqual(self.app.status.get(), stopped_status)
+                self.assertTrue(self.root.winfo_exists())
+                self.assertTrue(self.app.running)
+                self.assertEqual(self.app.completed, 0)
+            finally:
+                commands.put(None)
+                self.finish()
+        final_status = self.app.status.get()
+        self.app.refresh_running_status()
+        self.assertEqual(self.app.status.get(), final_status)
+        self.assertIsNone(self.app.current_file_started_at)
+        self.assertIn("上次任务已处理 1/1", final_status)
+        self.assertNotIn("已用时", final_status)
+        self.assertEqual(float(self.app.progress["value"]), 1)
+        self.assertEqual(APP_VERSION, "1.1.1")
+        self.assertIn("v1.1.1", self.root.title())
+
+    def test_elapsed_restarts_for_each_file(self):
+        first, later = "合成第一份.xlsx", "合成第二份.xlsx"
+        self.app.files = self.app.run_files = (first, later)
+        self.app.file_states = {first: "pending", later: "pending"}
+        self.app.running = True
+        self.app.events.put(("started", first, 1, 2))
+        self.app.poll_results()
+        self.app.current_file_started_at -= 65
+        self.app.refresh_running_status()
+        self.assertIn("已用时 01:", self.app.status.get())
+        self.app.events.put(("result", first, None, [], None))
+        self.app.events.put(("started", later, 2, 2))
+        self.app.poll_results()
+        self.assertIn(later, self.app.status.get())
+        self.assertIn("已用时 00:00", self.app.status.get())
+        self.assertIn("本轮第 2/2 个，已完成 1 个", self.app.status.get())
+        self.assertEqual(float(self.app.progress["value"]), 1)
+        self.app.events.put(("result", later, None, [], None))
+        self.app.events.put(("done", 2, 0, ()))
+        self.app.poll_results()
+        self.assertFalse(self.app.running)
+
+    def test_progress_after_error_cannot_overwrite_failure_or_done_status(self):
+        source = str(self.folder / "合成失败.xlsx")
+        self.app.files = (source,)
+        self.app.run_files = (source,)
+        self.app.file_states = {source: "pending"}
+        self.app.running = True
+        self.app.events.put(("started", source, 1, 1))
+        self.app.events.put(("progress", source, dict(
+            phase="reading", sheet=None, completed=10, total=None, unit="rows")))
+        self.app.events.put(("result", source, None, [], "合成错误"))
+        self.app.events.put(("progress", source, dict(
+            phase="saving", sheet=None, completed=20, total=20, unit="bytes")))
+        self.app.poll_results()
+        failed_status = self.app.status.get()
+        self.assertIn("失败", failed_status)
+        self.assertNotIn("已用时", failed_status)
+        self.assertIsNone(self.app.current_file_started_at)
+        self.app.refresh_running_status()
+        self.assertEqual(self.app.status.get(), failed_status)
+        self.app.events.put(("done", 1, 1, ()))
+        self.app.poll_results()
+        done_status = self.app.status.get()
+        self.app.events.put(("progress", source, dict(
+            phase="reading", sheet=None, completed=30, total=None, unit="rows")))
+        self.app.poll_results()
+        self.assertEqual(self.app.status.get(), done_status)
+        self.assertIsNone(self.app.current_detail)
+        self.assertEqual(self.app.failed_files, (source,))
+
+    def check_recovery_displays_old_target_and_keeps_next_selection(self, state):
+        old = str(self.folder / "上次任务A.xlsx")
+        new = str(self.folder / "待开始B.xlsx")
+        self.app.files = (old,)
+        self.app.file_states = {old: state}
+        self.app.batch_all_merges = False
+        self.app.update_counts()
+        with patch("excel_unmerge_gui.filedialog.askopenfilenames", return_value=(new,)):
+            self.app.choose()
+        self.assertEqual(self.app.files, (new,))
+        self.assertIn(new, self.app.file_list.get("1.0", "end"))
+        self.assertIn("待开始", self.app.input_frame.cget("text"))
+        self.assertIn("恢复按钮仍处理上次任务", self.app.status.get())
+        button = self.app.retry_button if state == "failed" else self.app.resume_button
+        self.assertIn("上次", button.cget("text"))
+        self.assertIn("（1）", button.cget("text"))
+        self.app.all_merges.set(True)
+        entered = threading.Event()
+        release = threading.Event()
+        processed = []
+
+        def process(file, all_merges, progress=None):
+            processed.append((file, all_merges))
+            if file == old:
+                entered.set()
+                if not release.wait(5):
+                    raise AssertionError("Recovery was not released")
+            return None, []
+
+        with patch("excel_unmerge_gui.process_file", side_effect=process):
+            if state == "failed":
+                self.app.retry_failed()
+            else:
+                self.app.resume_pending()
+            try:
+                self.assertTrue(entered.wait(5))
+                self.wait_for(lambda: self.app.current_file == old)
+                self.assertEqual(self.app.files, (new,))
+                self.assertEqual(self.app.file_list.get("1.0", "end-1c"), old)
+                self.assertIn("上次任务", self.app.input_frame.cget("text"))
+                self.assertIn(Path(old).name, self.app.status.get())
+                self.assertNotIn(Path(new).name, self.app.status.get())
+                self.assertIs(self.app.all_merges.get(), False)
+            finally:
+                release.set()
+                self.finish()
+            self.assertEqual(self.app.files, (new,))
+            self.assertEqual(self.app.file_list.get("1.0", "end-1c"), new)
+            self.assertIn("待开始", self.app.input_frame.cget("text"))
+            self.assertIn("上次任务已处理 1/1", self.app.status.get())
+            self.assertIn("待开始选择已保留（1 个）", self.app.status.get())
+            self.assertIn(old, self.app.results.get("1.0", "end"))
+            self.assertNotIn(new, self.app.results.get("1.0", "end"))
+            self.app.all_merges.set(True)
+            self.app.start()
+            self.finish()
+        self.assertEqual(processed, [(old, False), (new, True)])
+        self.assertEqual(tuple(self.app.file_states), (new,))
+        self.assertIn(new, self.app.results.get("1.0", "end"))
+        self.assertNotIn(old, self.app.results.get("1.0", "end"))
+
+    def test_retry_shows_old_task_then_starts_preserved_new_selection(self):
+        self.check_recovery_displays_old_target_and_keeps_next_selection("failed")
+
+    def test_resume_shows_old_task_then_starts_preserved_new_selection(self):
+        self.check_recovery_displays_old_target_and_keeps_next_selection("pending")
 
     def test_result_directory_unavailable_until_output_exists(self):
         button = getattr(self.app, "open_button", None)
@@ -125,12 +313,12 @@ class WindowTests(unittest.TestCase):
         entered = threading.Event()
         release = threading.Event()
 
-        def delayed_process(file, all_merges):
+        def delayed_process(file, all_merges, progress=None):
             if file == str(first):
                 entered.set()
                 if not release.wait(5):
                     raise AssertionError("Current file was not released")
-            return process_file(file, all_merges=all_merges)
+            return process_file(file, all_merges=all_merges, progress=progress)
 
         with patch("excel_unmerge_gui.process_file", side_effect=delayed_process) as mocked:
             self.app.start()
@@ -171,7 +359,7 @@ class WindowTests(unittest.TestCase):
         later = self.workbook("继续.xlsx", True)
         self.app.files = tuple(map(str, (first, later)))
 
-        def fail_and_stop(file, all_merges):
+        def fail_and_stop(file, all_merges, progress=None):
             self.app.stop_event.set()
             raise PermissionError("test access denied")
 
@@ -238,11 +426,18 @@ class WindowTests(unittest.TestCase):
         self.check_thread_memory_failure_recovery("excel_unmerge_gui.threading.Thread.start", "启动")
 
     def test_new_controls_fit_minimum_window_width(self):
+        self.app.file_states = {"failed-{}.xlsx".format(index): "failed" for index in range(100)}
+        self.app.file_states.update({"pending-{}.xlsx".format(index): "pending" for index in range(100)})
+        self.app.update_counts()
         self.root.geometry("{}x{}".format(*self.root.minsize()))
+        self.app.status.set("正在处理：" + "合成明细" * 10
+                            + ".xlsx（本轮第 1/100 个，已完成 0 个）\n"
+                            "填充 · 工作表：合成测试 · 已处理 100,000 行 / 757,636 行 · 已用时 06:46")
         self.root.update()
         for button in (self.app.start_button, self.app.open_button,
                        self.app.retry_button, self.app.resume_button, self.app.stop_button):
             self.assertTrue(button.winfo_ismapped())
+            self.assertGreaterEqual(button.winfo_width(), button.winfo_reqwidth())
             self.assertLessEqual(button.winfo_rootx() + button.winfo_width(),
                                  self.root.winfo_rootx() + self.root.winfo_width())
 

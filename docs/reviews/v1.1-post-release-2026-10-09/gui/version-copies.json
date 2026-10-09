@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-10-09T11:18:36.4276467Z",
+  "method": "Read-only file hashes and existing recorded window titles; no EXE launch, PID enumeration, or user-instance identification.",
+  "source_lines": [
+    "excel_unmerge_gui.py:24-25",
+    "excel_unmerge_gui.py:116"
+  ],
+  "local_copies": [
+    {
+      "sha256": "066CA4A1C7FE7FD2AC80A06DDC3969DBD178F5181983D8767D2C219078485D5C",
+      "file_version": null,
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\app\\ExcelTools.exe",
+      "product_version": null,
+      "historically_recorded_title": "Excel 数据处理工具 v1.1",
+      "title_source": "testfile/验收_v1.1_2026-10-09/fixed/exe/gui-probe.json"
+    },
+    {
+      "sha256": "239B1456771AE417F044DFD1AC2642F7AC36DE7BC3781C6D2AC3DDC75D2D7EA4",
+      "file_version": null,
+      "path": "E:\\codex\\excel-tools\\testfile\\大文件验收_v1.1_2026-10-09\\exe-check\\app\\ExcelTools.exe",
+      "product_version": null,
+      "historically_recorded_title": "Excel 数据处理工具 v1.1",
+      "title_source": "docs/releases/v1.1/monthly-data-acceptance-2026-10-09/exe/execution.json (same released EXE hash)"
+    }
+  ],
+  "user_running_instance": "Not inspected or operated; this record makes no claim about which copy the user is running."
+}
