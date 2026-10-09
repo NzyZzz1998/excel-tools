@@ -23,3 +23,5 @@ Only the test assertion changed. Application identities remain:
 - GUI SHA-256: `50ea03ad60ed6f86003132b9d4c951213f5f01b6c202a677bf765a8df01d2094`.
 
 No application rebuild or business workbook rerun was performed.
+
+Final verification: [CI 37956614673](https://github.com/NzyZzz1998/excel-tools/actions/runs/37956614673), at commit `96b6a6ea4ae2c47c0fe50540cb326835bb907c4c`, passed source tests, packaging and the portable self-test. This closes the runner path-alias failure; earlier observations above remain the historical record.

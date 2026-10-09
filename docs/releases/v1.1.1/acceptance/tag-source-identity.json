@@ -1,0 +1,27 @@
+{
+  "tag": "v1.1.1",
+  "tag_commit": "96b6a6ea4ae2c47c0fe50540cb326835bb907c4c",
+  "files": [
+    {
+      "file": "excel_unmerge_fill.py",
+      "git_blob_sha256": "b6dfa4a539674dddfe24265731335d5fbfc91b5d47ba3ad1201f1d6b4d820035",
+      "frozen_windows_sha256": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+      "git_crlf": 0,
+      "frozen_crlf": 873,
+      "only_crlf_lf_difference": true,
+      "same_after_crlf_to_lf": true,
+      "working_matches_frozen_bytes": true
+    },
+    {
+      "file": "excel_unmerge_gui.py",
+      "git_blob_sha256": "d86a853477541d3fe4748eba026adda0cbf27e8910772128fde86c9fbdafb607",
+      "frozen_windows_sha256": "50ea03ad60ed6f86003132b9d4c951213f5f01b6c202a677bf765a8df01d2094",
+      "git_crlf": 0,
+      "frozen_crlf": 580,
+      "only_crlf_lf_difference": true,
+      "same_after_crlf_to_lf": true,
+      "working_matches_frozen_bytes": true
+    }
+  ],
+  "note": "Git normalizes CRLF to LF. Frozen Windows byte hashes remain unchanged; normalized source content matches the tag."
+}

@@ -26,3 +26,7 @@ CI 的 `test_resume_shows_old_task_then_starts_preserved_new_selection` 附近�
 - GUI SHA256仍为 `50ea03ad60ed6f86003132b9d4c951213f5f01b6c202a677bf765a8df01d2094`；引擎仍为 `602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3`。
 
 本轮没有重跑月表、构建或操作用户正在使用的程序。清理断言用于防止测试对象跨用例残留；远端CI是否恢复通过由重跑结果决定。
+
+## 远端复验关闭
+
+`37956290587` 已完整通过所有GUI用例，剩余失败是独立的临时目录长短名称断言，见[路径别名修正](ci-path-alias.md)。最终[CI 37956614673](https://github.com/NzyZzz1998/excel-tools/actions/runs/37956614673)的源码测试、打包与便携自检全部通过，故本项已关闭。上文保留故障诊断时的观察边界。

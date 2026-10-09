@@ -1,16 +1,18 @@
 入口判断：/acceptance → 发布收口
 
-交付模式：Vibe Coding 全流程型。结论：**本地候选通过，可按既有授权提交、推送、发布并公开仓库**；远端 CI、正式附件和公开状态尚待执行。本记录不将准备动作称为已发布。
+交付模式：Vibe Coding 全流程型。结论：**本地验收及远端CI通过，v1.1.1正式发布，仓库已公开**。正式附件重新下载的ZIP/EXE哈希与实际月表验收包相同，隔离自检退出0；详见[发布记录](../release-record.md)。
 
 # v1.1.1 验收
 
-合同：[PRD](../prd_v1.1.1.md)，承接 I-01/I-02/I-03。应用源基线4e013c4加本轮改动；完整冻结文件/测试/依赖身份见[构建manifest](build/verification-manifest.json)。
+合同：[PRD](../prd_v1.1.1.md)，承接 I-01/I-02/I-03。正式tag `v1.1.1` 指向 `96b6a6ea4ae2c47c0fe50540cb326835bb907c4c`，应用源码与原冻结候选相同；冻结文件/测试/依赖身份见[构建manifest](build/verification-manifest.json)，后续测试夹具修正单独记录。
 
 - 引擎 SHA256：`602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3`。
 - GUI SHA256：`50ea03ad60ed6f86003132b9d4c951213f5f01b6c202a677bf765a8df01d2094`。
 - EXE SHA256：`b5eca2e5837698e677bdb3f6b9bf844275f734ba0ce7643275fd46871ccaa2ed`。
 - 本地 ZIP：`dist/ExcelTools-v1.1.1-Windows-x64.zip`；SHA256 `7d3954b5a898c14f42aef8c8881acd8f075097d941689204c68e18faa4c45b52`。
 - Python3.12.8 / PyInstaller6.22.3 / openpyxl3.1.5；本机Windows11。旧v1.1 ZIP哈希保持不变。
+
+以上应用源SHA是冻结Windows文件字节；Git blob正规化为LF后SHA不同。[tag源码核对](tag-source-identity.json)同时记录两种SHA，确认只有CRLF/LF差异、当前工作区与冻结文件逐字节相同。
 
 ## 预期与实际
 
@@ -35,10 +37,12 @@
 
 首次远端 Windows CI `37955040642` 在 GUI 测试中出现 Tk 跨线程析构错误并退出1。已将测试清理改为主线程显式释放应用/窗口引用并回收，逐个测试用弱引用断言清理完成；本地115项复测通过。独立探针证实旧清理仍持有四类Tk相关对象，新清理后全部释放；没有宣称复现远端随机GC时序的唯一原因。详见[CI生命周期修正](ci-lifecycle.md)。引擎和GUI源码SHA保持不变，因此冻结EXE、独立保存故障和真实月表证据仍对应同一应用。
 
+第二轮CI `37956290587` 的全部GUI用例通过，完整115项测试报告一处临时目录长短名称比较失败。将该测试改为 `samefile()` 比较实际目录身份，保留所有异常、残片及源保护断言；本地14项针对性回归通过，见[路径别名修正](ci-path-alias.md)。这是测试断言修正，应用SHA仍未改变。
+
 未新增验证：月表全部拆分模式、更大的全月明细、干净Windows、WPS、真实断电持久性。POSIX发布分支有单元测试但未实跑其他OS；结果原子命名不等于fsync/断电恢复保证。没有中途取消或跨重启恢复。
 
 ## README 与公开
 
 [README四组预览与事实校对](../readme-validation.md)通过；[公开适宜性](../public-readiness.md)覆盖当前内容及本地可达历史。主方另核对后续月表结果截图/JSON、本报告及提交增量，没有加入业务工作簿、凭据或业务单元格原值。远端 `git ls-remote --heads --tags` 仅有main/v1.0.0/v1.1，全部提交在本地已审查main历史中，不存在新增远端专有分支。
 
-源码可公开；便携候选可发布；不存在安装器或商店发布面。用户已明确授权提交/推送/公开，tag和Release沿用本会话“没问题就发布”的条件授权。远端操作完成后，将实际提交、CI、tag、下载哈希和visibility回写版本progress及发布记录。
+用户已明确授权提交/推送/公开，tag和Release沿用本会话“没问题就发布”的条件授权。[最终CI](https://github.com/NzyZzz1998/excel-tools/actions/runs/37956614673)的源码测试、构建、便携隔离自检及资产上传全部成功，见[元数据](ci-success.json)。[正式下载验证](release-download/release-download-verification.json)通过，ZIP与EXE身份一致，CRC及隔离自检通过。[匿名API回读](release-publication.json)确认仓库public、Latest为正式v1.1.1；发布于北京时间2026-10-10 00:07:56。不存在安装器或商店发布面。

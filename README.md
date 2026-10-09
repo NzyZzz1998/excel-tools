@@ -6,7 +6,7 @@
 
 **[下载 Windows 免安装版](https://github.com/NzyZzz1998/excel-tools/releases/latest/download/ExcelTools-Windows-x64.zip)** · [使用说明](使用说明.md) · [版本记录](https://github.com/NzyZzz1998/excel-tools/releases)
 
-> 下载入口当前指向已发布的 **v1.1**。**v1.1.1 已完成本地验收**，新增处理阶段与计时、完整保存后生成正式结果，以及更清楚的任务恢复提示；[查看进度](docs/releases/v1.1.1/progress_v1.1.1.md)。
+> 最新版 **[v1.1.1](https://github.com/NzyZzz1998/excel-tools/releases/tag/v1.1.1)** 已发布：新增处理阶段与计时、完整保存后生成正式结果，以及更清楚的任务恢复提示。下载后请核对窗口标题中的版本号。
 
 ![虚构示例：华东仓从跨三行的合并单元格，变为每行各填一次；数量120、80、60保持不变。](assets/readme/merge-example.svg)
 

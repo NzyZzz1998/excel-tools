@@ -1,0 +1,42 @@
+{
+  "recorded_utc": "2026-10-09T16:09:15.552713+00:00",
+  "app_version": "1.1.1",
+  "passed": true,
+  "stage": "complete",
+  "script_sha256": "a8cf08df913fc5494be825f21ce2b49be1a095f03223774292eaa9a13d406717",
+  "timeout_seconds": 90,
+  "limits": "Local Windows self-test in isolated paths and environment; not a clean-machine or business-workbook acceptance test.",
+  "manifest_sha256": "4d08454d415e7536c31d010b59ac6469bcc476196ce322ff666bdc29d6249c90",
+  "expected_zip_sha256": "7d3954b5a898c14f42aef8c8881acd8f075097d941689204c68e18faa4c45b52",
+  "expected_exe_sha256": "b5eca2e5837698e677bdb3f6b9bf844275f734ba0ce7643275fd46871ccaa2ed",
+  "downloaded_zip_sha256": "7d3954b5a898c14f42aef8c8881acd8f075097d941689204c68e18faa4c45b52",
+  "members": [
+    {
+      "name": "ExcelTools.exe",
+      "size_bytes": 12444848,
+      "compressed_bytes": 12168215,
+      "crc32": "f7314237"
+    },
+    {
+      "name": "使用说明.txt",
+      "size_bytes": 3490,
+      "compressed_bytes": 1931,
+      "crc32": "f229c80e"
+    }
+  ],
+  "zip_crc_passed": true,
+  "work_directory_relative_to_repo": "testfile/v1.1.1-release-download-jy0rqvfl",
+  "extracted_exe_sha256": "b5eca2e5837698e677bdb3f6b9bf844275f734ba0ce7643275fd46871ccaa2ed",
+  "isolation": {
+    "chinese_and_space_paths": true,
+    "cwd_differs_from_exe_directory": true,
+    "python_tcl_tk_conda_environment_removed": true,
+    "path_only_system32": true,
+    "hidden_launch": true
+  },
+  "self_test_exit_code": 0,
+  "self_test_log_sha256": "0c4f279e8ab7c3d3ed4e057d76b5d18982e787b9f7361e6c0c2e53af33020908",
+  "zip_unchanged": true,
+  "extracted_exe_unchanged": true,
+  "elapsed_seconds": 1.485
+}

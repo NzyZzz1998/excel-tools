@@ -38,3 +38,24 @@
 - [源码自检](acceptance/gui/source-self-test.txt)，SHA256 `0c4f279e8ab7c3d3ed4e057d76b5d18982e787b9f7361e6c0c2e53af33020908`，与原 `.log` 相同。
 
 两份 `.txt` 未被Git忽略。此操作没有重跑或改写既有测试结论。
+
+## 正式发布后的最终补验（2026-10-10，北京时间）
+
+最终冻结 README SHA256：`adf0f4e6753dd7a9907a651bb0033b90b11658515c9bdbbb6ca26a0cc4c8ca8e`；SVG 仍为 `40d70b94d5cd12e9960143d7e971f3296e8ea3831fa13b5f4cef2873f9eb2b82`。本节对应正式发布后的 README，前文较早 SHA 及 Latest=v1.1 的记录保留为当时快照，不作为当前下载状态。
+
+独立调用 GitHub `GET /repos/NzyZzz1998/excel-tools/releases/latest`，确认 [Latest 已是 v1.1.1](https://github.com/NzyZzz1998/excel-tools/releases/tag/v1.1.1)，`draft=false`、`prerelease=false`，发布时间为 `2026-10-09T16:07:56Z`。附件 `ExcelTools-Windows-x64.zip` 为 **12,170,380 字节**，API digest 为 `sha256:7d3954b5a898c14f42aef8c8881acd8f075097d941689204c68e18faa4c45b52`，与[已验收构建记录](acceptance/build/verification-manifest.json)一致。README 的 Latest 下载路径与该资产名称吻合，版本直达链接也指向该正式 Release。第一次 API 请求遇到 EOF，有限重试一次后成功；本轨道只查询元数据，下载字节及公开可见性的验证由主方单独记录。
+
+第一屏已明确“最新版 v1.1.1 已发布”，没有沿用开发中提示；历史 v1.1 测量与 v1.1.1 复验仍清楚区分。104MB 月表约 6 分 43 秒／296 MiB、115 项回归和 9 项独立验收的表述有[本版验收报告](acceptance/report.md)支持，没有新增速度或平台保证。六个唯一仓库相对目标全部存在：使用说明、SVG、两份历史大表报告、本版验收报告和开发说明。
+
+再次用 GitHub GFM HTML、相同本地 CSS 与 Edge headless 渲染全部四组，逐张检查四张首屏和四张全页截图：
+
+| 视口／主题 | 页面宽度 | 图像显示宽度 | 最终结果 |
+|---|---:|---:|---|
+| 900px / light | 900px | 852px | 无横向溢出、缺图或页面错误；下载及版本提示清楚 |
+| 900px / dark | 900px | 852px | 同上，正文、表格和示意图对比可读 |
+| 360px / light | 360px | 328px | 无页面横向溢出，版本提示自然换行，章节及表格未重叠 |
+| 360px / dark | 360px | 328px | 同上，最后的开发命令及反馈说明可见 |
+
+`beautify-github-readme/scripts/audit_readme.py` 再次通过；SVG没有脚本或 `foreignObject`。手机图内文字较小的原有限制仍存在，紧邻正文及替代文本完整表达规则；代码块使用局部横向滚动，不造成整页横向溢出。
+
+旧 `testfile/readme-preview-v1.1.1/` 预览完整保留；本次 HTML、输入、同源脚本、8 张截图和 `preview-evidence.json` 另存到 ignored `testfile/readme-preview-v1.1.1-final/`。没有覆盖旧证据，也没有修改 README、SVG、应用或测试。上述渲染为 GitHub GFM 加本地样式的验证，不声称是公开 GitHub 完整页面的像素复刻。

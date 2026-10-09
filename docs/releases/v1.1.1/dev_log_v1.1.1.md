@@ -21,3 +21,7 @@
 实现与本地验收证据已提交为 `1a928e7` 并推送。首轮 Windows CI `37955040642` 在 GUI 回归中发生 `RuntimeError: main thread is not in main loop`，随后 `Tcl_AsyncDelete: async handler deleted by the wrong thread`；保留失败记录，在修正和重新验证前不发布。此次失败没有覆盖或替换已经通过月表测试的候选包。
 
 `3e26aa9` 修正测试夹具销毁后仍持有Tk对象的生命周期，主线程释放并用弱引用断言验证。第二轮CI `37956290587` 全部GUI用例通过，完整执行115项后报告一处引擎测试断言失败：`runneradmin` 与 `RUNNER~1` 指向同一Windows临时目录，原断言比较了路径写法。首轮日志也已有该用例FAIL标记，但在Tk中止前未输出完整失败详情；第二轮给出了明确的长短路径差异。将该断言改为目录身份比较，不修改应用源码或重建候选。
+
+`96b6a6e` 修正目录身份断言后，Windows CI `37956614673` 的测试、构建、隔离便携自检与资产上传全部通过。正式annotated tag `v1.1.1` 指向该提交，上传本地真实月表验收过的同一ZIP；并非用另一个构建替代已测包。Release于UTC2026-10-09 16:07:56发布为Latest，重新下载后ZIP/EXE哈希一致且隔离自检退出0。
+
+按用户授权将仓库改为public；匿名GitHub API回读仓库及Latest均返回200，visibility为public。README同步实际最新版，最终文档记录和回归证据随收口提交推送。首次push及visibility更新遇到网络EOF/TLS失败时，先核对实际状态再重试，未误把失败请求称为完成。公开增量只含测试适配、状态、哈希与日志，没有加入业务原件或原值。
