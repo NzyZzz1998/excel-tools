@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "captured_utc": "2026-10-08T16:25:46.944309+00:00",
+  "exe_sha256": "066CA4A1C7FE7FD2AC80A06DDC3969DBD178F5181983D8767D2C219078485D5C",
+  "zip_sha256": "92870BDC52451341C7268F6E1937A3741ECD3E1012DE0CF2E4026C606CCDD4A9",
+  "raw_evidence_root": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe",
+  "method": "Frozen EXE only. Native Win32 file-dialog edit/confirm, guarded real mouse clicks on own Tk controls, PrintWindow after explicit repaint. Screenshots manually inspected. No business-source module imported.",
+  "ui_observations": [
+    {
+      "scenario": "default",
+      "selected_rule_all_merges": false,
+      "selected_source_folder": "default-proof",
+      "processed": 5,
+      "success": 5,
+      "unchanged": 0,
+      "failed": 0,
+      "pending": 0,
+      "screenshot": "default-proof-result-final.png",
+      "note": "Original default execution outputs are separately recorded; proof replay uses identical inputs in another folder and all five resulting archive hashes equal default outputs."
+    },
+    {
+      "scenario": "all",
+      "selected_rule_all_merges": true,
+      "selected_source_folder": "all",
+      "processed": 5,
+      "success": 5,
+      "unchanged": 0,
+      "failed": 0,
+      "pending": 0,
+      "screenshot": "all-result-final.png"
+    },
+    {
+      "scenario": "default-no-match",
+      "selected_rule_all_merges": false,
+      "processed": 5,
+      "success": 0,
+      "unchanged": 5,
+      "failed": 0,
+      "pending": 0,
+      "screenshot": "default-no-match-result-final.png",
+      "file_sha_set_before_equals_after": true
+    },
+    {
+      "scenario": "all-no-match",
+      "selected_rule_all_merges": true,
+      "processed": 5,
+      "success": 0,
+      "unchanged": 5,
+      "failed": 0,
+      "pending": 0,
+      "screenshot": "all-no-match-result-final.png",
+      "file_sha_set_before_equals_after": true
+    }
+  ],
+  "original_input_checks": [
+    {
+      "name": "供应商缺货Top20 (1).xlsx",
+      "sha256": "FFF09AEFF695C865EBEC8723F3F482CD96626F514E33B198432453AAEAB2AA63",
+      "original_and_all_three_copies_unchanged": true
+    },
+    {
+      "name": "库存满足率 (1).xlsx",
+      "sha256": "489AFD7A65DC8FCE54B186AAA28A5882F1DF90A24E0AD059C686C78440F3C498",
+      "original_and_all_three_copies_unchanged": true
+    },
+    {
+      "name": "期间缺货Top20.xlsx",
+      "sha256": "48BEBEAF7C3E3BB77B9CE6405B652C67883E89BE7C697066357AFD2F4C2F2579",
+      "original_and_all_three_copies_unchanged": true
+    },
+    {
+      "name": "每日缺货Top50 (1).xlsx",
+      "sha256": "C8A8326ACED43CA62952583C39666A173F060592C735292FE98383B0D467442B",
+      "original_and_all_three_copies_unchanged": true
+    },
+    {
+      "name": "缺货数据统计.xlsx",
+      "sha256": "097D2B7BFEAA6E8C03A5E041A843B19377CFF7A0AB6844E9B769A591350AFEC1",
+      "original_and_all_three_copies_unchanged": true
+    }
+  ],
+  "accepted_output_checks": [
+    {
+      "mode": "default",
+      "name": "供应商缺货Top20 (1)_拆分填充.xlsx",
+      "sha256": "82A2C653AF16BA6C4779EFB0E30B030947AE5012F42ECA7B863E08E9E1F1680A",
+      "unchanged_since_gui_execution": true,
+      "independent_default_proof_output_identical": true
+    },
+    {
+      "mode": "default",
+      "name": "库存满足率 (1)_拆分填充.xlsx",
+      "sha256": "46FD622330DA7044CD49B161AEA994AC285A340D883F57885F423AC217191143",
+      "unchanged_since_gui_execution": true,
+      "independent_default_proof_output_identical": true
+    },
+    {
+      "mode": "default",
+      "name": "期间缺货Top20_拆分填充.xlsx",
+      "sha256": "83206DCD64B780BC13B1469534CFFDAB794329A7A48794C9AC4C2357A14FC5D8",
+      "unchanged_since_gui_execution": true,
+      "independent_default_proof_output_identical": true
+    },
+    {
+      "mode": "default",
+      "name": "每日缺货Top50 (1)_拆分填充.xlsx",
+      "sha256": "CEBA1FF562DEFD5B2015D284206A585AD61536C405DCDEA7BD9644CAAAAC58A3",
+      "unchanged_since_gui_execution": true,
+      "independent_default_proof_output_identical": true
+    },
+    {
+      "mode": "default",
+      "name": "缺货数据统计_拆分填充.xlsx",
+      "sha256": "ADA6B5E456AF2239A0CCB3A7D3D10D54C323D6C4D9C75CE80D59E7280AD79EBC",
+      "unchanged_since_gui_execution": true,
+      "independent_default_proof_output_identical": true
+    },
+    {
+      "mode": "all",
+      "name": "供应商缺货Top20 (1)_拆分填充.xlsx",
+      "sha256": "5856AF27E4A038AC9217BD8F2311AA230D9E492836DFB2054840864BB98EA5C0",
+      "unchanged_since_gui_execution": true
+    },
+    {
+      "mode": "all",
+      "name": "库存满足率 (1)_拆分填充.xlsx",
+      "sha256": "78836C8898F9EBD6246D3A3B67C77E12AFE2B7202C45BC2431A52895F80B101B",
+      "unchanged_since_gui_execution": true
+    },
+    {
+      "mode": "all",
+      "name": "期间缺货Top20_拆分填充.xlsx",
+      "sha256": "B195A55F035A8707FB8CC37B8C1FBB93260735D14CFE54D7E7F0F4B819C64CC7",
+      "unchanged_since_gui_execution": true
+    },
+    {
+      "mode": "all",
+      "name": "每日缺货Top50 (1)_拆分填充.xlsx",
+      "sha256": "45599EC648B98AABA4BC3125B9CCD6ACAC68A2584A5D2A448AE30C46E8D7674F",
+      "unchanged_since_gui_execution": true
+    },
+    {
+      "mode": "all",
+      "name": "缺货数据统计_拆分填充.xlsx",
+      "sha256": "CDDDC39DD340421C242FA87767EC0217C244AC5311BCCB1136616B170FD05F1D",
+      "unchanged_since_gui_execution": true
+    }
+  ],
+  "final_images": [
+    {
+      "path": "default-proof-result-final.png",
+      "sha256": "B8E2D1DAC9043B1F861D52AF663FA572B078CDE541B5C645F00A20CD963EB38D"
+    },
+    {
+      "path": "all-result-final.png",
+      "sha256": "11B432150F128FD7F1C7599A03DAF924FB31D6E3E147FF7FF52F449D69BD81E3"
+    },
+    {
+      "path": "default-no-match-result-final.png",
+      "sha256": "6F9ED1B6BE4741C9C209D7358DC557076FD08FEF4941EB4B93BFBC1E63D7AD3D"
+    },
+    {
+      "path": "all-no-match-result-final.png",
+      "sha256": "DEB734032F919E884ECEF15F2E1F48723AD125D697E5C2B3438C085BD9C37ADB"
+    }
+  ],
+  "replay_scripts": [
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\native_gui_controller.py",
+      "sha256": "D9C57C58FAA5A3CAE4D5AC73D873FA902E73CC4D3360B261B5DFB7A602E44EFA"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\run_real_exe_batch.py",
+      "sha256": "B9696B77C73E4AA1D117BBEC6D669C966EA92D5A2DCDE107F4AD50DACFA09C5D"
+    }
+  ],
+  "process_cleanup": {
+    "closed_own_gui_pid": 6712,
+    "remaining_processes_at_own_exe_path": []
+  },
+  "limits": [
+    "Earlier images without final suffix captured stale offscreen paint and are not final-state evidence.",
+    "Semantic workbook and Excel COM validation were performed separately by the parent agent.",
+    "All raw workbooks remain local; no business cells appear in these GUI screenshots."
+  ]
+}

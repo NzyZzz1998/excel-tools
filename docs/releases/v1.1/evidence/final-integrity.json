@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "captured_utc": "2026-10-08T15:56:15.303687+00:00",
+  "active_source_checks": [
+    {
+      "path": "excel_unmerge_fill.py",
+      "sha256": "F7A77D0D4DC651A792DE27E3F9D8E2D5E29F0112B66B14641DBDBA42241474A4",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "excel_unmerge_gui.py",
+      "sha256": "0D59D53E067DA326984702ECE5939347448A829012B564363EB9469C42B25F87",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "tests/test_engine_regressions.py",
+      "sha256": "182798440398CDCECB2FD9B3B354E572B3302328B205B070E3CE3BD2BA8783BE",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "tests/test_excel_unmerge.py",
+      "sha256": "B1E8FA062C8182902F587804E31F9D2A0D58E81A02862F46D1881761C4E56D9E",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "tests/test_gui_batch.py",
+      "sha256": "8325821344CF96C78EED808F4B95267FBFD677B69287A494181B6ED0AA9FE05D",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "tests/test_windows_gui_helpers.py",
+      "sha256": "830BDF61E5F5EA1F8D73BBDB18260E1AD3CE2619A499AA067D94FD7FEF847E43",
+      "matches_tested_snapshot": true
+    }
+  ],
+  "package": {
+    "path": "E:\\codex\\excel-tools\\dist\\ExcelTools-v1.1-Windows-x64.zip",
+    "bytes": 12161714,
+    "sha256": "4A0CA98B0F95D172C35A12219E2582EE95FAB39DEC771E74A11EA75C2C97927C",
+    "matches_manifest": true,
+    "members": [
+      "ExcelTools.exe",
+      "使用说明.txt"
+    ]
+  },
+  "executable": {
+    "sha256": "DC7EC7E07092533F67D25A6172995475D432A0CCF76DC351C8B89E6C8B72F9B5",
+    "matches_isolated_self_test_binary": true
+  },
+  "instructions": {
+    "source": "packaging/使用说明.txt",
+    "archive_member": "使用说明.txt",
+    "expected_encoding": "UTF-8 with BOM",
+    "exact_bytes_equal_to_utf8_bom_conversion": true,
+    "source_has_utf8_bom": false,
+    "archive_has_utf8_bom": true,
+    "source_crlf_count": 34,
+    "archive_crlf_count": 34,
+    "sha256": "BA15D33ED8857525346D8D95C6D4F64B7E1FC552DCEE498B0BB04C0F212F0A66"
+  },
+  "note": "The first text comparison normalized source CRLF via Python read_text; direct expected UTF-8 BOM byte comparison confirms exact content. No source instructions or package were changed or rebuilt."
+}

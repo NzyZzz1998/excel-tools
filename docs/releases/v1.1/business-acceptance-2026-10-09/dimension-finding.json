@@ -1,0 +1,313 @@
+{
+  "recorded_at": "2026-10-09T00:17:03.141540+08:00",
+  "status": "confirmed_on_pre_fix_outputs",
+  "finding": "incomplete_output_dimension",
+  "privacy": "Only filenames, cell addresses, counts and hashes; no business values.",
+  "source_report": "engine-content-validation.json",
+  "source_report_sha256": "c91b44a3512dbdd17432899f893bd90eccd646aac726cd64c0df8856a0daadfa",
+  "scenario_count": 10,
+  "sheet_count": 20,
+  "explanation": "Inputs already declared dimension=A1 incorrectly. The pre-fix engine expanded that range only through processed merges, so output declarations still omitted existing ordinary cells. XML content validation passed and no business cell loss is alleged; default streaming readers can stop at the incomplete declaration.",
+  "validation_boundary": "The original validator intentionally excluded dimension and loaded openpyxl with read_only=False. Therefore its old pass established cell/part preservation, not default streaming-reader coverage.",
+  "observations": [
+    {
+      "file_name": "供应商缺货Top20 (1).xlsx",
+      "mode": "default",
+      "source_sha256": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "output_sha256": "fa61357d120d0dc290bc5b1eec174172ad6fe11d73e2d296aa8ca944f3ce613b",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:A21",
+          "actual_cell_bounds": "A1:D22",
+          "physical_output_cells": 87,
+          "physical_cells_outside_declared_dimension": 66,
+          "first_outside_coordinate": "B1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C3",
+          "actual_cell_bounds": "A1:D3",
+          "physical_output_cells": 11,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "D2"
+        }
+      ]
+    },
+    {
+      "file_name": "库存满足率 (1).xlsx",
+      "mode": "default",
+      "source_sha256": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "output_sha256": "eaecbae0d4460a89646aecee82f922aecd0f8ed5f90c3140624bf2402919ca72",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C26",
+          "actual_cell_bounds": "A1:P27",
+          "physical_output_cells": 429,
+          "physical_cells_outside_declared_dimension": 351,
+          "first_outside_coordinate": "D1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C3",
+          "actual_cell_bounds": "A1:D3",
+          "physical_output_cells": 11,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "D2"
+        }
+      ]
+    },
+    {
+      "file_name": "期间缺货Top20.xlsx",
+      "mode": "default",
+      "source_sha256": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "output_sha256": "ea427251d76bc8c163929e715c28c79efc7df13ab426db31e1f6586c2c151671",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:B81",
+          "actual_cell_bounds": "A1:F82",
+          "physical_output_cells": 488,
+          "physical_cells_outside_declared_dimension": 326,
+          "first_outside_coordinate": "C1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C3",
+          "actual_cell_bounds": "A1:D3",
+          "physical_output_cells": 11,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "D2"
+        }
+      ]
+    },
+    {
+      "file_name": "每日缺货Top50 (1).xlsx",
+      "mode": "default",
+      "source_sha256": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "output_sha256": "c4065b40922cc3598153bc6bc4004d332433a49ae2abe95c1da07b3dd2c40bc0",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:D401",
+          "actual_cell_bounds": "A1:AA402",
+          "physical_output_cells": 10847,
+          "physical_cells_outside_declared_dimension": 9243,
+          "first_outside_coordinate": "E1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:B2",
+          "actual_cell_bounds": "A1:C2",
+          "physical_output_cells": 6,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "C1"
+        }
+      ]
+    },
+    {
+      "file_name": "缺货数据统计.xlsx",
+      "mode": "default",
+      "source_sha256": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "output_sha256": "344148a64a70da5b12f48591cb09567476f1eda2f09849f965bab14cb4911178",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C51",
+          "actual_cell_bounds": "A1:I52",
+          "physical_output_cells": 465,
+          "physical_cells_outside_declared_dimension": 312,
+          "first_outside_coordinate": "D1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:B2",
+          "actual_cell_bounds": "A1:C2",
+          "physical_output_cells": 6,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "C1"
+        }
+      ]
+    },
+    {
+      "file_name": "供应商缺货Top20 (1).xlsx",
+      "mode": "all",
+      "source_sha256": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "output_sha256": "bd35055f35e813e88883112c88754b6686cb1f9b475af7d83d66f153a1d3e776",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:B22",
+          "actual_cell_bounds": "A1:D22",
+          "physical_output_cells": 88,
+          "physical_cells_outside_declared_dimension": 44,
+          "first_outside_coordinate": "C1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C3",
+          "actual_cell_bounds": "A1:D3",
+          "physical_output_cells": 11,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "D2"
+        }
+      ]
+    },
+    {
+      "file_name": "库存满足率 (1).xlsx",
+      "mode": "all",
+      "source_sha256": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "output_sha256": "707ad8b6eb0728d56803d3804d0de8605042c3cc9b60520c6d0fa936a0cebf65",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:D27",
+          "actual_cell_bounds": "A1:P27",
+          "physical_output_cells": 432,
+          "physical_cells_outside_declared_dimension": 324,
+          "first_outside_coordinate": "E1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C3",
+          "actual_cell_bounds": "A1:D3",
+          "physical_output_cells": 11,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "D2"
+        }
+      ]
+    },
+    {
+      "file_name": "期间缺货Top20.xlsx",
+      "mode": "all",
+      "source_sha256": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "output_sha256": "42b196f930f8b6209b8d7b15606d6cdba6c28cb2e02aa0fb4fdb9e27d3cc85aa",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:E82",
+          "actual_cell_bounds": "A1:F82",
+          "physical_output_cells": 492,
+          "physical_cells_outside_declared_dimension": 82,
+          "first_outside_coordinate": "F1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:C3",
+          "actual_cell_bounds": "A1:D3",
+          "physical_output_cells": 11,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "D2"
+        }
+      ]
+    },
+    {
+      "file_name": "每日缺货Top50 (1).xlsx",
+      "mode": "all",
+      "source_sha256": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "output_sha256": "6b960ab5a1fc5a0f9798effdf966040c0acd2ea2907ba3a4398ccb137567c1b4",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:H402",
+          "actual_cell_bounds": "A1:AA402",
+          "physical_output_cells": 10854,
+          "physical_cells_outside_declared_dimension": 7638,
+          "first_outside_coordinate": "I1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:B2",
+          "actual_cell_bounds": "A1:C2",
+          "physical_output_cells": 6,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "C1"
+        }
+      ]
+    },
+    {
+      "file_name": "缺货数据统计.xlsx",
+      "mode": "all",
+      "source_sha256": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "output_sha256": "7d5641775f706960694994d509d12e1163b15dc8e7967ddbaf7435cab6a6c62e",
+      "hashes_match_original_validation_record": true,
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:D52",
+          "actual_cell_bounds": "A1:I52",
+          "physical_output_cells": 468,
+          "physical_cells_outside_declared_dimension": 260,
+          "first_outside_coordinate": "E1"
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_dimension": "A1",
+          "output_dimension": "A1:B2",
+          "actual_cell_bounds": "A1:C2",
+          "physical_output_cells": 6,
+          "physical_cells_outside_declared_dimension": 2,
+          "first_outside_coordinate": "C1"
+        }
+      ]
+    }
+  ],
+  "fix_scope": "On processed worksheets with a dimension element, extend the prior range to include all physical cells and remaining merged ranges. Do not shrink the prior range or rewrite unmatched sheets.",
+  "fix_source_sha256": "95b5455b5d10aab9436a8842bbc27f6814485c037247d8320e3c9b1cf81e6e30",
+  "synthetic_regression_evidence": {
+    "before_fix_new_test_failures": 2,
+    "after_fix_engine_regression_tests_passed": 15,
+    "after_fix_existing_engine_tests_passed": 15,
+    "business_values_used_in_tests": false
+  },
+  "rebuild_and_business_rerun_status": "pending parent validation on a newly built candidate"
+}

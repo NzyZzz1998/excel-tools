@@ -1,0 +1,417 @@
+{
+  "revision": "fixed",
+  "update_links": 0,
+  "candidate_package_sha256": "92870bdc52451341c7268f6e1937a3741ecd3e1012de0cf2e4026c606ccdd4a9",
+  "failure_stack": null,
+  "preexisting_excel_pids": [],
+  "excel_executable": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\EXCEL.EXE",
+  "scope_limit": "Normal-mode read-only opening and Excel values, not visual layout or repair-dialog observation; DisplayAlerts disabled. No formula/macros/charts samples present.",
+  "excel_build": 17932.0,
+  "track": "exe",
+  "normal_load_no_recovery": true,
+  "owned_excel_pid": 27880,
+  "excel_version": "16.0",
+  "failure": null,
+  "results": [
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\供应商缺货Top20 (1)_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "default",
+      "file": "供应商缺货Top20 (1).xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$D$22",
+          "grid_cells_checked": 88,
+          "output_used_range": "$A$1:$D$22"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$D$3",
+          "grid_cells_checked": 12,
+          "output_used_range": "$A$1:$D$3"
+        }
+      ],
+      "grid_cells_checked": 100,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\供应商缺货Top20 (1)_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "all",
+      "file": "供应商缺货Top20 (1).xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$D$22",
+          "grid_cells_checked": 88,
+          "output_used_range": "$A$1:$D$22"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$D$3",
+          "grid_cells_checked": 12,
+          "output_used_range": "$A$1:$D$3"
+        }
+      ],
+      "grid_cells_checked": 100,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\库存满足率 (1)_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "default",
+      "file": "库存满足率 (1).xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$P$27",
+          "grid_cells_checked": 432,
+          "output_used_range": "$A$1:$P$27"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$D$3",
+          "grid_cells_checked": 12,
+          "output_used_range": "$A$1:$D$3"
+        }
+      ],
+      "grid_cells_checked": 444,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\库存满足率 (1)_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "all",
+      "file": "库存满足率 (1).xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$P$27",
+          "grid_cells_checked": 432,
+          "output_used_range": "$A$1:$P$27"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$D$3",
+          "grid_cells_checked": 12,
+          "output_used_range": "$A$1:$D$3"
+        }
+      ],
+      "grid_cells_checked": 444,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\每日缺货Top50 (1)_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "default",
+      "file": "每日缺货Top50 (1).xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$AA$402",
+          "grid_cells_checked": 10854,
+          "output_used_range": "$A$1:$AA$402"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$C$2",
+          "grid_cells_checked": 6,
+          "output_used_range": "$A$1:$C$2"
+        }
+      ],
+      "grid_cells_checked": 10860,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\每日缺货Top50 (1)_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "all",
+      "file": "每日缺货Top50 (1).xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$AA$402",
+          "grid_cells_checked": 10854,
+          "output_used_range": "$A$1:$AA$402"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$C$2",
+          "grid_cells_checked": 6,
+          "output_used_range": "$A$1:$C$2"
+        }
+      ],
+      "grid_cells_checked": 10860,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\期间缺货Top20_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "default",
+      "file": "期间缺货Top20.xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$F$82",
+          "grid_cells_checked": 492,
+          "output_used_range": "$A$1:$F$82"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$D$3",
+          "grid_cells_checked": 12,
+          "output_used_range": "$A$1:$D$3"
+        }
+      ],
+      "grid_cells_checked": 504,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\期间缺货Top20_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "all",
+      "file": "期间缺货Top20.xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$F$82",
+          "grid_cells_checked": 492,
+          "output_used_range": "$A$1:$F$82"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$D$3",
+          "grid_cells_checked": 12,
+          "output_used_range": "$A$1:$D$3"
+        }
+      ],
+      "grid_cells_checked": 504,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\缺货数据统计_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "default",
+      "file": "缺货数据统计.xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$I$52",
+          "grid_cells_checked": 468,
+          "output_used_range": "$A$1:$I$52"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$C$2",
+          "grid_cells_checked": 6,
+          "output_used_range": "$A$1:$C$2"
+        }
+      ],
+      "grid_cells_checked": 474,
+      "passed": true
+    },
+    {
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\缺货数据统计_拆分填充.xlsx",
+      "opened_normal_mode": true,
+      "mode": "all",
+      "file": "缺货数据统计.xlsx",
+      "opened_read_only": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "source_used_range": "$A$1:$I$52",
+          "grid_cells_checked": 468,
+          "output_used_range": "$A$1:$I$52"
+        },
+        {
+          "sheet_index": 2,
+          "source_used_range": "$A$1:$C$2",
+          "grid_cells_checked": 6,
+          "output_used_range": "$A$1:$C$2"
+        }
+      ],
+      "grid_cells_checked": 474,
+      "passed": true
+    }
+  ],
+  "client": "Microsoft Excel COM, local installed client",
+  "owned_excel_exited": true,
+  "validation_script_sha256": "284fd73696829d43c5bea06f3ad0c06634cbcc752f80c298cfe88aaf7010bfed",
+  "excel_file_version": "16.0.17932.21000",
+  "saves_performed": 0,
+  "file_hash_checks": [
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\缺货数据统计.xlsx",
+      "unchanged": true,
+      "sha256_after": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "sha256_before": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\每日缺货Top50 (1)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "45599ec648b98aaba4bc3125b9ccd6acac68a2584a5d2a448ae30c46e8d7674f",
+      "sha256_before": "45599ec648b98aaba4bc3125b9ccd6acac68a2584a5d2a448ae30c46e8d7674f"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\库存满足率 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "sha256_before": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\库存满足率 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "sha256_before": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\供应商缺货Top20 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "sha256_before": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\每日缺货Top50 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "sha256_before": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\缺货数据统计.xlsx",
+      "unchanged": true,
+      "sha256_after": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "sha256_before": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\期间缺货Top20.xlsx",
+      "unchanged": true,
+      "sha256_after": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "sha256_before": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\库存满足率 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "sha256_before": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\期间缺货Top20_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "83206dcd64b780bc13b1469534cffdab794329a7a48794c9ac4c2357a14fc5d8",
+      "sha256_before": "83206dcd64b780bc13b1469534cffdab794329a7a48794c9ac4c2357a14fc5d8"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\缺货数据统计_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "ada6b5e456af2239a0ccb3a7d3d10d54c323d6c4d9c75ce80d59e7280ad79ebc",
+      "sha256_before": "ada6b5e456af2239a0ccb3a7d3d10d54c323d6c4d9c75ce80d59e7280ad79ebc"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\期间缺货Top20.xlsx",
+      "unchanged": true,
+      "sha256_after": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "sha256_before": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\供应商缺货Top20 (1)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "82a2c653af16ba6c4779efb0e30b030947ae5012f42eca7b863e08e9e1f1680a",
+      "sha256_before": "82a2c653af16ba6c4779efb0e30b030947ae5012f42eca7b863e08e9e1f1680a"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\期间缺货Top20_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "b195a55f035a8707fb8cc37b8c1fbb93260735d14cfe54d7e7f0f4b819c64cc7",
+      "sha256_before": "b195a55f035a8707fb8cc37b8c1fbb93260735d14cfe54d7e7f0f4b819c64cc7"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\期间缺货Top20.xlsx",
+      "unchanged": true,
+      "sha256_after": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "sha256_before": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\缺货数据统计_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "cdddc39dd340421c242fa87767ec0217c244ac5311bccb1136616b170fd05f1d",
+      "sha256_before": "cdddc39dd340421c242fa87767ec0217c244ac5311bccb1136616b170fd05f1d"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\缺货数据统计.xlsx",
+      "unchanged": true,
+      "sha256_after": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "sha256_before": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\每日缺货Top50 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "sha256_before": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\每日缺货Top50 (1)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "ceba1ff562defd5b2015d284206a585ad61536c405dcdea7bd9644caaaac58a3",
+      "sha256_before": "ceba1ff562defd5b2015d284206a585ad61536c405dcdea7bd9644caaaac58a3"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\供应商缺货Top20 (1)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "5856af27e4a038ac9217bd8f2311aa230d9e492836dfb2054840864bb98ea5c0",
+      "sha256_before": "5856af27e4a038ac9217bd8f2311aa230d9e492836dfb2054840864bb98ea5c0"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\库存满足率 (1)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "46fd622330da7044cd49b161aea994ac285a340d883f57885f423ac217191143",
+      "sha256_before": "46fd622330da7044cd49b161aea994ac285a340d883f57885f423ac217191143"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\供应商缺货Top20 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "sha256_before": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\供应商缺货Top20 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "sha256_before": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\库存满足率 (1)_拆分填充.xlsx",
+      "unchanged": true,
+      "sha256_after": "78836c8898f9ebd6246d3a3b67c77e12afe2b7202c45bc2431a52895f80b101b",
+      "sha256_before": "78836c8898f9ebd6246d3a3b67c77e12afe2b7202c45bc2431a52895f80b101b"
+    },
+    {
+      "path": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\每日缺货Top50 (1).xlsx",
+      "unchanged": true,
+      "sha256_after": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "sha256_before": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b"
+    }
+  ],
+  "passed": true,
+  "recorded_at": "2026-10-09T00:20:53.7356820+08:00",
+  "automation_security": 3
+}

@@ -1,0 +1,1283 @@
+{
+  "recorded_at": "2026-10-09T00:07:57.569242+08:00",
+  "scope": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20",
+  "privacy": "No cell values, formula text, supplier or product values recorded.",
+  "method": "Independent ZIP/ElementTree/Openpyxl reads; no processing engine imports or calls.",
+  "python_version": "3.12.8",
+  "openpyxl_version": "3.1.5",
+  "script_sha256": "2740a0abaf2ea96b71e391dd0c593b567911bf2c1dfcaaf1ebf33f0d6d8fc446",
+  "files": [
+    {
+      "file_name": "供应商缺货Top20 (1).xlsx",
+      "source_path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\供应商缺货Top20 (1).xlsx",
+      "source_bytes": 5624,
+      "source_sha256_before": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "sheet_name_sha256": "dec8969f7ce053a00461de1c68ef7478b8db131764af20223d378b42e997308d",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet1.xml",
+          "xml_bytes": 5309,
+          "xml_sha256": "15c1bf1cba77da9cbfb61ad946e6626c5bc33fbcdbafe0436230a5e369f7fed3",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 22,
+            "min_column": 1,
+            "max_column": 4
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 22,
+          "physical_cells": 68,
+          "xml_cell_type_counts": {
+            "inlineStr": 25,
+            "n": 43
+          },
+          "cell_style_index_counts": {
+            "1": 4,
+            "2": 11,
+            "3": 18,
+            "4": 10,
+            "5": 20,
+            "6": 2,
+            "7": 1,
+            "8": 2
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 2,
+          "merge_kind_counts": {
+            "vertical_only": 1,
+            "horizontal_only": 1
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 1,
+            "planned_filled_cell_count": 19,
+            "remaining_merge_count": 1,
+            "remaining_merge_refs": [
+              "A22:B22"
+            ],
+            "selected_anchor_xml_types": {
+              "inlineStr": 1
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 2,
+            "planned_filled_cell_count": 20,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 2
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 67,
+          "openpyxl_value_type_counts": {
+            "text": 25,
+            "number": 42
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 22,
+          "openpyxl_nonempty_max_column": 4
+        },
+        {
+          "sheet_index": 2,
+          "sheet_name_sha256": "f4c373d88a05bedc6497185efed823e2938375801a6180237e1217929acd371d",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet2.xml",
+          "xml_bytes": 1273,
+          "xml_sha256": "f811c4e93ce173118b9596ef69655b9de5ec4326d3e5abb6b0e347b53cc3661e",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 3,
+            "min_column": 1,
+            "max_column": 4
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 3,
+          "physical_cells": 6,
+          "xml_cell_type_counts": {
+            "inlineStr": 6
+          },
+          "cell_style_index_counts": {
+            "9": 3,
+            "implicit": 3
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 3,
+          "merge_kind_counts": {
+            "vertical_only": 3
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 3,
+            "planned_filled_cell_count": 5,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 3
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 3,
+            "planned_filled_cell_count": 5,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 3
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 6,
+          "openpyxl_value_type_counts": {
+            "text": 6
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 3,
+          "openpyxl_nonempty_max_column": 4
+        }
+      ],
+      "zip_integrity": "passed",
+      "zip_part_count": 10,
+      "document_signature_part_count": 0,
+      "part_category_counts": {
+        "styles": 1,
+        "shared_strings": 1,
+        "charts": 0,
+        "drawings": 0,
+        "media": 0,
+        "tables": 0,
+        "pivot_tables": 0,
+        "external_links": 0,
+        "vba": 0,
+        "metadata_or_rich_data": 0
+      },
+      "workbook_part": "xl/workbook.xml",
+      "standard_workbook_path": true,
+      "workbook_protected": false,
+      "defined_name_count": 0,
+      "nonworksheet_part_sha256": {
+        "[Content_Types].xml": "57a76367d4ac83e7c9bfc102570ead4dafc7a1108f2befaf6bb9dea5f0aab007",
+        "_rels/.rels": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3",
+        "docProps/app.xml": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b",
+        "docProps/core.xml": "c9132423bb5cb07e94896461814eba15cb34fdfd8462c0f5fa76b995c5e1a4e8",
+        "xl/sharedStrings.xml": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206",
+        "xl/styles.xml": "779fb3246a4a5504fc953f2ee6668120f472572d9449f305a172f1305612b9ab",
+        "xl/workbook.xml": "4a580ccd250e73b0cd36137a068769d50b50815e510220ba52da82f102dcfd4b",
+        "xl/_rels/workbook.xml.rels": "5111e561ae4d7f7ec000200724d9b668191683f3cc65d88e0318b448d620bac4"
+      },
+      "style_definition_counts": {
+        "numFmts": 2,
+        "fonts": 3,
+        "fills": 10,
+        "borders": 1,
+        "cellStyleXfs": 1,
+        "cellXfs": 10
+      },
+      "shared_string_count": 0,
+      "openpyxl_warning_codes": [
+        "missing_default_cell_style"
+      ],
+      "openpyxl_readable": true,
+      "expected_default": {
+        "file_outcome": "saved",
+        "selected_merge_count": 4,
+        "planned_filled_cell_count": 24,
+        "remaining_merge_count": 1,
+        "blocker_count": 0
+      },
+      "expected_all_merges": {
+        "file_outcome": "saved",
+        "selected_merge_count": 5,
+        "planned_filled_cell_count": 25,
+        "remaining_merge_count": 0,
+        "blocker_count": 0
+      },
+      "source_sha256_after": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "source_unchanged": true
+    },
+    {
+      "file_name": "库存满足率 (1).xlsx",
+      "source_path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\库存满足率 (1).xlsx",
+      "source_bytes": 7901,
+      "source_sha256_before": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "sheet_name_sha256": "e329139e65c839ff63d3d055a4fbbe9fd3af302da69ddb6e7268e3ef2c0b9a64",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet1.xml",
+          "xml_bytes": 20374,
+          "xml_sha256": "f90c96057bc33b4c4211fc5862f2f1e0883b8ef1ee4c57a48704c4777001af76",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 27,
+            "min_column": 1,
+            "max_column": 16
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 27,
+          "physical_cells": 360,
+          "xml_cell_type_counts": {
+            "inlineStr": 48,
+            "n": 312
+          },
+          "cell_style_index_counts": {
+            "1": 16,
+            "2": 16,
+            "3": 144,
+            "4": 15,
+            "5": 156,
+            "6": 1,
+            "7": 12
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 7,
+          "merge_kind_counts": {
+            "vertical_only": 6,
+            "horizontal_only": 1
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 6,
+            "planned_filled_cell_count": 69,
+            "remaining_merge_count": 1,
+            "remaining_merge_refs": [
+              "A27:D27"
+            ],
+            "selected_anchor_xml_types": {
+              "inlineStr": 6
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 7,
+            "planned_filled_cell_count": 72,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 7
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 360,
+          "openpyxl_value_type_counts": {
+            "text": 48,
+            "number": 312
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 27,
+          "openpyxl_nonempty_max_column": 16
+        },
+        {
+          "sheet_index": 2,
+          "sheet_name_sha256": "5be0d39f53074d5a0b7ed49a8e930d43871b606925906376460409ae76af8e33",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet2.xml",
+          "xml_bytes": 1427,
+          "xml_sha256": "f65cc033cd7746f260f2734e43399c4d437a0e8293578261a43e9914d7d2bbfd",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 3,
+            "min_column": 1,
+            "max_column": 4
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 3,
+          "physical_cells": 6,
+          "xml_cell_type_counts": {
+            "inlineStr": 6
+          },
+          "cell_style_index_counts": {
+            "8": 3,
+            "implicit": 3
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 3,
+          "merge_kind_counts": {
+            "vertical_only": 3
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 3,
+            "planned_filled_cell_count": 5,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 3
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 3,
+            "planned_filled_cell_count": 5,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 3
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 6,
+          "openpyxl_value_type_counts": {
+            "text": 6
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 3,
+          "openpyxl_nonempty_max_column": 4
+        }
+      ],
+      "zip_integrity": "passed",
+      "zip_part_count": 10,
+      "document_signature_part_count": 0,
+      "part_category_counts": {
+        "styles": 1,
+        "shared_strings": 1,
+        "charts": 0,
+        "drawings": 0,
+        "media": 0,
+        "tables": 0,
+        "pivot_tables": 0,
+        "external_links": 0,
+        "vba": 0,
+        "metadata_or_rich_data": 0
+      },
+      "workbook_part": "xl/workbook.xml",
+      "standard_workbook_path": true,
+      "workbook_protected": false,
+      "defined_name_count": 0,
+      "nonworksheet_part_sha256": {
+        "[Content_Types].xml": "57a76367d4ac83e7c9bfc102570ead4dafc7a1108f2befaf6bb9dea5f0aab007",
+        "_rels/.rels": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3",
+        "docProps/app.xml": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b",
+        "docProps/core.xml": "ff68b0f26089f4644847d857a12f8d136c6b203f855ebc04ddd4ec44f8c7f0f2",
+        "xl/sharedStrings.xml": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206",
+        "xl/styles.xml": "704ac049c8f81e7e3c0adb731244ed5a8f730d20a9f030d726a15fca58bbab2c",
+        "xl/workbook.xml": "8a25866cc18baad9ce35a472b1f9c48d91be8d0c769a8f16d61df6c7379f7246",
+        "xl/_rels/workbook.xml.rels": "5111e561ae4d7f7ec000200724d9b668191683f3cc65d88e0318b448d620bac4"
+      },
+      "style_definition_counts": {
+        "numFmts": 1,
+        "fonts": 3,
+        "fills": 10,
+        "borders": 1,
+        "cellStyleXfs": 1,
+        "cellXfs": 9
+      },
+      "shared_string_count": 0,
+      "openpyxl_warning_codes": [
+        "missing_default_cell_style"
+      ],
+      "openpyxl_readable": true,
+      "expected_default": {
+        "file_outcome": "saved",
+        "selected_merge_count": 9,
+        "planned_filled_cell_count": 74,
+        "remaining_merge_count": 1,
+        "blocker_count": 0
+      },
+      "expected_all_merges": {
+        "file_outcome": "saved",
+        "selected_merge_count": 10,
+        "planned_filled_cell_count": 77,
+        "remaining_merge_count": 0,
+        "blocker_count": 0
+      },
+      "source_sha256_after": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "source_unchanged": true
+    },
+    {
+      "file_name": "每日缺货Top50 (1).xlsx",
+      "source_path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\每日缺货Top50 (1).xlsx",
+      "source_bytes": 75154,
+      "source_sha256_before": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "sheet_name_sha256": "e7539634a867bdf7c43b0ab489bd2167ed52f5d9e5ddb3824d246fbaef94eaa8",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet1.xml",
+          "xml_bytes": 458176,
+          "xml_sha256": "693f8a144b105eb2e89b25134f6a637bc33c497d5f3e6a30079ede71170788ae",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 402,
+            "min_column": 1,
+            "max_column": 27
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 402,
+          "physical_cells": 9294,
+          "xml_cell_type_counts": {
+            "inlineStr": 1675,
+            "n": 7619
+          },
+          "cell_style_index_counts": {
+            "1": 27,
+            "2": 1,
+            "3": 823,
+            "4": 700,
+            "5": 3100,
+            "6": 823,
+            "7": 700,
+            "8": 3100,
+            "9": 1,
+            "10": 5,
+            "11": 14
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 44,
+          "merge_kind_counts": {
+            "vertical_only": 43,
+            "horizontal_only": 1
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 43,
+            "planned_filled_cell_count": 1553,
+            "remaining_merge_count": 1,
+            "remaining_merge_refs": [
+              "A402:H402"
+            ],
+            "selected_anchor_xml_types": {
+              "inlineStr": 43
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 44,
+            "planned_filled_cell_count": 1560,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 44
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 9294,
+          "openpyxl_value_type_counts": {
+            "text": 1675,
+            "number": 7619
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 402,
+          "openpyxl_nonempty_max_column": 27
+        },
+        {
+          "sheet_index": 2,
+          "sheet_name_sha256": "93a25450edaf24402abcfffbaeaa47994c8ba42169e7e77dc1fa16b1ea2cee84",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet2.xml",
+          "xml_bytes": 802,
+          "xml_sha256": "3e352d10db2533932ddc6e3d2e777351da5a8849caa0939e47204f881572566a",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 2,
+            "min_column": 1,
+            "max_column": 3
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 2,
+          "physical_cells": 4,
+          "xml_cell_type_counts": {
+            "inlineStr": 4
+          },
+          "cell_style_index_counts": {
+            "12": 2,
+            "implicit": 2
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 2,
+          "merge_kind_counts": {
+            "vertical_only": 2
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 2,
+            "planned_filled_cell_count": 2,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 2
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 2,
+            "planned_filled_cell_count": 2,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 2
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 4,
+          "openpyxl_value_type_counts": {
+            "text": 4
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 2,
+          "openpyxl_nonempty_max_column": 3
+        }
+      ],
+      "zip_integrity": "passed",
+      "zip_part_count": 10,
+      "document_signature_part_count": 0,
+      "part_category_counts": {
+        "styles": 1,
+        "shared_strings": 1,
+        "charts": 0,
+        "drawings": 0,
+        "media": 0,
+        "tables": 0,
+        "pivot_tables": 0,
+        "external_links": 0,
+        "vba": 0,
+        "metadata_or_rich_data": 0
+      },
+      "workbook_part": "xl/workbook.xml",
+      "standard_workbook_path": true,
+      "workbook_protected": false,
+      "defined_name_count": 0,
+      "nonworksheet_part_sha256": {
+        "[Content_Types].xml": "57a76367d4ac83e7c9bfc102570ead4dafc7a1108f2befaf6bb9dea5f0aab007",
+        "_rels/.rels": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3",
+        "docProps/app.xml": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b",
+        "docProps/core.xml": "faa42973d799cc26d8b968b42c80bd8250f23f8e037010e3f229366d828def0c",
+        "xl/sharedStrings.xml": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206",
+        "xl/styles.xml": "f6e63ca3a87e796e3ad845f1951be2b55ceb9bbe69d12cb5049f0b0b94497a4a",
+        "xl/workbook.xml": "d216d91f71ba8653e7df7da50267a3cca189db1a467fc4b559add5de96711f51",
+        "xl/_rels/workbook.xml.rels": "5111e561ae4d7f7ec000200724d9b668191683f3cc65d88e0318b448d620bac4"
+      },
+      "style_definition_counts": {
+        "numFmts": 3,
+        "fonts": 3,
+        "fills": 10,
+        "borders": 1,
+        "cellStyleXfs": 1,
+        "cellXfs": 13
+      },
+      "shared_string_count": 0,
+      "openpyxl_warning_codes": [
+        "missing_default_cell_style"
+      ],
+      "openpyxl_readable": true,
+      "expected_default": {
+        "file_outcome": "saved",
+        "selected_merge_count": 45,
+        "planned_filled_cell_count": 1555,
+        "remaining_merge_count": 1,
+        "blocker_count": 0
+      },
+      "expected_all_merges": {
+        "file_outcome": "saved",
+        "selected_merge_count": 46,
+        "planned_filled_cell_count": 1562,
+        "remaining_merge_count": 0,
+        "blocker_count": 0
+      },
+      "source_sha256_after": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "source_unchanged": true
+    },
+    {
+      "file_name": "期间缺货Top20.xlsx",
+      "source_path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\期间缺货Top20.xlsx",
+      "source_bytes": 10625,
+      "source_sha256_before": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "sheet_name_sha256": "73c9ebe9874a1f5b757901d63ef58dca349adbd9002c84111e149fd05f3d21e1",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet1.xml",
+          "xml_bytes": 28072,
+          "xml_sha256": "b2e6b28fda3b62d088794ff23d8a51d58939c1fb460a9131a22c8a2e734b7466",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 82,
+            "min_column": 1,
+            "max_column": 6
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 82,
+          "physical_cells": 333,
+          "xml_cell_type_counts": {
+            "inlineStr": 252,
+            "n": 81
+          },
+          "cell_style_index_counts": {
+            "1": 6,
+            "2": 123,
+            "3": 16,
+            "4": 122,
+            "5": 16,
+            "6": 24,
+            "7": 24,
+            "8": 1,
+            "9": 1
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 6,
+          "merge_kind_counts": {
+            "vertical_only": 5,
+            "horizontal_only": 1
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 5,
+            "planned_filled_cell_count": 155,
+            "remaining_merge_count": 1,
+            "remaining_merge_refs": [
+              "A82:E82"
+            ],
+            "selected_anchor_xml_types": {
+              "inlineStr": 5
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 6,
+            "planned_filled_cell_count": 159,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 6
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 333,
+          "openpyxl_value_type_counts": {
+            "text": 252,
+            "number": 81
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 82,
+          "openpyxl_nonempty_max_column": 6
+        },
+        {
+          "sheet_index": 2,
+          "sheet_name_sha256": "f662fe95253706b28bc8090f7dacb21b51f9213f0f587da44b544de534bacb07",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet2.xml",
+          "xml_bytes": 1269,
+          "xml_sha256": "579f029070b7fbf646aa12819d2baa98b80bff88812aa842fc26864247a2b69a",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 3,
+            "min_column": 1,
+            "max_column": 4
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 3,
+          "physical_cells": 6,
+          "xml_cell_type_counts": {
+            "inlineStr": 6
+          },
+          "cell_style_index_counts": {
+            "10": 3,
+            "implicit": 3
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 3,
+          "merge_kind_counts": {
+            "vertical_only": 3
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 3,
+            "planned_filled_cell_count": 5,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 3
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 3,
+            "planned_filled_cell_count": 5,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 3
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 6,
+          "openpyxl_value_type_counts": {
+            "text": 6
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 3,
+          "openpyxl_nonempty_max_column": 4
+        }
+      ],
+      "zip_integrity": "passed",
+      "zip_part_count": 10,
+      "document_signature_part_count": 0,
+      "part_category_counts": {
+        "styles": 1,
+        "shared_strings": 1,
+        "charts": 0,
+        "drawings": 0,
+        "media": 0,
+        "tables": 0,
+        "pivot_tables": 0,
+        "external_links": 0,
+        "vba": 0,
+        "metadata_or_rich_data": 0
+      },
+      "workbook_part": "xl/workbook.xml",
+      "standard_workbook_path": true,
+      "workbook_protected": false,
+      "defined_name_count": 0,
+      "nonworksheet_part_sha256": {
+        "[Content_Types].xml": "57a76367d4ac83e7c9bfc102570ead4dafc7a1108f2befaf6bb9dea5f0aab007",
+        "_rels/.rels": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3",
+        "docProps/app.xml": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b",
+        "docProps/core.xml": "b6b18462627167db4e4df9f8000177dd289a3f2c032f97d5f59dcdabc011b481",
+        "xl/sharedStrings.xml": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206",
+        "xl/styles.xml": "feca761cf8d84b7112e70f3e4d0c7658c0ca243b4636369cddee8b6876773faf",
+        "xl/workbook.xml": "d09407737ff523462d4bef1c7cc89a47ac005e8ce3777f204946dbaef95afa74",
+        "xl/_rels/workbook.xml.rels": "5111e561ae4d7f7ec000200724d9b668191683f3cc65d88e0318b448d620bac4"
+      },
+      "style_definition_counts": {
+        "numFmts": 2,
+        "fonts": 3,
+        "fills": 10,
+        "borders": 1,
+        "cellStyleXfs": 1,
+        "cellXfs": 11
+      },
+      "shared_string_count": 0,
+      "openpyxl_warning_codes": [
+        "missing_default_cell_style"
+      ],
+      "openpyxl_readable": true,
+      "expected_default": {
+        "file_outcome": "saved",
+        "selected_merge_count": 8,
+        "planned_filled_cell_count": 160,
+        "remaining_merge_count": 1,
+        "blocker_count": 0
+      },
+      "expected_all_merges": {
+        "file_outcome": "saved",
+        "selected_merge_count": 9,
+        "planned_filled_cell_count": 164,
+        "remaining_merge_count": 0,
+        "blocker_count": 0
+      },
+      "source_sha256_after": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "source_unchanged": true
+    },
+    {
+      "file_name": "缺货数据统计.xlsx",
+      "source_path": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20\\缺货数据统计.xlsx",
+      "source_bytes": 8022,
+      "source_sha256_before": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "sheets": [
+        {
+          "sheet_index": 1,
+          "sheet_name_sha256": "497982aa68702866e420d32dbc96dd8a18ec1366b6b4ac285986336ec5750ddf",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet1.xml",
+          "xml_bytes": 19474,
+          "xml_sha256": "e7953adc2311ba50adddb830b1c63580b867580c8ecb4a296ec43ae9ce881a81",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 52,
+            "min_column": 1,
+            "max_column": 9
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 52,
+          "physical_cells": 326,
+          "xml_cell_type_counts": {
+            "inlineStr": 71,
+            "n": 255
+          },
+          "cell_style_index_counts": {
+            "1": 9,
+            "2": 31,
+            "3": 50,
+            "4": 75,
+            "5": 30,
+            "6": 50,
+            "7": 75,
+            "8": 1,
+            "9": 2,
+            "10": 3
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 12,
+          "merge_kind_counts": {
+            "vertical_only": 11,
+            "horizontal_only": 1
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 11,
+            "planned_filled_cell_count": 139,
+            "remaining_merge_count": 1,
+            "remaining_merge_refs": [
+              "A52:D52"
+            ],
+            "selected_anchor_xml_types": {
+              "inlineStr": 11
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 12,
+            "planned_filled_cell_count": 142,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 12
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 326,
+          "openpyxl_value_type_counts": {
+            "text": 71,
+            "number": 255
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 52,
+          "openpyxl_nonempty_max_column": 9
+        },
+        {
+          "sheet_index": 2,
+          "sheet_name_sha256": "dbd1bf4698fde5932eee72c390df38bed03987b8b8b8706bc8ba1d57e28cd49f",
+          "sheet_state": "visible",
+          "part": "xl/worksheets/sheet2.xml",
+          "xml_bytes": 1074,
+          "xml_sha256": "3ad7f15433e2181458c4bc3314943ac815140a9462bc70a8a488085b80abbbcc",
+          "dimension_ref": "A1",
+          "actual_cell_bounds": {
+            "min_row": 1,
+            "max_row": 2,
+            "min_column": 1,
+            "max_column": 3
+          },
+          "declared_dimension_covers_actual_cells": false,
+          "physical_rows": 2,
+          "physical_cells": 4,
+          "xml_cell_type_counts": {
+            "inlineStr": 4
+          },
+          "cell_style_index_counts": {
+            "11": 2,
+            "implicit": 2
+          },
+          "custom_styled_row_count": 0,
+          "hidden_row_count": 0,
+          "custom_styled_column_definition_count": 0,
+          "missing_row_reference_count": 0,
+          "missing_cell_reference_count": 0,
+          "formula_cell_count": 0,
+          "metadata_cell_count": 0,
+          "merge_count": 2,
+          "merge_kind_counts": {
+            "vertical_only": 2
+          },
+          "worksheet_features": {
+            "autoFilter": 0,
+            "tableParts": 0,
+            "conditionalFormatting": 0,
+            "dataValidations": 0,
+            "drawing": 0,
+            "legacyDrawing": 0,
+            "hyperlinks": 0,
+            "sheetProtection": 0,
+            "extLst": 0,
+            "auto_filter_refs": [],
+            "conditional_formatting_refs": []
+          },
+          "expected_default": {
+            "selected_merge_count": 2,
+            "planned_filled_cell_count": 2,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 2
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "expected_all_merges": {
+            "selected_merge_count": 2,
+            "planned_filled_cell_count": 2,
+            "remaining_merge_count": 0,
+            "remaining_merge_refs": [],
+            "selected_anchor_xml_types": {
+              "inlineStr": 2
+            },
+            "blockers": [],
+            "overlapping_merge_pairs": [],
+            "prediction_status": "processable"
+          },
+          "openpyxl_nonempty_cells": 4,
+          "openpyxl_value_type_counts": {
+            "text": 4
+          },
+          "openpyxl_formula_count": 0,
+          "openpyxl_declared_shape": {
+            "max_row": 1,
+            "max_column": 1
+          },
+          "openpyxl_dimensions_reset": true,
+          "openpyxl_nonempty_max_row": 2,
+          "openpyxl_nonempty_max_column": 3
+        }
+      ],
+      "zip_integrity": "passed",
+      "zip_part_count": 10,
+      "document_signature_part_count": 0,
+      "part_category_counts": {
+        "styles": 1,
+        "shared_strings": 1,
+        "charts": 0,
+        "drawings": 0,
+        "media": 0,
+        "tables": 0,
+        "pivot_tables": 0,
+        "external_links": 0,
+        "vba": 0,
+        "metadata_or_rich_data": 0
+      },
+      "workbook_part": "xl/workbook.xml",
+      "standard_workbook_path": true,
+      "workbook_protected": false,
+      "defined_name_count": 0,
+      "nonworksheet_part_sha256": {
+        "[Content_Types].xml": "57a76367d4ac83e7c9bfc102570ead4dafc7a1108f2befaf6bb9dea5f0aab007",
+        "_rels/.rels": "64573e1d86bc8a4e3fbf3714cc5681ea896cc11362c5b117a6438496d4a33be3",
+        "docProps/app.xml": "1a275cdfaf02b0fc41605591e189662b55442b628d6331d1424e09d2c6159d3b",
+        "docProps/core.xml": "9f417ebdf6f6832e708df1c0723ad5dedde49617ea6ecdefa8aa51d887b11a0f",
+        "xl/sharedStrings.xml": "0fcc155174429747ee6a9ef1704097d18344ab1654c96490c61cff151d027206",
+        "xl/styles.xml": "bcc17f0d85ad81aca283ff0ee0380594ca60d4f67543aed1c9a7b2306b0bb57d",
+        "xl/workbook.xml": "3336fe83eea12340e719720bf9f87712c41fb1ca514f53dba9e569bed09c940e",
+        "xl/_rels/workbook.xml.rels": "5111e561ae4d7f7ec000200724d9b668191683f3cc65d88e0318b448d620bac4"
+      },
+      "style_definition_counts": {
+        "numFmts": 2,
+        "fonts": 3,
+        "fills": 10,
+        "borders": 1,
+        "cellStyleXfs": 1,
+        "cellXfs": 12
+      },
+      "shared_string_count": 0,
+      "openpyxl_warning_codes": [
+        "missing_default_cell_style"
+      ],
+      "openpyxl_readable": true,
+      "expected_default": {
+        "file_outcome": "saved",
+        "selected_merge_count": 13,
+        "planned_filled_cell_count": 141,
+        "remaining_merge_count": 1,
+        "blocker_count": 0
+      },
+      "expected_all_merges": {
+        "file_outcome": "saved",
+        "selected_merge_count": 14,
+        "planned_filled_cell_count": 144,
+        "remaining_merge_count": 0,
+        "blocker_count": 0
+      },
+      "source_sha256_after": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "source_unchanged": true
+    }
+  ],
+  "summary": {
+    "source_file_count": 5,
+    "sheet_count": 10,
+    "all_sources_unchanged": true,
+    "hidden_sheet_count": 0,
+    "physical_cell_count": 10407,
+    "nonempty_cell_count": 10406,
+    "value_type_counts": {
+      "text": 2097,
+      "number": 8309
+    },
+    "merge_kind_counts": {
+      "vertical_only": 79,
+      "horizontal_only": 5
+    },
+    "incorrect_dimension_sheet_count": 10,
+    "missing_default_style_file_count": 5,
+    "expected_modes": {
+      "default": {
+        "selected_merge_count": 79,
+        "planned_filled_cell_count": 1954,
+        "remaining_merge_count": 5,
+        "blocker_count": 0
+      },
+      "all_merges": {
+        "selected_merge_count": 84,
+        "planned_filled_cell_count": 1972,
+        "remaining_merge_count": 0,
+        "blocker_count": 0
+      }
+    }
+  }
+}

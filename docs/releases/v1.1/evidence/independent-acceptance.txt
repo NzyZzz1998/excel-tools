@@ -1,0 +1,16 @@
+test_gui_stop_resume_and_retry_do_not_reprocess_successes (__main__.IndependentAcceptance.test_gui_stop_resume_and_retry_do_not_reprocess_successes) ... ok
+test_r1_anchor_local_namespace_and_cdata_remain_parseable (__main__.IndependentAcceptance.test_r1_anchor_local_namespace_and_cdata_remain_parseable) ... ok
+test_r1_character_fidelity_and_unmodified_archive_parts (__main__.IndependentAcceptance.test_r1_character_fidelity_and_unmodified_archive_parts) ... ok
+test_r2_hidden_target_metadata_is_not_erased (__main__.IndependentAcceptance.test_r2_hidden_target_metadata_is_not_erased) ... ok
+test_r2_metadata_anchors_reject_without_output (__main__.IndependentAcceptance.test_r2_metadata_anchors_reject_without_output) ... ok
+test_r4_corrupt_and_encrypted_inputs_offer_guidance (__main__.IndependentAcceptance.test_r4_corrupt_and_encrypted_inputs_offer_guidance) ... ok
+test_r4_permission_error_keeps_source_and_gives_recovery_action (__main__.IndependentAcceptance.test_r4_permission_error_keeps_source_and_gives_recovery_action) ... ok
+test_self_test_failure_records_traceback_without_stderr (__main__.IndependentAcceptance.test_self_test_failure_records_traceback_without_stderr) ... ok
+test_storage_write_failure_cleans_partial_output (__main__.IndependentAcceptance.test_storage_write_failure_cleans_partial_output) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.952s
+
+OK
+BENCHMARK_JSON=[{"case": "sparse_rectangle", "rows": 300, "columns": 300, "implementation": "baseline-v1.0", "seconds": 0.025752499990630895}, {"case": "sparse_rectangle", "rows": 300, "columns": 300, "implementation": "candidate-v1.1", "seconds": 0.007586899999296293}, {"case": "sparse_rectangle", "rows": 600, "columns": 300, "implementation": "baseline-v1.0", "seconds": 0.046733299997868016}, {"case": "sparse_rectangle", "rows": 600, "columns": 300, "implementation": "candidate-v1.1", "seconds": 0.01964179999777116}, {"case": "dense_vertical", "merges": 300, "implementation": "baseline-v1.0", "seconds": 0.020304300007410347}, {"case": "dense_vertical", "merges": 300, "implementation": "candidate-v1.1", "seconds": 0.021553699974901974}, {"case": "dense_vertical", "merges": 600, "implementation": "baseline-v1.0", "seconds": 0.0491858999885153}, {"case": "dense_vertical", "merges": 600, "implementation": "candidate-v1.1", "seconds": 0.046330600016517565}, {"case": "single_merge_many_rows", "rows": 5000, "implementation": "candidate-v1.1", "seconds": 0.10008540001581423, "full_row_value_attribute_order_check": true}, {"case": "single_merge_many_rows", "rows": 40000, "implementation": "candidate-v1.1", "seconds": 1.0631444999889936, "full_row_value_attribute_order_check": true}]
+Performance measurements are observations; no new release threshold is asserted.

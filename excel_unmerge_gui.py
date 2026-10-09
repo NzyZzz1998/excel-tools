@@ -2,6 +2,7 @@
 """Excel 合并行拆分的图形入口；也提供打包后的离线自检。"""
 
 import argparse
+import errno
 import os
 import queue
 import subprocess
@@ -11,7 +12,8 @@ import threading
 import traceback
 from pathlib import Path
 from xml.etree import ElementTree as ET
-from zipfile import ZIP_DEFLATED, ZipFile
+from xml.parsers.expat import ExpatError
+from zipfile import BadZipFile, ZIP_DEFLATED, ZipFile
 
 import tkinter as tk
 from tkinter import filedialog, font, ttk
@@ -20,7 +22,7 @@ from tkinter.scrolledtext import ScrolledText
 from excel_unmerge_fill import process_file
 
 APP_TITLE = "Excel 数据处理工具"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.1"
 
 
 def enable_windows_dpi_awareness():
@@ -47,17 +49,52 @@ def enable_windows_dpi_awareness():
         pass
 
 
-def process_batch(files, all_merges, events):
+def describe_error(error):
+    """提供恢复建议，同时保留可复制的原始异常供排查。"""
+    if isinstance(error, BadZipFile):
+        message = ("无法读取 Excel 文件；它可能已加密、已损坏，或并非标准 .xlsx / .xlsm。"
+                   "请先在 Excel 中打开，另存为无密码的副本后重试。")
+    elif isinstance(error, PermissionError):
+        message = ("文件或结果目录不可访问。请关闭正在编辑文件的应用，"
+                   "或把原文件复制到可写目录后重试。")
+    elif isinstance(error, FileNotFoundError):
+        message = "找不到文件或目录。请确认原文件未被移动、磁盘已连接，再重新选择文件。"
+    elif isinstance(error, OSError) and error.errno == errno.ENOSPC:
+        message = "保存结果所需的磁盘空间不足。请释放原文件所在磁盘的空间后重试。"
+    elif isinstance(error, OSError) and error.errno == errno.ENAMETOOLONG:
+        message = "文件路径过长。请缩短文件名，或复制到较短的目录路径后重试。"
+    elif isinstance(error, MemoryError):
+        message = "可用内存不足。请关闭其他大型应用，或将工作簿拆成较小的文件后重试。"
+    elif isinstance(error, (KeyError, ExpatError)):
+        message = "工作簿内部结构无法读取。请在 Excel 中打开并另存为副本后重试。"
+    elif isinstance(error, ValueError):
+        # 核心处理器的校验错误已包含工作表、单元格和具体操作建议。
+        message = str(error) or "文件内容无法处理。请在 Excel 中核对并另存为副本后重试。"
+        if message.startswith("找不到文件："):
+            message += "\n请确认文件未被移动、磁盘已连接，再重新选择文件。"
+    else:
+        message = ("处理未完成。请确认文件可在 Excel 中正常打开，并另存为副本后重试；"
+                   "若仍失败，可复制下方技术详情排查。")
+    return "{}\n技术详情：{}: {}".format(message, type(error).__name__, str(error))
+
+
+def process_batch(files, all_merges, events, stop_event=None):
     """后台处理只发送消息，不读取或操作任何 Tk 对象。"""
-    failures = 0
-    for file in files:
+    files = tuple(files)
+    failures = completed = 0
+    for index, file in enumerate(files):
+        # 只在文件边界停止，保证当前文件完成安全保存或失败清理。
+        if stop_event is not None and stop_event.is_set():
+            break
+        events.put(("started", file, index + 1, len(files)))
         try:
             output, stats = process_file(file, all_merges=all_merges)
             events.put(("result", file, output, stats, None))
         except Exception as error:
             failures += 1
-            events.put(("result", file, None, [], str(error)))
-    events.put(("done", len(files), failures))
+            events.put(("result", file, None, [], describe_error(error)))
+        completed += 1
+    events.put(("done", completed, failures, files[completed:]))
 
 
 class Application:
@@ -66,6 +103,12 @@ class Application:
         self.files = ()
         self.running = False
         self.completed = self.succeeded = self.unchanged = self.failed = 0
+        self.file_states = {}
+        self.run_files = ()
+        self.run_completed = 0
+        self.current_file = None
+        self.batch_all_merges = False
+        self.stop_event = threading.Event()
         self.output_directory = None
         self.events = queue.Queue()
         self.all_merges = tk.BooleanVar(root, value=False)
@@ -110,10 +153,23 @@ class Application:
         self.open_button = ttk.Button(toolbar, text="打开结果目录", state="disabled",
                                       command=self.open_results)
         self.open_button.pack(side="right")
+        recovery_toolbar = ttk.Frame(frame)
+        recovery_toolbar.pack(fill="x", pady=(0, 8))
+        self.retry_button = ttk.Button(recovery_toolbar, text="仅重试失败项", state="disabled",
+                                       command=self.retry_failed)
+        self.retry_button.pack(side="left")
+        self.resume_button = ttk.Button(recovery_toolbar, text="继续未处理项", state="disabled",
+                                        command=self.resume_pending)
+        self.resume_button.pack(side="left", padx=8)
+        self.stop_button = ttk.Button(recovery_toolbar, text="当前文件完成后停止", state="disabled",
+                                      command=self.request_stop)
+        self.stop_button.pack(side="right")
         self.progress = ttk.Progressbar(frame, mode="determinate", maximum=1, value=0)
         self.progress.pack(fill="x")
-        ttk.Label(frame, textvariable=self.status, wraplength=round(760 * scale)).pack(
-            anchor="w", pady=(8, 12))
+        self.status_label = ttk.Label(frame, textvariable=self.status, anchor="w",
+                                      justify="left", wraplength=round(760 * scale))
+        self.status_label.pack(fill="x", pady=(8, 12))
+        self.status_label.bind("<Configure>", self.resize_status_label)
         result_frame = ttk.LabelFrame(frame, text="2. 处理结果", padding=8)
         result_frame.pack(fill="both", expand=True)
         self.results = ScrolledText(result_frame, height=10, wrap="word", state="disabled")
@@ -129,6 +185,12 @@ class Application:
         widget.insert("end", text)
         widget.configure(state="disabled")
 
+    def resize_status_label(self, event):
+        # 按实际可用宽度换行；给标签边缘留余量，避免窄窗裁切长文件名。
+        width = max(1, event.width - 4)
+        if int(self.status_label.cget("wraplength")) != width:
+            self.status_label.configure(wraplength=width)
+
     def choose(self):
         files = filedialog.askopenfilenames(
             parent=self.root, title="选择要处理的 Excel 文件",
@@ -142,21 +204,82 @@ class Application:
     def start(self):
         if self.running or not self.files:
             return
-        self.running = True
-        self.completed = self.succeeded = self.unchanged = self.failed = 0
+        self.file_states = dict.fromkeys(self.files, "pending")
+        self.batch_all_merges = self.all_merges.get()
         self.output_directory = None
+        self.replace_text(self.results, "")
+        self.launch_batch(tuple(self.file_states), "开始处理")
+
+    @property
+    def failed_files(self):
+        return tuple(file for file, state in self.file_states.items() if state == "failed")
+
+    @property
+    def pending_files(self):
+        return tuple(file for file, state in self.file_states.items() if state == "pending")
+
+    def retry_failed(self):
+        if not self.running and self.failed_files:
+            self.launch_batch(self.failed_files, "仅重试失败项（沿用首次处理规则）")
+
+    def resume_pending(self):
+        if not self.running and self.pending_files:
+            self.launch_batch(self.pending_files, "继续未处理项（沿用首次处理规则）")
+
+    def update_counts(self):
+        states = tuple(self.file_states.values())
+        self.succeeded = states.count("success")
+        self.unchanged = states.count("unchanged")
+        self.failed = states.count("failed")
+        self.completed = self.succeeded + self.unchanged + self.failed
+
+    def task_summary(self):
+        return "任务已处理 {}/{}：成功 {} 个，无需处理 {} 个，失败 {} 个，待处理 {} 个。".format(
+            self.completed, len(self.file_states), self.succeeded, self.unchanged,
+            self.failed, len(self.pending_files))
+
+    def append_result(self, text, tag=""):
+        self.results.configure(state="normal")
+        self.results.insert("end", text + "\n\n", tag)
+        self.results.see("end")
+        self.results.configure(state="disabled")
+
+    def launch_batch(self, files, label):
+        self.running = True
+        self.run_files = tuple(files)
+        self.run_completed = 0
+        self.current_file = None
+        self.stop_event = threading.Event()
+        self.update_counts()
+        # 重试/继续时，复选框也反映真正使用的首次规则。
+        self.all_merges.set(self.batch_all_merges)
         self.choose_button.configure(state="disabled")
         self.start_button.configure(state="disabled")
         self.open_button.configure(state="disabled")
+        self.retry_button.configure(state="disabled")
+        self.resume_button.configure(state="disabled")
+        self.stop_button.configure(state="normal")
         self.option.configure(state="disabled")
-        self.replace_text(self.results, "")
-        self.status.set("正在处理：已完成 0/{} 个文件，请稍候……".format(len(self.files)))
-        self.progress.configure(maximum=len(self.files), value=0)
+        rule = "同时拆开横向合并" if self.batch_all_merges else "只拆纵向合并，保留横向表头"
+        self.append_result("{}：{} 个文件；规则：{}。".format(label, len(files), rule))
+        self.status.set("{}：本轮已处理 0/{} 个文件。".format(label, len(files)))
+        self.progress.configure(maximum=len(files), value=0)
         # 将主线程读取的参数副本传给工作线程；线程不得访问 Tk 变量。
         worker = threading.Thread(target=process_batch,
-                                  args=(self.files, self.all_merges.get(), self.events))
-        worker.start()
+                                  args=(self.run_files, self.batch_all_merges,
+                                        self.events, self.stop_event))
+        try:
+            worker.start()
+        except RuntimeError as error:
+            self.append_result("无法启动处理任务：" + describe_error(error), "failure")
+            self.events.put(("done", 0, 0, self.run_files))
         self.root.after(100, self.poll_results)
+
+    def request_stop(self):
+        if self.running:
+            self.stop_event.set()
+            self.stop_button.configure(state="disabled")
+            self.status.set("已请求停止；等待当前文件安全完成，尚未开始的文件会保留供继续处理。")
 
     def poll_results(self):
         while True:
@@ -164,44 +287,52 @@ class Application:
                 event = self.events.get_nowait()
             except queue.Empty:
                 break
-            if event[0] == "done":
-                _, count, failures = event
+            if event[0] == "started":
+                _, file, index, total = event
+                self.current_file = file
+                prefix = "正在完成当前文件后停止" if self.stop_event.is_set() else "正在处理"
+                self.status.set("{}：{}（本轮第 {}/{} 个，已处理 {} 个）。".format(
+                    prefix, Path(file).name, index, total, self.run_completed))
+            elif event[0] == "done":
+                _, count, failures, remaining = event
                 self.running = False
+                self.current_file = None
                 self.choose_button.configure(state="normal")
                 self.start_button.configure(state="normal")
                 self.option.configure(state="normal")
+                self.stop_button.configure(state="disabled")
+                self.retry_button.configure(state="normal" if self.failed_files else "disabled")
+                self.resume_button.configure(state="normal" if self.pending_files else "disabled")
                 if self.output_directory is not None:
                     self.open_button.configure(state="normal")
-                self.status.set("已完成 {}/{}：成功 {} 个，无需处理 {} 个，失败 {} 个。".format(
-                    self.completed, count, self.succeeded, self.unchanged, failures))
-            else:
+                prefix = "已停止" if remaining else "本轮处理结束"
+                summary = "{}；{}".format(prefix, self.task_summary())
+                self.status.set(summary)
+                self.append_result(summary)
+            elif event[0] == "result":
                 _, file, output, stats, error = event
-                self.completed += 1
-                self.progress.configure(value=self.completed)
+                self.run_completed += 1
+                self.progress.configure(value=self.run_completed)
                 if error is not None:
-                    self.failed += 1
+                    self.file_states[file] = "failed"
                     tag = "failure"
                     lines = ["失败  |  " + str(file), "原因：" + error]
                 else:
                     if output is not None:
-                        self.succeeded += 1
+                        self.file_states[file] = "success"
                         self.output_directory = Path(output).parent
                         tag = "success"
                         lines = ["成功  |  " + str(file)]
                     else:
-                        self.unchanged += 1
+                        self.file_states[file] = "unchanged"
                         tag = "unchanged"
                         lines = ["无需处理  |  " + str(file)]
                     lines.extend("  {}：拆分 {} 个合并区域，填充 {} 个单元格".format(*stat)
                                  for stat in stats)
                     lines.append("已保存：" + str(output) if output else
                                  "没有符合条件的合并区域，未生成新文件。")
-                self.results.configure(state="normal")
-                self.results.insert("end", "\n".join(lines) + "\n\n", tag)
-                self.results.see("end")
-                self.results.configure(state="disabled")
-                self.status.set("正在处理：已完成 {}/{} 个文件……".format(
-                    self.completed, len(self.files)))
+                self.update_counts()
+                self.append_result("\n".join(lines), tag)
         if self.running:
             self.root.after(100, self.poll_results)
 
@@ -221,7 +352,8 @@ class Application:
 
     def close(self):
         if self.running:
-            self.status.set("文件仍在处理中，请完成后再关闭窗口。")
+            self.request_stop()
+            self.status.set("已请求停止。当前文件安全完成后，可查看结果并关闭窗口。")
         else:
             self.root.destroy()
 
@@ -293,24 +425,40 @@ def self_test():
             app = Application(root)
             root.update()
             controls = (app.choose_button, app.file_list, app.option, app.start_button,
-                        app.progress, app.results, app.open_button)
+                        app.progress, app.results, app.open_button, app.retry_button,
+                        app.resume_button, app.stop_button)
             if any(control.winfo_width() <= 1 or control.winfo_height() <= 1
                    for control in controls):
                 raise AssertionError("主窗口控件未正确布局")
             if "disabled" not in app.open_button.state():
                 raise AssertionError("生成结果前不应启用结果目录按钮")
             app.files = (str(source),)
+            app.file_states = {str(source): "pending"}
+            app.run_files = app.files
             app.running = True
+            app.events.put(("started", str(source), 1, 1))
             app.events.put(("result", str(source), output, stats, None))
-            app.events.put(("done", 1, 0))
+            app.events.put(("done", 1, 0, ()))
             app.poll_results()
             root.update()
             if (app.running or app.completed != 1 or app.succeeded != 1
                     or app.output_directory != output.parent
                     or "disabled" in app.open_button.state()
                     or str(output) not in app.results.get("1.0", "end")
+                    or app.failed_files or app.pending_files
+                    or any("disabled" not in button.state() for button in (
+                        app.retry_button, app.resume_button, app.stop_button))
                     or float(app.progress["value"]) != 1):
                 raise AssertionError("成功处理后的窗口状态不正确")
+            stopped = threading.Event()
+            stopped.set()
+            stopped_events = queue.Queue()
+            process_batch((str(source),), False, stopped_events, stopped)
+            if stopped_events.get_nowait() != ("done", 0, 0, (str(source),)):
+                raise AssertionError("停止后不应处理尚未开始的文件")
+            error_text = describe_error(BadZipFile("self-test invalid workbook"))
+            if "加密" not in error_text or "BadZipFile" not in error_text:
+                raise AssertionError("读取失败应包含恢复建议与技术详情")
         finally:
             root.destroy()
 
@@ -318,16 +466,29 @@ def self_test():
 def main():
     parser = argparse.ArgumentParser(description=APP_TITLE)
     parser.add_argument("--self-test", action="store_true", help="运行离线打包自检")
+    parser.add_argument("--self-test-log", type=Path, help="将自检结果和异常详情写入 UTF-8 日志")
     args = parser.parse_args()
     enable_windows_dpi_awareness()
     if args.self_test:
         try:
             self_test()
         except Exception:
+            diagnostic = traceback.format_exc()
             if sys.stderr is not None:
-                traceback.print_exc()
-            return 1
-        return 0
+                sys.stderr.write(diagnostic)
+            result = 1
+        else:
+            diagnostic = "ExcelTools v{} self-test passed.\n".format(APP_VERSION)
+            result = 0
+        if args.self_test_log is not None:
+            try:
+                args.self_test_log.parent.mkdir(parents=True, exist_ok=True)
+                args.self_test_log.write_text(diagnostic, encoding="utf-8")
+            except OSError as error:
+                if sys.stderr is not None:
+                    sys.stderr.write("无法保存自检日志：{}\n".format(error))
+                return 1
+        return result
     root = tk.Tk()
     Application(root)
     root.mainloop()

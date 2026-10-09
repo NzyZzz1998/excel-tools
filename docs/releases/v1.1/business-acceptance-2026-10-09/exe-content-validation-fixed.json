@@ -1,0 +1,431 @@
+{
+  "version": "1.1",
+  "track": "exe",
+  "revision": "fixed",
+  "candidate_identity": {
+    "excel_unmerge_fill.py": "95b5455b5d10aab9436a8842bbc27f6814485c037247d8320e3c9b1cf81e6e30",
+    "excel_unmerge_gui.py": "0d59d53e067da326984702ece5939347448a829012b564363eb9469c42b25f87",
+    "dist/ExcelTools-v1.1-Windows-x64.zip": "92870bdc52451341c7268f6e1937a3741ecd3e1012de0cf2e4026c606ccdd4a9"
+  },
+  "validation_script_sha256": "da3457d8fe8776e26d6ca18374e30092fc8ab868e9cd651a521526c763ac9b6a",
+  "default_streaming_reader_checked": true,
+  "source_dir": "E:\\codex\\excel-tools\\testfile\\期间缺货Top20",
+  "original_hashes_before": {
+    "供应商缺货Top20 (1).xlsx": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+    "库存满足率 (1).xlsx": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+    "期间缺货Top20.xlsx": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+    "每日缺货Top50 (1).xlsx": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+    "缺货数据统计.xlsx": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1"
+  },
+  "original_hashes_after": {
+    "供应商缺货Top20 (1).xlsx": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+    "库存满足率 (1).xlsx": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+    "期间缺货Top20.xlsx": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+    "每日缺货Top50 (1).xlsx": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+    "缺货数据统计.xlsx": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1"
+  },
+  "all_originals_unchanged": true,
+  "results": [
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 68,
+          "expected_output_cells": 87,
+          "selected_regions": 1,
+          "target_count": 19,
+          "remaining_merges": 1
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 6,
+          "expected_output_cells": 11,
+          "selected_regions": 3,
+          "target_count": 5,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 4,
+      "filled_cells": 24,
+      "xml_cells_checked": 98,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "82a2c653af16ba6c4779efb0e30b030947ae5012f42eca7b863e08e9e1f1680a",
+      "file": "供应商缺货Top20 (1).xlsx",
+      "mode": "default",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\供应商缺货Top20 (1).xlsx",
+      "source_sha256": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\供应商缺货Top20 (1)_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 360,
+          "expected_output_cells": 429,
+          "selected_regions": 6,
+          "target_count": 69,
+          "remaining_merges": 1
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 6,
+          "expected_output_cells": 11,
+          "selected_regions": 3,
+          "target_count": 5,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 9,
+      "filled_cells": 74,
+      "xml_cells_checked": 440,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "46fd622330da7044cd49b161aea994ac285a340d883f57885f423ac217191143",
+      "file": "库存满足率 (1).xlsx",
+      "mode": "default",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\库存满足率 (1).xlsx",
+      "source_sha256": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\库存满足率 (1)_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 333,
+          "expected_output_cells": 488,
+          "selected_regions": 5,
+          "target_count": 155,
+          "remaining_merges": 1
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 6,
+          "expected_output_cells": 11,
+          "selected_regions": 3,
+          "target_count": 5,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 8,
+      "filled_cells": 160,
+      "xml_cells_checked": 499,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "83206dcd64b780bc13b1469534cffdab794329a7a48794c9ac4c2357a14fc5d8",
+      "file": "期间缺货Top20.xlsx",
+      "mode": "default",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\期间缺货Top20.xlsx",
+      "source_sha256": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\期间缺货Top20_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 9294,
+          "expected_output_cells": 10847,
+          "selected_regions": 43,
+          "target_count": 1553,
+          "remaining_merges": 1
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 4,
+          "expected_output_cells": 6,
+          "selected_regions": 2,
+          "target_count": 2,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 45,
+      "filled_cells": 1555,
+      "xml_cells_checked": 10853,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "ceba1ff562defd5b2015d284206a585ad61536c405dcdea7bd9644caaaac58a3",
+      "file": "每日缺货Top50 (1).xlsx",
+      "mode": "default",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\每日缺货Top50 (1).xlsx",
+      "source_sha256": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\每日缺货Top50 (1)_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 326,
+          "expected_output_cells": 465,
+          "selected_regions": 11,
+          "target_count": 139,
+          "remaining_merges": 1
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 4,
+          "expected_output_cells": 6,
+          "selected_regions": 2,
+          "target_count": 2,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 13,
+      "filled_cells": 141,
+      "xml_cells_checked": 471,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "ada6b5e456af2239a0ccb3a7d3d10d54c323d6c4d9c75ce80d59e7280ad79ebc",
+      "file": "缺货数据统计.xlsx",
+      "mode": "default",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\缺货数据统计.xlsx",
+      "source_sha256": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\default\\缺货数据统计_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 68,
+          "expected_output_cells": 88,
+          "selected_regions": 2,
+          "target_count": 20,
+          "remaining_merges": 0
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 6,
+          "expected_output_cells": 11,
+          "selected_regions": 3,
+          "target_count": 5,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 5,
+      "filled_cells": 25,
+      "xml_cells_checked": 99,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "5856af27e4a038ac9217bd8f2311aa230d9e492836dfb2054840864bb98ea5c0",
+      "file": "供应商缺货Top20 (1).xlsx",
+      "mode": "all",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\供应商缺货Top20 (1).xlsx",
+      "source_sha256": "fff09aeff695c865ebec8723f3f482cd96626f514e33b198432453aaeab2aa63",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\供应商缺货Top20 (1)_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 360,
+          "expected_output_cells": 432,
+          "selected_regions": 7,
+          "target_count": 72,
+          "remaining_merges": 0
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 6,
+          "expected_output_cells": 11,
+          "selected_regions": 3,
+          "target_count": 5,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 10,
+      "filled_cells": 77,
+      "xml_cells_checked": 443,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "78836c8898f9ebd6246d3a3b67c77e12afe2b7202c45bc2431a52895f80b101b",
+      "file": "库存满足率 (1).xlsx",
+      "mode": "all",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\库存满足率 (1).xlsx",
+      "source_sha256": "489afd7a65dc8fce54b186aaa28a5882f1df90a24e0ad059c686c78440f3c498",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\库存满足率 (1)_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 333,
+          "expected_output_cells": 492,
+          "selected_regions": 6,
+          "target_count": 159,
+          "remaining_merges": 0
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 6,
+          "expected_output_cells": 11,
+          "selected_regions": 3,
+          "target_count": 5,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 9,
+      "filled_cells": 164,
+      "xml_cells_checked": 503,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "b195a55f035a8707fb8cc37b8c1fbb93260735d14cfe54d7e7f0f4b819c64cc7",
+      "file": "期间缺货Top20.xlsx",
+      "mode": "all",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\期间缺货Top20.xlsx",
+      "source_sha256": "48bebeaf7c3e3bb77b9ce6405b652c67883e89be7c697066357afd2f4c2f2579",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\期间缺货Top20_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 9294,
+          "expected_output_cells": 10854,
+          "selected_regions": 44,
+          "target_count": 1560,
+          "remaining_merges": 0
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 4,
+          "expected_output_cells": 6,
+          "selected_regions": 2,
+          "target_count": 2,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 46,
+      "filled_cells": 1562,
+      "xml_cells_checked": 10860,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "45599ec648b98aaba4bc3125b9ccd6acac68a2584a5d2a448ae30c46e8d7674f",
+      "file": "每日缺货Top50 (1).xlsx",
+      "mode": "all",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\每日缺货Top50 (1).xlsx",
+      "source_sha256": "c8a8326aced43ca62952583c39666a173f060592c735292fe98383b0d467442b",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\每日缺货Top50 (1)_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    },
+    {
+      "passed": true,
+      "issues": [],
+      "sheet_results": [
+        {
+          "sheet_index": 1,
+          "part": "xl/worksheets/sheet1.xml",
+          "source_cells": 326,
+          "expected_output_cells": 468,
+          "selected_regions": 12,
+          "target_count": 142,
+          "remaining_merges": 0
+        },
+        {
+          "sheet_index": 2,
+          "part": "xl/worksheets/sheet2.xml",
+          "source_cells": 4,
+          "expected_output_cells": 6,
+          "selected_regions": 2,
+          "target_count": 2,
+          "remaining_merges": 0
+        }
+      ],
+      "selected_regions": 14,
+      "filled_cells": 144,
+      "xml_cells_checked": 474,
+      "reader_warnings": [
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default",
+        "Workbook contains no default style, apply openpyxl's default"
+      ],
+      "output_sha256": "cdddc39dd340421c242fa87767ec0217c244ac5311bccb1136616b170fd05f1d",
+      "file": "缺货数据统计.xlsx",
+      "mode": "all",
+      "source": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\缺货数据统计.xlsx",
+      "source_sha256": "097d2b7bfeaa6e8c03a5e041a843b19377cff7a0ab6844e9b769a591350afec1",
+      "output": "E:\\codex\\excel-tools\\testfile\\验收_v1.1_2026-10-09\\fixed\\exe\\all\\缺货数据统计_拆分填充.xlsx",
+      "seconds": null,
+      "source_matches_original": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,10 @@
+{
+  "active_source_matches_tested_snapshot": true,
+  "zip_contents": [
+    "ExcelTools.exe",
+    "使用说明.txt"
+  ],
+  "zip_executable_sha256": "DC7EC7E07092533F67D25A6172995475D432A0CCF76DC351C8B89E6C8B72F9B5",
+  "zip_instructions_match_current_packaging": true,
+  "zip_bytes": 12161714
+}

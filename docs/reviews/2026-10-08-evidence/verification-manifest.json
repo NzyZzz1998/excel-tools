@@ -1,0 +1,25 @@
+{
+  "source_head": "470a4e1b3c5346ed8bdfd3d770b4d235eb45f173",
+  "local_tag": "v1.0.0",
+  "tag_commit": "470a4e1b3c5346ed8bdfd3d770b4d235eb45f173",
+  "python": "3.12.8",
+  "pyinstaller": "6.20.0",
+  "ci_pyinstaller": "6.22.3 (not installed or exercised)",
+  "self_test_exit": 0,
+  "source_copies": [
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-package-review-0cefcc0e76714031a8ece405e57f9d29\\excel_unmerge_gui.py",
+      "Hash": "496986C6941D106D406EB048E1AFE6294F26AABB8D57B640785E1D7C04649472"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-package-review-0cefcc0e76714031a8ece405e57f9d29\\excel_unmerge_fill.py",
+      "Hash": "252BBF1EDFE9C24D78D4D3531B6D0BE31C20F395BD79A6BDF171EB47A0690528"
+    }
+  ],
+  "executable": {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-package-review-0cefcc0e76714031a8ece405e57f9d29\\免安装 验收\\ExcelTools.exe",
+    "Hash": "9358BD984ABF9BE2B5185B3203637D8CD55322D38F741CBB622553BCB4B9EC9D"
+  },
+  "isolation": "EXE only in Chinese + spaces directory, different cwd, Python/Tcl/Tk-related env removed, PATH restricted, separate Chinese temporary extraction directory",
+  "limits": "Locally rebuilt review artifact, not downloaded official Release; current Windows 11 host has installed runtime components."
+}

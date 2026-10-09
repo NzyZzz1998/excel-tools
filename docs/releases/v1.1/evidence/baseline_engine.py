@@ -8,7 +8,7 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from xml.dom import Node, XMLNS_NAMESPACE, minidom
+from xml.dom import Node, minidom
 from zipfile import ZipFile
 
 
@@ -48,37 +48,10 @@ def bounds(ref):
     return first[0], first[1], last[0], last[1]
 
 
-def namespace_bindings(element):
-    """返回元素当前作用域中的声明，靠近元素的声明优先。"""
-    bindings = {}
-    while element is not None:
-        if element.nodeType == Node.ELEMENT_NODE:
-            for attribute in element.attributes.values():
-                if attribute.namespaceURI == XMLNS_NAMESPACE:
-                    bindings.setdefault(attribute.name, attribute.value)
-        element = element.parentNode
-    bindings.setdefault("xmlns", "")
-    return bindings
-
-
-def new_element(doc, name, parent):
+def new_element(doc, name):
     root = doc.documentElement
     qualified = root.prefix + ":" + name if root.prefix else name
-    element = doc.createElementNS(root.namespaceURI, qualified)
-    declaration = "xmlns:" + root.prefix if root.prefix else "xmlns"
-    if namespace_bindings(parent).get(declaration) != (root.namespaceURI or ""):
-        element.setAttributeNS(XMLNS_NAMESPACE, declaration, root.namespaceURI or "")
-    return element
-
-
-def clone_payload(child, target):
-    """把源作用域补到复制子树上，避免源格局部前缀在目标格失联/被重绑定。"""
-    cloned = child.cloneNode(True)
-    destination = namespace_bindings(target)
-    for declaration, namespace in namespace_bindings(child).items():
-        if not cloned.hasAttribute(declaration) and destination.get(declaration) != namespace:
-            cloned.setAttributeNS(XMLNS_NAMESPACE, declaration, namespace)
-    return cloned
+    return doc.createElementNS(root.namespaceURI, qualified)
 
 
 def payload(cell):
@@ -90,68 +63,6 @@ def payload(cell):
     values = children(cell, "v") + list(cell.getElementsByTagNameNS(cell.namespaceURI, "t"))
     return any(n.nodeValue for value in values for n in value.childNodes
                if n.nodeType in (Node.TEXT_NODE, Node.CDATA_SECTION_NODE))
-
-
-def has_metadata(cell):
-    """这些值依赖额外关联，不能按普通 v/is 复制或视作空白覆盖。"""
-    return cell is not None and (
-        any(cell.hasAttribute(attr) for attr in ("vm", "cm"))
-        or bool(children(cell, "extLst")))
-
-
-def reorder_children(parent, ordered):
-    """一次重建 minidom 子节点序列，避免逐项 removeChild 的平方开销。"""
-    parent.childNodes[:] = ordered
-    previous = None
-    for child in ordered:
-        child.parentNode = parent
-        child.previousSibling = previous
-        if previous is not None:
-            previous.nextSibling = child
-        previous = child
-    if previous is not None:
-        previous.nextSibling = None
-
-
-def serialize_xml(document):
-    """保留字符语义：文本 CR、属性 CR/LF/TAB 必须写成字符引用。"""
-    def escape(value, attribute=False):
-        value = (value.replace("&", "&amp;").replace("<", "&lt;")
-                 .replace(">", "&gt;").replace("\r", "&#13;"))
-        if attribute:
-            value = (value.replace('"', "&quot;").replace("\n", "&#10;")
-                     .replace("\t", "&#9;"))
-        return value
-
-    declaration = '<?xml version="' + (document.version or "1.0") + '" encoding="utf-8"'
-    if document.standalone is not None:
-        declaration += ' standalone="' + ("yes" if document.standalone else "no") + '"'
-    output = [declaration + "?>"]
-    # 显式栈避免工作表扩展 XML 的层级增加 Python 递归深度。
-    pending = list(reversed(document.childNodes))
-    while pending:
-        node = pending.pop()
-        if isinstance(node, str):
-            output.append(node)
-        elif node.nodeType == Node.ELEMENT_NODE:
-            output.append("<" + node.tagName)
-            for attribute in node.attributes.values():
-                output.append(' ' + attribute.name + '="' + escape(attribute.value, True) + '"')
-            if node.childNodes:
-                output.append(">")
-                pending.append("</" + node.tagName + ">")
-                pending.extend(reversed(node.childNodes))
-            else:
-                output.append("/>")
-        elif node.nodeType == Node.TEXT_NODE:
-            output.append(escape(node.data))
-        elif node.nodeType == Node.CDATA_SECTION_NODE:
-            data = node.data.replace("]]>", "]]]]><![CDATA[>")
-            output.append("<![CDATA[" + data.replace("\r", "]]>&#13;<![CDATA[") + "]]>")
-        else:
-            # 注释、处理指令和文档类型不含需重新转义的属性/文本值。
-            output.append(node.toxml())
-    return "".join(output).encode("utf-8")
 
 
 def transform_sheet(raw, all_merges=False):
@@ -174,10 +85,6 @@ def transform_sheet(raw, all_merges=False):
         row_nodes = {int(row.getAttribute("r")): row for row in children(data, "row")}
         cells = {cell.getAttribute("r"): cell for row in row_nodes.values()
                  for cell in children(row, "c")}
-        cells_by_row = {}
-        for ref, cell in cells.items():
-            row, col = coordinate(ref)
-            cells_by_row.setdefault(row, {})[col] = cell
         changed_rows = set()
         filled = 0
         for merge, (r1, c1, r2, c2) in selected:
@@ -186,25 +93,19 @@ def transform_sheet(raw, all_merges=False):
             if anchor is not None and children(anchor, "f"):
                 raise ValueError("合并区域 " + merge.getAttribute("ref")
                                  + " 含公式，请先在 Excel 中复制并粘贴为值后重试。")
-            if has_metadata(anchor):
-                raise ValueError("合并区域 " + merge.getAttribute("ref")
-                                 + " 含单元格图片或扩展元数据，暂不支持拆分填充。"
-                                 + "请先在副本中人工核对并转换为普通单元格值后重试。")
             # 先检查被合并掩盖的内容，避免静默覆盖原有数据。
-            # 只访问实际存在的单元格，宽而稀疏的合并块不枚举整片空白。
             for row in range(r1, r2 + 1):
-                for col, cell in cells_by_row.get(row, {}).items():
-                    if (c1 <= col <= c2 and (row, col) != (r1, c1)
-                            and (payload(cell) or has_metadata(cell))):
-                        raise ValueError("合并区域内的 " + cell.getAttribute("r")
-                                         + " 仍有独立内容或元数据，请先核对后再处理。")
-            anchor_has_value = payload(anchor)
+                for col in range(c1, c2 + 1):
+                    ref = address(row, col)
+                    cell = cells.get(ref)
+                    if ref != anchor_ref and payload(cell):
+                        raise ValueError("合并区域内的 " + ref
+                                         + " 仍有独立内容，请先核对后再处理。")
             for row in range(r1, r2 + 1):
                 if row not in row_nodes:
-                    row_node = new_element(doc, "row", data)
+                    row_node = new_element(doc, "row")
                     row_node.setAttribute("r", str(row))
                     row_nodes[row] = row_node
-                    data.appendChild(row_node)
                 row_node = row_nodes[row]
                 changed_rows.add(row)
                 # 默认只拆纵向；矩形区域每一行仍保留横向合并。
@@ -214,12 +115,8 @@ def transform_sheet(raw, all_merges=False):
                     if ref == anchor_ref:
                         continue
                     old = cells.get(ref)
-                    cell = new_element(doc, "c", row_node)
+                    cell = new_element(doc, "c")
                     cell.setAttribute("r", ref)
-                    if old is not None:
-                        row_node.replaceChild(cell, old)
-                    else:
-                        row_node.appendChild(cell)
                     if anchor is not None:
                         for attr in ("s", "t"):
                             if anchor.hasAttribute(attr):
@@ -227,13 +124,16 @@ def transform_sheet(raw, all_merges=False):
                         for child in anchor.childNodes:
                             if (child.nodeType == Node.ELEMENT_NODE
                                     and child.localName in ("v", "is")):
-                                cell.appendChild(clone_payload(child, cell))
+                                cell.appendChild(child.cloneNode(True))
+                    if old is not None:
+                        row_node.replaceChild(cell, old)
+                    else:
+                        row_node.appendChild(cell)
                     cells[ref] = cell
-                    cells_by_row.setdefault(row, {})[col] = cell
-                    if anchor_has_value:
+                    if payload(anchor):
                         filled += 1
                 if not all_merges and c2 > c1:
-                    horizontal = new_element(doc, "mergeCell", merges)
+                    horizontal = new_element(doc, "mergeCell")
                     horizontal.setAttribute("ref", address(row, c1) + ":" + address(row, c2))
                     merges.appendChild(horizontal)
             merges.removeChild(merge)
@@ -243,14 +143,13 @@ def transform_sheet(raw, all_merges=False):
             row_node = row_nodes[row]
             if row_node.hasAttribute("spans"):
                 row_node.removeAttribute("spans")
-            ordered_cells = sorted(children(row_node, "c"),
-                                   key=lambda c: coordinate(c.getAttribute("r"))[1])
-            other_nodes = [n for n in row_node.childNodes
-                           if n.nodeType != Node.ELEMENT_NODE or n.localName != "c"]
-            reorder_children(row_node, ordered_cells + other_nodes)
-        other_nodes = [n for n in data.childNodes
-                       if n.nodeType != Node.ELEMENT_NODE or n.localName != "row"]
-        reorder_children(data, [row_nodes[row] for row in sorted(row_nodes)] + other_nodes)
+            tail = next((n for n in row_node.childNodes
+                         if n.nodeType == Node.ELEMENT_NODE and n.localName != "c"), None)
+            for cell in sorted(children(row_node, "c"),
+                               key=lambda c: coordinate(c.getAttribute("r"))[1]):
+                row_node.insertBefore(cell, tail)
+        for row in sorted(row_nodes):
+            data.appendChild(row_nodes[row])
         remaining = children(merges, "mergeCell")
         if remaining:
             merges.setAttribute("count", str(len(remaining)))
@@ -261,16 +160,8 @@ def transform_sheet(raw, all_merges=False):
             r1, c1, r2, c2 = bounds(dimensions[0].getAttribute("ref"))
             for _, (a, b, c, d) in selected:
                 r1, c1, r2, c2 = min(r1, a), min(c1, b), max(r2, c), max(c2, d)
-            # 部分导出文件错误地只声明 A1；流式读取器会据此截断普通数据。
-            # 保留原范围，并覆盖全部实体格和仍保留的合并区域，不只看拆分目标。
-            for row, columns in cells_by_row.items():
-                r1, r2 = min(r1, row), max(r2, row)
-                c1, c2 = min(c1, min(columns)), max(c2, max(columns))
-            for merge in remaining:
-                a, b, c, d = bounds(merge.getAttribute("ref"))
-                r1, c1, r2, c2 = min(r1, a), min(c1, b), max(r2, c), max(c2, d)
             dimensions[0].setAttribute("ref", address(r1, c1) + ":" + address(r2, c2))
-        return serialize_xml(doc), len(selected), filled
+        return doc.toxml(encoding="utf-8"), len(selected), filled
     finally:
         doc.unlink()
 

@@ -1,0 +1,72 @@
+{
+  "repo": "E:\\codex\\excel-tools",
+  "git_head": "470a4e1b3c5346ed8bdfd3d770b4d235eb45f173",
+  "source_file_sha256": "252bbf1edfe9c24d78d4d3531b6d0be31c20f395bd79a6bdf171eb47a0690528",
+  "python_version": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "xlsxwriter_version": "3.2.5",
+  "openpyxl_version": "3.1.5",
+  "embedded_image": {
+    "input": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-engine-review-82c7b3b922674f4d8880ceb0ac49c523\\merged-in-cell-image.xlsx",
+    "output": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-engine-review-82c7b3b922674f4d8880ceb0ac49c523\\merged-in-cell-image_拆分填充.xlsx",
+    "embed_return": 0,
+    "stats": [
+      [
+        "Sheet1",
+        1,
+        1
+      ]
+    ],
+    "before_cells": [
+      {
+        "attributes": {
+          "r": "A1",
+          "t": "e",
+          "vm": "1"
+        },
+        "value": "#VALUE!"
+      }
+    ],
+    "after_cells": [
+      {
+        "attributes": {
+          "r": "A1",
+          "t": "e",
+          "vm": "1"
+        },
+        "value": "#VALUE!"
+      },
+      {
+        "attributes": {
+          "r": "A2",
+          "t": "e"
+        },
+        "value": "#VALUE!"
+      }
+    ],
+    "rich_parts": [
+      "xl/richData/_rels/richValueRel.xml.rels",
+      "xl/media/image1.png",
+      "xl/metadata.xml",
+      "xl/richData/rdrichvalue.xml",
+      "xl/richData/rdRichValueTypes.xml",
+      "xl/richData/rdrichvaluestructure.xml",
+      "xl/richData/richValueRel.xml"
+    ],
+    "rich_parts_bytes_unchanged": true,
+    "excel365_ui_opened": false
+  },
+  "omitted_coordinate_probes": [
+    {
+      "probe": "row_without_r",
+      "input": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-engine-review-82c7b3b922674f4d8880ceb0ac49c523\\row_without_r.xlsx",
+      "openpyxl_a1": "VALUE",
+      "engine_result": "ValueError: 工作表“Sheet”：invalid literal for int() with base 10: ''"
+    },
+    {
+      "probe": "cell_without_r",
+      "input": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-engine-review-82c7b3b922674f4d8880ceb0ac49c523\\cell_without_r.xlsx",
+      "openpyxl_a1": "VALUE",
+      "engine_result": "ValueError: 工作表“Sheet”：无效的单元格地址："
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 # Local input data and generated workbooks are never repository inputs.
+testfile/
 *.xlsx
 *.xlsm
 *.xls

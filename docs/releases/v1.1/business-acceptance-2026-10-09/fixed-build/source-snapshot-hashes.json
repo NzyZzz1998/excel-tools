@@ -1,0 +1,38 @@
+[
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\使用说明.txt",
+    "Hash": "895F94674EE550E724EE012FC0E6ACD9909616625AD271354918D36843E37CDB"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\excel_unmerge_fill.py",
+    "Hash": "95B5455B5D10AAB9436A8842BBC27F6814485C037247D8320E3C9B1CF81E6E30"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\excel_unmerge_gui.py",
+    "Hash": "0D59D53E067DA326984702ECE5939347448A829012B564363EB9469C42B25F87"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\tests\\test_engine_regressions.py",
+    "Hash": "721E8D5F4AF9018DA7DD61FBFA35E5E10B297466D5109A53BBD4A14D8A9BE2CE"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\tests\\test_excel_unmerge.py",
+    "Hash": "B1E8FA062C8182902F587804E31F9D2A0D58E81A02862F46D1881761C4E56D9E"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\tests\\test_gui_batch.py",
+    "Hash": "8325821344CF96C78EED808F4B95267FBFD677B69287A494181B6ED0AA9FE05D"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\tests\\test_windows_gui_helpers.py",
+    "Hash": "830BDF61E5F5EA1F8D73BBDB18260E1AD3CE2619A499AA067D94FD7FEF847E43"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\__pycache__\\excel_unmerge_fill.cpython-312.pyc",
+    "Hash": "F12FEE45C3D7782F0E49D36A81645370E7F1C70EA46870226EBA4DE609488EE2"
+  },
+  {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-business-fix-6ff03ed9f50048b4b5b31e0675a83afd\\candidate-source\\__pycache__\\excel_unmerge_gui.cpython-312.pyc",
+    "Hash": "B9D5346C7731BEEAC5376C5005EC0572C918AF384C17FA804288AE277CB40B94"
+  }
+]

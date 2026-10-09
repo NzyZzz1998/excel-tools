@@ -1,0 +1,62 @@
+{
+  "source_head": "470a4e1b3c5346ed8bdfd3d770b4d235eb45f173",
+  "source_status": [
+    " M .github/workflows/windows-build.yml",
+    " M README.md",
+    " M \"docs/\\345\\274\\200\\345\\217\\221\\350\\257\\264\\346\\230\\216.md\"",
+    " M excel_unmerge_fill.py",
+    " M excel_unmerge_gui.py",
+    " M packaging/release-notes.md",
+    " M \"packaging/\\344\\275\\277\\347\\224\\250\\350\\257\\264\\346\\230\\216.txt\"",
+    " M tests/test_gui_batch.py",
+    " M tests/test_windows_gui_helpers.py",
+    " M \"\\344\\275\\277\\347\\224\\250\\350\\257\\264\\346\\230\\216.md\"",
+    "?? docs/releases/",
+    "?? docs/reviews/",
+    "?? testfile/",
+    "?? tests/test_engine_regressions.py"
+  ],
+  "source_snapshot": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\candidate-source",
+  "source_hashes": [
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\candidate-source\\excel_unmerge_fill.py",
+      "Hash": "F7A77D0D4DC651A792DE27E3F9D8E2D5E29F0112B66B14641DBDBA42241474A4"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\candidate-source\\excel_unmerge_gui.py",
+      "Hash": "0D59D53E067DA326984702ECE5939347448A829012B564363EB9469C42B25F87"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\candidate-source\\tests\\test_engine_regressions.py",
+      "Hash": "182798440398CDCECB2FD9B3B354E572B3302328B205B070E3CE3BD2BA8783BE"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\candidate-source\\tests\\test_excel_unmerge.py",
+      "Hash": "B1E8FA062C8182902F587804E31F9D2A0D58E81A02862F46D1881761C4E56D9E"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\candidate-source\\tests\\test_gui_batch.py",
+      "Hash": "8325821344CF96C78EED808F4B95267FBFD677B69287A494181B6ED0AA9FE05D"
+    },
+    {
+      "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\candidate-source\\tests\\test_windows_gui_helpers.py",
+      "Hash": "830BDF61E5F5EA1F8D73BBDB18260E1AD3CE2619A499AA067D94FD7FEF847E43"
+    }
+  ],
+  "app_version": "1.1",
+  "python": "Python 3.12.8",
+  "pyinstaller": "6.22.3",
+  "openpyxl": "3.1.5",
+  "portable_self_test_exit": 0,
+  "executable": {
+    "Path": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\免安装 验收\\ExcelTools.exe",
+    "Hash": "DC7EC7E07092533F67D25A6172995475D432A0CCF76DC351C8B89E6C8B72F9B5"
+  },
+  "package": {
+    "Path": "E:\\codex\\excel-tools\\dist\\ExcelTools-v1.1-Windows-x64.zip",
+    "Hash": "4A0CA98B0F95D172C35A12219E2582EE95FAB39DEC771E74A11EA75C2C97927C"
+  },
+  "captured_utc": "2026-10-08T15:53:55.2234923Z",
+  "isolation": "EXE only, Chinese/space paths, separate cwd, stripped Python/Tcl environment, restricted PATH, separate extraction directory, hidden launch",
+  "limitations": "Local Windows 11 validation; no remote CI or official Release run; no private workbook content inspected; source snapshot includes authorized uncommitted v1.1 implementation"
+}

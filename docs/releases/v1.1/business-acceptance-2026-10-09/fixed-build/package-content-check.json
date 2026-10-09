@@ -1,0 +1,12 @@
+{
+  "zip_entries": [
+    "ExcelTools.exe",
+    "使用说明.txt"
+  ],
+  "crc_check": "passed",
+  "exe_inside_zip_matches_isolated_exe": true,
+  "exe_sha256": "066CA4A1C7FE7FD2AC80A06DDC3969DBD178F5181983D8767D2C219078485D5C",
+  "instructions_match": true,
+  "instructions_version": "v1.1",
+  "package_sha256": "92870BDC52451341C7268F6E1937A3741ECD3E1012DE0CF2E4026C606CCDD4A9"
+}
