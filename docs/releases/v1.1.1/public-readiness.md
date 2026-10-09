@@ -26,7 +26,27 @@
 
 新增的五张 PNG 已逐张查看：两张合成 GUI 布局图，以及月表运行的初始、已选择、处理中截图；均只有应用界面和诊断元数据。`assets/readme/merge-example.svg` 明示为虚构示例。新增 post-release 样式探针中的 `Value2`／显示文本来自 `prepare_style_fixtures.py` 构造的日期序号和样式夹具，记录也标记 synthetic only；恢复选择探针使用合成路径及临时工作簿。未把这些合成预期值误作真实业务数据。
 
-仍需集成方补核的增量是：本快照之后生成的月表最终 `result.png`、`execution.json`／运行总结，最终发布报告、下载验证、CI 证据，以及扫描后继续修改的 README／发布文档。只需检查新差异和图片，不必重复业务处理或历史全扫。本报告自身在扫描后补入了统计及人工分类文字；没有引入业务值。
+该快照之后的月表最终截图、运行记录和本地验收总报告，已按下面的提交补审完成。未来产生的下载验证、CI 证据、正式发布记录，以及本次补审之后继续修改的文件，仍需由集成方核对新差异；不必重复业务处理或历史全扫。
+
+## 提交 1a928e7 增量补审
+
+本轮只读补审于 2026-10-10（北京时间）收口，对象是已提交的 `1a928e784cadf742b2f3eb4443ee7eaabc2ad95d`。该提交包含 84 个变更路径，完整 Git 树有 357 个文件；逐个读取这 84 个提交 blob 及提交消息重新执行凭据／敏感文件路径检查，没有新增凭据候选、业务工作簿／压缩包路径或 JSON 原值候选。与先前 355 文件快照比较，新增四个路径为 `monthly/execution.json`、`monthly/result.png`、扫描结果 JSON 本身及 `acceptance/report.md`；有变化的 README、月表动作／内存轨迹、进度和本报告也已补核。
+
+- [月表完成截图](acceptance/monthly/result.png) 已逐张查看：窗口为 v1.1.1，默认规则，成功 1/1、失败 0、待处理 0；日志仅有路径、工作表名及拆分／填充数量，没有工作簿网格或业务单元格值。处理中截图也再次检查，显示读取阶段、145,051 行和已用时 00:31，没有新增敏感内容。
+- [execution.json](acceptance/monthly/execution.json)、[identity.json](acceptance/monthly/identity.json) 和 [progress.json](acceptance/monthly/progress.json) 只包含文件身份、哈希、应用窗口／进程、计数和资源观测。`execution.json` 中自动生成的 `ui_conclusion` 仍为待人工查看，人工补审结论记录于本报告；`progress.json` 是完成前心跳，不应解读为最终状态。最终状态以执行记录和完成截图为准。
+- 动作日志共 16 条，仅含目标／命中窗口及前台恢复字段；内存轨迹 410 条，仅含时间、PID、CPU 与内存数值。未增加业务明细记录。
+- [验收总报告](acceptance/report.md) 的 403.078 秒、工作集 295.86 MiB、专用内存 231.71 MiB、结果字节数及 SHA 与执行记录相符；明确内容／Excel 校验来自与 v1.1 结果逐字节一致后的证据继承，没有冒称本轮再次逐格扫描。所有相对链接均能解析到本地文件。报告未把远端 CI、Release 或公开操作写成已完成。
+
+本轮人工检查的关键工作区文件 SHA256（Git 文本行尾可能正规化）为：
+
+| 文件 | SHA256 |
+|---|---|
+| `monthly/result.png` | `fb96f0a64ca2ee9a314e4f4447928176caf40dee768bfc2aca7f09c99fa729a3` |
+| `monthly/processing.png` | `74a9a20c333b8818413afd5bd34f622880702480687ca326241aa58c009ffc9b` |
+| `monthly/execution.json` | `004b5482c93128abfa4dc81aeb56c338ad00fd45c83ba43b0c3fec70a747e8c4` |
+| `acceptance/report.md` | `5d9e37676dadcc6d70a7c40a5724f0194f4f653ef603acdd28ca9a434ba18476` |
+
+补审结论：该提交没有识别出必须排除的公开内容。这里只修改公开审查报告，没有修改 README、应用、测试或原验收证据，也没有运行工作簿处理或触碰用户程序。CI 修复及其后续提交不属于此 Git SHA 的检查结论。
 
 ## 可公开内容与边界
 

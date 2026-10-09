@@ -1,0 +1,55 @@
+{
+  "baseline": {
+    "retained_after_teardown": {
+      "app": true,
+      "root": true,
+      "status": true,
+      "all_merges": true
+    },
+    "finalization": [
+      {
+        "object": "app",
+        "thread": "MainThread"
+      },
+      {
+        "object": "all_merges",
+        "thread": "MainThread"
+      },
+      {
+        "object": "status",
+        "thread": "MainThread"
+      },
+      {
+        "object": "root",
+        "thread": "MainThread"
+      }
+    ]
+  },
+  "fixed": {
+    "retained_after_teardown": {
+      "app": false,
+      "root": false,
+      "status": false,
+      "all_merges": false
+    },
+    "finalization": [
+      {
+        "object": "app",
+        "thread": "MainThread"
+      },
+      {
+        "object": "all_merges",
+        "thread": "MainThread"
+      },
+      {
+        "object": "status",
+        "thread": "MainThread"
+      },
+      {
+        "object": "root",
+        "thread": "MainThread"
+      }
+    ]
+  },
+  "passed": true
+}

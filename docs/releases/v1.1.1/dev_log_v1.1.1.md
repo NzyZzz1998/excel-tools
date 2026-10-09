@@ -15,3 +15,7 @@
 独立硬停探针前两次暴露的是验收器适配问题：旧copyfileobj接缝不再命中、Windows venv转发器PID与实际Python不同。修正为实际ZIP writer和基础Python进程后，同一冻结源码的硬停及真实Win32读锁+ENOSPC验证均通过，历史尝试记录保留。没有为探针改动产品。
 
 用户后续授权提交、深度README优化与公开。README重排为价值→拆分示例→使用→规则→实测→边界/开发，使用全为虚构数据的静态SVG，保留实际测量口径与下载版本区分；公共可见性检查覆盖Git历史，条件发布与远端状态将在完成后回写。
+
+## 2026-10-10：远端验证与发布收口
+
+实现与本地验收证据已提交为 `1a928e7` 并推送。首轮 Windows CI `37955040642` 在 GUI 回归中发生 `RuntimeError: main thread is not in main loop`，随后 `Tcl_AsyncDelete: async handler deleted by the wrong thread`；保留失败记录，在修正和重新验证前不发布。此次失败没有覆盖或替换已经通过月表测试的候选包。

@@ -1,5 +1,6 @@
 """Exercise the real Tk window; business fixtures stay in temporary directories."""
 
+import gc
 import queue
 import tempfile
 import threading
@@ -7,6 +8,7 @@ import time
 import tkinter as tk
 from tkinter import font as tkfont
 import unittest
+import weakref
 from pathlib import Path
 from unittest.mock import patch
 
@@ -26,9 +28,21 @@ class WindowTests(unittest.TestCase):
         self.folder = Path(self.directory.name)
 
     def tearDown(self):
-        if self.root is not None:
-            self.root.destroy()
-        self.directory.cleanup()
+        # destroy() removes Tcl widgets, but Python cycles (including mocked
+        # exception tracebacks) may still own the interpreter and its variables.
+        # Release them on their creator thread before another test starts workers.
+        self.assertIs(threading.current_thread(), threading.main_thread())
+        app_ref, root_ref = weakref.ref(self.app), weakref.ref(self.app.root)
+        try:
+            if self.root is not None:
+                self.root.destroy()
+        finally:
+            self.app = None
+            self.root = None
+            gc.collect()
+            self.directory.cleanup()
+        self.assertIsNone(app_ref(), "The test retained its destroyed Tk application")
+        self.assertIsNone(root_ref(), "The test retained its destroyed Tcl interpreter")
 
     def workbook(self, name, merged):
         path = self.folder / name
