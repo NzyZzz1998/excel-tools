@@ -1,15 +1,15 @@
 入口判断：/acceptance → 本地候选验收
 
-交付模式：Vibe Coding 全流程型。2026-10-11。当前结论：本机本地候选验收通过，A01–A08均已闭合。正式下载保持v1.1.1；本报告不等于已发布。
+交付模式：Vibe Coding 全流程型。2026-10-11。当前结论：实现、便携包与发布下载验收通过，A01–A10均已闭合。v1.2.0已正式发布并设为Latest，详见[发布记录](../release-record.md)。
 
 # 对象与证据身份
 
-起点分支main，base HEAD `b48e97dd77bcd32c1508eab076a924568a6d54bf`；新实现尚未提交，采用冻结源文件SHA256绑定候选。旧拆分填充引擎未改，SHA256仍为 `602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3`。独立冻结源码快照、所有5个运行模块、打包版本、EXE/ZIP完整身份见[candidate-identity.json](candidate-identity.json)。
+起点分支main，base HEAD `b48e97dd77bcd32c1508eab076a924568a6d54bf`；候选构建时新实现未提交，采用冻结源文件SHA256绑定。旧拆分填充引擎未改，SHA256仍为 `602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3`。下表保留候选构建身份，见[candidate-identity.json](candidate-identity.json)。正式tag对应`0f56c96e7f89bae22759055457f57ed6d1d5172a`，所有5模块与冻结源码仅有可能的Git行尾正规化，内容一致，见[发布源码身份](release-source-identity.json)；包内说明更新后的正式ZIP见[发布包身份](release-package.json)，EXE不变。
 
 | 身份闭包 | 状态与证据 |
 |---|---|
 | 候选路径/版本/哈希 | 已提供；dist/ExcelTools-v1.2.0/ExcelTools.exe，v1.2.0，SHA256 `51ff57528044e46a91bb3779b26a3b9d0a9feff17affe42e01fc3cda8a67347a` |
-| source commit或等价构建身份 | 已提供；base HEAD＋dirty工作树5个模块SHA，构建使用独立冻结快照；未冒称有v1.2.0提交或tag |
+| source commit或等价构建身份 | 已提供；候选构建时采用base HEAD＋dirty工作树5个模块SHA及独立冻结快照；发布后另以release-source-identity绑定真实tag源码 |
 | review范围/时间 | 已提供；2026-10-11新IO、编排、GUI和根窗口集成差异，由实现之外的角色做黑盒测试和交叉审查 |
 | 日志/测试时间/环境 | 已提供；2026-10-11 Windows本机，Python3.12.8、Tk8.6.15、openpyxl3.1.5（仅测试）、PyInstaller6.22.3 |
 
@@ -27,6 +27,8 @@
 | A06 / T04 | Excel客户端打开新xlsx并解释类型正确 | 独立创建的Excel16.0 COM实例只读打开合成输出，3行×4列，编号0012、日期序列、布尔、数字0000格式、字面等号文本均符合；关闭工作簿并Quit自己实例。见[excel-client.json](excel-client.json) | 通过（合成样本） |
 | A07 / T03/07 | 真实月表完成并保值，记录资源 | 按10万行拆8份141.138秒/30.79MiB RSS、重新合表143.070秒/30.64MiB RSS、按第1列值拆29份151.967秒/46.40MiB RSS；源哈希不变，均757635数据行。全量解码后值/类型/数字格式摘要一致；38份输出表头一致、29份分组归属正确。见[内容核验](monthly-oracle.json)、[表头与分组](monthly-groups.json) | 通过 |
 | A08 / T07 | 大SST不能全表字符串驻内存 | 100000唯一字符串×544字节；SST未压缩56000113字节。拆成40000/40000/20000行，11.526秒、峰值RSS32.20MiB；独立openpyxl源与结果逐行文本/类型/摘要一致，源哈希不变。[完整证据](sst-stress.json) | 通过 |
+| A09 / T08 | 远端Windows环境测试、构建与便携自检 | CI 38145277446对应正式源码commit，测试、打包、隔离EXE自检及资产生成全部通过。[CI记录](ci-success.json) | 通过 |
+| A10 / 发布 | 用户下载的附件身份与版本正确 | 匿名Latest为正式v1.2.0，远端digest、从latest下载的ZIP/EXE哈希与发布清单一致；中文/空格目录、不同cwd、最小PATH、去开发环境自检退出0，日志v1.2.0。[下载证据](release-download/release-download-verification.json) | 通过 |
 
 IO定向测试曾发现最后保存回调刚设取消但未再次检查，已补检查并按原反例通过。CR异常确认是测试夹具先把CR写成XML字面回车导致源读回先变LF，已用合法字符实体构造并先独立读回核实，没有放宽应用断言。首次全套唯一失败为旧GUI测试硬编码v1.1.1，版本合同更新后全套通过。
 
@@ -52,4 +54,6 @@ PowerShell/Python实际执行源码、unittest、PyInstaller和文件哈希；�
 
 本轮合同内无未关闭阻塞。本机96DPI、已测结构和样本的结论已闭合；其他DPI、WPS、干净Windows环境、更大或不同结构工作簿仍没有相应完成声明。
 
-本地交付`dist/ExcelTools-v1.2.0-Windows-x64.zip`，解压后运行`ExcelTools.exe`，主窗口进入“合表与拆表…”；全部5个运行模块及两项产物的哈希收尾复核一致。不存在新增安装器或商店包。本轮尚未提交/推送、创建tag、上传Release，仓库已公开不需要再次变更可见性。不得把本地候选链接包装成正式下载已更新。回退直接使用已发布v1.1.1，源和历史结果保留，无配置迁移。
+已按用户明确授权完成提交、推送、annotated tag及正式Release，Latest现为v1.2.0。正式包`dist/ExcelTools-v1.2.0-release/ExcelTools-Windows-x64.zip`仅更新包内说明，EXE与已验收候选相同；正式重新下载后再次确认哈希及自检成功。不存在新增安装器或商店包，仓库保持已公开状态。回退直接使用v1.1.1，源和历史结果保留，无配置迁移。
+
+首轮CI 38145129384的180项中仅一处Windows临时目录长短路径文本比较失败；改为唯一目录数量断言＋samefile身份，所有错误/清理/源与旧结果哈希断言保持。定向28项通过后，新CI 38145277446全部通过。该修正仅改测试，运行模块和已验收EXE未改，既有真实月表证据仍有效；旧[失败记录](ci-attempt-1.json)保留。

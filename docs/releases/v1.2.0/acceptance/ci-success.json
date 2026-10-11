@@ -1,0 +1,84 @@
+{
+  "id": 38145277446,
+  "html_url": "https://github.com/NzyZzz1998/excel-tools/actions/runs/38145277446",
+  "head_sha": "0f56c96e7f89bae22759055457f57ed6d1d5172a",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-10-11T13:58:08Z",
+  "updated_at": "2026-10-11T13:59:22Z",
+  "jobs": [
+    {
+      "name": "windows",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install build and test dependencies",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test source",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build portable application",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test portable app without Python paths or source files",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Upload portable self-test failure diagnostics",
+          "status": "completed",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Prepare user package",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Upload Windows application",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "source_test_count": 180,
+  "source_test_seconds": 23.902
+}

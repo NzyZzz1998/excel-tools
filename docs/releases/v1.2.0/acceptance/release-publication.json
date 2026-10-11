@@ -1,0 +1,18 @@
+{
+  "anonymous_read_success": true,
+  "id": 409702253,
+  "tag_name": "v1.2.0",
+  "draft": false,
+  "prerelease": false,
+  "html_url": "https://github.com/NzyZzz1998/excel-tools/releases/tag/v1.2.0",
+  "published_at": "2026-10-11T14:00:32Z",
+  "target_commitish": "main",
+  "asset": [
+    {
+      "name": "ExcelTools-Windows-x64.zip",
+      "size": 13145189,
+      "digest": "sha256:d60c15554317dfed91822115df62e7b2d072c6dcbd48fd219ea0af8bacf8cce6",
+      "browser_download_url": "https://github.com/NzyZzz1998/excel-tools/releases/download/v1.2.0/ExcelTools-Windows-x64.zip"
+    }
+  ]
+}

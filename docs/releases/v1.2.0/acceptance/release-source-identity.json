@@ -1,0 +1,36 @@
+{
+  "source_commit": "0f56c96e7f89bae22759055457f57ed6d1d5172a",
+  "release_version": "1.2.0",
+  "all_runtime_sources_match": true,
+  "executable_sha256": "51ff57528044e46a91bb3779b26a3b9d0a9feff17affe42e01fc3cda8a67347a",
+  "files": {
+    "excel_unmerge_gui.py": {
+      "frozen_windows_sha256": "9f5de5603a271d1f8fbb64d95eea2d4f28c3b149afa86d9e635296e1fb6e8384",
+      "git_blob_sha256": "e2fb14fbb1eb82b5ce30ce812950c5d8fb1c61ce14cdd92b23f04a74c4df95d3",
+      "equal_after_crlf_normalization": true
+    },
+    "excel_unmerge_fill.py": {
+      "frozen_windows_sha256": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+      "git_blob_sha256": "b6dfa4a539674dddfe24265731335d5fbfc91b5d47ba3ad1201f1d6b4d820035",
+      "equal_after_crlf_normalization": true
+    },
+    "excel_table_gui.py": {
+      "frozen_windows_sha256": "459d672dd94668fc596cc938e304154e8840543d7835df36c9d4abec03027627",
+      "git_blob_sha256": "459d672dd94668fc596cc938e304154e8840543d7835df36c9d4abec03027627",
+      "equal_after_crlf_normalization": true
+    },
+    "excel_table_io.py": {
+      "frozen_windows_sha256": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+      "git_blob_sha256": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+      "equal_after_crlf_normalization": true
+    },
+    "excel_table_tools.py": {
+      "frozen_windows_sha256": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac",
+      "git_blob_sha256": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac",
+      "equal_after_crlf_normalization": true
+    }
+  },
+  "note": "Git autocrlf may normalize line endings; runtime source content is identical to frozen candidate.",
+  "tag": "v1.2.0",
+  "annotated_tag_object": "36dbd9c00052aa972001d8db8757680c1ea1713c"
+}

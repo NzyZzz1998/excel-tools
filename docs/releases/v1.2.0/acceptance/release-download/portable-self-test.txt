@@ -1,0 +1,1 @@
+ExcelTools v1.2.0 self-test passed.
