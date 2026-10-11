@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-10-11",
+  "synthetic_only": true,
+  "public_scripts_rerun": true,
+  "application_modified": false,
+  "application_sha256": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+  "artifacts": {
+    "create_fixture.py": "46f344a23906f36f97ae88eb5721b62a7be2b7dd6a436687afabb496a7891417",
+    "validate_excel.ps1": "9449826ab75be9006787fa5c5e261faa0c4b81e6dd98497d3fc6eb47efb31610",
+    "openpyxl-result.json": "e23d2745b54507b6a1eeb5beaa21cb1127595cdb9e1ff1d2e54a8ea6eec96bb0",
+    "excel-result.json": "209099a403b35378adf2a497756aa7eaa7540e3dbfe31ab5e4a842f515965ec6"
+  }
+}

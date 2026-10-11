@@ -1,0 +1,29 @@
+{
+  "test_command": "python -m unittest discover -s tests -v",
+  "passed": true,
+  "count": 180,
+  "seconds": 15.372,
+  "python": "3.12.8",
+  "oracle": "openpyxl 3.1.5",
+  "raw_log": "testfile/v1.2.0-acceptance/full-tests-locked.log",
+  "raw_log_sha256": "0cc4c8ba9db5558e57d482f4c41ad4fc425de2bfbc356c9b543b3652a7e1b481",
+  "runtime_source_sha256": {
+    "excel_unmerge_gui.py": "9f5de5603a271d1f8fbb64d95eea2d4f28c3b149afa86d9e635296e1fb6e8384",
+    "excel_unmerge_fill.py": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+    "excel_table_gui.py": "459d672dd94668fc596cc938e304154e8840543d7835df36c9d4abec03027627",
+    "excel_table_io.py": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+    "excel_table_tools.py": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac"
+  },
+  "tests_sha256": {
+    "tests\\test_engine_io_progress.py": "7dca568d3c0605ed2a360a12beed425b5a152edaa5cbd0c69637443a093f9d28",
+    "tests\\test_engine_regressions.py": "7edb726fce76caee8e0a5a24724f6c5a3f6d3d132cc2c91ea241e982d290d176",
+    "tests\\test_excel_unmerge.py": "b1e8fa062c8182902f587804e31f9d2a0d58e81a02862f46d1881761c4e56d9e",
+    "tests\\test_gui_batch.py": "c429cf20dc3eb65721de7174cb3d6dd41f4a75a34d8ada637375e1b286df07e4",
+    "tests\\test_streaming_engine.py": "a8b8e7e32274b9157e50a32a4af422799a4f56fe9b9981d73d86cd2e690afe94",
+    "tests\\test_table_gui.py": "a6ad9c9b4135905b97db121162ce6a315f7e6c59e6f2bad9054b5fe1a9d7de0c",
+    "tests\\test_table_integration.py": "b69b364ac3cee671cc866e11fb313f291e4b9e0c42c195db21b08e5a0cbd4076",
+    "tests\\test_table_io.py": "47bd1a1c10876a21d6f1f3219a137a2a724f0fd302493b9939c07cf541809d66",
+    "tests\\test_table_tools.py": "37d181ea1b3195f9b1aa704aed6dd1504b774c07baf9047b2eea1f7becc817f3",
+    "tests\\test_windows_gui_helpers.py": "752cc312ef289beb47f7794f77f8cab0a533db92ecdf43688c16f9ce7df46a5b"
+  }
+}

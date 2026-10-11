@@ -23,7 +23,7 @@ from tkinter.scrolledtext import ScrolledText
 from excel_unmerge_fill import process_file
 
 APP_TITLE = "Excel 数据处理工具"
-APP_VERSION = "1.1.1"
+APP_VERSION = "1.2.0"
 
 
 def enable_windows_dpi_awareness():
@@ -120,6 +120,7 @@ class Application:
         self.stop_event = threading.Event()
         self.output_directory = None
         self.events = queue.Queue()
+        self.table_tools = None
         self.all_merges = tk.BooleanVar(root, value=False)
         self.status = tk.StringVar(root, value="请选择 Excel 文件。")
         root.title("{} v{}".format(APP_TITLE, APP_VERSION))
@@ -134,7 +135,11 @@ class Application:
         frame.pack(fill="both", expand=True)
         self.heading_font = font.nametofont("TkDefaultFont").copy()
         self.heading_font.configure(size=16, weight="bold")
-        ttk.Label(frame, text="合并单元格拆分与填充", font=self.heading_font).pack(anchor="w")
+        heading = ttk.Frame(frame)
+        heading.pack(fill="x")
+        ttk.Label(heading, text="合并单元格拆分与填充", font=self.heading_font).pack(side="left")
+        self.tools_button = ttk.Button(heading, text="合表与拆表…", command=self.open_table_tools)
+        self.tools_button.pack(side="right")
         ttk.Label(frame, text="拆开合并行，让每一行都有原来的值。"
                   ).pack(anchor="w", pady=(6, 12))
 
@@ -219,7 +224,7 @@ class Application:
         self.replace_text(self.file_list, "\n".join(self.files))
 
     def start(self):
-        if self.running or not self.files:
+        if self.running or self.table_tools is not None or not self.files:
             return
         self.file_states = dict.fromkeys(self.files, "pending")
         self.batch_all_merges = self.all_merges.get()
@@ -236,12 +241,12 @@ class Application:
         return tuple(file for file, state in self.file_states.items() if state == "pending")
 
     def retry_failed(self):
-        if not self.running and self.failed_files:
+        if not self.running and self.table_tools is None and self.failed_files:
             self.launch_batch(self.failed_files, "重试上次失败项（沿用首次处理规则）",
                               recovering=True)
 
     def resume_pending(self):
-        if not self.running and self.pending_files:
+        if not self.running and self.table_tools is None and self.pending_files:
             self.launch_batch(self.pending_files, "继续上次未处理项（沿用首次处理规则）",
                               recovering=True)
 
@@ -266,7 +271,10 @@ class Application:
         self.results.configure(state="disabled")
 
     def launch_batch(self, files, label, recovering=False):
+        if self.table_tools is not None:
+            return
         self.running = True
+        self.tools_button.configure(state="disabled")
         self.run_files = tuple(files)
         self.run_completed = 0
         self.current_file = None
@@ -354,6 +362,7 @@ class Application:
             elif event[0] == "done":
                 _, count, failures, remaining = event
                 self.running = False
+                self.tools_button.configure(state="normal")
                 self.current_file = None
                 self.current_file_started_at = None
                 self.current_detail = None
@@ -421,7 +430,37 @@ class Application:
         except OSError as error:
             self.status.set("无法打开结果目录：{}。可从下方复制保存路径。".format(error))
 
+    def open_table_tools(self):
+        if self.running:
+            return
+        if self.table_tools is not None:
+            self.table_tools.window.deiconify()
+            self.table_tools.window.lift()
+            self.table_tools.window.focus_set()
+            return
+        from excel_table_gui import TableToolsWindow
+        self.table_tools = TableToolsWindow(self.root, on_close=self.table_tools_closed)
+        self.choose_button.configure(state="disabled")
+        self.start_button.configure(state="disabled")
+        self.retry_button.configure(state="disabled")
+        self.resume_button.configure(state="disabled")
+        self.option.configure(state="disabled")
+
+    def table_tools_closed(self):
+        self.table_tools = None
+        self.choose_button.configure(state="normal")
+        self.start_button.configure(state="normal" if self.files else "disabled")
+        self.retry_button.configure(state="normal" if self.failed_files else "disabled")
+        self.resume_button.configure(state="normal" if self.pending_files else "disabled")
+        self.option.configure(state="normal")
+
     def close(self):
+        if self.table_tools is not None:
+            if self.table_tools.running:
+                self.table_tools.close()
+                self.status.set("合表与拆表正在安全取消；清理完成后可关闭窗口。")
+                return
+            self.table_tools.close()
         if self.running:
             self.request_stop()
             self.status.set("已请求停止。当前文件安全完成后，可查看结果并关闭窗口。")
@@ -489,6 +528,26 @@ def self_test():
         if source.read_bytes() != original:
             raise AssertionError("原文件被修改")
 
+        # 新工具同样进入离线便携自检，验证打包包含 SQLite 与新模块。
+        from excel_table_io import Cell, TableReader, XlsxWriter
+        from excel_table_tools import TableSource, run_tables
+        table_source = Path(directory) / "数据 自检.xlsx"
+        with XlsxWriter(table_source, ["编号", "分组", "数量", "日期"]) as writer:
+            writer.append([Cell("s", "0012"), Cell("s", "甲"), Cell("n", "0"), Cell("n", "45292", 14)])
+            writer.append([Cell("s", "=原样文本"), Cell("s", "乙"), Cell("b", "1"), Cell("n", "45293", 14)])
+        for mode in ("merge", "split_rows", "split_column"):
+            table_result = run_tables([TableSource(table_source, "数据")], directory,
+                                      mode=mode, rows_per_file=1, split_column="分组", provenance=False)
+            if table_result.rows != 2 or len(table_result.files) != (1 if mode == "merge" else 2):
+                raise AssertionError("合表/拆表行数或文件数不正确")
+            actual = []
+            for result_path in table_result.files:
+                with TableReader(result_path, "数据") as reader:
+                    actual.extend([cell.value if cell else None for cell in cells]
+                                  for _, cells in reader.iter_rows())
+            if actual != [["0012", "甲", "0", "45292"], ["=原样文本", "乙", "1", "45293"]]:
+                raise AssertionError("合表/拆表未正确保留数据值")
+
         # 完整窗口以透明方式布局，检查打包后的控件及结果显示路径。
         root = tk.Tk()
         try:
@@ -540,6 +599,15 @@ def self_test():
             error_text = describe_error(BadZipFile("self-test invalid workbook"))
             if "加密" not in error_text or "BadZipFile" not in error_text:
                 raise AssertionError("读取失败应包含恢复建议与技术详情")
+            app.open_table_tools()
+            root.update()
+            if app.table_tools is None or not app.table_tools.window.winfo_exists():
+                raise AssertionError("合表与拆表窗口未打开")
+            if "disabled" not in app.start_button.state():
+                raise AssertionError("新工具打开时原任务启动入口应禁用")
+            app.table_tools.close()
+            if app.table_tools is not None:
+                raise AssertionError("合表与拆表窗口未正常释放")
         finally:
             root.destroy()
 

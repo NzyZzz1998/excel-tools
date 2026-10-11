@@ -127,8 +127,8 @@ class WindowTests(unittest.TestCase):
         self.assertIn("上次任务已处理 1/1", final_status)
         self.assertNotIn("已用时", final_status)
         self.assertEqual(float(self.app.progress["value"]), 1)
-        self.assertEqual(APP_VERSION, "1.1.1")
-        self.assertIn("v1.1.1", self.root.title())
+        self.assertEqual(APP_VERSION, "1.2.0")
+        self.assertIn("v1.2.0", self.root.title())
 
     def test_elapsed_restarts_for_each_file(self):
         first, later = "合成第一份.xlsx", "合成第二份.xlsx"

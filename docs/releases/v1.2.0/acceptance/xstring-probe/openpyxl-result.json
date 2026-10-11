@@ -1,0 +1,69 @@
+{
+  "synthetic_only": true,
+  "openpyxl_version": "3.1.5",
+  "expected": [
+    "left=right",
+    "=1+1",
+    "_x003D_",
+    "left\rright",
+    "left\rright",
+    "\ud83d\ude00"
+  ],
+  "source": [
+    {
+      "value": "left_x003D_right",
+      "type": "s"
+    },
+    {
+      "value": "_x003D_1+1",
+      "type": "s"
+    },
+    {
+      "value": "_x005F_x003D_",
+      "type": "s"
+    },
+    {
+      "value": "left_x000D_right",
+      "type": "s"
+    },
+    {
+      "value": "left\rright",
+      "type": "s"
+    },
+    {
+      "value": "_xD83D__xDE00_",
+      "type": "s"
+    }
+  ],
+  "output": [
+    {
+      "value": "left=right",
+      "type": "s"
+    },
+    {
+      "value": "=1+1",
+      "type": "s"
+    },
+    {
+      "value": "_x005F_x003D_",
+      "type": "s"
+    },
+    {
+      "value": "left\rright",
+      "type": "s"
+    },
+    {
+      "value": "left\rright",
+      "type": "s"
+    },
+    {
+      "value": "\ud83d\ude00",
+      "type": "s"
+    }
+  ],
+  "installed_openpyxl_parse_cell": {
+    "module": "openpyxl/worksheet/_reader.py",
+    "start_line": 189
+  },
+  "application_sha256": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b"
+}

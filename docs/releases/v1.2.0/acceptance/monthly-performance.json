@@ -1,0 +1,268 @@
+{
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel Core Ultra 7 265K",
+    "logical_cpus": 20,
+    "ram_gib": 47.4,
+    "runtime": "Python 3.12.8",
+    "sampling": "psutil current process every 100ms; no GUI or oracle in measured process"
+  },
+  "source_preparation": {
+    "input_is_fully_unmerged_copy": true,
+    "previous_default_sha256": "c28ee8a7646ac33315fb89f0a9483a51c5d9b7a8eb05195632493c2d7e02c4ae",
+    "all_merges_additional_ranges": 1,
+    "additional_filled_cells": 6,
+    "seconds_excluded_from_new_tool_measurement": 205.958,
+    "header_row": 1,
+    "selected_sheet_index": 0,
+    "columns": 22,
+    "data_includes_footer": true,
+    "provenance": false,
+    "split_column_index": 0
+  },
+  "operations": {
+    "monthly-split": {
+      "mode": "split_rows",
+      "seconds": 141.138,
+      "peak_rss_mib": 30.79,
+      "peak_private_mib": 18.89,
+      "input": [
+        {
+          "size": 117674551,
+          "sha256": "b7c9a7dde0d6a1011b0f5ea6179592d0f5abeab39b861ae28aeb0afdaa59f3ca"
+        }
+      ],
+      "source_unchanged": true,
+      "rows": 757635,
+      "output_files": 8,
+      "output": [
+        {
+          "size": 15473833,
+          "sha256": "78c47656ba95e60b140d8db50bd219babc5c9f4d167a5bc44fa96882f9250568"
+        },
+        {
+          "size": 15529911,
+          "sha256": "aaa4088ec5393f822c841e360ceb1df7e65c7e3928f4925103b8c0e264cc1ddc"
+        },
+        {
+          "size": 15582391,
+          "sha256": "8d558b14f8d5b9cf89779cc47873c1226602bbaaf8a2e7490a4b8841eda436f4"
+        },
+        {
+          "size": 15633997,
+          "sha256": "f8560f756db5abcdbc64e6ec66f88a0f6e8ea8441c1c384cb3077c82b97920f6"
+        },
+        {
+          "size": 15669812,
+          "sha256": "5129207104597e1714ca6d26a505b9ca2ef10dee8db6646cf05dbc17287ac951"
+        },
+        {
+          "size": 15661244,
+          "sha256": "7f0bacbd9282cbacfe7e448855277d5d13532e08e43c60648f001c0f86671185"
+        },
+        {
+          "size": 15628980,
+          "sha256": "98983cf70e7a99adf30556bd25ed1a6e89f67212941b4e9471ecbfbb0ad6d06f"
+        },
+        {
+          "size": 9064887,
+          "sha256": "dd8a86bb1a4c8b19ebfb7ff73aa8922476d77ef2ec0bff76c2fa436d3d775ace"
+        }
+      ],
+      "code": {
+        "excel_table_io.py": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+        "excel_table_tools.py": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac"
+      }
+    },
+    "monthly-merge": {
+      "mode": "merge",
+      "seconds": 143.07,
+      "peak_rss_mib": 30.64,
+      "peak_private_mib": 19.88,
+      "input": [
+        {
+          "size": 15473833,
+          "sha256": "78c47656ba95e60b140d8db50bd219babc5c9f4d167a5bc44fa96882f9250568"
+        },
+        {
+          "size": 15529911,
+          "sha256": "aaa4088ec5393f822c841e360ceb1df7e65c7e3928f4925103b8c0e264cc1ddc"
+        },
+        {
+          "size": 15582391,
+          "sha256": "8d558b14f8d5b9cf89779cc47873c1226602bbaaf8a2e7490a4b8841eda436f4"
+        },
+        {
+          "size": 15633997,
+          "sha256": "f8560f756db5abcdbc64e6ec66f88a0f6e8ea8441c1c384cb3077c82b97920f6"
+        },
+        {
+          "size": 15669812,
+          "sha256": "5129207104597e1714ca6d26a505b9ca2ef10dee8db6646cf05dbc17287ac951"
+        },
+        {
+          "size": 15661244,
+          "sha256": "7f0bacbd9282cbacfe7e448855277d5d13532e08e43c60648f001c0f86671185"
+        },
+        {
+          "size": 15628980,
+          "sha256": "98983cf70e7a99adf30556bd25ed1a6e89f67212941b4e9471ecbfbb0ad6d06f"
+        },
+        {
+          "size": 9064887,
+          "sha256": "dd8a86bb1a4c8b19ebfb7ff73aa8922476d77ef2ec0bff76c2fa436d3d775ace"
+        }
+      ],
+      "source_unchanged": true,
+      "rows": 757635,
+      "output_files": 1,
+      "output": [
+        {
+          "size": 118850434,
+          "sha256": "00fc0ef39c8d5e28e2a56955928127a763ef78f740d634567194b3853716fbf3"
+        }
+      ],
+      "code": {
+        "excel_table_io.py": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+        "excel_table_tools.py": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac"
+      }
+    },
+    "monthly-group": {
+      "mode": "split_column",
+      "seconds": 151.967,
+      "peak_rss_mib": 46.4,
+      "peak_private_mib": 34.27,
+      "input": [
+        {
+          "size": 117674551,
+          "sha256": "b7c9a7dde0d6a1011b0f5ea6179592d0f5abeab39b861ae28aeb0afdaa59f3ca"
+        }
+      ],
+      "source_unchanged": true,
+      "rows": 757635,
+      "output_files": 29,
+      "output": [
+        {
+          "size": 2423166,
+          "sha256": "d13e428bb45a07546ee1b4836db319b3ae3b5ae393d52b0ffd97e324d69581c1"
+        },
+        {
+          "size": 4751970,
+          "sha256": "6c31d2baef6f382a1715de0d49dd66e0d8b3fe8f6e79f8b81b82379bec9ebee6"
+        },
+        {
+          "size": 4934652,
+          "sha256": "789964604e4119e8bd89ba31714ff4173c96e65e7608db7b649d0953c1621909"
+        },
+        {
+          "size": 4891680,
+          "sha256": "2519c390fd5cde138a716af5f19708128064e28d5254b51e419c95b7886302eb"
+        },
+        {
+          "size": 3111940,
+          "sha256": "d6f6298168bb9cbd761773fbabef6f0d5366ce2da7937851ec26528c0eee9144"
+        },
+        {
+          "size": 4815291,
+          "sha256": "c1b05dfb5b557df44cb49b11ebe6b031d82541ab1af38f6ac279bc7adb0681d9"
+        },
+        {
+          "size": 4803800,
+          "sha256": "aef8b2124a6b662fe984d50f5f79de844aeedfc85b813d8e313a4b1770678cbc"
+        },
+        {
+          "size": 4877828,
+          "sha256": "8d8fb3f752aa5cae72224c7d2cf7be20d58851b179b3b7e1832ba583de775b27"
+        },
+        {
+          "size": 4878142,
+          "sha256": "053fdc8bb21936907da1c93f553b2e0138a23104331dad330f65b0dd9bdeb93a"
+        },
+        {
+          "size": 867124,
+          "sha256": "98c1194745dd01eb1d97af2b1c8a94dd704c084ec23aa68ec1cf520ad2f537db"
+        },
+        {
+          "size": 4782213,
+          "sha256": "b1a06021d69565b2365cdb46b1cad60f2313a336a762b8609fbae3e3d60a3055"
+        },
+        {
+          "size": 4717337,
+          "sha256": "2fbe1ce1df7b850e9cadc790c50964acb03b2a3abbdbf6284ef31e49f2d2b6e2"
+        },
+        {
+          "size": 4821656,
+          "sha256": "dc22d36f942885e38dcdeb5435678e7cd861a77c1aaf83a6012de239ec73bd70"
+        },
+        {
+          "size": 4930269,
+          "sha256": "09388cdd06e02788d861f2550884c8cbef187c3c2de8b736a1ec612f3cbfbc1f"
+        },
+        {
+          "size": 4978526,
+          "sha256": "bd87a28e579eeeccc5310f0e89ab5a40a13149897dc7fa4b85f5981e013de907"
+        },
+        {
+          "size": 141263,
+          "sha256": "62d129be103e55085b0385ae9ac1f8a32b95429560a682cb9c9a6f0727955a89"
+        },
+        {
+          "size": 4681425,
+          "sha256": "bf1807374d1e77490fefc5dbe26265ff3b073180c2a34a5793ba046b7131aa3f"
+        },
+        {
+          "size": 4818358,
+          "sha256": "1b582197b14ac3298fa88342e41e0677a56c07d85b17f39eb9666a2a64bbe437"
+        },
+        {
+          "size": 4695166,
+          "sha256": "427998f9e98bcbc9dfa8c365040fd66f963d555c12ec2961da33543896dd450d"
+        },
+        {
+          "size": 4803824,
+          "sha256": "623f0db2dbf1409c99547a95bec909b41d6987fb74789f9527f049940c156ecf"
+        },
+        {
+          "size": 4985904,
+          "sha256": "a1534715569b5384599df7f1ed5f7ad518cea1882f42e9e0d1626664575a140f"
+        },
+        {
+          "size": 4998645,
+          "sha256": "c5e4c84c5836cc8b84a7a8b48d5915ea10a858cbf2b33b8bdef042351c14a2bf"
+        },
+        {
+          "size": 17636,
+          "sha256": "68ea43a341c67a589624c243014e45d718a1958ad13efcb123cf1d4f3f33ebc3"
+        },
+        {
+          "size": 4840289,
+          "sha256": "99cf739b9fb6fd6da9ef95d763bdceb8fcab9d897a5449273d7b95d75207ba30"
+        },
+        {
+          "size": 4877532,
+          "sha256": "cda9e3869b83f093381dfed877965c9e8c8c89e76c5159454678456bfe0cd006"
+        },
+        {
+          "size": 4886962,
+          "sha256": "c8b4f687034bce7bdfc417ea653e15525abb1dfc3b7fdcf298eac9e113bd2d67"
+        },
+        {
+          "size": 4914468,
+          "sha256": "88488b2ccb3ce0faaa83c7e1a0ad8d61bd9db27aadc5b9a4201d02447764d72e"
+        },
+        {
+          "size": 5003692,
+          "sha256": "ffba56db8260e3a1e2ea64e1c9bd5c223f472888a527b567e5289313e5cab8b5"
+        },
+        {
+          "size": 2512,
+          "sha256": "9d7d354598ed23e89143c72dfa5437157f06e4428c8d26b86abeab2d5dd89db7"
+        }
+      ],
+      "code": {
+        "excel_table_io.py": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+        "excel_table_tools.py": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac"
+      }
+    }
+  }
+}

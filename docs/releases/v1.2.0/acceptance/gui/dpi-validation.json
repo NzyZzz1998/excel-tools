@@ -1,0 +1,274 @@
+{
+  "scope": "Source, real Windows DPI; synthetic long paths and errors, no workbook processing",
+  "executable": "C:\\Users\\win\\AppData\\Local\\Temp\\excel-tools-v1.1-acceptance-23bc299521804363abc3c99f5a99ed02\\venv\\Scripts\\python.exe",
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "pid": 48156,
+  "os_dpi": 96,
+  "awareness": 1,
+  "tk_dpi": 96.04726735598227,
+  "tk_scaling": 1.3339898243886428,
+  "tk_version": "8.6.15",
+  "screen": [
+    2560,
+    1440
+  ],
+  "hashes": {
+    "excel_unmerge_gui.py": "9f5de5603a271d1f8fbb64d95eea2d4f28c3b149afa86d9e635296e1fb6e8384",
+    "excel_table_gui.py": "459d672dd94668fc596cc938e304154e8840543d7835df36c9d4abec03027627"
+  },
+  "cases": [
+    {
+      "requested": "900x760",
+      "actual": [
+        900,
+        760
+      ],
+      "widgets": {
+        "choose_button": {
+          "rect": [
+            26,
+            43,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "add_button": {
+          "rect": [
+            770,
+            78,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "remove_button": {
+          "rect": [
+            26,
+            240,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "output_button": {
+          "rect": [
+            799,
+            425,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "preview_button": {
+          "rect": [
+            14,
+            537,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "run_button": {
+          "rect": [
+            109,
+            537,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "stop_button": {
+          "rect": [
+            204,
+            537,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "open_button": {
+          "rect": [
+            299,
+            537,
+            106,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "log": {
+          "rect": [
+            14,
+            574,
+            855,
+            143
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "status_label": {
+          "rect": [
+            14,
+            725,
+            872,
+            21
+          ],
+          "mapped": true,
+          "fits": true
+        }
+      },
+      "log_scroll": [
+        0.8124156545209177,
+        1.0
+      ],
+      "source_scroll": [
+        0.0,
+        0.3333333333333333
+      ],
+      "screenshot": {
+        "path": "dpi-900x760.png",
+        "pid": 48156,
+        "size": [
+          916,
+          799
+        ],
+        "fresh": true
+      }
+    },
+    {
+      "requested": "760x700",
+      "actual": [
+        760,
+        700
+      ],
+      "widgets": {
+        "choose_button": {
+          "rect": [
+            26,
+            43,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "add_button": {
+          "rect": [
+            630,
+            78,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "remove_button": {
+          "rect": [
+            26,
+            240,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "output_button": {
+          "rect": [
+            659,
+            425,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "preview_button": {
+          "rect": [
+            14,
+            537,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "run_button": {
+          "rect": [
+            109,
+            537,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "stop_button": {
+          "rect": [
+            204,
+            537,
+            87,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "open_button": {
+          "rect": [
+            299,
+            537,
+            106,
+            27
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "log": {
+          "rect": [
+            14,
+            574,
+            715,
+            83
+          ],
+          "mapped": true,
+          "fits": true
+        },
+        "status_label": {
+          "rect": [
+            14,
+            665,
+            732,
+            21
+          ],
+          "mapped": true,
+          "fits": true
+        }
+      },
+      "log_scroll": [
+        0.8047337278106509,
+        0.8982248520710059
+      ],
+      "source_scroll": [
+        0.0,
+        0.3333333333333333
+      ],
+      "screenshot": {
+        "path": "dpi-760x700.png",
+        "pid": 48156,
+        "size": [
+          776,
+          739
+        ],
+        "fresh": true
+      }
+    }
+  ],
+  "passed": true
+}

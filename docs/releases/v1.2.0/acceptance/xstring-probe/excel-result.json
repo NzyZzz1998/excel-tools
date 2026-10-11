@@ -1,0 +1,93 @@
+{
+  "synthetic_only": true,
+  "passed": true,
+  "files": [
+    {
+      "name": "synthetic-source.xlsx",
+      "cells": [
+        {
+          "column": 1,
+          "value_equal_expected": true,
+          "utf16_length": 10,
+          "has_formula": false
+        },
+        {
+          "column": 2,
+          "value_equal_expected": true,
+          "utf16_length": 4,
+          "has_formula": false
+        },
+        {
+          "column": 3,
+          "value_equal_expected": true,
+          "utf16_length": 7,
+          "has_formula": false
+        },
+        {
+          "column": 4,
+          "value_equal_expected": true,
+          "utf16_length": 10,
+          "has_formula": false
+        },
+        {
+          "column": 5,
+          "value_equal_expected": true,
+          "utf16_length": 10,
+          "has_formula": false
+        },
+        {
+          "column": 6,
+          "value_equal_expected": true,
+          "utf16_length": 2,
+          "has_formula": false
+        }
+      ],
+      "unchanged": true
+    },
+    {
+      "name": "synthetic-output.xlsx",
+      "cells": [
+        {
+          "column": 1,
+          "value_equal_expected": true,
+          "utf16_length": 10,
+          "has_formula": false
+        },
+        {
+          "column": 2,
+          "value_equal_expected": true,
+          "utf16_length": 4,
+          "has_formula": false
+        },
+        {
+          "column": 3,
+          "value_equal_expected": true,
+          "utf16_length": 7,
+          "has_formula": false
+        },
+        {
+          "column": 4,
+          "value_equal_expected": true,
+          "utf16_length": 10,
+          "has_formula": false
+        },
+        {
+          "column": 5,
+          "value_equal_expected": true,
+          "utf16_length": 10,
+          "has_formula": false
+        },
+        {
+          "column": 6,
+          "value_equal_expected": true,
+          "utf16_length": 2,
+          "has_formula": false
+        }
+      ],
+      "unchanged": true
+    }
+  ],
+  "cleanup_errors": [],
+  "independent_process_confirmed": true,
+  "excel_version": "16.0"
+}

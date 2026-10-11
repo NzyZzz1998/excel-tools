@@ -1,0 +1,348 @@
+{
+  "checked_utc": "2026-10-10T17:08:48.625704+00:00",
+  "scope": "Only the actual monthly source and split/merge/group output workbooks; ZIP content types and small SST metadata, no worksheet cell rescans or business values. No general workbook memory bound is claimed.",
+  "script_sha256": "1659b063a126fe2eb126daf7d300b80b921010ea0d98ca6edfc7df1d099a7a4c",
+  "operation_report_sha256": {
+    "split": "d437dc2c6d924b0be0e2958a193b745abb279c8f7c88538d4bb7393cf7b116ed",
+    "merge": "228a9de8546d30d34b3e4b765d0bde0e83d79bce045146a27849fe1303ad673d",
+    "group": "b99185d624814ea84b89f2fef593d0c05555d97db85911385caa98dd9bdf8705"
+  },
+  "summary": {
+    "workbooks": 39,
+    "worksheet_parts": 40,
+    "by_set": {
+      "source": 1,
+      "split": 8,
+      "merge": 1,
+      "group": 29
+    },
+    "all_worksheet_parts_exist": true,
+    "all_worksheet_parts_covered_by_guard": true,
+    "sst_part_count": 1,
+    "all_present_sst_empty": true
+  },
+  "workbooks": [
+    {
+      "set": "source",
+      "index": 1,
+      "worksheet_count": 2,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": [
+        {
+          "exists": true,
+          "xml_bytes": 137,
+          "compressed_bytes": 120,
+          "si_count": 0,
+          "declared_count": "0",
+          "declared_unique_count": "0",
+          "empty": true
+        }
+      ]
+    },
+    {
+      "set": "split",
+      "index": 1,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "split",
+      "index": 2,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "split",
+      "index": 3,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "split",
+      "index": 4,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "split",
+      "index": 5,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "split",
+      "index": 6,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "split",
+      "index": 7,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "split",
+      "index": 8,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "merge",
+      "index": 1,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 1,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 2,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 3,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 4,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 5,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 6,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 7,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 8,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 9,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 10,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 11,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 12,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 13,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 14,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 15,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 16,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 17,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 18,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 19,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 20,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 21,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 22,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 23,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 24,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 25,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 26,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 27,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 28,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    },
+    {
+      "set": "group",
+      "index": 29,
+      "worksheet_count": 1,
+      "all_worksheet_parts_exist": true,
+      "all_worksheet_parts_covered_by_guard": true,
+      "sst_parts": []
+    }
+  ]
+}

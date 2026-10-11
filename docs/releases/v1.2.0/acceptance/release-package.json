@@ -1,0 +1,26 @@
+{
+  "version": "1.2.0",
+  "created_utc": "2026-10-11T13:53:43.091243+00:00",
+  "source": {
+    "excel_unmerge_gui.py": "9f5de5603a271d1f8fbb64d95eea2d4f28c3b149afa86d9e635296e1fb6e8384",
+    "excel_unmerge_fill.py": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+    "excel_table_gui.py": "459d672dd94668fc596cc938e304154e8840543d7835df36c9d4abec03027627",
+    "excel_table_io.py": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+    "excel_table_tools.py": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac"
+  },
+  "executable": {
+    "sha256": "51ff57528044e46a91bb3779b26a3b9d0a9feff17affe42e01fc3cda8a67347a",
+    "size": 13420331
+  },
+  "package": {
+    "sha256": "d60c15554317dfed91822115df62e7b2d072c6dcbd48fd219ea0af8bacf8cce6",
+    "size": 13145189,
+    "path": "dist/ExcelTools-v1.2.0-release/ExcelTools-Windows-x64.zip"
+  },
+  "instructions": {
+    "sha256": "1cb734c6564d60f1aad87f80cd1099c02317f907486cb190d4958abb9cf867cd",
+    "size": 5051
+  },
+  "candidate_exe_unchanged": true,
+  "change_from_candidate": "Only bundled instructions promoted from candidate to release; executable unchanged."
+}

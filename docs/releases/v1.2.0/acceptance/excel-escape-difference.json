@@ -1,0 +1,19 @@
+{
+  "excel_version": "16.0",
+  "coordinate": "F246",
+  "source_and_output_value2_equal": true,
+  "records": [
+    {
+      "value_length": 26,
+      "escape_count": 0,
+      "has_formula": false,
+      "number_format": "General"
+    },
+    {
+      "value_length": 26,
+      "escape_count": 0,
+      "has_formula": false,
+      "number_format": "General"
+    }
+  ]
+}

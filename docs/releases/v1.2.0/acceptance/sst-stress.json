@@ -1,0 +1,78 @@
+{
+  "fixture": {
+    "rows": 100000,
+    "columns": 2,
+    "unique_strings": 100000,
+    "string_bytes": 544,
+    "sst_uncompressed_bytes": 56000113,
+    "sst_compressed_bytes": 4556302,
+    "sheet_uncompressed_bytes": 9244746,
+    "source_bytes": 5907631,
+    "expected_row_sha256": "e0a6a468d0d851e8fcb9e5af3d2ca80a4215376a64a12cf1cd7d6b872f48235c"
+  },
+  "source_sha256_before": "1fb5154cb18143a18ff3989edfbda53cb7f220b1353ec827225c55f9cc6cc3fa",
+  "source_sha256_after": "1fb5154cb18143a18ff3989edfbda53cb7f220b1353ec827225c55f9cc6cc3fa",
+  "engine_exit_code": 0,
+  "worker_envelope_seconds": 11.660155399993528,
+  "peak_rss_bytes": 33759232,
+  "peak_rss_MiB": 32.1953125,
+  "peak_private_bytes": 23633920,
+  "sample_interval_seconds": 0.1,
+  "samples": 116,
+  "probe_stop_reason": null,
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "psutil_version": "7.2.2",
+  "app_sha256": {
+    "excel_table_io.py": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+    "excel_table_tools.py": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac"
+  },
+  "engine": {
+    "rows": 100000,
+    "files": [
+      "按行拆表_001.xlsx",
+      "按行拆表_002.xlsx",
+      "按行拆表_003.xlsx"
+    ],
+    "wall_seconds": 11.526086499972735,
+    "progress_events": 112
+  },
+  "oracle": {
+    "openpyxl_version": "3.1.5",
+    "source": {
+      "rows": 100000,
+      "counts": [
+        100000
+      ],
+      "ordered_rows_sha256": "e0a6a468d0d851e8fcb9e5af3d2ca80a4215376a64a12cf1cd7d6b872f48235c"
+    },
+    "output": {
+      "rows": 100000,
+      "counts": [
+        40000,
+        40000,
+        20000
+      ],
+      "ordered_rows_sha256": "e0a6a468d0d851e8fcb9e5af3d2ca80a4215376a64a12cf1cd7d6b872f48235c"
+    }
+  },
+  "source_sha256_after_oracle": "1fb5154cb18143a18ff3989edfbda53cb7f220b1353ec827225c55f9cc6cc3fa",
+  "outputs": [
+    {
+      "name": "按行拆表_001.xlsx",
+      "sha256": "d0c95c32bb032051dc279d89469c675893825b4e28c54721f8d8bc76e6789ae7",
+      "bytes": 2352617
+    },
+    {
+      "name": "按行拆表_002.xlsx",
+      "sha256": "0c6cb5ca2183ad8887103c13c13f94e6abafa89e433e39b3dfb2a65a17d129d6",
+      "bytes": 2352840
+    },
+    {
+      "name": "按行拆表_003.xlsx",
+      "sha256": "795aea290598aae802810c9fdb5361471c28c522764fda0b18afc80fa1fc6ccb",
+      "bytes": 1177959
+    }
+  ],
+  "passed": true,
+  "scope": "Synthetic 100000-row large-SST input; engine process only measured; oracle and fixture creation excluded; no extrapolation to business workbooks."
+}

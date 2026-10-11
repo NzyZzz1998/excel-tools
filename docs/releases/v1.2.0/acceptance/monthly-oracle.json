@@ -1,0 +1,32 @@
+{
+  "source": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "bf55620f8c01c793e07319a0eabb8240d3d86c6587039db753aea062abdda8cf",
+    "unordered_row_sha256_sum": "7b4289c2c367e703926731b37e6edc5eaba5e4b148797a561dd06b7f71cada27"
+  },
+  "output": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "bf55620f8c01c793e07319a0eabb8240d3d86c6587039db753aea062abdda8cf",
+    "unordered_row_sha256_sum": "7b4289c2c367e703926731b37e6edc5eaba5e4b148797a561dd06b7f71cada27"
+  },
+  "equal": true,
+  "merged": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "bf55620f8c01c793e07319a0eabb8240d3d86c6587039db753aea062abdda8cf",
+    "unordered_row_sha256_sum": "7b4289c2c367e703926731b37e6edc5eaba5e4b148797a561dd06b7f71cada27"
+  },
+  "grouped": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "bf55620f8c01c793e07319a0eabb8240d3d86c6587039db753aea062abdda8cf",
+    "unordered_row_sha256_sum": "7b4289c2c367e703926731b37e6edc5eaba5e4b148797a561dd06b7f71cada27"
+  },
+  "grouped_equal": true,
+  "seconds": 404.611,
+  "oracle": {
+    "reader": "openpyxl",
+    "version": "3.1.5",
+    "inline_xstring_single_pass": true,
+    "storage_guard": "reject s/str cells in all worksheets",
+    "script_sha256": "1659b063a126fe2eb126daf7d300b80b921010ea0d98ca6edfc7df1d099a7a4c"
+  }
+}

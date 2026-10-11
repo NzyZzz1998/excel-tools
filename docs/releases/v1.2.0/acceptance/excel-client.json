@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "excel_version": "16.0",
+  "read_only": true,
+  "worksheets": 1,
+  "rows": 3,
+  "columns": 4,
+  "literal_equal_text_has_formula": false,
+  "date_number_format": "d/m/yyyy"
+}

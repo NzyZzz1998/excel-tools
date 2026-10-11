@@ -1,0 +1,27 @@
+{
+  "version": "1.2.0",
+  "base_head": "b48e97dd77bcd32c1508eab076a924568a6d54bf",
+  "dirty": true,
+  "created_at": "2026-10-11T00:45:57.824977+08:00",
+  "source": {
+    "excel_unmerge_gui.py": "9f5de5603a271d1f8fbb64d95eea2d4f28c3b149afa86d9e635296e1fb6e8384",
+    "excel_unmerge_fill.py": "602f867dfd9be498e911a6599cd8da1ffcdaed5dd6bb20db5af9637b0dc196f3",
+    "excel_table_gui.py": "459d672dd94668fc596cc938e304154e8840543d7835df36c9d4abec03027627",
+    "excel_table_io.py": "d288bc4f3d518a717769b87c4c68a6f1236ecf1be2434650a3e68525d4fa6f1b",
+    "excel_table_tools.py": "b2951839c8e646cbbbf29192f735abebd25816e3c0f7a75986ea4811e22f24ac"
+  },
+  "snapshot": "E:\\codex\\excel-tools\\testfile\\v1.2.0-build-2037854d\\source",
+  "artifact": {
+    "dist\\ExcelTools-v1.2.0\\ExcelTools.exe": {
+      "sha256": "51ff57528044e46a91bb3779b26a3b9d0a9feff17affe42e01fc3cda8a67347a",
+      "size": 13420331
+    },
+    "dist\\ExcelTools-v1.2.0-Windows-x64.zip": {
+      "sha256": "e0f25dbf2c5b7ab29b7e6e5174f393dc33fe08967610fdc56fcdba03a67ca6b6",
+      "size": 13146116
+    }
+  },
+  "python": "3.12.8",
+  "pyinstaller": "6.22.3",
+  "isolated_self_test": "passed"
+}

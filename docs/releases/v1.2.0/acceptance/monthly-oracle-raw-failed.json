@@ -1,0 +1,25 @@
+{
+  "source": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "3e034254d58ee79f872e8c12215273f81e1da977a2c04f364dc77904bcbcdfd8",
+    "unordered_row_sha256_sum": "20452a9ef46f9ccd5decf635defd71c133979eeac587d025339144155e2e53e5"
+  },
+  "output": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "bf55620f8c01c793e07319a0eabb8240d3d86c6587039db753aea062abdda8cf",
+    "unordered_row_sha256_sum": "7b4289c2c367e703926731b37e6edc5eaba5e4b148797a561dd06b7f71cada27"
+  },
+  "equal": false,
+  "merged": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "bf55620f8c01c793e07319a0eabb8240d3d86c6587039db753aea062abdda8cf",
+    "unordered_row_sha256_sum": "7b4289c2c367e703926731b37e6edc5eaba5e4b148797a561dd06b7f71cada27"
+  },
+  "grouped": {
+    "rows": 757635,
+    "ordered_value_type_format_sha256": "bf55620f8c01c793e07319a0eabb8240d3d86c6587039db753aea062abdda8cf",
+    "unordered_row_sha256_sum": "7b4289c2c367e703926731b37e6edc5eaba5e4b148797a561dd06b7f71cada27"
+  },
+  "grouped_equal": false,
+  "seconds": 260.184
+}
