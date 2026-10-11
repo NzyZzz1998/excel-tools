@@ -1,0 +1,15 @@
+{
+  "run_id": 38145129384,
+  "url": "https://github.com/NzyZzz1998/excel-tools/actions/runs/38145129384",
+  "source_commit": "ed85c03499fc74ad177b42b2ba443439287dfe86",
+  "conclusion": "failure",
+  "python": "3.12.10",
+  "test_count": 180,
+  "test_seconds": 22.601,
+  "failure_count": 1,
+  "failed_test": "test_partial_zip_write_enospc_keeps_original_error_and_previous_task",
+  "cause": "Path-string comparison treats Windows TEMP short and long aliases as different directories.",
+  "fix": "Assert exactly one remaining directory, then compare samefile identity; retain every error and content-preservation assertion.",
+  "runtime_changed": false,
+  "local_targeted_retest": {"count": 28, "seconds": 1.116, "passed": true}
+}

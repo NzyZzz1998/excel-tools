@@ -450,7 +450,10 @@ class TableToolsAcceptanceTests(unittest.TestCase):
         self.assertTrue(observed, "The fault must occur after writing actual ZIP payload")
         self.assertIs(raised.exception, failure)
         self.assertEqual(raised.exception.errno, errno.ENOSPC)
-        self.assertEqual(set(self.output.iterdir()), {first.directory.parent})
+        remaining = list(self.output.iterdir())
+        self.assertEqual(len(remaining), 1)
+        # Windows TEMP may use an 8.3 alias while the result is resolved.
+        self.assertTrue(remaining[0].samefile(first.directory.parent))
         self.assertEqual({p: digest(p) for p in first.directory.iterdir()}, before)
         self.assertEqual(digest(path), source_before)
 
